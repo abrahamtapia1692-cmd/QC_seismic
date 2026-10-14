@@ -1,0 +1,2 @@
+pair_id,t_ab_s,t_ba_s,delta_t_ms,tolerance_ms,status
+F01_CH24 <-> F09_CH01,0.095875,0.085000,10.875,3.0,DISCREPANCIA

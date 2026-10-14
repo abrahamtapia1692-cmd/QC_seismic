@@ -1,0 +1,17 @@
+metric,value
+slug,KM_52_500
+title,KM 52+500
+technique,TRS (Tomografía de Refracción Sísmica)
+channels,24
+dx_m,2.5
+aperture_m,57.5
+spread_grade,REGULAR
+good_traces_count,739
+regular_traces_count,53
+bad_traces_count,120
+total_traces,912
+good_percent_lower,81.03070175438596
+good_percent_upper,81.03070175438596
+pick_coverage_percent,97.91666666666667
+acceptance_status,NOT_CERTIFIED
+objective_sufficiency,PENDIENTE

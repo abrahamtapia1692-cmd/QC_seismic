@@ -1,0 +1,2 @@
+pair_id,t_ab_s,t_ba_s,delta_t_ms,tolerance_ms,status
+F01_CH24 <-> F11_CH01,0.038000,0.039500,-1.500,3.0,CONFORME

@@ -1,0 +1,17 @@
+metric,value
+slug,KM_40_672
+title,KM 40+672
+technique,TRS (Tomografía de Refracción Sísmica)
+channels,24
+dx_m,5.0
+aperture_m,115.0
+spread_grade,MALA
+good_traces_count,474
+regular_traces_count,70
+bad_traces_count,152
+total_traces,696
+good_percent_lower,68.10344827586206
+good_percent_upper,68.10344827586206
+pick_coverage_percent,96.83908045977012
+acceptance_status,NOT_CERTIFIED
+objective_sufficiency,PENDIENTE

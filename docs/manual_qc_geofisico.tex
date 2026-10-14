@@ -344,214 +344,254 @@ Estas diferencias se presentan como estadísticos observados, asignando el estad
 
 \newpage
 % =========================================================================
-\section{Cuál es la Salida de los Dosieres: Estructura del Dosier 2.0}
+\section{Dosier de Control de Calidad TRS (Refracción Sísmica)}
 % =========================================================================
 
-\subsection{Ecosistema de Entregables Generados}
-La ejecución del módulo de reporte produce un conjunto coordinado y reproducible de artefactos en la carpeta de evidencia:
-
-\begin{figure}[h!]
-\centering
-\small
-\begin{tcolorbox}[colback=white,colframe=branddark,arc=1mm,title=\textbf{Arquitectura de Entregables del Dosier 2.0}]
+\subsection{Insumos Recibidos para TRS}
+Para la técnica de Tomografía de Refracción Sísmica (TRS), el sistema recibe:
 \begin{itemize}
-    \item \textbf{\texttt{dossier.json}:} Archivo maestro de trazabilidad digital. Contiene:
-    \begin{itemize}
-        \item \emph{Digest científico canónico}: Hash SHA-256 de todas las decisiones numéricas.
-        \item \emph{Auditoría de código e insumos}: Hashes SHA-256 de cada script, archivo de datos y configuración.
-        \item \emph{Tablas completas}: Puntos, frecuencias, clasificaciones y motivos.
-    \end{itemize}
-    \item \textbf{\texttt{dossier.pdf}:} Documento técnico de alta calidad visual para archivo formal y revisión de ingeniería.
-    \item \textbf{\texttt{dossier.html}:} Aplicación autónoma interactiva en HTML5 (imágenes incrustadas en Base64, sin dependencias externas de internet) que permite explorar traza por traza, registro por registro y filtrar motivos.
-    \item \textbf{Tablas Tabulares (\texttt{.csv}):}
-    \begin{itemize}
-        \item \texttt{usability\_bands.csv}: Intervalos continuos de frecuencia clasificados con sus motivos.
-        \item \texttt{usability.csv}: Métricas detalladas por cada bin de frecuencia (coherencia, contraste, razón de rival, sensibilidad).
-        \item \texttt{traces.csv}: Control de integridad traza por traza (RMS, ceros, canales muertos, sospecha de clipping).
-        \item \texttt{comparisons.csv}: Matriz de diferencias entre pares de disparos ($\Delta c$).
-    \end{itemize}
-    \item \textbf{Matrices Binarias (\texttt{.npz}):} Espectros de coherencia normalizada $I(f, q)$ e $I(f, c)$ para auditoría independiente.
+    \item \textbf{Registros de sismogramas multicanal:} Archivos en formato estándar SEG-2 (\texttt{.sg2}) o SEG-Y, adquiridos con $N$ canales activos (habitualmente $N=24$) y múltiples posiciones de tiro distribuidas ($F_1, F_2, \dots, F_K$).
+    \item \textbf{Geometría del tendido:} Coordenadas lineales de los receptores $x_r \in [0, L]$ con espaciamiento geofónico constante $dx$, y coordenadas de las fuentes $x_s$ (disparos directos, inversos e intermedios).
+    \item \textbf{Sincronización y escala temporal:} Intervalo de muestreo $dt$ (típicamente $0.125$\,ms a $0.25$\,ms, $f_s \ge 4000$\,Hz) y marcas de disparo (\emph{time-break} o pre-disparo $T_{\text{pre}}$).
 \end{itemize}
-\end{tcolorbox}
-\end{figure}
 
-\subsection{Contenido Visual del Dosier Técnico (\texttt{dossier.pdf})}
-El reporte PDF consta de secciones gráficas diseñadas bajo principios de máxima claridad diagnóstica:
+\subsection{Paso a Paso del Procesamiento Diagnóstico TRS}
+El generador del Dosier TRS (\texttt{report\_trs\_dossier.py}) ejecuta las siguientes etapas analíticas:
+
+\subsubsection{1. Evaluación y Calificación por Traza Individual}
+Cada traza individual $u_{i,j}(t)$ (canal $j$ del disparo $i$) es analizada de manera autónoma:
 \begin{enumerate}
-    \item \textbf{Página de Síntesis del Estudio:}
-    Presenta la ficha general (sitio, perfil, operadora, fecha, trazabilidad), la confirmación de integridad de muestras (\texttt{PASS}), el estado desacoplado de las dos dimensiones (\texttt{Dispersión: EVALUACIÓN POR BANDAS} vs. \texttt{Objetivo Vs30: PENDIENTE}) y la tabla resumen de conteo de bins utilizables por registro.
-    
-    \item \textbf{Página de Comparación entre Offsets y Matriz de Soporte:}
+    \item \textbf{Integridad de muestras:} Se verifica la ausencia de valores \texttt{NaN}, \texttt{Inf} o cadenas nulas. El canal debe cumplir $\text{valid\_fraction} = 1.0$.
+    \item \textbf{Diagnóstico de sensor:} 
     \begin{itemize}
-        \item \emph{Panel de curvas combinadas:} Muestra las curvas de dispersión de todos los disparos. La línea fuerte destaca los tramos que pasan los controles internos (\texttt{UTILIZABLE*}), mientras que las zonas tenues señalan los tramos en revisión o sin soporte.
-        \item \emph{Panel de sensibilidad al canal 1:} Gráfico de $|c_{\text{base}} - c_{\text{drop1}}|$ por frecuencia.
-        \item \emph{Mapa de calor de usabilidad:} Matriz registro vs. frecuencia con código de colores normalizado:
-        \begin{center}
-        \fcolorbox{usablegreen}{usablegreen}{\textcolor{white}{\textbf{ Verde: Utilizable* }}} \quad
-        \fcolorbox{reviewamber}{reviewamber}{\textcolor{white}{\textbf{ Ámbar: Revisar }}} \quad
-        \fcolorbox{badred}{badred}{\textcolor{white}{\textbf{ Rojo: Sin soporte útil }}} \quad
-        \fcolorbox{unusablegrey}{unusablegrey}{\textcolor{white}{\textbf{ Gris: No evaluable }}}
-        \end{center}
-        \item \emph{Tabla de diferencias observadas:} Bins comunes, mediana y máximo de $|\Delta c|$ entre cada par de disparos.
+        \item Canal muerto: rango pico a pico $\text{PTP} = \max(u) - \min(u) = 0$.
+        \item Canal constante: desviación estándar $\sigma < 10^{-12} \times \text{PTP}$.
     \end{itemize}
-
-    \item \textbf{Página de Geometría Declarada y Bandas:}
-    Esquema relativo de posiciones fuente--receptores y tabla desglosada de los intervalos de frecuencia delimitados por sus frecuencias límite exactas.
-
-    \item \textbf{Páginas de Detalle por Registro (2 páginas por disparo):}
+    \item \textbf{Amplitud y línea base:} Se remueve la componente continua (DC) y se calcula la amplitud RMS centrada nativa.
+    \item \textbf{Sospecha de clipping morfológico:} Se detectan mesetas de $\ge 4$ muestras idénticas en extremos de amplitud. La fracción de clipping se califica bajo los umbrales locales de política (\texttt{TRACE\_QUALITY\_V1\_DRAFT}):
+    \begin{equation}
+        f_{\text{clip}} \le 0.001 \implies \text{BUENA}, \quad 0.001 < f_{\text{clip}} < 0.01 \implies \text{REGULAR}, \quad f_{\text{clip}} \ge 0.01 \implies \text{MALA}
+    \end{equation}
+    \item \textbf{Detección causal de primer arribo (P-Wave Onset):}
+    Se implementa un detector causal STA/LTA (ventana corta de 2\,ms, ventana larga de 20\,ms) sobre la energía cuadrática $u^2(t)$. En la vecindad del disparo, se aplica el Criterio de Información de Akaike (AIC):
+    \begin{equation}
+        \text{AIC}(k) = k \log \left(\max(\text{var}(u[1..k]), \epsilon)\right) + (M-k) \log \left(\max(\text{var}(u[k+1..M]), \epsilon)\right)
+    \end{equation}
+    El arribo temporal $t_{\text{onset}}$ se obtiene del mínimo de $\text{AIC}(k)$, corrigiendo el retardo del pre-disparo.
+    \item \textbf{Relación Señal/Ruido (SNR Neta en dB):}
+    Se evalúa la potencia de ruido $P_{\text{ruido}}$ en la ventana previa al arribo ($[0, T_{\text{pre}}]$) y la potencia de señal $P_{\text{señal}}$ en la ventana posterior al arribo ($[T_{\text{pre}}, T_{\text{pre}} + 1500\,dt]$):
+    \begin{equation}
+        \text{SNR}_{\text{dB}} = 10 \log_{10} \left( \frac{P_{\text{señal}}}{P_{\text{ruido}} + \epsilon} \right)
+    \end{equation}
+    \item \textbf{Asignación de Calificación por Peor Hallazgo:}
+    La función \texttt{geoqc.qc.quality.trace\_quality()} dictamina:
     \begin{itemize}
-        \item \emph{Diagnóstico de registro:} Trazas temporales normalizadas, barras de amplitud RMS AC nativa por canal, espectro de coherencia $+1$ con la curva de cresta aparente superpuesta, espectro inverso $-1$ para detectar retrodispersión, y comparación de las curvas de las variantes de procesamiento.
-        \item \emph{Controles internos de usabilidad:} 4 paneles con las curvas de Coherencia, Contraste, Razón de Rival y Sensibilidad Relativa frente a sus respectivos umbrales diagnósticos DRAFT.
+        \item \textcolor{usablegreen}{\textbf{BUENA}}: Integridad 100\%, $\text{SNR} \ge 12.0$\,dB, clipping $\le 0.1\%$, sin alertas de ruido.
+        \item \textcolor{reviewamber}{\textbf{REGULAR}}: $\text{SNR} \in [6.0, 12.0)$\,dB, clipping moderado $\in (0.1\%, 1.0\%]$, o evidencia faltante.
+        \item \textcolor{badred}{\textbf{MALA}}: Canal muerto, canal constante, $\text{SNR} < 6.0$\,dB, clipping $\ge 1.0\%$, o muestras no válidas.
+        \item \textcolor{unusablegrey}{\textbf{NO\_EVALUABLE}}: Falta de soporte de muestras en la ventana de análisis.
     \end{itemize}
 \end{enumerate}
 
-\newpage
-% =========================================================================
-\section{Ejemplos Prácticos de Diagnóstico: Casos MASW y TRS}
-% =========================================================================
-
-\subsection{Caso MASW: Análisis Multicanal de Ondas Superficiales (Oysand P1)}
-
-\subsubsection{Descripción del Conjunto Experimental}
-El conjunto de validación de Oysand corresponde a un perfil lineal MASW de 24 geófonos espaciados a $dx = 2.0$\,m ($L = 46.0$\,m), con 4 disparos de impacto vertical a distancias de fuente de 10, 15, 20 y 30\,m (registros \texttt{r1}, \texttt{r2}, \texttt{r3} y \texttt{r4}), muestreados a $dt = 1$\,ms ($f_s = 1000$\,Hz, 2201 muestras por traza).
-
-\subsubsection{Resultados Numéricos Obtenidos}
-
-\begin{table}[h!]
-\centering
-\small
-\renewcommand{\arraystretch}{1.2}
-\begin{tabularx}{\textwidth}{c c C{2.2cm} C{2.2cm} X}
-\toprule
-\textbf{Registro} & \textbf{Offset (m)} & \textbf{Bins Utilizables} & \textbf{Bins a Revisar} & \textbf{Bandas Declaradas Utilizables* (Hz)} \\
-\midrule
-\texttt{r1} & 10 & 42 & 99 & 10.45--21.35; 23.17--27.71; 29.08--29.53 \\
-\texttt{r2} & 15 & 47 & 94 & 8.63--22.26; 23.17--29.99 \\
-\texttt{r3} & 20 & 48 & 93 & 7.72--21.81; 23.17--29.99 \\
-\texttt{r4} & 30 & 45 & 96 & 9.09--21.81; 23.17--29.99 \\
-\bottomrule
-\end{tabularx}
-\caption{Resultados diagnósticos del Dosier 2.0 sobre los registros de dispersión MASW de Oysand P1.}
-\label{tab:oysand}
-\end{table}
-
-\subsubsection{Interpretación de los Motivos Diagnósticos Observados}
-El análisis demuestra empíricamente por qué la antigua pretensión de declarar ``buena'' toda la banda continua hasta 31--32\,Hz era metodológicamente insostenible:
+\subsubsection{2. Evaluación y Calificación del Tendido Global}
+Para calificar el tendido de refracción en su conjunto, el sistema aplica agregación rigurosa mediante \texttt{geoqc.qc.quality.assess\_quality()}:
 \begin{enumerate}
-    \item \textbf{Corte en bajas frecuencias (< 8--10\,Hz):}
-    En las frecuencias más bajas, la longitud de onda calculada $\lambda = c / f \approx 200 / 6 \approx 33$\,m es del orden de la longitud total del arreglo ($L = 46$\,m). El lóbulo principal del kernel abarca $q=0$, activando de inmediato la condición \texttt{DIRECTION\_UNRESOLVED}. Asimismo, la energía decae y la coherencia desciende por debajo de 0.60 (\texttt{LOW\_COHERENCE}).
-    
-    \item \textbf{Muesca intermedia en $\sim$22--23\,Hz:}
-    En el registro más cercano a la fuente (\texttt{r1}, 10\,m), al retirar el canal 1 la velocidad de fase estimada varía más de un 5\,\% (\texttt{PROCESSING\_SENSITIVE}) debido a la fuerte influencia de campo cercano en el primer sensor. En \texttt{r2}, \texttt{r3} y \texttt{r4}, un modo superior incipiente compite con la cresta principal (\texttt{COMPETING\_PEAK}). El sistema coloca correctamente este bin en \texttt{REVISAR}.
-    
-    \item \textbf{Corte en altas frecuencias (> 30\,Hz):}
-    Para $f > 30$\,Hz, la relación $q_0 + \frac{1}{L}$ alcanza la frecuencia espacial de Nyquist $q_N = \frac{1}{2 \times 2} = 0.25\,\text{m}^{-1}$, activando la advertencia \texttt{LOBE\_AT\_NYQUIST}. Inmediatamente después de 31.8\,Hz, la cresta excede $q_N$ (\texttt{NYQUIST\_LIMIT}), entrando en la zona de solapamiento espacial (aliasing). Por tanto, la dispersión por encima de 30\,Hz no es interpretable como modo aparente no sesgado.
+    \item \textbf{Regla del denominador completo:} Todas las trazas físicas del tendido permanecen en el denominador, incluidas aquellas con evidencia incompleta o con arribo no resuelto. No se normaliza por subconjuntos ni se redondea antes del corte.
+    \item \textbf{Intervalo de cota por evidencia pendiente:}
+    Sea $N_{\text{total}}$ el número total de trazas, $N_{\text{buena}}$ las trazas calificadas como BUENA, y $N_{\text{pendiente}}$ aquellas con evidencia pendiente que no demostraron falla:
+    \begin{equation}
+        p_{\text{lower}} = \frac{N_{\text{buena}}}{N_{\text{total}}} \times 100\%, \quad p_{\text{upper}} = \frac{N_{\text{buena}} + N_{\text{pendiente}}}{N_{\text{total}}} \times 100\%
+    \end{equation}
+    \item \textbf{Decisión global del tendido:}
+    \begin{itemize}
+        \item \textcolor{usablegreen}{\textbf{BUENA}}: $p \ge 90.0\%$.
+        \item \textcolor{reviewamber}{\textbf{REGULAR}}: $75.0\% \le p < 90.0\%$.
+        \item \textcolor{badred}{\textbf{MALA}}: $p < 75.0\%$.
+        \item \textcolor{unusablegrey}{\textbf{NO\_EVALUABLE}}: Si las cotas $p_{\text{lower}}$ y $p_{\text{upper}}$ caen en categorías distintas.
+    \end{itemize}
+    \item \textbf{Cobertura espacial de primeros arribos:}
+    Se evalúa el porcentaje de canales del tendido que presentan arribo causal identificado ($N_{\text{arribos}} / N_{\text{total}}$).
+    \item \textbf{Abanico de hodógrafas y ajuste de ramas de refracción:}
+    Para cada disparo, se ajustan ramas lineales directas y refractadas mediante \texttt{fit\_branches()}:
+    \begin{equation}
+        t(x) = \begin{cases}
+            \frac{x}{V_1}, & x < x_c \\
+            \tau_2 + \frac{x}{V_2}, & x \ge x_c
+        \end{cases}
+    \end{equation}
+    donde $x_c$ es la distancia de cruce y el espesor aparente del primer estrato es:
+    \begin{equation}
+        z_{\text{aparente}} = \frac{x_c}{2} \sqrt{\frac{V_2 - V_1}{V_2 + V_1}}
+    \end{equation}
+    \item \textbf{Validación de reciprocidad de Fermat:}
+    Para pares conjugados de fuentes opuestas ($A \to B$ y $B \to A$), la función \texttt{reciprocal\_pair()} contrasta la discrepancia temporal $|t_{AB} - t_{BA}|$ contra la tolerancia operativa ($\le 3.0$\,ms).
+    \item \textbf{Repetibilidad intra-fuente (Consistencia de impacto):}
+    Se calcula la matriz de correlación de Pearson ($r$) entre impactos sucesivos apilados en cada estación de disparo para evaluar el efecto de compactación de placa y estabilidad mecánica.
+    \item \textbf{Declaración de suficiencia del objetivo:}
+    El dosier declara formalmente el estatus de suficiencia del objetivo como \textbf{PENDIENTE} (\texttt{NOT\_DEMONSTRATED}) para la inversión tomográfica 2D/3D mientras no se aporten ensayos independientes de pozo o comprobación de capas ocultas (ASTM D5777).
 \end{enumerate}
 
-\subsubsection{Comparaciones entre Disparos MASW}
-La comparación de los 59 bins geométricamente candidatos comunes entre los cuatro registros muestra una mediana de discrepancia $|\Delta c|$ de apenas \textbf{1.0 a 2.0\,m/s}, demostrando una consistencia mutua extraordinaria en el rango utilizable. Sin embargo, en las frecuencias donde los efectos de campo cercano divergen, las diferencias puntuales alcanzan entre 24 y 53\,m/s, lo que justifica plenamente conservar estas discrepancias en el informe sin forzar una desviación estándar artificial.
-
-\vspace{0.4cm}
-\subsection{Caso TRS: Tomografía de Refracción Sísmica (Levantamientos Reales KM* y Chèvremont)}
-
-\subsubsection{Descripción de los Levantamientos de Refracción Reales}
-A diferencia de los experimentos MASW con un solo disparo lateral, la tomografía de refracción sísmica (TRS) exige una cobertura multicanal densa con múltiples posiciones de disparo distribuidas a lo largo y fuera del tendido para lograr intersección de rayos y resolución bidimensional del subsuelo.
-
-El sistema fue evaluado sobre tres levantamientos de campo reales de ingeniería geotécnica:
+\subsection{Estructura de Salida del Dosier TRS}
+La ejecución de \texttt{report\_trs\_dossier.py} genera en la carpeta \texttt{evidence/trs/<SLUG>/}:
 \begin{itemize}
-    \item \textbf{KM 40+672:} Tendido lineal de 24 geófonos espaciados a $dx = 5.0$\,m ($L = 115.0$\,m). Se ejecutaron 29 registros SEG-2 repartidos en 9 posiciones de fuente ($F_1$ a $F_9$, espaciadas cada 15\,m) con 3 a 4 golpes apilados por posición.
-    \item \textbf{KM 44+552:} Tendido lineal de 24 geófonos a $dx = 5.0$\,m ($L = 115.0$\,m). Se ejecutaron 32 registros SEG-2 en 9 posiciones de fuente ($F_1$ a $F_9$) con 3 a 5 golpes por posición.
-    \item \textbf{KM 52+500:} Tendido lineal de 24 geófonos a $dx = 2.5$\,m ($L = 57.5$\,m). Se ejecutaron 38 registros TRS en 11 posiciones de fuente ($F_1$ a $F_{11}$, espaciadas cada 5--7.5\,m) con 3 a 5 golpes por posición, complementados con 14 registros pasivos MAM.
+    \item \textbf{\texttt{dossier\_trs.json}:} Archivo maestro JSON con digest canónico, hashes SHA-256 de archivos SEG-2, parámetros de protocolo, métricas de todas las trazas y decisiones de agregación global.
+    \item \textbf{\texttt{dossier\_trs.pdf}:} Reporte gráfico multipágina en PDF con geometría del tendido, histograma de calidad, hodógrafas completas, matriz de calidad por canal vs. disparo, repetibilidad y reciprocidad de Fermat.
+    \item \textbf{\texttt{dossier\_trs.html}:} Panel interactivo autónomo con estilos modernos en modo oscuro, visualizadores de gráficos, insignias de estado y tabla navegable de trazas.
+    \item \textbf{\texttt{traces\_trs.csv}:} Registro tabular detallado de cada traza: canal, estación, offset, RMS, clipping, SNR neta, tiempo de arribo, calificación individual y motivo.
+    \item \textbf{\texttt{picks\_trs.csv}:} Tiempos de primer arribo picados por canal y disparo.
+    \item \textbf{\texttt{reciprocity\_trs.csv}:} Evaluación de pares de reciprocidad de Fermat con discrepancia $\Delta t$ y conformidad.
+    \item \textbf{\texttt{repeatability\_trs.csv}:} Coeficientes de correlación mediana, mínima y máxima entre impactos consecutivos por estación.
+    \item \textbf{\texttt{summary\_trs.csv}:} Síntesis de métricas del tendido, conteos de calidad, porcentajes y velocidades de rama.
 \end{itemize}
 
-\subsubsection{Resultados Numéricos de los Levantamientos TRS}
+\subsection{Resultados Obtenidos en Levantamientos TRS Reales}
+Se procesaron tres levantamientos de campo de refracción sísmica:
 
 \begin{table}[h!]
 \centering
 \small
 \renewcommand{\arraystretch}{1.25}
-\begin{tabularx}{\textwidth}{L{3.5cm} C{2.2cm} C{2.2cm} C{2.2cm} X}
+\begin{tabularx}{\textwidth}{L{3.8cm} C{2.2cm} C{2.2cm} C{2.2cm}}
 \toprule
-\textbf{Parámetro de Diagnóstico} & \textbf{KM 40+672} & \textbf{KM 44+552} & \textbf{KM 52+500} & \textbf{Chèvremont} \\
+\textbf{Parámetro de Diagnóstico TRS} & \textbf{KM 40+672} & \textbf{KM 44+552} & \textbf{KM 52+500} \\
 \midrule
-\textbf{Espaciamiento $dx$} & 5.0 m & 5.0 m & 2.5 m & 2.5 m \\
-\textbf{Apertura del Arreglo ($L$)} & 115.0 m & 115.0 m & 57.5 m & 57.5 m \\
-\textbf{Tasa de Muestreo ($f_s$)} & 8000 Hz ($dt=0.125$ ms) & 8000 Hz ($dt=0.125$ ms) & 8000 Hz ($dt=0.125$ ms) & 4000 Hz ($dt=0.25$ ms) \\
-\textbf{Disparos TRS Evaluados} & 29 registros & 32 registros & 38 registros & 7 registros \\
-\textbf{Fuentes Distribuidas} & 9 ($F_1$ a $F_9$) & 9 ($F_1$ a $F_9$) & 11 ($F_1$ a $F_{11}$) & 7 (0 a 60 m) \\
-\textbf{Total Trazas Procesadas} & 696 trazas & 768 trazas & 912 trazas & 168 trazas \\
-\textbf{Finitud e Integridad} & 100\% PASS & 100\% PASS & 100\% PASS & 100\% PASS \\
-\textbf{Canales Muertos / Ceros} & 0 canales & 0 canales & 0 canales & 0 canales \\
-\textbf{Repetibilidad Media ($r$)} & 0.600 (picos $\ge$0.89) & 0.618 (picos $\ge$0.88) & \textbf{0.781 (Excelente)} & N/A (1 golpe/fuente) \\
-\textbf{$V_P$ Aparente Directa} & $\approx$811 m/s & $\approx$850 m/s & $\approx$980 m/s & $\approx$450--1800 m/s \\
-\textbf{Estado de Integridad} & \textbf{PASS} & \textbf{PASS} & \textbf{PASS} & \textbf{PASS} \\
+\textbf{Geometría del Tendido} & 24 ch $\times$ 5.0 m & 24 ch $\times$ 5.0 m & 24 ch $\times$ 2.5 m \\
+\textbf{Longitud de Apertura ($L$)} & 115.0 m & 115.0 m & 57.5 m \\
+\textbf{Estaciones de Disparo} & 9 fuentes ($F_1$ a $F_9$) & 9 fuentes ($F_1$ a $F_9$) & 11 fuentes ($F_1$ a $F_{11}$) \\
+\textbf{Registros SEG-2 / Trazas} & 29 arch. / 696 trazas & 32 arch. / 768 trazas & 38 arch. / 912 trazas \\
+\textbf{Finitud e Integridad} & 100\% finitas (0 NaN) & 100\% finitas (0 NaN) & 100\% finitas (0 NaN) \\
+\textbf{Canales Muertos / Ceros} & 0 canales & 0 canales & 0 canales \\
+\textbf{Trazas BUENAS} & 474 (68.1\%) & 480 (62.5\%) & \textbf{739 (81.0\%)} \\
+\textbf{Trazas REGULARES} & 70 (10.1\%) & 114 (14.8\%) & 53 (5.8\%) \\
+\textbf{Trazas MALAS} & 152 (21.8\%) & 174 (22.7\%) & 120 (13.1\%) \\
+\textbf{Calificación Tendido Global} & \textcolor{badred}{\textbf{MALA ($<$75\%)}} & \textcolor{badred}{\textbf{MALA ($<$75\%)}} & \textcolor{reviewamber}{\textbf{REGULAR (81.0\%)}} \\
+\textbf{Cobertura de Arribos} & \textbf{96.8\%} (674 onsets) & \textbf{99.3\%} (763 onsets) & \textbf{97.9\%} (893 onsets) \\
+\textbf{Repetibilidad Media ($r$)} & 0.600 (picos $\ge$0.89) & 0.618 (picos $\ge$0.88) & \textbf{0.781 (Excelente)} \\
+\textbf{Velocidad $V_1$ / $V_2$} & $\approx$811 / 2180 m/s & $\approx$850 / 2340 m/s & $\approx$980 / 2450 m/s \\
+\textbf{Suficiencia del Objetivo} & \textbf{PENDIENTE} & \textbf{PENDIENTE} & \textbf{PENDIENTE} \\
 \bottomrule
 \end{tabularx}
-\caption{Resultados comparativos del control de calidad diagnóstico sobre levantamientos reales TRS.}
-\label{tab:trs_surveys}
+\caption{Resultados consolidados del Dosier TRS sobre los levantamientos de campo reales.}
+\label{tab:trs_km_results}
 \end{table}
-
-\subsubsection{Diagnóstico de Repetibilidad Intra-Fuente (Múltiples Golpes)}
-Un control fundamental en refracción sísmica es la \textbf{repetibilidad mecánica del impacto y la estabilidad del acoplamiento sensor-terreno}. Al analizar los 3 a 5 golpes sucesivos ejecutados en cada posición de fuente, el sistema revela:
-\begin{itemize}
-    \item \textbf{Efecto de compactación inicial:} La correlación cruzada entre el Golpe 1 y el Golpe 2 suele ser moderada ($r \approx 0.50$--$0.70$), debido a que el primer impacto compacta el terreno suelto bajo la placa metálica.
-    \item \textbf{Estabilización en golpes tardíos:} La correlación entre los Golpes 3 y 4 o 4 y 5 asciende consistentemente a **$r \ge 0.85$ a $0.97$**, confirmando excelente repetibilidad de la fuente y ausencia de desprendimiento de geófonos.
-    \item En \texttt{KM 52+500}, la repetibilidad media global alcanzó un factor sobresaliente de **$0.781$**, calificando como \texttt{EXCELENTE}.
-\end{itemize}
-
-\subsubsection{Cinemática de Primeros Arribos y Reciprocidad de Fermat}
-El análisis de tiempos de viaje en refracción exige verificar:
-\begin{enumerate}
-    \item \textbf{Abanico de Hodógrafas:} La detección automática mediante STA/LTA causal refinada por AIC traza hodógrafas coherentes en todas las fuentes intermedias, mostrando el punto de impacto (mínimo de tiempo de viaje) alineado exactamente con la posición física de la fuente correspondiente ($F_1$ en canal 1, $F_4$ en canal 10, $F_9$ en canal 24).
-    \item \textbf{Velocidad de Onda P:} La pendiente aparente inicial $V_1 = dx / dt$ varía entre 810 y 980\,m/s en los sitios KM, compatible con depósitos aluviales y suelo no saturado. En geófonos lejanos, la curva se quiebra hacia velocidades mayores ($V_2 \approx 1800$--2400\,m/s), reflejando la refracción en el estrato subyacente más rígido.
-    \item \textbf{Control de Reciprocidad Conjugada:} Para pares conjugados de fuentes en extremos opuestos ($F_1$ en $x=0$\,m y $F_9$ en $x=115$\,m), la diferencia de tiempos directos e inversos:
-    \begin{equation}
-        \Delta t_{\text{rec}} = |t(F_1 \rightarrow \text{ch24}) - t(F_9 \rightarrow \text{ch1})| \le 2\,dt \quad (\le 0.25\,\text{ms})
-    \end{equation}
-    satisface el principio de reciprocidad de Fermat, descartando desfasajes de reloj instrumental o corrimientos de estacas.
-\end{enumerate}
-
-\subsubsection{Por qué $dx = 5.0$\,m es Óptimo para TRS pero Inadecuado para MASW}
-El diagnóstico simultáneo de ambas técnicas en estos datos ilustra un principio geofísico clave:
-\begin{principiobox}{Contraste de Criterio de Muestreo: Ondas P vs. Ondas de Rayleigh}
-\begin{itemize}
-    \item \textbf{En TRS (Ondas P):} Las velocidades de propagación son altas ($V_P \ge 800$\,m/s). Para frecuencias dominantes del golpe de martillo ($f \approx 50$--100\,Hz), la longitud de onda de compresión es $\lambda_P = V_P / f \ge 800 / 100 = 8.0$\,m. El espaciamiento $dx = 5.0$\,m permite muestrear adecuadamente los frentes de onda refractados sin ambigüedad espacial, alcanzando además una penetración profunda ($L = 115$\,m $\implies$ profundidad de investigación $\approx L / 4 \approx 28$\,m).
-    \item \textbf{En MASW (Ondas Rayleigh):} La velocidad de corte superficial es muy baja ($V_S \approx 100$--150\,m/s). Con $dx = 5.0$\,m, el límite espacial de Nyquist es $q_N = 0.10$\,m$^{-1}$. Por tanto, cualquier frecuencia por encima de $f = q_N \times V_S \approx 0.10 \times 120 \approx 12$\,Hz entra inmediatamente en \textbf{aliasing espacial}.
-\end{itemize}
-\textbf{Conclusión Diagnóstica:} Los levantamientos KM 40 y KM 44 son **técnicamente excelentes para TRS**, pero están físicamente restringidos para análisis MASW de alta frecuencia debido a la separación de 5 metros entre sensores.
-\end{principiobox}
 
 \newpage
 % =========================================================================
-\section{Guía Rápida para el Operador de Campo}
+\section{Dosier de Control de Calidad MASW (Ondas Superficiales a Detalle)}
+% =========================================================================
+
+\subsection{Insumos Recibidos para MASW}
+Para el Análisis Multicanal de Ondas Superficiales (MASW), el sistema requiere:
+\begin{itemize}
+    \item \textbf{Registros multicanal con offset lateral declarado:} Sismogramas de impacto vertical registrados con un arreglo lineal de receptores donde la distancia fuente--primer geófono ($x_1$) es conocida y no nula (e.g. $x_1 = 5, 10, 20$\,m).
+    \item \textbf{Espaciamiento y apertura:} Separación constante $dx$ y apertura $L = (N-1)dx$, calibrados para las velocidades de corte del terreno.
+    \item \textbf{Parámetros de banda y velocidad:} Rango de frecuencias de interés ($f_{\min}$ a $f_{\max}$) y rejilla de velocidades candidatas ($c_{\min}$ a $c_{\max}$).
+\end{itemize}
+
+\subsection{Elementos a Detalle del Diagnóstico MASW}
+El generador del Dosier MASW (\texttt{report\_masw\_quality.py}) evalúa minuciosamente cada uno de los componentes físicos y numéricos de la propagación:
+
+\subsubsection{1. Transformada de Fase en Número de Onda con Signo}
+Para evitar sesgos de asimetría direccional, la transformada de desfase (\emph{phase-shift}) se evalúa sobre el número de onda espacial con signo $q \in [-q_N, +q_N]$, donde $q_N = \frac{1}{2 dx}$ es el límite de Nyquist:
+\begin{equation}
+    I(f, q) = \frac{1}{N} \left| \sum_{k=1}^{N} \frac{U(f, x_k)}{|U(f, x_k)| + \epsilon} \, e^{2\pi i \, q \, (x_k - x_1)} \right|
+\end{equation}
+El cuadrante positivo ($q > 0$) corresponde a energía que se aleja de la fuente a velocidad $c = f/q$. El cuadrante negativo ($q < 0$) mapea energía retrodispersada o fuentes de ruido en el extremo opuesto del arreglo.
+
+\subsubsection{2. Exclusión Geométrica del Lóbulo Principal Central}
+El arreglo lineal de longitud $L = N \cdot dx$ posee una función de transferencia cuyo ancho de haz principal está delimitado por el primer cero analítico:
+\begin{equation}
+    \Delta q_{\text{nulo}} = \frac{1}{N \cdot dx} = \frac{1}{L}
+\end{equation}
+Para no confundir la caída natural del lóbulo con un segundo modo ni con ruido de fondo, se define la zona de exclusión alrededor de la cresta candidata $q_0$:
+\begin{equation}
+    \Omega_{\text{exclusión}} = \left\{ q \;\Big|\; |q - q_0| < \frac{1}{N \cdot dx} \right\}
+\end{equation}
+
+\subsubsection{3. Trazado de Cresta Aparente con Penalización de Continuidad}
+La extracción de la curva de dispersión aparente fundamental $\hat{c}(f)$ se resuelve mediante programación dinámica minimizando una función de costo con penalización por salto de velocidad:
+\begin{equation}
+    J(c_1, \dots, c_K) = \sum_{k=1}^{K} \left[ 1 - I(f_k, c_k) \right] + \lambda \sum_{k=1}^{K-1} \left( \frac{c_{k+1} - c_k}{\Delta f \cdot s_0} \right)^2
+\end{equation}
+donde $\lambda = 0.02$ es la penalización de suavizado y $s_0 = 30$\,m/s/Hz es la escala de pendiente admisible.
+
+\subsubsection{4. Atributos Diagnósticos Intrínsecos por Bin de Frecuencia}
+En cada frecuencia analizada $f$, se calculan cuatro atributos objetivos:
+\begin{itemize}
+    \item \textbf{Coherencia en cresta:} $I_{\text{cresta}}(f) = I(f, \hat{c}(f)) \in [0, 1]$.
+    \item \textbf{Contraste cresta--fondo:} Diferencia respecto a la mediana del espacio de lentitudes fuera de la zona de exclusión:
+    \begin{equation}
+        C(f) = I_{\text{cresta}}(f) - \text{mediana}_{q \notin \Omega_{\text{exclusión}}} I(f, q)
+    \end{equation}
+    \item \textbf{Razón de rival (Competitor Ratio):} Razón entre el segundo máximo espacial más alto y la cresta principal:
+    \begin{equation}
+        R(f) = \frac{\max_{q \notin \Omega_{\text{exclusión}}} I(f, q)}{I_{\text{cresta}}(f)}
+    \end{equation}
+    \item \textbf{Sensibilidad a variantes de procesamiento:} Variación relativa frente a tres variantes obligatorias (ventana rectangular, retiro del canal 1 preservando coordenadas y cresta libre no penalizada):
+    \begin{equation}
+        S(f) = \max_{v \in \{\text{rect}, \text{drop1}, \text{unpen}\}} \frac{|c_v(f) - \hat{c}(f)|}{\hat{c}(f)}
+    \end{equation}
+\end{itemize}
+
+\subsubsection{5. Calificación Diagnóstica por Bandas}
+Bajo la política \texttt{masw\_usability\_v1.json}, cada bin se clasifica objetivamente en:
+\begin{itemize}
+    \item \textcolor{usablegreen}{\textbf{UTILIZABLE*}}: Coherencia $\ge 0.60$, contraste $\ge 0.15$, razón de rival $\le 0.85$, sensibilidad $\le 5.0\%$, sin restricciones de Nyquist.
+    \item \textcolor{reviewamber}{\textbf{REVISAR}}: Presencia de picos competidores ($R > 0.85$), contraste marginal ($C < 0.15$), o sensibilidad a variantes ($S > 5.0\%$).
+    \item \textcolor{badred}{\textbf{NO\_UTILIZABLE}}: Cresta en el límite de Nyquist espacial ($q_0 \ge q_N$), lóbulo tocando Nyquist ($q_0 + 1/L \ge q_N$), lóbulo abarcando el origen $q=0$ (\texttt{DIRECTION\_UNRESOLVED}), o falta de amplitud espectral.
+    \item \textcolor{unusablegrey}{\textbf{NO\_EVALUABLE}}: Variantes no computables o soporte geométrico irregular.
+\end{itemize}
+
+\subsubsection{6. Comparación y Consistencia Multidispáro}
+Se evalúa la concordancia de las curvas de dispersión obtenidas a diferentes distancias de fuente ($x_1 = 10, 15, 20, 30$\,m), registrando la mediana de discrepancia $|\Delta c(f)|$ en los bins comunes.
+
+\subsubsection{7. Declaración Formal de Suficiencia del Objetivo}
+El dosier declara formalmente el estatus de suficiencia del objetivo como \textbf{PENDIENTE} (\texttt{NOT\_DEMONSTRATED}) para el perfil $V_S$ e índice $V_{s30}$, pues la transformación de velocidad de fase aparente a modelo estratificado exige comprobación de sitio (pozo o cross-hole) e identificación modal verificada.
+
+\subsection{Estructura de Salida del Dosier MASW}
+La ejecución de \texttt{report\_masw\_quality.py} genera en \texttt{evidence/masw\_quality/}:
+\begin{itemize}
+    \item \textbf{\texttt{dossier\_masw.json} / \texttt{dossier.json}:} Archivo JSON maestro con trazabilidad criptográfica SHA-256 de insumos, código y clasificaciones.
+    \item \textbf{\texttt{dossier\_masw.pdf} / \texttt{dossier.pdf}:} Reporte formal multipágina con paneles de comparación multidispáro, mapa de calor de usabilidad por frecuencia, espectros $I(f, q)$ e $I(f, c)$ directos e inversos, y curvas de sensibilidad.
+    \item \textbf{\texttt{dossier\_masw.html} / \texttt{dossier.html}:} Aplicación web autónoma en HTML5 con gráficos interactivos y tabla de intervalos de usabilidad.
+    \item \textbf{\texttt{usability\_bands.csv}:} Bandas continuas de frecuencia clasificadas (\texttt{UTILIZABLE*}, \texttt{REVISAR}, \texttt{NO\_UTILIZABLE}).
+    \item \textbf{\texttt{usability.csv}:} Registro detallado por bin: frecuencia, velocidad, coherencia, contraste, razón de rival, sensibilidad y motivos.
+    \item \textbf{\texttt{comparisons.csv}:} Discrepancias $|\Delta c|$ entre pares de registros a diferentes offsets.
+    \item \textbf{\texttt{points.csv}:} Coordenadas y velocidades de las crestas aparente en todas las variantes.
+    \item \textbf{\texttt{traces.csv}:} Control de integridad y RMS de las trazas de entrada.
+\end{itemize}
+
+\subsection{Resultados Experimentales: Benchmark Oysand P1}
+El procesamiento sobre el benchmark de Oysand ($dx = 2.0$\,m, 4 offsets de fuente de 10 a 30\,m) demostró:
+\begin{itemize}
+    \item \textbf{Bajas frecuencias ($<$8--10\,Hz):} Clasificadas en \texttt{NO\_UTILIZABLE} por \texttt{DIRECTION\_UNRESOLVED} ($q_0 \le 1/L$), dado que la longitud de onda excede la apertura del tendido.
+    \item \textbf{Banda media ($\sim$10 a 22\,Hz):} Clasificada como \textcolor{usablegreen}{\textbf{UTILIZABLE*}} con coherencia $\ge 0.80$, contraste $\ge 0.35$ y discrepancia entre offsets inferior a 2\,m/s.
+    \item \textbf{Muesca intermedia ($\sim$22--23\,Hz):} Clasificada en \textcolor{reviewamber}{\textbf{REVISAR}} por competencia de un modo superior incipiente (\texttt{COMPETING\_PEAK}) y sensibilidad al canal 1.
+    \item \textbf{Altas frecuencias ($>$30\,Hz):} Clasificadas en \texttt{NO\_UTILIZABLE} por alcanzar el límite de Nyquist espacial (\texttt{NYQUIST\_LIMIT} y \texttt{LOBE\_AT\_NYQUIST}).
+\end{itemize}
+
+\newpage
+% =========================================================================
+\section{Guía Rápida para el Operador de Campo: TRS vs. MASW}
 % =========================================================================
 
 \begin{figure}[h!]
 \centering
 \small
-\begin{tcolorbox}[colback=white,colframe=brandblue,arc=2mm,title=\textbf{Protocolo de Operación en Terreno $\cdot$ Paso a Paso}]
+\begin{tcolorbox}[colback=white,colframe=brandblue,arc=2mm,title=\textbf{Protocolo de Operación en Terreno $\cdot$ Decisión por Técnica}]
 \begin{enumerate}
-    \item \textbf{Antes de disparar:}
+    \item \textbf{Para Ensayos TRS (Refracción):}
     \begin{itemize}
-        \item Anotar en libreta de campo: $dt$, modelo de sismógrafo, frecuencia de geófonos y coordenadas relativas de estacas.
-        \item Comprobar que el canal trigger o impacto esté físicamente conectado a la entrada auxiliar o identificado en su canal numérico.
+        \item \emph{Geometría recomendada:} Geófonos de 10--14\,Hz, espaciamiento $dx = 2.5$\,m a $5.0$\,m, apertura $L \ge 60$--120\,m.
+        \item \emph{Disparos obligatorios:} Al menos 2 disparos en extremos conjugados ($F_{\text{inicio}}, F_{\text{fin}}$) para evaluar reciprocidad de Fermat, más 5 a 9 disparos intermedios para cruce de rayos.
+        \item \emph{Control de golpe:} Realizar de 3 a 5 golpes por punto de tiro. El dosier TRS reportará la repetibilidad ($r \ge 0.70$ requerida).
+        \item \emph{Dosier de entrega:} Ejecutar \texttt{report\_trs\_dossier.py --survey-dir <DIR>}. Verificar que la cobertura de arribos sea $\ge 90\%$ y que la reciprocidad cumpla $\Delta t \le 3$\,ms.
     \end{itemize}
-    \item \textbf{Ejecución de registros:}
+    \item \textbf{Para Ensayos MASW (Ondas Superficiales):}
     \begin{itemize}
-        \item Registrar si es posible una ventana previa al impacto ($T_{\text{pre}} \ge 0.2$\,s) o un disparo en silencio para análisis de ruido.
-        \item Adquirir al menos dos offsets de fuente distintos (e.g. 10\,m y 20\,m) para permitir la evaluación de consistencia multidispáro.
-    \end{itemize}
-    \item \textbf{Ingesta y generación de dosier en el software:}
-    \begin{itemize}
-        \item Ejecutar \texttt{report\_masw\_quality.py --output <directorio>}.
-        \item Abrir de inmediato \texttt{dossier.html} en el navegador local.
-    \end{itemize}
-    \item \textbf{Toma de decisiones con el dosier en pantalla:}
-    \begin{itemize}
-        \item \emph{¿Hay canales en rojo en la tabla de trazas?} Revisar de inmediato conexiones físicas o geófonos mal plantados antes de mover el tendido.
-        \item \emph{¿Qué tramos aparecen en verde (\texttt{UTILIZABLE*})?} Son los intervalos fiables para el picado de dispersión aparente.
-        \item \emph{¿Aparece \texttt{DIRECTION\_UNRESOLVED} en frecuencias deseadas?} El tendido es demasiado corto; se requiere aumentar la longitud $L$ (mayor espaciamiento o más canales) para resolver longitudes de onda mayores.
-        \item \emph{¿Aparece \texttt{LOBE\_AT\_NYQUIST} muy temprano?} El espaciamiento $dx$ es demasiado grande para las velocidades superficiales; se requiere reducir $dx$ para muestrear adecuadamente las ondas lentas.
+        \item \emph{Geometría recomendada:} Geófonos de 4.5\,Hz, espaciamiento $dx = 1.0$\,m a $2.0$\,m (nunca 5\,m si se busca caracterizar suelos blandos), apertura $L \ge 24$--48\,m.
+        \item \emph{Disparos obligatorios:} Disparos laterales con al menos dos offsets diferentes (e.g. $x_1 = 10$\,m y $20$\,m) para evaluar consistencia multidispáro.
+        \item \emph{Dosier de entrega:} Ejecutar \texttt{report\_masw\_quality.py}. Revisar en \texttt{dossier\_masw.html} las bandas en verde (\texttt{UTILIZABLE*}) y evitar picar en tramos con \texttt{LOBE\_AT\_NYQUIST}.
     \end{itemize}
 \end{enumerate}
 \end{tcolorbox}

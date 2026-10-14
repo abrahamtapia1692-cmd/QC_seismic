@@ -1,0 +1,17 @@
+metric,value
+slug,KM_44_552
+title,KM 44+552
+technique,TRS (Tomografía de Refracción Sísmica)
+channels,24
+dx_m,5.0
+aperture_m,115.0
+spread_grade,MALA
+good_traces_count,480
+regular_traces_count,114
+bad_traces_count,174
+total_traces,768
+good_percent_lower,62.5
+good_percent_upper,62.5
+pick_coverage_percent,99.34895833333333
+acceptance_status,NOT_CERTIFIED
+objective_sufficiency,PENDIENTE
