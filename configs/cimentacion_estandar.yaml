@@ -1,0 +1,22 @@
+schema_version: "1.4"
+profile: cimentacion_estandar
+profile_state: DRAFT
+calibration_ref: null
+project:
+  z_obj_m: 15.0
+  targets: [vs_profile]
+  required_techniques: [MASW]
+  roi_ref: null
+acquisition_ref: null
+metrics_registry_ref: null
+validation_manifest_ref: docs/validation_manifest_v1_4.json
+planning:
+  vs_prior_ms: 200.0
+  nu_prior: 0.4
+  frequency_band_hz: [4.5, 100.0]
+  fn_hz: 4.5
+  damping: 0.7
+  nominal_kg: 1.0
+  kappa_z: 2.5
+  description: "Escenario candidato para perfil Vs a 15 m; falta evidencia de campo"
+metrics: []

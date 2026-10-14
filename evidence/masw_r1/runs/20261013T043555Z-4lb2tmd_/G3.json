@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.4",
+  "id": "G3",
+  "document_revision": "MASW-R1",
+  "status": "PASSED",
+  "required_test_ids": [
+    "V-E3-1",
+    "V-E3-2",
+    "V-E3-3",
+    "V-E3-4",
+    "V-E3-5",
+    "V-E3-6",
+    "V-E3-7"
+  ],
+  "required_supplement_ids": [],
+  "base_status": "PASSED",
+  "execution_artifact": "execution.json",
+  "execution_artifact_sha256": "31ffbe88dfb4ab9010640f01c079544c4b81213a94b7d2e31fdcbc43b5ac20d8",
+  "scope": "IMPLEMENTATION_AND_DECLARED_SYNTHETIC_DOMAIN_ONLY",
+  "eligible_for_field_acceptance": false,
+  "coverage_io": null,
+  "coverage_common_qc": null,
+  "coverage_trs": null,
+  "coverage_masw": null,
+  "masw_scope": null
+}

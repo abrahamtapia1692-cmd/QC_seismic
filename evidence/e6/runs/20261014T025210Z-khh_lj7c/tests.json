@@ -1,0 +1,509 @@
+{
+  "pytest_exit_code": 0,
+  "tests": [
+    {
+      "nodeid": "tests/unit/test_e6.py::test_actions_have_units_conditions_and_no_universal_guarantees",
+      "id": "V-E6-3",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_annotation_recomputes_tampered_payload",
+      "id": "V-E6-5",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_calibration_reference_is_not_trust_and_out_of_scope_is_explicit",
+      "id": "V-E6-1",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_cartesian_quality_and_optional_non_dilution",
+      "id": "V-E6-2",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_cli_exports_diagnostic_and_rejects_forged_eligibility",
+      "id": "V-E6-5",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_common_qc_adapter_retains_trace_support_and_upstream_missing",
+      "id": "V-E6-4",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_critical_used_input_propagates_through_dependencies",
+      "id": "V-E6-4",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_incompatible_or_unresolved_supersession_rejected[changes0]",
+      "id": "V-E6-6",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_incompatible_or_unresolved_supersession_rejected[changes1]",
+      "id": "V-E6-6",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_incompatible_or_unresolved_supersession_rejected[changes2]",
+      "id": "V-E6-6",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_incompatible_or_unresolved_supersession_rejected[changes3]",
+      "id": "V-E6-6",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_incompatible_or_unresolved_supersession_rejected[changes4]",
+      "id": "V-E6-6",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_incompatible_or_unresolved_supersession_rejected[changes5]",
+      "id": "V-E6-6",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_invalid_dependency_graph_is_rejected[records0]",
+      "id": "V-E6-4",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_invalid_dependency_graph_is_rejected[records1]",
+      "id": "V-E6-4",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_invalid_or_injected_input_is_rejected[changes0]",
+      "id": "V-E6-1",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_invalid_or_injected_input_is_rejected[changes1]",
+      "id": "V-E6-1",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_invalid_or_injected_input_is_rejected[changes2]",
+      "id": "V-E6-1",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_invalid_or_injected_input_is_rejected[changes3]",
+      "id": "V-E6-1",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_operator_annotation_preserves_warning_digest_and_export",
+      "id": "V-E6-5",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_profile_critical_flag_stays_with_original_used_by_derivative",
+      "id": "V-E6-4",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_profile_na_and_unknown_cannot_be_supplied_by_metric",
+      "id": "V-E6-1",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_quality_table[False-FAIL]",
+      "id": "V-E6-1",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_quality_table[False-None]",
+      "id": "V-E6-1",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_quality_table[False-PASS]",
+      "id": "V-E6-1",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_quality_table[False-WARN]",
+      "id": "V-E6-1",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_quality_table[True-FAIL]",
+      "id": "V-E6-1",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_quality_table[True-None]",
+      "id": "V-E6-1",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_quality_table[True-PASS]",
+      "id": "V-E6-1",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_quality_table[True-WARN]",
+      "id": "V-E6-1",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_requirement_context_must_match[changes0]",
+      "id": "V-E6-1",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_requirement_context_must_match[changes1]",
+      "id": "V-E6-1",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_requirement_context_must_match[changes2]",
+      "id": "V-E6-1",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_requirement_context_must_match[changes3]",
+      "id": "V-E6-1",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_supersession_cycles_and_unresolved_other_failure_rejected",
+      "id": "V-E6-6",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_supersession_preserves_history_and_requires_explicit_mapping",
+      "id": "V-E6-6",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_unknown_validity_is_incomplete[COMPUTATION_ERROR]",
+      "id": "V-E6-1",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_unknown_validity_is_incomplete[INVALID]",
+      "id": "V-E6-1",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_unknown_validity_is_incomplete[MISSING]",
+      "id": "V-E6-1",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_unknown_validity_is_incomplete[MODEL_INAPPLICABLE]",
+      "id": "V-E6-1",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_unknown_validity_is_incomplete[UNCALIBRATED]",
+      "id": "V-E6-1",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    },
+    {
+      "nodeid": "tests/unit/test_e6.py::test_upstream_missing_and_legacy_masw_never_complete",
+      "id": "V-E6-4",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": []
+    }
+  ]
+}

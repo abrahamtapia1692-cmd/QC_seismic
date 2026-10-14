@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.4",
+  "analysis": {
+    "schema_version": "1.4",
+    "start_s": -0.512,
+    "end_s": 1.536
+  },
+  "noise": {
+    "schema_version": "1.4",
+    "start_s": -0.512,
+    "end_s": -0.128
+  },
+  "signal": {
+    "schema_version": "1.4",
+    "start_s": 0.0,
+    "end_s": 1.536
+  },
+  "noise_independent": true,
+  "noise_stationarity": "VERIFIED",
+  "stationarity_ref": "Known iid noise process in create_qc_demo.py, seed 20261005",
+  "expected_relative_amplitude": [
+    0.8187307530779818,
+    0.7659283383646487,
+    0.7165313105737893,
+    0.6703200460356393,
+    0.6270890852730561,
+    0.5866462195100318
+  ],
+  "amplitude_model_ref": "Known synthetic gains exp(-r/30); not field coupling calibration",
+  "log_mad_limit": 3.5,
+  "amplitude_ratio_bounds": [
+    0.4,
+    2.5
+  ],
+  "rail_tolerance": 0.0,
+  "rail_scale_to_data": 1.0,
+  "frequency_band_hz": [
+    10.0,
+    100.0
+  ],
+  "antialias_verified": null,
+  "nyquist_margin": 0.8,
+  "min_group_velocity_ms": 80.0,
+  "group_velocity_verified": false,
+  "group_velocity_ref": null,
+  "wavelet_duration_s": 0.3,
+  "post_margin_s": 0.0,
+  "guard_s": 0.0,
+  "mains_hz": 50.0,
+  "mains_search_hz": 1.0,
+  "line_power_ratio": 20.0,
+  "welch_segment_samples": 256,
+  "provenance": "examples/e2; synthetic protocol"
+}

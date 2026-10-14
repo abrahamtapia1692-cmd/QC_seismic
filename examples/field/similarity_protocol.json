@@ -1,0 +1,16 @@
+{
+  "arrival": {"start_s": 0.0, "end_s": 0.18},
+  "baseline": {"start_s": -0.25, "end_s": -0.05},
+  "neighbor_radius_m": 2.1,
+  "min_apparent_velocity_ms": 100.0,
+  "max_lag_s": 0.02,
+  "max_neighbors": 4,
+  "min_neighbors": 3,
+  "bad_below_rho": 0.5,
+  "warn_below_rho": 0.8,
+  "neighbor_consensus_min": 0.8,
+  "bad_neighbor_fraction_min": 0.75,
+  "baseline_ratio_warn": 5.0,
+  "comparable_channels": true,
+  "reference": "Chevremont: geometría local y CHANNEL_NUMBER; comparabilidad provisional del tendido. Ventanas del protocolo de picking existente; DELAY no verificado. Límites locales sin calibración, aplicados a los siete disparos sin usar etiquetas de canal."
+}

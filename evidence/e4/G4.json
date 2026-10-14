@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.4",
+  "id": "G4",
+  "status": "PASSED",
+  "required_test_ids": [
+    "V-E4-1",
+    "V-E4-2",
+    "V-E4-3",
+    "V-E4-4",
+    "V-E4-5",
+    "V-E4-6",
+    "V-E4-7",
+    "V-E4-8",
+    "V-E4-9",
+    "V-E4-10",
+    "V-E4-11",
+    "V-E4-12",
+    "V-E4-13",
+    "V-E4-14",
+    "V-E4-15",
+    "V-E4-16",
+    "V-E4-17",
+    "V-E4-18",
+    "V-E4-19",
+    "V-E4-20",
+    "V-E4-21"
+  ],
+  "execution_artifact": "execution.json",
+  "execution_artifact_sha256": "948e5e37063bf75fca709be86a11f7d9f0491839c795e25842348fee0e25a6cd",
+  "scope": "IMPLEMENTATION_AND_DECLARED_SYNTHETIC_DOMAIN_ONLY",
+  "eligible_for_field_acceptance": false,
+  "coverage_io": null,
+  "coverage_common_qc": null,
+  "coverage_trs": {
+    "geoqc\\trs\\__init__.py": {
+      "covered_lines": 0,
+      "num_statements": 0,
+      "percent_covered": 100.0,
+      "percent_covered_display": "100",
+      "missing_lines": 0,
+      "excluded_lines": 0,
+      "percent_statements_covered": 100.0,
+      "percent_statements_covered_display": "100"
+    },
+    "geoqc\\trs\\branches.py": {
+      "covered_lines": 105,
+      "num_statements": 116,
+      "percent_covered": 90.51724137931035,
+      "percent_covered_display": "91",
+      "missing_lines": 11,
+      "excluded_lines": 0,
+      "percent_statements_covered": 90.51724137931035,
+      "percent_statements_covered_display": "91"
+    },
+    "geoqc\\trs\\contracts.py": {
+      "covered_lines": 84,
+      "num_statements": 91,
+      "percent_covered": 92.3076923076923,
+      "percent_covered_display": "92",
+      "missing_lines": 7,
+      "excluded_lines": 0,
+      "percent_statements_covered": 92.3076923076923,
+      "percent_statements_covered_display": "92"
+    },
+    "geoqc\\trs\\coverage.py": {
+      "covered_lines": 83,
+      "num_statements": 91,
+      "percent_covered": 91.20879120879121,
+      "percent_covered_display": "91",
+      "missing_lines": 8,
+      "excluded_lines": 0,
+      "percent_statements_covered": 91.20879120879121,
+      "percent_statements_covered_display": "91"
+    },
+    "geoqc\\trs\\forward.py": {
+      "covered_lines": 45,
+      "num_statements": 51,
+      "percent_covered": 88.23529411764706,
+      "percent_covered_display": "88",
+      "missing_lines": 6,
+      "excluded_lines": 0,
+      "percent_statements_covered": 88.23529411764706,
+      "percent_statements_covered_display": "88"
+    },
+    "geoqc\\trs\\inversion.py": {
+      "covered_lines": 53,
+      "num_statements": 61,
+      "percent_covered": 86.88524590163935,
+      "percent_covered_display": "87",
+      "missing_lines": 8,
+      "excluded_lines": 0,
+      "percent_statements_covered": 86.88524590163935,
+      "percent_statements_covered_display": "87"
+    },
+    "geoqc\\trs\\picking.py": {
+      "covered_lines": 91,
+      "num_statements": 98,
+      "percent_covered": 92.85714285714286,
+      "percent_covered_display": "93",
+      "missing_lines": 7,
+      "excluded_lines": 0,
+      "percent_statements_covered": 92.85714285714286,
+      "percent_statements_covered_display": "93"
+    },
+    "geoqc\\trs\\reciprocity.py": {
+      "covered_lines": 23,
+      "num_statements": 25,
+      "percent_covered": 92.0,
+      "percent_covered_display": "92",
+      "missing_lines": 2,
+      "excluded_lines": 0,
+      "percent_statements_covered": 92.0,
+      "percent_statements_covered_display": "92"
+    },
+    "geoqc\\trs\\reference.py": {
+      "covered_lines": 16,
+      "num_statements": 18,
+      "percent_covered": 88.88888888888889,
+      "percent_covered_display": "89",
+      "missing_lines": 2,
+      "excluded_lines": 0,
+      "percent_statements_covered": 88.88888888888889,
+      "percent_statements_covered_display": "89"
+    },
+    "geoqc\\trs\\report.py": {
+      "covered_lines": 37,
+      "num_statements": 39,
+      "percent_covered": 94.87179487179488,
+      "percent_covered_display": "95",
+      "missing_lines": 2,
+      "excluded_lines": 0,
+      "percent_statements_covered": 94.87179487179488,
+      "percent_statements_covered_display": "95"
+    }
+  }
+}

@@ -1,0 +1,1578 @@
+{
+  "schema_version": "1.0",
+  "specification_version": "1.4",
+  "plan_file": "SDD_QC_Geofisico_MASW_TRS_v1_4.md",
+  "status": "SPECIFICATION_ONLY",
+  "gate_policy": {
+    "all_required_tests_must_pass": true,
+    "required_skip_result": "INCOMPLETE",
+    "audit_evidence_is_implementation_evidence": false,
+    "field_calibration_gate": "G9",
+    "acceptance_requires_validated_profile": true
+  },
+  "gates": {
+    "G0": {
+      "depends_on": [],
+      "required_test_ids": [
+        "V-E0-1",
+        "V-E0-2",
+        "V-E0-3",
+        "V-E0-4",
+        "V-E0-5",
+        "V-E0-6",
+        "V-E0-7",
+        "V-E0-8",
+        "V-E0-9",
+        "V-E0-10",
+        "V-E3-4"
+      ],
+      "status": "NOT_RUN",
+      "scope": "implementation_and_analytic_reference"
+    },
+    "G1": {
+      "depends_on": [
+        "G0"
+      ],
+      "required_test_ids": [
+        "V-E1-1",
+        "V-E1-2",
+        "V-E1-3",
+        "V-E1-4",
+        "V-E1-5",
+        "V-E1-6"
+      ],
+      "status": "NOT_RUN",
+      "scope": "ingestion"
+    },
+    "G3": {
+      "depends_on": [
+        "G0"
+      ],
+      "required_test_ids": [
+        "V-E3-1",
+        "V-E3-2",
+        "V-E3-3",
+        "V-E3-4",
+        "V-E3-5",
+        "V-E3-6",
+        "V-E3-7"
+      ],
+      "status": "NOT_RUN",
+      "scope": "basic_synthetics"
+    },
+    "G2": {
+      "depends_on": [
+        "G1",
+        "G3"
+      ],
+      "required_test_ids": [
+        "V-E2-1",
+        "V-E2-2",
+        "V-E2-3",
+        "V-E2-4",
+        "V-E2-5",
+        "V-E2-6",
+        "V-E2-7",
+        "V-E2-8",
+        "V-E2-9",
+        "V-E2-10"
+      ],
+      "status": "NOT_RUN",
+      "scope": "common_qc_synthetic"
+    },
+    "G4": {
+      "depends_on": [
+        "G2"
+      ],
+      "required_test_ids": [
+        "V-E4-1",
+        "V-E4-2",
+        "V-E4-3",
+        "V-E4-4",
+        "V-E4-5",
+        "V-E4-6",
+        "V-E4-7",
+        "V-E4-8",
+        "V-E4-9",
+        "V-E4-10",
+        "V-E4-11",
+        "V-E4-12",
+        "V-E4-13",
+        "V-E4-14",
+        "V-E4-15",
+        "V-E4-16",
+        "V-E4-17",
+        "V-E4-18",
+        "V-E4-19",
+        "V-E4-20",
+        "V-E4-21"
+      ],
+      "status": "NOT_RUN",
+      "scope": "trs_synthetic_domain"
+    },
+    "G5": {
+      "depends_on": [
+        "G2"
+      ],
+      "required_test_ids": [
+        "V-E5-1",
+        "V-E5-2",
+        "V-E5-3",
+        "V-E5-4",
+        "V-E5-5",
+        "V-E5-6",
+        "V-E5-7",
+        "V-E5-8",
+        "V-E5-9",
+        "V-E5-10",
+        "V-E5-11",
+        "V-E5-12",
+        "V-E5-13",
+        "V-E5-14",
+        "V-E5-15",
+        "V-E5-16",
+        "V-E5-17",
+        "V-E5-17b",
+        "V-E5-18",
+        "V-E5-19",
+        "V-E5-20",
+        "V-E5-21",
+        "V-E5-22",
+        "V-E3-8"
+      ],
+      "status": "NOT_RUN",
+      "scope": "masw_synthetic_domain"
+    },
+    "G6": {
+      "depends_on": [
+        "G4",
+        "G5"
+      ],
+      "required_test_ids": [
+        "V-E6-1",
+        "V-E6-2",
+        "V-E6-3",
+        "V-E6-4",
+        "V-E6-5",
+        "V-E6-6"
+      ],
+      "status": "NOT_RUN",
+      "scope": "decision"
+    },
+    "G7": {
+      "depends_on": [
+        "G6"
+      ],
+      "required_test_ids": [
+        "V-E7-1",
+        "V-E7-2",
+        "V-E7-3"
+      ],
+      "status": "NOT_RUN",
+      "scope": "user_interface"
+    },
+    "G8": {
+      "depends_on": [
+        "G7"
+      ],
+      "required_test_ids": [
+        "V-E8-1",
+        "V-E8-2",
+        "V-E8-3",
+        "V-E8-4"
+      ],
+      "status": "NOT_RUN",
+      "scope": "reports"
+    },
+    "G9": {
+      "depends_on": [
+        "G8"
+      ],
+      "required_test_ids": [
+        "V-E9-1",
+        "V-E9-2",
+        "V-E9-3",
+        "V-E9-4",
+        "V-E9-5",
+        "V-E9-6",
+        "V-E9-7"
+      ],
+      "status": "NOT_RUN",
+      "scope": "independent_calibration_and_field_validation"
+    },
+    "G10": {
+      "depends_on": [
+        "G9"
+      ],
+      "required_test_ids": [
+        "V-E10-1",
+        "V-E10-2"
+      ],
+      "status": "NOT_RUN",
+      "scope": "packaging_with_validated_profile"
+    }
+  },
+  "tests": [
+    {
+      "id": "V-E0-1",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G0"
+      ],
+      "description": "paquete importable, suite descubierta, ruff y mypy strict en core; no skips obligatorios por dependencias omitidas.",
+      "previous_test_id": "V-E0-1"
+    },
+    {
+      "id": "V-E0-2",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G0"
+      ],
+      "description": "semilla/entorno iguales producen arrays idénticos; hash científico canónico estable.",
+      "previous_test_id": "V-E0-2"
+    },
+    {
+      "id": "V-E0-3",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G0"
+      ],
+      "description": "esquema rechaza umbral incoherente con direction, frontera indefinida y parámetro operativo desconocido/ausente.",
+      "previous_test_id": "V-E0-3"
+    },
+    {
+      "id": "V-E0-4",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G0"
+      ],
+      "description": "reproducir aritmética histórica 4.8/9.6 m solo como regla near_offset_ratio v1.3; demostrar que no implica imposibilidad física ni sirve como NACD corregido.",
+      "previous_test_id": "V-E0-4"
+    },
+    {
+      "id": "V-E0-5",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G0"
+      ],
+      "description": "una implementación comparte utilidades entre planificación y QC, preservando distinción entre entradas previstas y observadas; prior favorable no genera PASS observado.",
+      "previous_test_id": "V-E0-5"
+    },
+    {
+      "id": "V-E0-6",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G0"
+      ],
+      "description": "perfiles Vs30/cimentación generan escenarios coherentes o NOT_DEMONSTRATED; tests de ambas bandas, fronteras y efecto conjunto de N/dx/offset, sin exigir monotonicidad universal de calidad.",
+      "previous_test_id": "V-E0-6"
+    },
+    {
+      "id": "V-E0-7",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G0"
+      ],
+      "description": "notación/apertura/geometría consistente; con huecos no reutilizar automáticamente N_activo dx ni Nyquist uniforme.",
+      "previous_test_id": "V-E0-7"
+    },
+    {
+      "id": "V-E0-8",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G0"
+      ],
+      "description": "respuesta geófono y estimaciones nominales 15.07513/33.91904 m reproducidas bajo supuestos; ninguna se etiqueta límite físico. Banda sub-f_n validada/desconocida se distingue.",
+      "previous_test_id": "V-E0-8"
+    },
+    {
+      "id": "V-E0-9",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G0"
+      ],
+      "description": "contratos mantienen máscaras, tiempo, unidades, incertidumbre y procedencia; serialización sin NaN y contenido inmutable cuando se promete.",
+      "previous_test_id": null
+    },
+    {
+      "id": "V-E0-10",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G0"
+      ],
+      "description": "manifiesto contiene cada ID exactamente una vez en registro, toda prueba pertenece a un gate y dependencias no tienen ciclos; ningún REQUIRED+SKIPPED permite PASSED.",
+      "previous_test_id": null
+    },
+    {
+      "id": "V-E1-1",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G1"
+      ],
+      "description": "round-trip SEG-Y IBM/IEEE realmente soportado: amplitudes rtol=1e-6 con atol de quantización declarado; dt/coordenadas exactos solo representables, resto dentro de quantización registrada.",
+      "previous_test_id": "V-E1-1"
+    },
+    {
+      "id": "V-E1-2",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G1"
+      ],
+      "description": "truncados/vacíos/dt inválido/header inconsistente generan IngestError accionable; endian reconocido y corrupción se distinguen.",
+      "previous_test_id": "V-E1-2"
+    },
+    {
+      "id": "V-E1-3",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G1"
+      ],
+      "description": "property n_ch∈[1,96], n_s∈[16,32768], dt representable en formato; forma/máscaras y metadatos se conservan. No prometer dt exacto para float continuo arbitrario.",
+      "previous_test_id": "V-E1-3"
+    },
+    {
+      "id": "V-E1-4",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G1"
+      ],
+      "description": "coordenadas conocidas desplazadas producen irregularidad calculada, no certeza de error; umbrales iniciales 20/50 % son diagnósticos hasta calibración. Probar topografía, y, huecos y receptor fuera de soporte.",
+      "previous_test_id": "V-E1-4"
+    },
+    {
+      "id": "V-E1-5",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G1"
+      ],
+      "description": "fuente interna y bilateral separadas; distancias y orientación exactas para ejemplos representables.",
+      "previous_test_id": "V-E1-5"
+    },
+    {
+      "id": "V-E1-6",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G1"
+      ],
+      "description": "discrepancias 0.5/0.05 m respecto a referencia fiable se comparan con tol inicial 0.1 m e incertidumbre; metadato ausente queda MISSING.",
+      "previous_test_id": "V-E1-6"
+    },
+    {
+      "id": "V-E2-1",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G2"
+      ],
+      "description": "presupuesto pre/post y banda: ejemplo r=51 m, v_group=80, wavelet=0.3, margin=0 da 0.9375 s; perfil Vs30 r=134 requiere 1.975 s post sin margen. 2 s totales con pre=0.1 no alcanzan. dt=0.5 ms no permite banda de 1–2 kHz bajo regla 0.8 Nyquist.",
+      "previous_test_id": "V-E2-1"
+    },
+    {
+      "id": "V-E2-2",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G2"
+      ],
+      "description": "muertos k=1..4/24 detectados; controles con atenuación, MAD=0/DC/gain comparable. Meta inicial FPR≤2 % en ≥200 realizaciones, con intervalo y denominador declarados.",
+      "previous_test_id": "V-E2-2"
+    },
+    {
+      "id": "V-E2-3",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G2"
+      ],
+      "description": "clipping conocido y sinusoide limpia: la sinusoide no es clipping aunque 13 % esté cerca de su máximo; plateaus limpios, ADC, gains y stack incluidos. Fronteras de phi de perfil probado.",
+      "previous_test_id": "V-E2-3"
+    },
+    {
+      "id": "V-E2-4",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G2"
+      ],
+      "description": "calibración SNR 0/5/10/20/30 dB, ≥500 realizaciones independientes; objetivo inicial error medio≤1.5 dB para SNR≥5 y sesgo≤1 dB, por estrato y ventana. SNR_total/net distinguido.",
+      "previous_test_id": "V-E2-4"
+    },
+    {
+      "id": "V-E2-5",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G2"
+      ],
+      "description": "líneas 50/60 Hz según sitio: detección/frecuencia con duración/SNR especificados; 0.1 Hz solo para protocolo que sostenga tal precisión. No afirmar precisión por bins interpolados.",
+      "previous_test_id": "V-E2-5"
+    },
+    {
+      "id": "V-E2-6",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G2"
+      ],
+      "description": "señales propagantes limpias lambda=3dx con correlación cruda -0.5 no generan inversión confirmada; fallas de signo detectadas cuando identificables. Atenuación×0.2 se reporta como anomalía sin causa exclusiva.",
+      "previous_test_id": "V-E2-6"
+    },
+    {
+      "id": "V-E2-7",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G2"
+      ],
+      "description": "delay submuestra en banda/duración fijadas con error de referencia independiente; meta 0.05dt para experimento prerregistrado, fuera de dominio abstención. No atribuir lag de fuente variable exclusivamente a trigger.",
+      "previous_test_id": "V-E2-7"
+    },
+    {
+      "id": "V-E2-8",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G2"
+      ],
+      "description": "stack N=1/2/4/8/16 con ruido independiente: pendiente SNR vs10log10N entre0.85 y1.15, con intervalos; correlación de ruido rompe la predicción y se marca.",
+      "previous_test_id": "V-E2-8"
+    },
+    {
+      "id": "V-E2-9",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G2"
+      ],
+      "description": "H(f) nominal y complejo contra referencia; incluir respuestas relativas distintas, calibración ausente y datos útiles bajo f_n. No emitir límite físico de profundidad desde f_n.",
+      "previous_test_id": "V-E2-9"
+    },
+    {
+      "id": "V-E2-10",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G2"
+      ],
+      "description": "corpus ≥1000, fallas simples/combinadas y ambiguas con etiquetas independientes; metas iniciales recall≥0.95, FPR≤0.05 por falla identificable. Wrong_dt plausible sin referencia queda no identificable, no fallo obligatorio universal.",
+      "previous_test_id": "V-E2-10"
+    },
+    {
+      "id": "V-E3-1",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G3"
+      ],
+      "description": "máximo espectral Ricker en fp±1 bin; Parseval rtol=1e-10; SNR generado vs estimador independiente dentro de tolerancia registrada; onset causal conocido separado.",
+      "previous_test_id": "V-E3-1"
+    },
+    {
+      "id": "V-E3-2",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G3"
+      ],
+      "description": "fórmulas TRS frente a límites y cruce; valores simples rtol=1e-12/atol temporal 1e-12 s, con dominio explícito y límite g=0 estable.",
+      "previous_test_id": "V-E3-2"
+    },
+    {
+      "id": "V-E3-3",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G3"
+      ],
+      "description": "reciprocidad en medios estáticos isotrópicos modelados: igualdad analítica o error de convergencia del forward; no exigir bit-exact entre discretizaciones distintas.",
+      "previous_test_id": "V-E3-3"
+    },
+    {
+      "id": "V-E3-4",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G0",
+        "G3"
+      ],
+      "description": "referencia Rayleigh contra forma cerrada, solver alternativo, residual algebraico, límites, monotonicidad en dominio y validación de entradas. Residual equivalente no se presenta como segunda teoría independiente.",
+      "previous_test_id": "V-E3-4"
+    },
+    {
+      "id": "V-E3-5",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G3"
+      ],
+      "description": "dos forward de dispersión de origen identificado, tres perfiles incluyendo inversión: diferencia≤0.5 % en banda convergida y modo continuo; cortes/solapamientos no se excluyen silenciosamente.",
+      "previous_test_id": "V-E3-5"
+    },
+    {
+      "id": "V-E3-6",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G3"
+      ],
+      "description": "límites alta/baja f hacia capa superior/semiespacio en modelos donde esas asíntotas aplican; aproximación≤1 % tras estudio de convergencia.",
+      "previous_test_id": "V-E3-6"
+    },
+    {
+      "id": "V-E3-7",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G3"
+      ],
+      "description": "inyectores deterministas de muertos, clip, ruido, polaridad, time_shift, geometry, dt, hum, burst, acople aparente, jitter y truncación. Severidad comprobada por otra medida; añadir combinaciones. Error dt no implica detectabilidad universal.",
+      "previous_test_id": "V-E3-7"
+    },
+    {
+      "id": "V-E3-8",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G5"
+      ],
+      "description": "demostrar convergencia en malla/integración/dominio y límite lejano contra referencias; cuantificar error del generador por debajo del sesgo cercano que se pretende medir. Sin ese estudio, no habilitar el criterio de campo cercano como validado.",
+      "previous_test_id": null
+    },
+    {
+      "id": "V-E4-1",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G4"
+      ],
+      "description": "onset causal con dt=0.25 ms/banda alrededor de80 Hz, duración/filtrado/SNR especificados; objetivos iniciales mediana error≤dt/P95≤3dt para SNR≥15. Se evalúan sesgo y dominio, no centro de Ricker como first break.",
+      "previous_test_id": "V-E4-1"
+    },
+    {
+      "id": "V-E4-2",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G4"
+      ],
+      "description": "burst/muerto/ambiguo no produce confianza injustificada; inversión de signo preserva tiempo cuando el estimador lo permite, con QC de polaridad separado. Meta de errores confiados >3sigma≤2 % con denominador de picks confiados.",
+      "previous_test_id": "V-E4-2"
+    },
+    {
+      "id": "V-E4-3",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G4"
+      ],
+      "description": "≥5000 picks holdout, cobertura de intervalos nominales 68/95 % por estrato con intervalos binomiales y sesgo. Bandas amplias 0.58–0.78/0.90–0.99 de v1.3 sirven exploración, no calibración final automáticamente aprobada.",
+      "previous_test_id": "V-E4-3"
+    },
+    {
+      "id": "V-E4-4",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G4"
+      ],
+      "description": "escala positiva y traslación temporal compatible con ventana/onset, permutación conjunta de canales; precisión según dt/interpolación. Escalar solo señal sin ruido no conserva SNR y no es invariancia.",
+      "previous_test_id": "V-E4-4"
+    },
+    {
+      "id": "V-E4-5",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G4"
+      ],
+      "description": "Delta=0 analítico; con errores conocidos independientes/correlacionados verificar distribución z e intervalos, sigma cero controlado.",
+      "previous_test_id": "V-E4-5"
+    },
+    {
+      "id": "V-E4-6",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G4"
+      ],
+      "description": "error0.5 m a1500 m/s da0.333 ms y pasa tolerancia1 ms: el test debe respetarlo. Medir potencia para efectos por encima/debajo del umbral; atribución única solo con geometría y observaciones identificables.",
+      "previous_test_id": "V-E4-6"
+    },
+    {
+      "id": "V-E4-7",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G4"
+      ],
+      "description": "delay2 ms en disparo genera patrón correspondiente, con orientación de Delta registrada; trigger y geometría indistinguibles generan causas candidatas, no certeza automática.",
+      "previous_test_id": "V-E4-7"
+    },
+    {
+      "id": "V-E4-8",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G4"
+      ],
+      "description": "dos ramas visibles y suficientes receptores por rama: metas V≤2 %, ti≤1 ms, h≤5 % con sesgo/onset/ruido definidos. Si no hay rama observable, abstenerse de recuperar h.",
+      "previous_test_id": "V-E4-8"
+    },
+    {
+      "id": "V-E4-9",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G4"
+      ],
+      "description": "K corresponde a ramas visibles, no número universal de capas; selección BIC y grados de libertad probados en modelos1/2/3 observables y ocultos.",
+      "previous_test_id": "V-E4-9"
+    },
+    {
+      "id": "V-E4-10",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G4"
+      ],
+      "description": "modelos300/600/1500 m/s con h5/0.5 m y equivalente300/1500 con h≈5.2338536 m producen mismos primeros tiempos cuando el espesor equivalente se calcula igualando interceptos —no usando su redondeo mostrado como dato exacto—; el sistema no inventa un detector universal. Documentar riesgo de no identificabilidad y evidencia complementaria requerida por objetivo.",
+      "previous_test_id": "V-E4-10"
+    },
+    {
+      "id": "V-E4-11",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G4"
+      ],
+      "description": "outliers10 % con amplitud≥20 ms en protocolo de offsets/SNR prerregistrado: objetivos recall≥0.95 y sesgo de pendiente≤1 %, con intervalos y casos inaplicables.",
+      "previous_test_id": "V-E4-11"
+    },
+    {
+      "id": "V-E4-12",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G4"
+      ],
+      "description": "h15,V1=300,V2=1500: x_cross=36.74235 m; multiplicador1.5 exige55.1135 m bajo esa heurística. 46/72 m no prueban solos insuficiencia/suficiencia real; verificar puntos por rama.",
+      "previous_test_id": "V-E4-12"
+    },
+    {
+      "id": "V-E4-13",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G4"
+      ],
+      "description": "solver frente a solución analítica y mallas refinadas, norma/domino definidos; meta p_obs≥0.9 en problema suave primer orden, singularidades separadas. Error de tiempo requerido dentro del presupuesto de picking.",
+      "previous_test_id": "V-E4-13"
+    },
+    {
+      "id": "V-E4-14",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G4"
+      ],
+      "description": "modelo recuperable en ROI conocida, ruido0.5 ms independiente: evaluar Q/convergencia/error de V por capa; metas iniciales Q0.7–1.5 y error≤10 % no sustituyen resolución ni aplican a capas no identificables.",
+      "previous_test_id": "V-E4-14"
+    },
+    {
+      "id": "V-E4-15",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G4"
+      ],
+      "description": "errores5 %: evaluar detección/potencia y sesgo en protocolo independiente; incremento50 % de misfit es objetivo específico del experimento, no propiedad universal del solver flexible.",
+      "previous_test_id": "V-E4-15"
+    },
+    {
+      "id": "V-E4-16",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G4"
+      ],
+      "description": "presupuesto25 s para24 canales×12 disparos medido en hardware/prera y primera/caché; excederlo genera aviso de rendimiento separado de calidad.",
+      "previous_test_id": "V-E4-16"
+    },
+    {
+      "id": "V-E4-17",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G4"
+      ],
+      "description": "≥300 escenarios recuperables/ambiguos/inaceptables, etiquetas independientes y tasas por estrato; severo obligatorio no resuelto nunca habilita aceptación.",
+      "previous_test_id": "V-E4-17"
+    },
+    {
+      "id": "V-E4-18",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G4"
+      ],
+      "description": "Siddon vs intersección independiente en rectas, bordes/vértices y curvas discretizadas; hits exactos con mismas convenciones, longitud rtol1e-10 más atol dimensional declarado.",
+      "previous_test_id": "V-E4-18"
+    },
+    {
+      "id": "V-E4-19",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G4"
+      ],
+      "description": "ángulos0/60/120° dan span120°; ángulo único span0,A0; vacío UNKNOWN. Distribución uniforme exacta o comparación Monte Carlo con intervalo, no garantía por cualquier n≥200.",
+      "previous_test_id": "V-E4-19"
+    },
+    {
+      "id": "V-E4-20",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G4"
+      ],
+      "description": "arreglos bajo modelo específico para los tres estados y controles de semiespacio sin profundidad; no imponer verde solo por añadir disparos. Validar refinamiento de malla y duplicados.",
+      "previous_test_id": "V-E4-20"
+    },
+    {
+      "id": "V-E4-21",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G4"
+      ],
+      "description": "asociación cobertura/resolución/error por ROI y familias independientes, intervalos y confusores. Spearman≤-0.5 es hipótesis inicial que no demuestra unicidad; evidencia insuficiente no autoriza recalibrar contra holdout.",
+      "previous_test_id": "V-E4-21"
+    },
+    {
+      "id": "V-E5-1",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G5"
+      ],
+      "description": "filtro/ventana comune vs muting distinto por canal: medir fase/resolución y error de pico en protocolo fijado. Meta fase≤1e-3 rad solo en caso controlado al que aplica.",
+      "previous_test_id": "V-E5-1"
+    },
+    {
+      "id": "V-E5-2",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G5"
+      ],
+      "description": "plano f0=5 Hz,c0=100 m/s,N24,dx2, frecuencia bin exacta y ventana común; I=1±1e-6/pico en c0 dentro rejilla. Signo contrario no alinea este ejemplo, evitando coincidencia alias accidental.",
+      "previous_test_id": "V-E5-2"
+    },
+    {
+      "id": "V-E5-3",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G5"
+      ],
+      "description": "resolver kernel finito para amplitud/potencia y transformar fronteras en lambda/L_eff=0.25/0.5/1; contraejemplo a aproximación0.886 universal debe conservarse. Tolerancia ligada a rejilla/root, no ±15 % de teoría equivocada.",
+      "previous_test_id": "V-E5-3"
+    },
+    {
+      "id": "V-E5-4",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G5"
+      ],
+      "description": "lambda1.5dx produce alias q-1/dx negativo en búsqueda firmada; lambda3dx sin alias indistinguible en dominio Nyquist elegido. Huecos/irregularidad evaluados aparte.",
+      "previous_test_id": "V-E5-4"
+    },
+    {
+      "id": "V-E5-5",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G5"
+      ],
+      "description": "referencias phase-shift/f–k/tau–p dentro2 % mediana en banda convergida de alta SNR; no cubrir desacuerdos con exclusión arbitraria de bins.",
+      "previous_test_id": "V-E5-5"
+    },
+    {
+      "id": "V-E5-6",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G5"
+      ],
+      "description": "permutación conjunta U/x/pesos conserva I; reflexión x→-x exige d→-d. Escala común positiva/fase común conserva I con soporte fijo. Excluir muertos preserva la curva de canales activos, no garantiza mejora estricta del pico ni misma resolución que arreglo completo.",
+      "previous_test_id": "V-E5-6"
+    },
+    {
+      "id": "V-E5-7",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G5"
+      ],
+      "description": "tres familias normal/inversión/contraste, fundamentales visibles y no visibles: objetivos3/6 % RMS para SNR20/10 solo en banda observable; casos ambiguos deben abstenerse de identidad fundamental.",
+      "previous_test_id": "V-E5-7"
+    },
+    {
+      "id": "V-E5-8",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G5"
+      ],
+      "description": "A1/A0=2 no obliga detección universal; probar modos separables y no resolubles/ausentes, curvas aparentes e incertidumbre de identidad sin inferir energía desde I.",
+      "previous_test_id": "V-E5-8"
+    },
+    {
+      "id": "V-E5-9",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G5"
+      ],
+      "description": "ejemplo N24,dx2,x1=6,lambda48: near_ratio0.125,NACD_center0.6041667; no conservar profundidad4.8 como resultado NACD. Priors/union no permiten inventar banda observada.",
+      "previous_test_id": "V-E5-9"
+    },
+    {
+      "id": "V-E5-10",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G5"
+      ],
+      "description": "sesgo cercano Delta c/c vs ambos ratios usando V-E3-8, fuente/modelos calibración/holdout independientes; metas de sesgo5/2 % son objetivos de perfil a comprobar, no presets aprobados. Declarar sesgo desconocido cuando el generador no cubre el fenómeno.",
+      "previous_test_id": "V-E5-10"
+    },
+    {
+      "id": "V-E5-11",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G5"
+      ],
+      "description": "cobertura y sesgo de intervalos c por SNR/banda/modelo, con CI y holdout; no usar intervalos globales0.55–0.85 como calibración definitiva.",
+      "previous_test_id": "V-E5-11"
+    },
+    {
+      "id": "V-E5-12",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G5"
+      ],
+      "description": "experimento identificado de dependencia con SNR/apertura/lambda, reportar regresión/CI y excepciones; no exigir monotonicidad universal al cambiar modos/soporte.",
+      "previous_test_id": "V-E5-12"
+    },
+    {
+      "id": "V-E5-13",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G5"
+      ],
+      "description": "repeatability por réplicas y offsets con incertidumbre calibrada; gradiente lateral no se atribuye inequívocamente a partir de un par si fuente/modos confunden.",
+      "previous_test_id": "V-E5-13"
+    },
+    {
+      "id": "V-E5-14",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G5"
+      ],
+      "description": "kernels normalizados/convergencia de discretización/ROI y ensembles: regla90 %/kappa2–3.5 se evalúa como hipótesis, no prueba de resolución. Casos de igual dispersión y distinto Vs30 se consideran cuando aplican.",
+      "previous_test_id": "V-E5-14"
+    },
+    {
+      "id": "V-E5-15",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G5"
+      ],
+      "description": "≥300 escenarios etiquetados por evidencia del objetivo, no solo lambda/kappa; banda ausente, incertidumbre/modalidad no válida o requisito obligatorio faltante nunca habilitan aceptación.",
+      "previous_test_id": "V-E5-15"
+    },
+    {
+      "id": "V-E5-16",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G5"
+      ],
+      "description": "obligatorio para perfiles Vs30: estimador de referencia/ensembles independientes con precisión objetivo inicial±15 %, sesgo y CI. Asociación con QC por estrato y sentido de score definido; Spearman negativo solo si score crece con calidad, sin sustituir tasas de falsos PASS.",
+      "previous_test_id": "V-E5-16"
+    },
+    {
+      "id": "V-E5-17",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G5"
+      ],
+      "description": "Kluyver vs MC≥2 millones bajo nula: error con CI binomial y multiplicidad. Verificar cuantiles a±0.005 y el contraejemplo N12,a0.3167508,cola0.30636>asintótica0.3. No imponer dominancia falsa ni sumar error absoluto como relativo.",
+      "previous_test_id": "V-E5-17"
+    },
+    {
+      "id": "V-E5-17b",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G5"
+      ],
+      "description": "ruido real/coloreado/correlacionado y nula del máximo; control de falsos picos al nivel del protocolo y su intervalo. Si falla, método UNCALIBRATED, no ajuste improvisado contra holdout.",
+      "previous_test_id": "V-E5-17b"
+    },
+    {
+      "id": "V-E5-18",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G5"
+      ],
+      "description": "casos y fronteras del umbral de significancia calibrado, cohorte independiente; significancia sin control del ruido coherente no habilita aceptación.",
+      "previous_test_id": "V-E5-18"
+    },
+    {
+      "id": "V-E5-19",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G5"
+      ],
+      "description": "banda8–32Hz produce exactamente2 octavas según fronteras; segmentos separados no se fusionan como continuos.",
+      "previous_test_id": "V-E5-19"
+    },
+    {
+      "id": "V-E5-20",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G5"
+      ],
+      "description": "N_active distinto del alcance de niveles => UNCALIBRATED; configuración exige calibración compatible. Perfiles48ch no heredan levels24ch por defecto.",
+      "previous_test_id": "V-E5-20"
+    },
+    {
+      "id": "V-E5-21",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G5"
+      ],
+      "description": "ruido de tráfico coherente significativo sin evidencia del evento activo => no aceptación automática; controles de dirección/ventana/fuente.",
+      "previous_test_id": null
+    },
+    {
+      "id": "V-E5-22",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G5"
+      ],
+      "description": "unión de bandas con hueco/modos distintos/soportes distintos preserva motivos y procedencia; ningún prior sustituye dato observado ni produce suficiencia Vs30 por geometría sola.",
+      "previous_test_id": null
+    },
+    {
+      "id": "V-E6-1",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G6"
+      ],
+      "description": "tabla exhaustiva de quality/evidence/eligible por requisitos —incluye FAIL no crítico, NA real y MISSING crítico— coincide con especificación.",
+      "previous_test_id": "V-E6-1"
+    },
+    {
+      "id": "V-E6-2",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G6"
+      ],
+      "description": "empeorar evidencia usada nunca mejora elegibilidad/veredicto; agregar opcionales no diluye faltantes; selección/supersesión explícita es cambio de inputs, no excepción a monotonicidad.",
+      "previous_test_id": "V-E6-2"
+    },
+    {
+      "id": "V-E6-3",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G6"
+      ],
+      "description": "integridad de acciones, unidades y supuestos; stacks4,SNR6→12dB producen16 bajo independencia; abstención si no aplica.",
+      "previous_test_id": "V-E6-3"
+    },
+    {
+      "id": "V-E6-4",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G6"
+      ],
+      "description": "fallo crítico en datos seleccionados bloquea decisión pese a downstream PASS; gráficos diagnósticos con validez heredada explícita.",
+      "previous_test_id": "V-E6-4"
+    },
+    {
+      "id": "V-E6-5",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G6"
+      ],
+      "description": "diagnóstico amarillo siempre exportable; aceptación con advertencias exige bitácora, responsable y alcance y conserva WARN.",
+      "previous_test_id": "V-E6-5"
+    },
+    {
+      "id": "V-E6-6",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G6"
+      ],
+      "description": "repetición válida sustituye requisito fallido sin borrar original; disparo/métrica obligatoria ausente no se cubre con registros irrelevantes verdes.",
+      "previous_test_id": null
+    },
+    {
+      "id": "V-E7-1",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G7"
+      ],
+      "description": "smoke offscreen con datos válidos/corruptos/ausentes; seis paneles y estados explícitos.",
+      "previous_test_id": "V-E7-1"
+    },
+    {
+      "id": "V-E7-2",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G7"
+      ],
+      "description": "ninguna lógica numérica en UI ni import inverso core→UI; la UI no fuerza aceptación.",
+      "previous_test_id": "V-E7-2"
+    },
+    {
+      "id": "V-E7-3",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G7"
+      ],
+      "description": "pantalla1366×768 y96×32768 muestras, interacción/zoom objetivo>20fps con decimación; no confundir tiempo de pintura con latencia analítica.",
+      "previous_test_id": "V-E7-3"
+    },
+    {
+      "id": "V-E8-1",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G8"
+      ],
+      "description": "mismos datos/config/código/calibración producen digest científico idéntico; metadatos volátiles separados.",
+      "previous_test_id": "V-E8-1"
+    },
+    {
+      "id": "V-E8-2",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G8"
+      ],
+      "description": "esquema rechaza campos científicos requeridos ausentes y permite diagnósticos TRS/MASW/ingesta conforme al alcance.",
+      "previous_test_id": "V-E8-2"
+    },
+    {
+      "id": "V-E8-3",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G8"
+      ],
+      "description": "flags desde UI/JSON editado aunque se recalcule hash no habilitan aceptación si falta evidencia/requisitos válidos; modelo de confianza probado.",
+      "previous_test_id": "V-E8-3"
+    },
+    {
+      "id": "V-E8-4",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G8"
+      ],
+      "description": "cambios autorizados/config/calibración, máscaras y supersesión quedan en provenance/digest; exportación diagnóstica no se confunde con aceptación humana.",
+      "previous_test_id": null
+    },
+    {
+      "id": "V-E9-1",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G9"
+      ],
+      "description": "corpus independiente con metas/CI predefinidos, distribución de fallas y matriz de confusión por técnica/estrato; distinguir falso PASS y abstención.",
+      "previous_test_id": "V-E9-1"
+    },
+    {
+      "id": "V-E9-2",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G9"
+      ],
+      "description": "sensibilidad de umbrales ±50 % en calibración; variación±10 %/cambio≤5 % es hipótesis del corpus, no garantía universal. Fijar operating point antes de holdout.",
+      "previous_test_id": "V-E9-2"
+    },
+    {
+      "id": "V-E9-3",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G9"
+      ],
+      "description": "piloto real y V&V posterior por tamaño/potencia necesarios; evidencia estadística para falso PASS≤5 % con95 % unilateral, concordancia objetivo≥85 % y acuerdo de expertos documentado.",
+      "previous_test_id": "V-E9-3"
+    },
+    {
+      "id": "V-E9-4",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G9"
+      ],
+      "description": "rendimiento≤60 s/disparo y≤4GB medido offline por perfiles coherentes, primera/caché y por tendido. Hardware, threads, dependencias y dataset fijados antes del benchmark.",
+      "previous_test_id": "V-E9-4"
+    },
+    {
+      "id": "V-E9-5",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G9"
+      ],
+      "description": "fuzz10000 y corrupción de forma/unidades/metadata/archivos en escritura: errores tipados o diagnóstico inválido, nunca PASS ni excepción no controlada.",
+      "previous_test_id": "V-E9-5"
+    },
+    {
+      "id": "V-E9-6",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G9"
+      ],
+      "description": "formatos/endian reconocidos y cuantización comparable conservan resultado dentro tolerancia dimensional/representación, no identidad arbitraria para inputs físicamente distintos.",
+      "previous_test_id": "V-E9-6"
+    },
+    {
+      "id": "V-E9-7",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G9"
+      ],
+      "description": "release elegible solo para combinación objetivo/técnica/formato/instrumentación/población validada; perfil nuevo o fuera de dominio bloquea elegibilidad y preserva diagnóstico.",
+      "previous_test_id": null
+    },
+    {
+      "id": "V-E10-1",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G10"
+      ],
+      "description": "instalación en máquina limpia sin Python/red, smoke≤5min según hardware fijado; depende de G9 del perfil distribuido.",
+      "previous_test_id": "V-E10-1"
+    },
+    {
+      "id": "V-E10-2",
+      "specification_version": "1.4",
+      "required": true,
+      "status": "NOT_IMPLEMENTED_FOR_SPEC_1_4",
+      "gate_refs": [
+        "G10"
+      ],
+      "description": "actualización config/calibración sin recompilar, migración y caché correcta, rechazo de esquema incompatible; regresión con datos/perfiles validables.",
+      "previous_test_id": "V-E10-2"
+    }
+  ],
+  "audit_findings": {
+    "H01": {
+      "specification_change": "INCORPORATED",
+      "execution_status": "PENDING",
+      "validation_test_ids": [
+        "V-E0-4",
+        "V-E5-9",
+        "V-E5-10"
+      ]
+    },
+    "H02": {
+      "specification_change": "INCORPORATED",
+      "execution_status": "PENDING",
+      "validation_test_ids": [
+        "V-E0-8",
+        "V-E2-9"
+      ]
+    },
+    "H03": {
+      "specification_change": "INCORPORATED",
+      "execution_status": "PENDING",
+      "validation_test_ids": [
+        "V-E0-5",
+        "V-E5-14",
+        "V-E5-15",
+        "V-E5-22"
+      ]
+    },
+    "H04": {
+      "specification_change": "INCORPORATED",
+      "execution_status": "PENDING",
+      "validation_test_ids": [
+        "V-E5-3"
+      ]
+    },
+    "H05": {
+      "specification_change": "INCORPORATED",
+      "execution_status": "PENDING",
+      "validation_test_ids": [
+        "V-E5-11",
+        "V-E5-12"
+      ]
+    },
+    "H06": {
+      "specification_change": "INCORPORATED",
+      "execution_status": "PENDING",
+      "validation_test_ids": [
+        "V-E5-17"
+      ]
+    },
+    "H07": {
+      "specification_change": "INCORPORATED",
+      "execution_status": "PENDING",
+      "validation_test_ids": [
+        "V-E5-17b",
+        "V-E5-18",
+        "V-E5-21"
+      ]
+    },
+    "H08": {
+      "specification_change": "INCORPORATED",
+      "execution_status": "PENDING",
+      "validation_test_ids": [
+        "V-E3-8",
+        "V-E5-10"
+      ]
+    },
+    "H09": {
+      "specification_change": "INCORPORATED",
+      "execution_status": "PENDING",
+      "validation_test_ids": [
+        "V-E4-10"
+      ]
+    },
+    "H10": {
+      "specification_change": "INCORPORATED",
+      "execution_status": "PENDING",
+      "validation_test_ids": [
+        "V-E3-1",
+        "V-E4-1",
+        "V-E4-2",
+        "V-E4-3"
+      ]
+    },
+    "H11": {
+      "specification_change": "INCORPORATED",
+      "execution_status": "PENDING",
+      "validation_test_ids": [
+        "V-E6-1",
+        "V-E6-2",
+        "V-E6-4",
+        "V-E6-5"
+      ]
+    },
+    "H12": {
+      "specification_change": "INCORPORATED",
+      "execution_status": "PENDING",
+      "validation_test_ids": [
+        "V-E0-10"
+      ]
+    },
+    "H13": {
+      "specification_change": "INCORPORATED",
+      "execution_status": "PENDING",
+      "validation_test_ids": [
+        "V-E0-10"
+      ]
+    },
+    "H14": {
+      "specification_change": "INCORPORATED",
+      "execution_status": "PENDING",
+      "validation_test_ids": [
+        "V-E2-3"
+      ]
+    },
+    "H15": {
+      "specification_change": "INCORPORATED",
+      "execution_status": "PENDING",
+      "validation_test_ids": [
+        "V-E2-2",
+        "V-E2-6"
+      ]
+    },
+    "H16": {
+      "specification_change": "INCORPORATED",
+      "execution_status": "PENDING",
+      "validation_test_ids": [
+        "V-E4-5",
+        "V-E4-6",
+        "V-E4-7"
+      ]
+    },
+    "H17": {
+      "specification_change": "INCORPORATED",
+      "execution_status": "PENDING",
+      "validation_test_ids": [
+        "V-E3-2",
+        "V-E4-8",
+        "V-E4-9"
+      ]
+    },
+    "H18": {
+      "specification_change": "INCORPORATED",
+      "execution_status": "PENDING",
+      "validation_test_ids": [
+        "V-E0-7",
+        "V-E1-4",
+        "V-E1-5",
+        "V-E5-4",
+        "V-E5-6"
+      ]
+    },
+    "H19": {
+      "specification_change": "INCORPORATED",
+      "execution_status": "PENDING",
+      "validation_test_ids": [
+        "V-E5-7",
+        "V-E5-8"
+      ]
+    },
+    "H20": {
+      "specification_change": "INCORPORATED",
+      "execution_status": "PENDING",
+      "validation_test_ids": [
+        "V-E4-18",
+        "V-E4-19",
+        "V-E4-20",
+        "V-E4-21"
+      ]
+    },
+    "H21": {
+      "specification_change": "INCORPORATED",
+      "execution_status": "PENDING",
+      "validation_test_ids": [
+        "V-E4-14",
+        "V-E4-15",
+        "V-E5-16"
+      ]
+    },
+    "H22": {
+      "specification_change": "INCORPORATED",
+      "execution_status": "PENDING",
+      "validation_test_ids": [
+        "V-E9-1",
+        "V-E9-3"
+      ]
+    },
+    "H23": {
+      "specification_change": "INCORPORATED",
+      "execution_status": "PENDING",
+      "validation_test_ids": [
+        "V-E2-1",
+        "V-E2-5",
+        "V-E9-4"
+      ]
+    },
+    "H24": {
+      "specification_change": "INCORPORATED",
+      "execution_status": "PENDING",
+      "validation_test_ids": [
+        "V-E2-4",
+        "V-E2-8",
+        "V-E6-3"
+      ]
+    },
+    "H25": {
+      "specification_change": "INCORPORATED",
+      "execution_status": "PENDING",
+      "validation_test_ids": [
+        "V-E0-9",
+        "V-E8-2"
+      ]
+    },
+    "H26": {
+      "specification_change": "INCORPORATED",
+      "execution_status": "PENDING",
+      "validation_test_ids": [
+        "V-E0-3",
+        "V-E0-6",
+        "V-E5-20",
+        "V-E9-7"
+      ]
+    },
+    "H27": {
+      "specification_change": "INCORPORATED",
+      "execution_status": "PENDING",
+      "validation_test_ids": [
+        "V-E2-7",
+        "V-E2-10",
+        "V-E4-13",
+        "V-E5-1",
+        "V-E5-16"
+      ]
+    },
+    "H28": {
+      "specification_change": "INCORPORATED",
+      "execution_status": "PENDING",
+      "validation_test_ids": [
+        "V-E4-9",
+        "V-E6-6"
+      ]
+    },
+    "H29": {
+      "specification_change": "INCORPORATED",
+      "execution_status": "PENDING",
+      "validation_test_ids": [
+        "V-E8-1",
+        "V-E8-3",
+        "V-E8-4"
+      ]
+    },
+    "H30": {
+      "specification_change": "INCORPORATED",
+      "execution_status": "PENDING",
+      "validation_test_ids": [
+        "V-E0-1",
+        "V-E0-10"
+      ]
+    }
+  }
+}

@@ -1,0 +1,6 @@
+# Referencia aislada E4: Windows/CPython 3.12; nunca mezclar con el entorno GeoQC.
+numpy==2.5.3
+pgcore==1.6.0
+pygimli==1.6.1
+scooby==0.12.0
+setuptools==84.0.0

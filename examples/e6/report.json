@@ -1,0 +1,696 @@
+{
+  "schema_version": "1.4",
+  "input": {
+    "schema_version": "1.4",
+    "profile_ref": "vs30_sitio/DRAFT/common_qc_demo",
+    "scope_ref": "synthetic_e2/observed_traces",
+    "scope_status": "IN_SCOPE",
+    "requirements": [
+      {
+        "schema_version": "1.4",
+        "id": "common/clip@cf037cb0c4f52584cc5013aac865aaa1109a72a3e8692ac15335e345decf35ae",
+        "record_id": "e2-common-qc-demo",
+        "metric_id": "clip@cf037cb0c4f52584cc5013aac865aaa1109a72a3e8692ac15335e345decf35ae",
+        "unit": "fraction",
+        "support_refs": [
+          "e2-common-qc-demo/r0/clip"
+        ],
+        "technique": "MASW",
+        "component": "Z",
+        "mandatory": true,
+        "critical": false,
+        "applicability": "APPLICABLE",
+        "applicability_reason": "Control por traza declarado para fixture E2",
+        "calibration_required": true
+      },
+      {
+        "schema_version": "1.4",
+        "id": "common/snr_db@0453edcefa185fb0372cc55c84261cd020adae2cc389bea693b44357074b6591",
+        "record_id": "e2-common-qc-demo",
+        "metric_id": "snr_db@0453edcefa185fb0372cc55c84261cd020adae2cc389bea693b44357074b6591",
+        "unit": "dB",
+        "support_refs": [
+          "e2-common-qc-demo/r0/snr_db"
+        ],
+        "technique": "MASW",
+        "component": "Z",
+        "mandatory": true,
+        "critical": false,
+        "applicability": "APPLICABLE",
+        "applicability_reason": "Control por traza declarado para fixture E2",
+        "calibration_required": true
+      },
+      {
+        "schema_version": "1.4",
+        "id": "common/clip@c3a70efbc07065b02f0f2d944ba7b84bbcae9fb272e3ce28dfea98af9d698174",
+        "record_id": "e2-common-qc-demo",
+        "metric_id": "clip@c3a70efbc07065b02f0f2d944ba7b84bbcae9fb272e3ce28dfea98af9d698174",
+        "unit": "fraction",
+        "support_refs": [
+          "e2-common-qc-demo/r1/clip"
+        ],
+        "technique": "MASW",
+        "component": "Z",
+        "mandatory": true,
+        "critical": false,
+        "applicability": "APPLICABLE",
+        "applicability_reason": "Control por traza declarado para fixture E2",
+        "calibration_required": true
+      },
+      {
+        "schema_version": "1.4",
+        "id": "common/snr_db@eaeb02c710199a58d722c763b442b61888683bcf62676723811c8ce1e9ca044f",
+        "record_id": "e2-common-qc-demo",
+        "metric_id": "snr_db@eaeb02c710199a58d722c763b442b61888683bcf62676723811c8ce1e9ca044f",
+        "unit": "dB",
+        "support_refs": [
+          "e2-common-qc-demo/r1/snr_db"
+        ],
+        "technique": "MASW",
+        "component": "Z",
+        "mandatory": true,
+        "critical": false,
+        "applicability": "APPLICABLE",
+        "applicability_reason": "Control por traza declarado para fixture E2",
+        "calibration_required": true
+      },
+      {
+        "schema_version": "1.4",
+        "id": "common/clip@1f7545eeac3ea1cd4df8c2d7badedf0407a4c0bfb37d0a791bfd5153820c7d4b",
+        "record_id": "e2-common-qc-demo",
+        "metric_id": "clip@1f7545eeac3ea1cd4df8c2d7badedf0407a4c0bfb37d0a791bfd5153820c7d4b",
+        "unit": "fraction",
+        "support_refs": [
+          "e2-common-qc-demo/r2/clip"
+        ],
+        "technique": "MASW",
+        "component": "Z",
+        "mandatory": true,
+        "critical": false,
+        "applicability": "APPLICABLE",
+        "applicability_reason": "Control por traza declarado para fixture E2",
+        "calibration_required": true
+      },
+      {
+        "schema_version": "1.4",
+        "id": "common/snr_db@34f08761bcb17973c2adf26259b517e32b6bbba5093003741b044efaebf362b4",
+        "record_id": "e2-common-qc-demo",
+        "metric_id": "snr_db@34f08761bcb17973c2adf26259b517e32b6bbba5093003741b044efaebf362b4",
+        "unit": "dB",
+        "support_refs": [
+          "e2-common-qc-demo/r2/snr_db"
+        ],
+        "technique": "MASW",
+        "component": "Z",
+        "mandatory": true,
+        "critical": false,
+        "applicability": "APPLICABLE",
+        "applicability_reason": "Control por traza declarado para fixture E2",
+        "calibration_required": true
+      },
+      {
+        "schema_version": "1.4",
+        "id": "common/clip@adb15a0f26fa6ba8389e3d25e4186f4146ddab44ee01f3f701adbffce00eb22c",
+        "record_id": "e2-common-qc-demo",
+        "metric_id": "clip@adb15a0f26fa6ba8389e3d25e4186f4146ddab44ee01f3f701adbffce00eb22c",
+        "unit": "fraction",
+        "support_refs": [
+          "e2-common-qc-demo/r3/clip"
+        ],
+        "technique": "MASW",
+        "component": "Z",
+        "mandatory": true,
+        "critical": false,
+        "applicability": "APPLICABLE",
+        "applicability_reason": "Control por traza declarado para fixture E2",
+        "calibration_required": true
+      },
+      {
+        "schema_version": "1.4",
+        "id": "common/snr_db@b2dd520faaa07f2eaa76f44dd7d2c11b7dee3d32fafc3bfb04eaac518122e8ca",
+        "record_id": "e2-common-qc-demo",
+        "metric_id": "snr_db@b2dd520faaa07f2eaa76f44dd7d2c11b7dee3d32fafc3bfb04eaac518122e8ca",
+        "unit": "dB",
+        "support_refs": [
+          "e2-common-qc-demo/r3/snr_db"
+        ],
+        "technique": "MASW",
+        "component": "Z",
+        "mandatory": true,
+        "critical": false,
+        "applicability": "APPLICABLE",
+        "applicability_reason": "Control por traza declarado para fixture E2",
+        "calibration_required": true
+      },
+      {
+        "schema_version": "1.4",
+        "id": "common/clip@4cd92b8d7ad6158ef18d02cd6e0ea3a3dfc6a1a948735bf8da0488efef8a970b",
+        "record_id": "e2-common-qc-demo",
+        "metric_id": "clip@4cd92b8d7ad6158ef18d02cd6e0ea3a3dfc6a1a948735bf8da0488efef8a970b",
+        "unit": "fraction",
+        "support_refs": [
+          "e2-common-qc-demo/r4/clip"
+        ],
+        "technique": "MASW",
+        "component": "Z",
+        "mandatory": true,
+        "critical": false,
+        "applicability": "APPLICABLE",
+        "applicability_reason": "Control por traza declarado para fixture E2",
+        "calibration_required": true
+      },
+      {
+        "schema_version": "1.4",
+        "id": "common/snr_db@dbc0a2205c6ebb1b7a96684e016a85332dbc5d2c664c7737ab63b96b9697ea9f",
+        "record_id": "e2-common-qc-demo",
+        "metric_id": "snr_db@dbc0a2205c6ebb1b7a96684e016a85332dbc5d2c664c7737ab63b96b9697ea9f",
+        "unit": "dB",
+        "support_refs": [
+          "e2-common-qc-demo/r4/snr_db"
+        ],
+        "technique": "MASW",
+        "component": "Z",
+        "mandatory": true,
+        "critical": false,
+        "applicability": "APPLICABLE",
+        "applicability_reason": "Control por traza declarado para fixture E2",
+        "calibration_required": true
+      },
+      {
+        "schema_version": "1.4",
+        "id": "common/clip@48eb2e5ba76f9f9badd54fa53d3c1074c4b281ad2284476a1dca19f947cf882a",
+        "record_id": "e2-common-qc-demo",
+        "metric_id": "clip@48eb2e5ba76f9f9badd54fa53d3c1074c4b281ad2284476a1dca19f947cf882a",
+        "unit": "fraction",
+        "support_refs": [
+          "e2-common-qc-demo/r5/clip"
+        ],
+        "technique": "MASW",
+        "component": "Z",
+        "mandatory": true,
+        "critical": false,
+        "applicability": "APPLICABLE",
+        "applicability_reason": "Control por traza declarado para fixture E2",
+        "calibration_required": true
+      },
+      {
+        "schema_version": "1.4",
+        "id": "common/snr_db@1a887f98816f9174abf28ea76bbd33f7bbbeac260cd3b0e3e22c6bba7425df06",
+        "record_id": "e2-common-qc-demo",
+        "metric_id": "snr_db@1a887f98816f9174abf28ea76bbd33f7bbbeac260cd3b0e3e22c6bba7425df06",
+        "unit": "dB",
+        "support_refs": [
+          "e2-common-qc-demo/r5/snr_db"
+        ],
+        "technique": "MASW",
+        "component": "Z",
+        "mandatory": true,
+        "critical": false,
+        "applicability": "APPLICABLE",
+        "applicability_reason": "Control por traza declarado para fixture E2",
+        "calibration_required": true
+      }
+    ],
+    "records": [
+      {
+        "schema_version": "1.4",
+        "id": "e2-common-qc-demo",
+        "technique": "MASW",
+        "component": "Z",
+        "geometry_hash": "11031cedcf91c79ba503b3651403999dac252f848e9186d6ff68d3a1ee8cd3f9",
+        "config_hash": "c5d601ff28c02ba7a2ba83d7d6d5947e95f6549cd614a20c0a785d33253d9c30",
+        "code_hash": "f65e16aa3cc35dd109ed64a6199ab68fd81397040d404f60d8b04a6ff51dee67",
+        "data_hashes": [
+          "5dae2e034399bd69107e610416c495427d0bea220e02ba4a4d3cccbd8795e9ef",
+          "f0d2c2fcc3aeb9975f9172fbee6831b09b6d56fc71be9569eb9acc1800353265"
+        ],
+        "support_refs": [
+          "e2-common-qc-demo/r0/clip",
+          "e2-common-qc-demo/r0/snr_db",
+          "e2-common-qc-demo/r1/clip",
+          "e2-common-qc-demo/r1/snr_db",
+          "e2-common-qc-demo/r2/clip",
+          "e2-common-qc-demo/r2/snr_db",
+          "e2-common-qc-demo/r3/clip",
+          "e2-common-qc-demo/r3/snr_db",
+          "e2-common-qc-demo/r4/clip",
+          "e2-common-qc-demo/r4/snr_db",
+          "e2-common-qc-demo/r5/clip",
+          "e2-common-qc-demo/r5/snr_db"
+        ],
+        "metrics": [
+          {
+            "schema_version": "1.4",
+            "id": "clip@cf037cb0c4f52584cc5013aac865aaa1109a72a3e8692ac15335e345decf35ae",
+            "unit": "fraction",
+            "scope": "trace",
+            "support_refs": [
+              "e2-common-qc-demo/r0/clip"
+            ],
+            "value": 0.0,
+            "uncertainty": null,
+            "applicability": "APPLICABLE",
+            "validity": "VALID",
+            "reason": "Fracción junto a rails conocidos; denominador de muestras válidas",
+            "direction": null,
+            "threshold_ref": null,
+            "mandatory": true,
+            "critical": false,
+            "calibration_ref": null,
+            "quality_status": null,
+            "action_ids": []
+          },
+          {
+            "schema_version": "1.4",
+            "id": "snr_db@0453edcefa185fb0372cc55c84261cd020adae2cc389bea693b44357074b6591",
+            "unit": "dB",
+            "scope": "trace",
+            "support_refs": [
+              "e2-common-qc-demo/r0/snr_db"
+            ],
+            "value": 30.07981114638387,
+            "uncertainty": null,
+            "applicability": "APPLICABLE",
+            "validity": "VALID",
+            "reason": "10log10((P_total-P_ruido)/P_ruido); estimación sin CI de campo",
+            "direction": null,
+            "threshold_ref": null,
+            "mandatory": true,
+            "critical": false,
+            "calibration_ref": null,
+            "quality_status": null,
+            "action_ids": []
+          },
+          {
+            "schema_version": "1.4",
+            "id": "clip@c3a70efbc07065b02f0f2d944ba7b84bbcae9fb272e3ce28dfea98af9d698174",
+            "unit": "fraction",
+            "scope": "trace",
+            "support_refs": [
+              "e2-common-qc-demo/r1/clip"
+            ],
+            "value": 0.0,
+            "uncertainty": null,
+            "applicability": "APPLICABLE",
+            "validity": "VALID",
+            "reason": "Fracción junto a rails conocidos; denominador de muestras válidas",
+            "direction": null,
+            "threshold_ref": null,
+            "mandatory": true,
+            "critical": false,
+            "calibration_ref": null,
+            "quality_status": null,
+            "action_ids": []
+          },
+          {
+            "schema_version": "1.4",
+            "id": "snr_db@eaeb02c710199a58d722c763b442b61888683bcf62676723811c8ce1e9ca044f",
+            "unit": "dB",
+            "scope": "trace",
+            "support_refs": [
+              "e2-common-qc-demo/r1/snr_db"
+            ],
+            "value": 28.644886170341287,
+            "uncertainty": null,
+            "applicability": "APPLICABLE",
+            "validity": "VALID",
+            "reason": "10log10((P_total-P_ruido)/P_ruido); estimación sin CI de campo",
+            "direction": null,
+            "threshold_ref": null,
+            "mandatory": true,
+            "critical": false,
+            "calibration_ref": null,
+            "quality_status": null,
+            "action_ids": []
+          },
+          {
+            "schema_version": "1.4",
+            "id": "clip@1f7545eeac3ea1cd4df8c2d7badedf0407a4c0bfb37d0a791bfd5153820c7d4b",
+            "unit": "fraction",
+            "scope": "trace",
+            "support_refs": [
+              "e2-common-qc-demo/r2/clip"
+            ],
+            "value": 0.0,
+            "uncertainty": null,
+            "applicability": "APPLICABLE",
+            "validity": "VALID",
+            "reason": "Fracción junto a rails conocidos; denominador de muestras válidas",
+            "direction": null,
+            "threshold_ref": null,
+            "mandatory": true,
+            "critical": false,
+            "calibration_ref": null,
+            "quality_status": null,
+            "action_ids": []
+          },
+          {
+            "schema_version": "1.4",
+            "id": "snr_db@34f08761bcb17973c2adf26259b517e32b6bbba5093003741b044efaebf362b4",
+            "unit": "dB",
+            "scope": "trace",
+            "support_refs": [
+              "e2-common-qc-demo/r2/snr_db"
+            ],
+            "value": 28.603538934880465,
+            "uncertainty": null,
+            "applicability": "APPLICABLE",
+            "validity": "VALID",
+            "reason": "10log10((P_total-P_ruido)/P_ruido); estimación sin CI de campo",
+            "direction": null,
+            "threshold_ref": null,
+            "mandatory": true,
+            "critical": false,
+            "calibration_ref": null,
+            "quality_status": null,
+            "action_ids": []
+          },
+          {
+            "schema_version": "1.4",
+            "id": "clip@adb15a0f26fa6ba8389e3d25e4186f4146ddab44ee01f3f701adbffce00eb22c",
+            "unit": "fraction",
+            "scope": "trace",
+            "support_refs": [
+              "e2-common-qc-demo/r3/clip"
+            ],
+            "value": 0.0,
+            "uncertainty": null,
+            "applicability": "APPLICABLE",
+            "validity": "VALID",
+            "reason": "Fracción junto a rails conocidos; denominador de muestras válidas",
+            "direction": null,
+            "threshold_ref": null,
+            "mandatory": true,
+            "critical": false,
+            "calibration_ref": null,
+            "quality_status": null,
+            "action_ids": []
+          },
+          {
+            "schema_version": "1.4",
+            "id": "snr_db@b2dd520faaa07f2eaa76f44dd7d2c11b7dee3d32fafc3bfb04eaac518122e8ca",
+            "unit": "dB",
+            "scope": "trace",
+            "support_refs": [
+              "e2-common-qc-demo/r3/snr_db"
+            ],
+            "value": 28.316266631055566,
+            "uncertainty": null,
+            "applicability": "APPLICABLE",
+            "validity": "VALID",
+            "reason": "10log10((P_total-P_ruido)/P_ruido); estimación sin CI de campo",
+            "direction": null,
+            "threshold_ref": null,
+            "mandatory": true,
+            "critical": false,
+            "calibration_ref": null,
+            "quality_status": null,
+            "action_ids": []
+          },
+          {
+            "schema_version": "1.4",
+            "id": "clip@4cd92b8d7ad6158ef18d02cd6e0ea3a3dfc6a1a948735bf8da0488efef8a970b",
+            "unit": "fraction",
+            "scope": "trace",
+            "support_refs": [
+              "e2-common-qc-demo/r4/clip"
+            ],
+            "value": 0.0,
+            "uncertainty": null,
+            "applicability": "APPLICABLE",
+            "validity": "VALID",
+            "reason": "Fracción junto a rails conocidos; denominador de muestras válidas",
+            "direction": null,
+            "threshold_ref": null,
+            "mandatory": true,
+            "critical": false,
+            "calibration_ref": null,
+            "quality_status": null,
+            "action_ids": []
+          },
+          {
+            "schema_version": "1.4",
+            "id": "snr_db@dbc0a2205c6ebb1b7a96684e016a85332dbc5d2c664c7737ab63b96b9697ea9f",
+            "unit": "dB",
+            "scope": "trace",
+            "support_refs": [
+              "e2-common-qc-demo/r4/snr_db"
+            ],
+            "value": 26.903207939262153,
+            "uncertainty": null,
+            "applicability": "APPLICABLE",
+            "validity": "VALID",
+            "reason": "10log10((P_total-P_ruido)/P_ruido); estimación sin CI de campo",
+            "direction": null,
+            "threshold_ref": null,
+            "mandatory": true,
+            "critical": false,
+            "calibration_ref": null,
+            "quality_status": null,
+            "action_ids": []
+          },
+          {
+            "schema_version": "1.4",
+            "id": "clip@48eb2e5ba76f9f9badd54fa53d3c1074c4b281ad2284476a1dca19f947cf882a",
+            "unit": "fraction",
+            "scope": "trace",
+            "support_refs": [
+              "e2-common-qc-demo/r5/clip"
+            ],
+            "value": 0.0,
+            "uncertainty": null,
+            "applicability": "APPLICABLE",
+            "validity": "VALID",
+            "reason": "Fracción junto a rails conocidos; denominador de muestras válidas",
+            "direction": null,
+            "threshold_ref": null,
+            "mandatory": true,
+            "critical": false,
+            "calibration_ref": null,
+            "quality_status": null,
+            "action_ids": []
+          },
+          {
+            "schema_version": "1.4",
+            "id": "snr_db@1a887f98816f9174abf28ea76bbd33f7bbbeac260cd3b0e3e22c6bba7425df06",
+            "unit": "dB",
+            "scope": "trace",
+            "support_refs": [
+              "e2-common-qc-demo/r5/snr_db"
+            ],
+            "value": null,
+            "uncertainty": null,
+            "applicability": "APPLICABLE",
+            "validity": "INVALID",
+            "reason": "Ruido AC cero; límite superior no finito, no estimación",
+            "direction": null,
+            "threshold_ref": null,
+            "mandatory": true,
+            "critical": false,
+            "calibration_ref": null,
+            "quality_status": null,
+            "action_ids": []
+          }
+        ],
+        "dependency_ids": [],
+        "upstream_missing_requirement_ids": [
+          "FIELD_CALIBRATION_G9",
+          "TECHNIQUE_SPECIFIC_QC",
+          "REPEATED_SOURCE_EVIDENCE",
+          "e2-common-qc-demo/r5/snr_db"
+        ],
+        "source_schema_version": "1.4",
+        "document_revision": null,
+        "supplement_hash": null
+      }
+    ],
+    "selected_record_ids": [
+      "e2-common-qc-demo"
+    ],
+    "supersessions": []
+  },
+  "quality_status": null,
+  "evidence_status": "INCOMPLETE",
+  "verdict": "YELLOW",
+  "diagnostic_mode": true,
+  "eligible_for_acceptance": false,
+  "requirement_results": [
+    {
+      "schema_version": "1.4",
+      "id": "common/clip@cf037cb0c4f52584cc5013aac865aaa1109a72a3e8692ac15335e345decf35ae",
+      "effective_record_id": "e2-common-qc-demo",
+      "state": "INCOMPLETE",
+      "reasons": [
+        "QUALITY_MISSING",
+        "UNCALIBRATED"
+      ]
+    },
+    {
+      "schema_version": "1.4",
+      "id": "common/snr_db@0453edcefa185fb0372cc55c84261cd020adae2cc389bea693b44357074b6591",
+      "effective_record_id": "e2-common-qc-demo",
+      "state": "INCOMPLETE",
+      "reasons": [
+        "QUALITY_MISSING",
+        "UNCALIBRATED"
+      ]
+    },
+    {
+      "schema_version": "1.4",
+      "id": "common/clip@c3a70efbc07065b02f0f2d944ba7b84bbcae9fb272e3ce28dfea98af9d698174",
+      "effective_record_id": "e2-common-qc-demo",
+      "state": "INCOMPLETE",
+      "reasons": [
+        "QUALITY_MISSING",
+        "UNCALIBRATED"
+      ]
+    },
+    {
+      "schema_version": "1.4",
+      "id": "common/snr_db@eaeb02c710199a58d722c763b442b61888683bcf62676723811c8ce1e9ca044f",
+      "effective_record_id": "e2-common-qc-demo",
+      "state": "INCOMPLETE",
+      "reasons": [
+        "QUALITY_MISSING",
+        "UNCALIBRATED"
+      ]
+    },
+    {
+      "schema_version": "1.4",
+      "id": "common/clip@1f7545eeac3ea1cd4df8c2d7badedf0407a4c0bfb37d0a791bfd5153820c7d4b",
+      "effective_record_id": "e2-common-qc-demo",
+      "state": "INCOMPLETE",
+      "reasons": [
+        "QUALITY_MISSING",
+        "UNCALIBRATED"
+      ]
+    },
+    {
+      "schema_version": "1.4",
+      "id": "common/snr_db@34f08761bcb17973c2adf26259b517e32b6bbba5093003741b044efaebf362b4",
+      "effective_record_id": "e2-common-qc-demo",
+      "state": "INCOMPLETE",
+      "reasons": [
+        "QUALITY_MISSING",
+        "UNCALIBRATED"
+      ]
+    },
+    {
+      "schema_version": "1.4",
+      "id": "common/clip@adb15a0f26fa6ba8389e3d25e4186f4146ddab44ee01f3f701adbffce00eb22c",
+      "effective_record_id": "e2-common-qc-demo",
+      "state": "INCOMPLETE",
+      "reasons": [
+        "QUALITY_MISSING",
+        "UNCALIBRATED"
+      ]
+    },
+    {
+      "schema_version": "1.4",
+      "id": "common/snr_db@b2dd520faaa07f2eaa76f44dd7d2c11b7dee3d32fafc3bfb04eaac518122e8ca",
+      "effective_record_id": "e2-common-qc-demo",
+      "state": "INCOMPLETE",
+      "reasons": [
+        "QUALITY_MISSING",
+        "UNCALIBRATED"
+      ]
+    },
+    {
+      "schema_version": "1.4",
+      "id": "common/clip@4cd92b8d7ad6158ef18d02cd6e0ea3a3dfc6a1a948735bf8da0488efef8a970b",
+      "effective_record_id": "e2-common-qc-demo",
+      "state": "INCOMPLETE",
+      "reasons": [
+        "QUALITY_MISSING",
+        "UNCALIBRATED"
+      ]
+    },
+    {
+      "schema_version": "1.4",
+      "id": "common/snr_db@dbc0a2205c6ebb1b7a96684e016a85332dbc5d2c664c7737ab63b96b9697ea9f",
+      "effective_record_id": "e2-common-qc-demo",
+      "state": "INCOMPLETE",
+      "reasons": [
+        "QUALITY_MISSING",
+        "UNCALIBRATED"
+      ]
+    },
+    {
+      "schema_version": "1.4",
+      "id": "common/clip@48eb2e5ba76f9f9badd54fa53d3c1074c4b281ad2284476a1dca19f947cf882a",
+      "effective_record_id": "e2-common-qc-demo",
+      "state": "INCOMPLETE",
+      "reasons": [
+        "QUALITY_MISSING",
+        "UNCALIBRATED"
+      ]
+    },
+    {
+      "schema_version": "1.4",
+      "id": "common/snr_db@1a887f98816f9174abf28ea76bbd33f7bbbeac260cd3b0e3e22c6bba7425df06",
+      "effective_record_id": "e2-common-qc-demo",
+      "state": "INCOMPLETE",
+      "reasons": [
+        "INVALID",
+        "QUALITY_MISSING",
+        "UNCALIBRATED"
+      ]
+    }
+  ],
+  "satisfied_requirement_ids": [],
+  "missing_requirement_ids": [
+    "common/clip@cf037cb0c4f52584cc5013aac865aaa1109a72a3e8692ac15335e345decf35ae",
+    "common/snr_db@0453edcefa185fb0372cc55c84261cd020adae2cc389bea693b44357074b6591",
+    "common/clip@c3a70efbc07065b02f0f2d944ba7b84bbcae9fb272e3ce28dfea98af9d698174",
+    "common/snr_db@eaeb02c710199a58d722c763b442b61888683bcf62676723811c8ce1e9ca044f",
+    "common/clip@1f7545eeac3ea1cd4df8c2d7badedf0407a4c0bfb37d0a791bfd5153820c7d4b",
+    "common/snr_db@34f08761bcb17973c2adf26259b517e32b6bbba5093003741b044efaebf362b4",
+    "common/clip@adb15a0f26fa6ba8389e3d25e4186f4146ddab44ee01f3f701adbffce00eb22c",
+    "common/snr_db@b2dd520faaa07f2eaa76f44dd7d2c11b7dee3d32fafc3bfb04eaac518122e8ca",
+    "common/clip@4cd92b8d7ad6158ef18d02cd6e0ea3a3dfc6a1a948735bf8da0488efef8a970b",
+    "common/snr_db@dbc0a2205c6ebb1b7a96684e016a85332dbc5d2c664c7737ab63b96b9697ea9f",
+    "common/clip@48eb2e5ba76f9f9badd54fa53d3c1074c4b281ad2284476a1dca19f947cf882a",
+    "common/snr_db@1a887f98816f9174abf28ea76bbd33f7bbbeac260cd3b0e3e22c6bba7425df06"
+  ],
+  "blocked_requirement_ids": [],
+  "not_applicable_requirement_ids": [],
+  "used_record_ids": [
+    "e2-common-qc-demo"
+  ],
+  "downstream_blocked_record_ids": [],
+  "blockers": [
+    "DIAGNOSTIC_RELEASE",
+    "G9_FIELD_VALIDATION_PENDING",
+    "REQUIREMENT_INCOMPLETE:common/clip@cf037cb0c4f52584cc5013aac865aaa1109a72a3e8692ac15335e345decf35ae",
+    "REQUIREMENT_INCOMPLETE:common/snr_db@0453edcefa185fb0372cc55c84261cd020adae2cc389bea693b44357074b6591",
+    "REQUIREMENT_INCOMPLETE:common/clip@c3a70efbc07065b02f0f2d944ba7b84bbcae9fb272e3ce28dfea98af9d698174",
+    "REQUIREMENT_INCOMPLETE:common/snr_db@eaeb02c710199a58d722c763b442b61888683bcf62676723811c8ce1e9ca044f",
+    "REQUIREMENT_INCOMPLETE:common/clip@1f7545eeac3ea1cd4df8c2d7badedf0407a4c0bfb37d0a791bfd5153820c7d4b",
+    "REQUIREMENT_INCOMPLETE:common/snr_db@34f08761bcb17973c2adf26259b517e32b6bbba5093003741b044efaebf362b4",
+    "REQUIREMENT_INCOMPLETE:common/clip@adb15a0f26fa6ba8389e3d25e4186f4146ddab44ee01f3f701adbffce00eb22c",
+    "REQUIREMENT_INCOMPLETE:common/snr_db@b2dd520faaa07f2eaa76f44dd7d2c11b7dee3d32fafc3bfb04eaac518122e8ca",
+    "REQUIREMENT_INCOMPLETE:common/clip@4cd92b8d7ad6158ef18d02cd6e0ea3a3dfc6a1a948735bf8da0488efef8a970b",
+    "REQUIREMENT_INCOMPLETE:common/snr_db@dbc0a2205c6ebb1b7a96684e016a85332dbc5d2c664c7737ab63b96b9697ea9f",
+    "REQUIREMENT_INCOMPLETE:common/clip@48eb2e5ba76f9f9badd54fa53d3c1074c4b281ad2284476a1dca19f947cf882a",
+    "REQUIREMENT_INCOMPLETE:common/snr_db@1a887f98816f9174abf28ea76bbd33f7bbbeac260cd3b0e3e22c6bba7425df06",
+    "MASW_R1_MIGRATION_REQUIRED:e2-common-qc-demo",
+    "UPSTREAM_MISSING:e2-common-qc-demo:FIELD_CALIBRATION_G9",
+    "UPSTREAM_MISSING:e2-common-qc-demo:TECHNIQUE_SPECIFIC_QC",
+    "UPSTREAM_MISSING:e2-common-qc-demo:REPEATED_SOURCE_EVIDENCE",
+    "UPSTREAM_MISSING:e2-common-qc-demo:e2-common-qc-demo/r5/snr_db",
+    "MANDATORY_METRIC_INCOMPLETE:e2-common-qc-demo:clip@cf037cb0c4f52584cc5013aac865aaa1109a72a3e8692ac15335e345decf35ae",
+    "MANDATORY_METRIC_INCOMPLETE:e2-common-qc-demo:snr_db@0453edcefa185fb0372cc55c84261cd020adae2cc389bea693b44357074b6591",
+    "MANDATORY_METRIC_INCOMPLETE:e2-common-qc-demo:clip@c3a70efbc07065b02f0f2d944ba7b84bbcae9fb272e3ce28dfea98af9d698174",
+    "MANDATORY_METRIC_INCOMPLETE:e2-common-qc-demo:snr_db@eaeb02c710199a58d722c763b442b61888683bcf62676723811c8ce1e9ca044f",
+    "MANDATORY_METRIC_INCOMPLETE:e2-common-qc-demo:clip@1f7545eeac3ea1cd4df8c2d7badedf0407a4c0bfb37d0a791bfd5153820c7d4b",
+    "MANDATORY_METRIC_INCOMPLETE:e2-common-qc-demo:snr_db@34f08761bcb17973c2adf26259b517e32b6bbba5093003741b044efaebf362b4",
+    "MANDATORY_METRIC_INCOMPLETE:e2-common-qc-demo:clip@adb15a0f26fa6ba8389e3d25e4186f4146ddab44ee01f3f701adbffce00eb22c",
+    "MANDATORY_METRIC_INCOMPLETE:e2-common-qc-demo:snr_db@b2dd520faaa07f2eaa76f44dd7d2c11b7dee3d32fafc3bfb04eaac518122e8ca",
+    "MANDATORY_METRIC_INCOMPLETE:e2-common-qc-demo:clip@4cd92b8d7ad6158ef18d02cd6e0ea3a3dfc6a1a948735bf8da0488efef8a970b",
+    "MANDATORY_METRIC_INCOMPLETE:e2-common-qc-demo:snr_db@dbc0a2205c6ebb1b7a96684e016a85332dbc5d2c664c7737ab63b96b9697ea9f",
+    "MANDATORY_METRIC_INCOMPLETE:e2-common-qc-demo:clip@48eb2e5ba76f9f9badd54fa53d3c1074c4b281ad2284476a1dca19f947cf882a",
+    "MANDATORY_METRIC_INCOMPLETE:e2-common-qc-demo:snr_db@1a887f98816f9174abf28ea76bbd33f7bbbeac260cd3b0e3e22c6bba7425df06"
+  ],
+  "scientific_digest": "a4be906f9f2428acbb12e3f3ebfbbcba09ce71f73f67cb88c74e9d33265a1c77",
+  "engine_hash": "f65e16aa3cc35dd109ed64a6199ab68fd81397040d404f60d8b04a6ff51dee67"
+}

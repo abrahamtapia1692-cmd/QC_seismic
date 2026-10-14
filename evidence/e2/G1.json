@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.4",
+  "id": "G1",
+  "status": "PASSED",
+  "required_test_ids": [
+    "V-E1-1",
+    "V-E1-2",
+    "V-E1-3",
+    "V-E1-4",
+    "V-E1-5",
+    "V-E1-6"
+  ],
+  "execution_artifact": "execution.json",
+  "execution_artifact_sha256": "838d558135168a0c39edb4684a3d9f351ae92a749bc0c7c6ba5eb75e339993cc",
+  "scope": "IMPLEMENTATION_AND_DECLARED_SYNTHETIC_DOMAIN_ONLY",
+  "eligible_for_field_acceptance": false,
+  "coverage_io": {
+    "status": "PASSED",
+    "minimum_percent": 90,
+    "actual_percent": 96.80365296803653,
+    "modules": {
+      "geoqc\\io\\__init__.py": {
+        "covered_lines": 0,
+        "num_statements": 0,
+        "percent_covered": 100.0,
+        "percent_covered_display": "100",
+        "missing_lines": 0,
+        "excluded_lines": 0,
+        "percent_statements_covered": 100.0,
+        "percent_statements_covered_display": "100"
+      },
+      "geoqc\\io\\binary.py": {
+        "covered_lines": 147,
+        "num_statements": 153,
+        "percent_covered": 96.07843137254902,
+        "percent_covered_display": "96",
+        "missing_lines": 6,
+        "excluded_lines": 0,
+        "percent_statements_covered": 96.07843137254902,
+        "percent_statements_covered_display": "96"
+      },
+      "geoqc\\io\\contracts.py": {
+        "covered_lines": 16,
+        "num_statements": 16,
+        "percent_covered": 100.0,
+        "percent_covered_display": "100",
+        "missing_lines": 0,
+        "excluded_lines": 0,
+        "percent_statements_covered": 100.0,
+        "percent_statements_covered_display": "100"
+      },
+      "geoqc\\io\\errors.py": {
+        "covered_lines": 10,
+        "num_statements": 10,
+        "percent_covered": 100.0,
+        "percent_covered_display": "100",
+        "missing_lines": 0,
+        "excluded_lines": 0,
+        "percent_statements_covered": 100.0,
+        "percent_statements_covered_display": "100"
+      },
+      "geoqc\\io\\geometry.py": {
+        "covered_lines": 80,
+        "num_statements": 81,
+        "percent_covered": 98.76543209876543,
+        "percent_covered_display": "99",
+        "missing_lines": 1,
+        "excluded_lines": 0,
+        "percent_statements_covered": 98.76543209876543,
+        "percent_statements_covered_display": "99"
+      },
+      "geoqc\\io\\readers.py": {
+        "covered_lines": 91,
+        "num_statements": 92,
+        "percent_covered": 98.91304347826087,
+        "percent_covered_display": "99",
+        "missing_lines": 1,
+        "excluded_lines": 0,
+        "percent_statements_covered": 98.91304347826087,
+        "percent_statements_covered_display": "99"
+      },
+      "geoqc\\io\\writers.py": {
+        "covered_lines": 80,
+        "num_statements": 86,
+        "percent_covered": 93.02325581395348,
+        "percent_covered_display": "93",
+        "missing_lines": 6,
+        "excluded_lines": 0,
+        "percent_statements_covered": 93.02325581395348,
+        "percent_statements_covered_display": "93"
+      }
+    }
+  },
+  "coverage_common_qc": null
+}

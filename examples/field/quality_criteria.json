@@ -1,0 +1,25 @@
+{
+  "id": "FIELD_DIAGNOSTIC_V1",
+  "status": "DRAFT_UNCALIBRATED",
+  "origin": "Local diagnostic rules; not acceptance limits supplied by the upstream repositories",
+  "calibration_reference": null,
+  "eligible_for_acceptance": false,
+  "trs_onset_coverage": {
+    "green_min": 0.8,
+    "amber_min": 0.5,
+    "denominator": "All channels of each saved multichannel record, including abstentions",
+    "interpretation": "Availability of exploratory onsets, not pick accuracy or acquisition quality"
+  },
+  "masw_support": {
+    "none": "RED",
+    "partial_or_unverified_mode": "AMBER",
+    "interpretation": "Geometric candidate support c > 2*f*dx; no modal validation implied"
+  },
+  "reference_agreement": {
+    "same_site_composite_uncalibrated": "AMBER",
+    "absent_or_unverified_timing": "GRAY",
+    "numerical_acceptance_threshold": null
+  },
+  "overall": "Worst evaluated dimension; any unresolved mandatory dimension prevents GREEN",
+  "missing_evidence": "GRAY; never silently converted to GREEN"
+}

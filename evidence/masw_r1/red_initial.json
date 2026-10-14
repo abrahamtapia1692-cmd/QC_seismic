@@ -1,0 +1,27 @@
+{
+  "pytest_exit_code": 1,
+  "tests": [
+    {
+      "nodeid": "tests/unit/test_masw_r1.py::test_legacy_union_preserves_covariance_and_abstains",
+      "id": "V-E5-22",
+      "status": "FAILED",
+      "phases": {
+        "setup": "passed",
+        "call": "failed",
+        "teardown": "passed"
+      },
+      "scientific_properties": []
+    },
+    {
+      "nodeid": "tests/unit/test_masw_r1.py::test_unresolved_reference_cannot_confirm_observed_mode",
+      "id": "V-E5-7",
+      "status": "FAILED",
+      "phases": {
+        "setup": "passed",
+        "call": "failed",
+        "teardown": "passed"
+      },
+      "scientific_properties": []
+    }
+  ]
+}

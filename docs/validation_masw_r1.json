@@ -1,0 +1,108 @@
+{
+  "schema_version": "masw-review-1.0",
+  "specification_version": "1.4",
+  "document_revision": "MASW-R1",
+  "review_date_local": "2026-10-12",
+  "status": "SPECIFICATION_ONLY",
+  "base_manifest_ref": "docs/validation_manifest_v1_4.json",
+  "normative_ref": "docs/masw_review_2026_10_12.md",
+  "decision_ref": "docs/adr/0002-masw-r1.md",
+  "external_review_sha256": "fe763c7881978a6fb227393615fc6006e6e9d99f1cf55fc276a817776774c21d",
+  "preserved_inputs": {
+    "docs/archive/SDD_v1_4_before_masw_r1.md": "1a8e4b04e7c1b8a04a2dd0c5f59a28455f688d0b73aecf3cdd385b16585f5090",
+    "docs/validation_manifest_v1_4.json": "a68278febf213724184ed2efd597e2879fff35ba6a256b5c53a56995b56f7471",
+    "evidence/e5/G5.json": "de993cc9e83f57489c58991c91be0e81e2552ea824d35ee70f5aa0761e66ebcf"
+  },
+  "policy": {
+    "inherit_base_passed": false,
+    "all_required_obligations_must_pass": true,
+    "required_skip_result": "INCOMPLETE",
+    "expanded_G5_status": "INCOMPLETE",
+    "field_eligible": false,
+    "runner_support": "PENDING_RM_08",
+    "protocols_required_before_execution": true,
+    "closure_requires": ["base_G5_dependencies_and_tests", "RM-01..RM-08", "revision_and_supplement_hash_in_evidence", "G9_for_field_acceptance"]
+  },
+  "obligations": [
+    {
+      "id": "RM-01",
+      "title": "Forward, residuales, autofunciones y dominio modal",
+      "required": true,
+      "status": "NOT_RUN",
+      "gate_refs": ["G3", "G5"],
+      "base_test_refs": ["V-E3-5", "V-E3-6", "V-E5-7", "V-E5-8"],
+      "contract_sections": ["D.1"],
+      "evidence_refs": []
+    },
+    {
+      "id": "RM-02",
+      "title": "Identidad modal y evidencia verificable",
+      "required": true,
+      "status": "NOT_RUN",
+      "gate_refs": ["G0", "G5", "G6"],
+      "base_test_refs": ["V-E0-9", "V-E5-7", "V-E5-8", "V-E5-18", "V-E5-21"],
+      "contract_sections": ["D.2"],
+      "evidence_refs": []
+    },
+    {
+      "id": "RM-03",
+      "title": "Covarianza conjunta, unión y duplicados",
+      "required": true,
+      "status": "NOT_RUN",
+      "gate_refs": ["G5"],
+      "base_test_refs": ["V-E5-11", "V-E5-13", "V-E5-22"],
+      "contract_sections": ["D.3"],
+      "evidence_refs": []
+    },
+    {
+      "id": "RM-04",
+      "title": "Sensibilidad, resolución y clases de covarianza",
+      "required": true,
+      "status": "NOT_RUN",
+      "gate_refs": ["G5"],
+      "base_test_refs": ["V-E5-11", "V-E5-14"],
+      "contract_sections": ["D.4"],
+      "evidence_refs": []
+    },
+    {
+      "id": "RM-05",
+      "title": "Incertidumbre y validación ingenieril Vs30",
+      "required": true,
+      "status": "NOT_RUN",
+      "gate_refs": ["G5", "G9"],
+      "base_test_refs": ["V-E5-14", "V-E5-15", "V-E5-16", "V-E9-1", "V-E9-7"],
+      "contract_sections": ["D.4", "D.5"],
+      "evidence_refs": []
+    },
+    {
+      "id": "RM-06",
+      "title": "Campo cercano, fuente y atenuación con dominio explícito",
+      "required": true,
+      "status": "NOT_RUN",
+      "gate_refs": ["G5"],
+      "base_test_refs": ["V-E3-8", "V-E5-9", "V-E5-10"],
+      "contract_sections": ["D.6"],
+      "evidence_refs": []
+    },
+    {
+      "id": "RM-07",
+      "title": "Aplicabilidad 1D, velocidad aparente y selección adaptativa",
+      "required": true,
+      "status": "NOT_RUN",
+      "gate_refs": ["G5", "G9"],
+      "base_test_refs": ["V-E5-17b", "V-E5-18", "V-E5-21", "V-E5-22", "V-E9-7"],
+      "contract_sections": ["D.2", "D.6"],
+      "evidence_refs": []
+    },
+    {
+      "id": "RM-08",
+      "title": "Migración de contratos, runner y confianza de evidencia",
+      "required": true,
+      "status": "NOT_RUN",
+      "gate_refs": ["G0", "G5", "G6", "G8"],
+      "base_test_refs": ["V-E0-9", "V-E0-10", "V-E6-1", "V-E6-4", "V-E8-3", "V-E8-4"],
+      "contract_sections": ["D.7", "D.8"],
+      "evidence_refs": []
+    }
+  ]
+}

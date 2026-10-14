@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.4",
+  "id": "G5",
+  "document_revision": "MASW-R1",
+  "status": "INCOMPLETE",
+  "required_test_ids": [
+    "V-E5-1",
+    "V-E5-2",
+    "V-E5-3",
+    "V-E5-4",
+    "V-E5-5",
+    "V-E5-6",
+    "V-E5-7",
+    "V-E5-8",
+    "V-E5-9",
+    "V-E5-10",
+    "V-E5-11",
+    "V-E5-12",
+    "V-E5-13",
+    "V-E5-14",
+    "V-E5-15",
+    "V-E5-16",
+    "V-E5-17",
+    "V-E5-17b",
+    "V-E5-18",
+    "V-E5-19",
+    "V-E5-20",
+    "V-E5-21",
+    "V-E5-22",
+    "V-E3-8"
+  ],
+  "required_supplement_ids": [
+    "RM-01",
+    "RM-02",
+    "RM-03",
+    "RM-04",
+    "RM-05",
+    "RM-06",
+    "RM-07",
+    "RM-08"
+  ],
+  "base_status": "PASSED",
+  "execution_artifact": "execution.json",
+  "execution_artifact_sha256": "31ffbe88dfb4ab9010640f01c079544c4b81213a94b7d2e31fdcbc43b5ac20d8",
+  "scope": "IMPLEMENTATION_AND_DECLARED_SYNTHETIC_DOMAIN_ONLY",
+  "eligible_for_field_acceptance": false,
+  "coverage_io": null,
+  "coverage_common_qc": null,
+  "coverage_trs": null,
+  "coverage_masw": {
+    "geoqc\\masw\\__init__.py": {
+      "covered_lines": 0,
+      "num_statements": 0,
+      "percent_covered": 100.0,
+      "percent_covered_display": "100",
+      "missing_lines": 0,
+      "excluded_lines": 0,
+      "percent_statements_covered": 100.0,
+      "percent_statements_covered_display": "100"
+    },
+    "geoqc\\masw\\contracts.py": {
+      "covered_lines": 61,
+      "num_statements": 67,
+      "percent_covered": 91.04477611940298,
+      "percent_covered_display": "91",
+      "missing_lines": 6,
+      "excluded_lines": 0,
+      "percent_statements_covered": 91.04477611940298,
+      "percent_statements_covered_display": "91"
+    },
+    "geoqc\\masw\\curves.py": {
+      "covered_lines": 53,
+      "num_statements": 59,
+      "percent_covered": 89.83050847457628,
+      "percent_covered_display": "90",
+      "missing_lines": 6,
+      "excluded_lines": 0,
+      "percent_statements_covered": 89.83050847457628,
+      "percent_statements_covered_display": "90"
+    },
+    "geoqc\\masw\\engineering.py": {
+      "covered_lines": 45,
+      "num_statements": 49,
+      "percent_covered": 91.83673469387755,
+      "percent_covered_display": "92",
+      "missing_lines": 4,
+      "excluded_lines": 0,
+      "percent_statements_covered": 91.83673469387755,
+      "percent_statements_covered_display": "92"
+    },
+    "geoqc\\masw\\r1.py": {
+      "covered_lines": 120,
+      "num_statements": 128,
+      "percent_covered": 93.75,
+      "percent_covered_display": "94",
+      "missing_lines": 8,
+      "excluded_lines": 0,
+      "percent_statements_covered": 93.75,
+      "percent_statements_covered_display": "94"
+    },
+    "geoqc\\masw\\report.py": {
+      "covered_lines": 48,
+      "num_statements": 48,
+      "percent_covered": 100.0,
+      "percent_covered_display": "100",
+      "missing_lines": 0,
+      "excluded_lines": 0,
+      "percent_statements_covered": 100.0,
+      "percent_statements_covered_display": "100"
+    },
+    "geoqc\\masw\\statistics.py": {
+      "covered_lines": 47,
+      "num_statements": 50,
+      "percent_covered": 94.0,
+      "percent_covered_display": "94",
+      "missing_lines": 3,
+      "excluded_lines": 0,
+      "percent_statements_covered": 94.0,
+      "percent_statements_covered_display": "94"
+    },
+    "geoqc\\masw\\transform.py": {
+      "covered_lines": 81,
+      "num_statements": 91,
+      "percent_covered": 89.01098901098901,
+      "percent_covered_display": "89",
+      "missing_lines": 10,
+      "excluded_lines": 0,
+      "percent_statements_covered": 89.01098901098901,
+      "percent_statements_covered_display": "89"
+    },
+    "geoqc\\masw\\union.py": {
+      "covered_lines": 85,
+      "num_statements": 86,
+      "percent_covered": 98.83720930232558,
+      "percent_covered_display": "99",
+      "missing_lines": 1,
+      "excluded_lines": 0,
+      "percent_statements_covered": 98.83720930232558,
+      "percent_statements_covered_display": "99"
+    }
+  },
+  "masw_scope": {
+    "transform": "phase shift with signed directions; actual support/kernel; diagnostic bands",
+    "uncertainty": "declared complex-Gaussian spectral domain; empirical error covariance/holdout",
+    "null": "IID equal phases N12/24/48 and declared colored correlated maximum domain",
+    "nearfield": "full P/S/R axisymmetric homogeneous halfspace Gaussian normal surface source only",
+    "layered_nearfield": "UNCALIBRATED",
+    "real_field_noise": "UNCALIBRATED; no real array-noise corpus in workspace",
+    "vs30": "independent FEM/disba discrete synthetic ensembles; not G9 profile qualification",
+    "field_acceptance": false
+  }
+}

@@ -1,0 +1,337 @@
+file,source_x_m,channel_1based,receiver_x_m,onset_s,confidence,reason
+0m.sg2,0.0,1,52.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+0m.sg2,0.0,2,51.0,,AMBIGUOUS,Burst aislado o llegada sin soporte sostenido
+0m.sg2,0.0,3,50.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+0m.sg2,0.0,4,49.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+0m.sg2,0.0,5,48.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+0m.sg2,0.0,6,47.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+0m.sg2,0.0,7,46.0,0.020000000000000018,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+0m.sg2,0.0,8,45.0,0.039999999999999925,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+0m.sg2,0.0,9,44.0,0.038999999999999924,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+0m.sg2,0.0,10,43.0,0.03799999999999992,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+0m.sg2,0.0,11,42.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+0m.sg2,0.0,12,41.0,0.03749999999999998,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+0m.sg2,0.0,13,40.0,0.03649999999999998,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+0m.sg2,0.0,14,39.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+0m.sg2,0.0,15,38.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+0m.sg2,0.0,16,37.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+0m.sg2,0.0,17,36.0,0.03499999999999992,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+0m.sg2,0.0,18,35.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+0m.sg2,0.0,19,34.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+0m.sg2,0.0,20,33.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+0m.sg2,0.0,21,32.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+0m.sg2,0.0,22,31.0,,AMBIGUOUS,Burst aislado o llegada sin soporte sostenido
+0m.sg2,0.0,23,30.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+0m.sg2,0.0,24,29.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+0m.sg2,0.0,25,28.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+0m.sg2,0.0,26,27.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+0m.sg2,0.0,27,26.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+0m.sg2,0.0,28,25.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+0m.sg2,0.0,29,24.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+0m.sg2,0.0,30,23.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+0m.sg2,0.0,31,22.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+0m.sg2,0.0,32,21.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+0m.sg2,0.0,33,20.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+0m.sg2,0.0,34,19.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+0m.sg2,0.0,35,18.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+0m.sg2,0.0,36,17.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+0m.sg2,0.0,37,16.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+0m.sg2,0.0,38,15.0,,AMBIGUOUS,Burst aislado o llegada sin soporte sostenido
+0m.sg2,0.0,39,14.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+0m.sg2,0.0,40,13.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+0m.sg2,0.0,41,12.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+0m.sg2,0.0,42,11.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+0m.sg2,0.0,43,10.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+0m.sg2,0.0,44,9.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+0m.sg2,0.0,45,8.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+0m.sg2,0.0,46,7.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+0m.sg2,0.0,47,6.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+0m.sg2,0.0,48,5.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+10m.sg2,10.0,1,52.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+10m.sg2,10.0,2,51.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+10m.sg2,10.0,3,50.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+10m.sg2,10.0,4,49.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+10m.sg2,10.0,5,48.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+10m.sg2,10.0,6,47.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+10m.sg2,10.0,7,46.0,,MISSING,No se identifica cambio de energía sobre el ruido
+10m.sg2,10.0,8,45.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+10m.sg2,10.0,9,44.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+10m.sg2,10.0,10,43.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+10m.sg2,10.0,11,42.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+10m.sg2,10.0,12,41.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+10m.sg2,10.0,13,40.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+10m.sg2,10.0,14,39.0,,AMBIGUOUS,Burst aislado o llegada sin soporte sostenido
+10m.sg2,10.0,15,38.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+10m.sg2,10.0,16,37.0,,AMBIGUOUS,Burst aislado o llegada sin soporte sostenido
+10m.sg2,10.0,17,36.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+10m.sg2,10.0,18,35.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+10m.sg2,10.0,19,34.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+10m.sg2,10.0,20,33.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+10m.sg2,10.0,21,32.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+10m.sg2,10.0,22,31.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+10m.sg2,10.0,23,30.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+10m.sg2,10.0,24,29.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+10m.sg2,10.0,25,28.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+10m.sg2,10.0,26,27.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+10m.sg2,10.0,27,26.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+10m.sg2,10.0,28,25.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+10m.sg2,10.0,29,24.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+10m.sg2,10.0,30,23.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+10m.sg2,10.0,31,22.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+10m.sg2,10.0,32,21.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+10m.sg2,10.0,33,20.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+10m.sg2,10.0,34,19.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+10m.sg2,10.0,35,18.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+10m.sg2,10.0,36,17.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+10m.sg2,10.0,37,16.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+10m.sg2,10.0,38,15.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+10m.sg2,10.0,39,14.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+10m.sg2,10.0,40,13.0,0.014000000000000012,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+10m.sg2,10.0,41,12.0,0.015000000000000013,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+10m.sg2,10.0,42,11.0,0.011499999999999955,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+10m.sg2,10.0,43,10.0,0.0044999999999999485,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+10m.sg2,10.0,44,9.0,,AMBIGUOUS,Mínimo AIC en límite de segmentos
+10m.sg2,10.0,45,8.0,,AMBIGUOUS,Mínimo AIC en límite de segmentos
+10m.sg2,10.0,46,7.0,0.013000000000000012,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+10m.sg2,10.0,47,6.0,0.01649999999999996,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+10m.sg2,10.0,48,5.0,0.014499999999999957,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+20m.sg2,20.0,1,52.0,0.03649999999999998,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+20m.sg2,20.0,2,51.0,0.03599999999999992,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+20m.sg2,20.0,3,50.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+20m.sg2,20.0,4,49.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+20m.sg2,20.0,5,48.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+20m.sg2,20.0,6,47.0,0.03200000000000003,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+20m.sg2,20.0,7,46.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+20m.sg2,20.0,8,45.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+20m.sg2,20.0,9,44.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+20m.sg2,20.0,10,43.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+20m.sg2,20.0,11,42.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+20m.sg2,20.0,12,41.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+20m.sg2,20.0,13,40.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+20m.sg2,20.0,14,39.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+20m.sg2,20.0,15,38.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+20m.sg2,20.0,16,37.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+20m.sg2,20.0,17,36.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+20m.sg2,20.0,18,35.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+20m.sg2,20.0,19,34.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+20m.sg2,20.0,20,33.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+20m.sg2,20.0,21,32.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+20m.sg2,20.0,22,31.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+20m.sg2,20.0,23,30.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+20m.sg2,20.0,24,29.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+20m.sg2,20.0,25,28.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+20m.sg2,20.0,26,27.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+20m.sg2,20.0,27,26.0,0.015499999999999958,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+20m.sg2,20.0,28,25.0,0.013499999999999956,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+20m.sg2,20.0,29,24.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+20m.sg2,20.0,30,23.0,0.014000000000000012,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+20m.sg2,20.0,31,22.0,0.011499999999999955,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+20m.sg2,20.0,32,21.0,0.01200000000000001,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+20m.sg2,20.0,33,20.0,0.00649999999999995,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+20m.sg2,20.0,34,19.0,0.020499999999999963,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+20m.sg2,20.0,35,18.0,0.009000000000000008,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+20m.sg2,20.0,36,17.0,0.010000000000000009,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+20m.sg2,20.0,37,16.0,0.012499999999999956,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+20m.sg2,20.0,38,15.0,0.008499999999999952,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+20m.sg2,20.0,39,14.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+20m.sg2,20.0,40,13.0,0.014000000000000012,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+20m.sg2,20.0,41,12.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+20m.sg2,20.0,42,11.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+20m.sg2,20.0,43,10.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+20m.sg2,20.0,44,9.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+20m.sg2,20.0,45,8.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+20m.sg2,20.0,46,7.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+20m.sg2,20.0,47,6.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+20m.sg2,20.0,48,5.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+30m.sg2,30.0,1,52.0,0.021499999999999964,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+30m.sg2,30.0,2,51.0,0.021499999999999964,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+30m.sg2,30.0,3,50.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+30m.sg2,30.0,4,49.0,0.01849999999999996,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+30m.sg2,30.0,5,48.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+30m.sg2,30.0,6,47.0,0.01749999999999996,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+30m.sg2,30.0,7,46.0,,AMBIGUOUS,Burst aislado o llegada sin soporte sostenido
+30m.sg2,30.0,8,45.0,0.01649999999999996,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+30m.sg2,30.0,9,44.0,0.015000000000000013,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+30m.sg2,30.0,10,43.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+30m.sg2,30.0,11,42.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+30m.sg2,30.0,12,41.0,0.012499999999999956,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+30m.sg2,30.0,13,40.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+30m.sg2,30.0,14,39.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+30m.sg2,30.0,15,38.0,0.013499999999999956,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+30m.sg2,30.0,16,37.0,0.009000000000000008,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+30m.sg2,30.0,17,36.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+30m.sg2,30.0,18,35.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+30m.sg2,30.0,19,34.0,0.0044999999999999485,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+30m.sg2,30.0,20,33.0,0.010000000000000009,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+30m.sg2,30.0,21,32.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+30m.sg2,30.0,22,31.0,0.0044999999999999485,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+30m.sg2,30.0,23,30.0,0.011499999999999955,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+30m.sg2,30.0,24,29.0,0.017000000000000015,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+30m.sg2,30.0,25,28.0,0.011499999999999955,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+30m.sg2,30.0,26,27.0,0.005499999999999949,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+30m.sg2,30.0,27,26.0,0.0050000000000000044,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+30m.sg2,30.0,28,25.0,0.008000000000000007,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+30m.sg2,30.0,29,24.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+30m.sg2,30.0,30,23.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+30m.sg2,30.0,31,22.0,0.010499999999999954,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+30m.sg2,30.0,32,21.0,0.01200000000000001,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+30m.sg2,30.0,33,20.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+30m.sg2,30.0,34,19.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+30m.sg2,30.0,35,18.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+30m.sg2,30.0,36,17.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+30m.sg2,30.0,37,16.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+30m.sg2,30.0,38,15.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+30m.sg2,30.0,39,14.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+30m.sg2,30.0,40,13.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+30m.sg2,30.0,41,12.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+30m.sg2,30.0,42,11.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+30m.sg2,30.0,43,10.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+30m.sg2,30.0,44,9.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+30m.sg2,30.0,45,8.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+30m.sg2,30.0,46,7.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+30m.sg2,30.0,47,6.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+30m.sg2,30.0,48,5.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+40m.sg2,40.0,1,52.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+40m.sg2,40.0,2,51.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+40m.sg2,40.0,3,50.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+40m.sg2,40.0,4,49.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+40m.sg2,40.0,5,48.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+40m.sg2,40.0,6,47.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+40m.sg2,40.0,7,46.0,0.01849999999999996,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+40m.sg2,40.0,8,45.0,0.016000000000000014,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+40m.sg2,40.0,9,44.0,0.012499999999999956,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+40m.sg2,40.0,10,43.0,0.009499999999999953,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+40m.sg2,40.0,11,42.0,0.007499999999999951,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+40m.sg2,40.0,12,41.0,0.0044999999999999485,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+40m.sg2,40.0,13,40.0,0.006000000000000005,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+40m.sg2,40.0,14,39.0,0.020000000000000018,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+40m.sg2,40.0,15,38.0,0.007000000000000006,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+40m.sg2,40.0,16,37.0,0.0050000000000000044,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+40m.sg2,40.0,17,36.0,0.01200000000000001,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+40m.sg2,40.0,18,35.0,0.010499999999999954,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+40m.sg2,40.0,19,34.0,0.01200000000000001,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+40m.sg2,40.0,20,33.0,0.014499999999999957,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+40m.sg2,40.0,21,32.0,0.016000000000000014,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+40m.sg2,40.0,22,31.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+40m.sg2,40.0,23,30.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+40m.sg2,40.0,24,29.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+40m.sg2,40.0,25,28.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+40m.sg2,40.0,26,27.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+40m.sg2,40.0,27,26.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+40m.sg2,40.0,28,25.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+40m.sg2,40.0,29,24.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+40m.sg2,40.0,30,23.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+40m.sg2,40.0,31,22.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+40m.sg2,40.0,32,21.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+40m.sg2,40.0,33,20.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+40m.sg2,40.0,34,19.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+40m.sg2,40.0,35,18.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+40m.sg2,40.0,36,17.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+40m.sg2,40.0,37,16.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+40m.sg2,40.0,38,15.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+40m.sg2,40.0,39,14.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+40m.sg2,40.0,40,13.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+40m.sg2,40.0,41,12.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+40m.sg2,40.0,42,11.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+40m.sg2,40.0,43,10.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+40m.sg2,40.0,44,9.0,,AMBIGUOUS,Burst aislado o llegada sin soporte sostenido
+40m.sg2,40.0,45,8.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+40m.sg2,40.0,46,7.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+40m.sg2,40.0,47,6.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+40m.sg2,40.0,48,5.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+50m.sg2,50.0,1,52.0,0.01200000000000001,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+50m.sg2,50.0,2,51.0,0.010000000000000009,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+50m.sg2,50.0,3,50.0,0.0050000000000000044,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+50m.sg2,50.0,4,49.0,,AMBIGUOUS,Mínimo AIC en límite de segmentos
+50m.sg2,50.0,5,48.0,,AMBIGUOUS,Mínimo AIC en límite de segmentos
+50m.sg2,50.0,6,47.0,0.009000000000000008,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+50m.sg2,50.0,7,46.0,0.010499999999999954,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+50m.sg2,50.0,8,45.0,0.008499999999999952,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+50m.sg2,50.0,9,44.0,0.01200000000000001,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+50m.sg2,50.0,10,43.0,0.014499999999999957,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+50m.sg2,50.0,11,42.0,0.017000000000000015,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+50m.sg2,50.0,12,41.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+50m.sg2,50.0,13,40.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+50m.sg2,50.0,14,39.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+50m.sg2,50.0,15,38.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+50m.sg2,50.0,16,37.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+50m.sg2,50.0,17,36.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+50m.sg2,50.0,18,35.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+50m.sg2,50.0,19,34.0,,AMBIGUOUS,Burst aislado o llegada sin soporte sostenido
+50m.sg2,50.0,20,33.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+50m.sg2,50.0,21,32.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+50m.sg2,50.0,22,31.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+50m.sg2,50.0,23,30.0,0.025499999999999967,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+50m.sg2,50.0,24,29.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+50m.sg2,50.0,25,28.0,0.027000000000000024,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+50m.sg2,50.0,26,27.0,0.027000000000000024,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+50m.sg2,50.0,27,26.0,0.026499999999999968,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+50m.sg2,50.0,28,25.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+50m.sg2,50.0,29,24.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+50m.sg2,50.0,30,23.0,0.031000000000000028,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+50m.sg2,50.0,31,22.0,0.03049999999999997,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+50m.sg2,50.0,32,21.0,0.03200000000000003,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+50m.sg2,50.0,33,20.0,0.03149999999999997,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+50m.sg2,50.0,34,19.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+50m.sg2,50.0,35,18.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+50m.sg2,50.0,36,17.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+50m.sg2,50.0,37,16.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+50m.sg2,50.0,38,15.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+50m.sg2,50.0,39,14.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+50m.sg2,50.0,40,13.0,,AMBIGUOUS,Burst aislado o llegada sin soporte sostenido
+50m.sg2,50.0,41,12.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+50m.sg2,50.0,42,11.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+50m.sg2,50.0,43,10.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+50m.sg2,50.0,44,9.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+50m.sg2,50.0,45,8.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+50m.sg2,50.0,46,7.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+50m.sg2,50.0,47,6.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+50m.sg2,50.0,48,5.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+60m.sg2,60.0,1,52.0,0.01749999999999996,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+60m.sg2,60.0,2,51.0,0.020000000000000018,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+60m.sg2,60.0,3,50.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+60m.sg2,60.0,4,49.0,,AMBIGUOUS,Burst aislado o llegada sin soporte sostenido
+60m.sg2,60.0,5,48.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+60m.sg2,60.0,6,47.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+60m.sg2,60.0,7,46.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+60m.sg2,60.0,8,45.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+60m.sg2,60.0,9,44.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+60m.sg2,60.0,10,43.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+60m.sg2,60.0,11,42.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+60m.sg2,60.0,12,41.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+60m.sg2,60.0,13,40.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+60m.sg2,60.0,14,39.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+60m.sg2,60.0,15,38.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+60m.sg2,60.0,16,37.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+60m.sg2,60.0,17,36.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+60m.sg2,60.0,18,35.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+60m.sg2,60.0,19,34.0,0.02949999999999997,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+60m.sg2,60.0,20,33.0,0.030000000000000027,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+60m.sg2,60.0,21,32.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+60m.sg2,60.0,22,31.0,0.03200000000000003,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+60m.sg2,60.0,23,30.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+60m.sg2,60.0,24,29.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+60m.sg2,60.0,25,28.0,0.033499999999999974,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+60m.sg2,60.0,26,27.0,0.034499999999999975,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+60m.sg2,60.0,27,26.0,,AMBIGUOUS,Burst aislado o llegada sin soporte sostenido
+60m.sg2,60.0,28,25.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+60m.sg2,60.0,29,24.0,0.04149999999999998,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+60m.sg2,60.0,30,23.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+60m.sg2,60.0,31,22.0,0.03749999999999998,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+60m.sg2,60.0,32,21.0,,AMBIGUOUS,Burst aislado o llegada sin soporte sostenido
+60m.sg2,60.0,33,20.0,0.038999999999999924,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada
+60m.sg2,60.0,34,19.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+60m.sg2,60.0,35,18.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+60m.sg2,60.0,36,17.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+60m.sg2,60.0,37,16.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+60m.sg2,60.0,38,15.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+60m.sg2,60.0,39,14.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+60m.sg2,60.0,40,13.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+60m.sg2,60.0,41,12.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+60m.sg2,60.0,42,11.0,,AMBIGUOUS,Burst aislado o llegada sin soporte sostenido
+60m.sg2,60.0,43,10.0,,AMBIGUOUS,Burst aislado o llegada sin soporte sostenido
+60m.sg2,60.0,44,9.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+60m.sg2,60.0,45,8.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+60m.sg2,60.0,46,7.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+60m.sg2,60.0,47,6.0,,AMBIGUOUS,Múltiples episodios de energía: primera llegada ambigua
+60m.sg2,60.0,48,5.0,0.04499999999999993,UNCALIBRATED,Onset diagnóstico; curvatura AIC no es sigma; polaridad separada

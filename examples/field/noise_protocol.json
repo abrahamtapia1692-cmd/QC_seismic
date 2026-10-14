@@ -1,0 +1,13 @@
+{
+  "noise": {"start_s": -0.75, "end_s": -0.05},
+  "signal": {"start_s": 0.0, "end_s": 0.18},
+  "low_band_hz": [1.0, 15.0],
+  "minimum_cycles": 3,
+  "noise_blocks": 4,
+  "block_power_ratio_warn": 4.0,
+  "low_ratio_warn": 0.5,
+  "mains_candidates_hz": [50, 60],
+  "harmonics": 5,
+  "line_prominence_db": 10,
+  "reference": "Chevremont: ventana fija [-0.75,-0.05) en reloj DELAY; no seleccionada por mínimo ruido. Señal [0,0.18) del protocolo previo. Transferencia del ruido a la señal y reloj de fuente no verificados. Búsqueda exploratoria 50/60 Hz, sin atribuir país o causa."
+}

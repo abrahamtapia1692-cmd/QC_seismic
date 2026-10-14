@@ -1,0 +1,15 @@
+{
+  "schema_version": "masw-criteria-1.0",
+  "document_revision": "MASW-R1",
+  "protocol_ref": "docs/requirements_masw_r1.md",
+  "criteria": {
+    "RM-01": ["forward_domain"],
+    "RM-02": ["reference", "population"],
+    "RM-03": ["unknowns", "covariance", "joint", "duplicates_modes", "validation"],
+    "RM-04": ["resolution_uncertainty"],
+    "RM-05": ["vs30_generalization"],
+    "RM-06": ["source_attenuation"],
+    "RM-07": ["applicability_selection"],
+    "RM-08": ["migration", "runner", "report_trust", "decision_integration"]
+  }
+}

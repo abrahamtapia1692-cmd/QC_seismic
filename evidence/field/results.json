@@ -1,0 +1,1443 @@
+{
+  "status": "EXPLORATORY_UNCALIBRATED",
+  "eligible_for_acceptance": false,
+  "executed_at_utc": "2026-10-08T04:20:45.573918+00:00",
+  "download_manifest": "examples/field/download_manifest.json",
+  "repositories": [
+    {
+      "label": "oysand",
+      "repository": "Mazvel/maswavespy",
+      "commit": "8ae34e9a112aad4e68df34f58efde7d500621a89"
+    },
+    {
+      "label": "chevremont",
+      "repository": "hadrienmichel/SardineReborn",
+      "commit": "2d1fdac70d94aa0baa62e82ae5319feacfc4a19b"
+    }
+  ],
+  "checks": [
+    {
+      "id": "sha256:examples/field/raw/oysand/examples/Data/Oysand_c_list.txt",
+      "passed": true
+    },
+    {
+      "id": "sha256:examples/field/raw/oysand/examples/Data/Oysand_dc.txt",
+      "passed": true
+    },
+    {
+      "id": "sha256:examples/field/raw/oysand/examples/Data/Oysand_dx_2m_x1_10m_forward.dat",
+      "passed": true
+    },
+    {
+      "id": "sha256:examples/field/raw/oysand/examples/Data/Oysand_dx_2m_x1_15m_forward.dat",
+      "passed": true
+    },
+    {
+      "id": "sha256:examples/field/raw/oysand/examples/Data/Oysand_dx_2m_x1_20m_forward.dat",
+      "passed": true
+    },
+    {
+      "id": "sha256:examples/field/raw/oysand/examples/Data/Oysand_dx_2m_x1_30m_forward.dat",
+      "passed": true
+    },
+    {
+      "id": "sha256:examples/field/raw/oysand/examples/Data/Oysand_example_dataset.csv",
+      "passed": true
+    },
+    {
+      "id": "sha256:examples/field/raw/oysand/examples/Data/Oysand_f_list.txt",
+      "passed": true
+    },
+    {
+      "id": "sha256:examples/field/raw/oysand/examples/Data/Oysand_initial.csv",
+      "passed": true
+    },
+    {
+      "id": "sha256:examples/field/raw/oysand/LICENSE",
+      "passed": true
+    },
+    {
+      "id": "sha256:examples/field/raw/oysand/README.md",
+      "passed": true
+    },
+    {
+      "id": "sha256:examples/field/raw/oysand/examples/MASWavesPy_Dispersion_test1.py",
+      "passed": true
+    },
+    {
+      "id": "sha256:examples/field/raw/oysand/examples/MASWavesPy_Dispersion_test2.py",
+      "passed": true
+    },
+    {
+      "id": "sha256:examples/field/raw/chevremont/example/Chevremont/0m.sg2",
+      "passed": true
+    },
+    {
+      "id": "sha256:examples/field/raw/chevremont/example/Chevremont/10m.sg2",
+      "passed": true
+    },
+    {
+      "id": "sha256:examples/field/raw/chevremont/example/Chevremont/20m.sg2",
+      "passed": true
+    },
+    {
+      "id": "sha256:examples/field/raw/chevremont/example/Chevremont/30m.sg2",
+      "passed": true
+    },
+    {
+      "id": "sha256:examples/field/raw/chevremont/example/Chevremont/40m.sg2",
+      "passed": true
+    },
+    {
+      "id": "sha256:examples/field/raw/chevremont/example/Chevremont/50m.sg2",
+      "passed": true
+    },
+    {
+      "id": "sha256:examples/field/raw/chevremont/example/Chevremont/60m.sg2",
+      "passed": true
+    },
+    {
+      "id": "sha256:examples/field/raw/chevremont/example/Chevremont/chevremont.geometry",
+      "passed": true
+    },
+    {
+      "id": "sha256:examples/field/raw/chevremont/example/Chevremont/test.sgt",
+      "passed": true
+    },
+    {
+      "id": "sha256:examples/field/raw/chevremont/LICENSE",
+      "passed": true
+    },
+    {
+      "id": "sha256:examples/field/raw/chevremont/README.md",
+      "passed": true
+    },
+    {
+      "id": "oysand_10_shape_metadata",
+      "passed": true
+    },
+    {
+      "id": "oysand_10_transform_finite_bounded",
+      "passed": true
+    },
+    {
+      "id": "oysand_10_ridge_complete",
+      "passed": true
+    },
+    {
+      "id": "oysand_15_shape_metadata",
+      "passed": true
+    },
+    {
+      "id": "oysand_15_transform_finite_bounded",
+      "passed": true
+    },
+    {
+      "id": "oysand_15_ridge_complete",
+      "passed": true
+    },
+    {
+      "id": "oysand_20_shape_metadata",
+      "passed": true
+    },
+    {
+      "id": "oysand_20_transform_finite_bounded",
+      "passed": true
+    },
+    {
+      "id": "oysand_20_ridge_complete",
+      "passed": true
+    },
+    {
+      "id": "oysand_30_shape_metadata",
+      "passed": true
+    },
+    {
+      "id": "oysand_30_transform_finite_bounded",
+      "passed": true
+    },
+    {
+      "id": "oysand_30_ridge_complete",
+      "passed": true
+    },
+    {
+      "id": "0m.sg2_geometry_channel_count",
+      "passed": true
+    },
+    {
+      "id": "0m.sg2_acquisition_channel_order",
+      "passed": true
+    },
+    {
+      "id": "0m.sg2_decode_vs_obspy",
+      "passed": true
+    },
+    {
+      "id": "0m.sg2_missing_sidecar_rejected",
+      "passed": true
+    },
+    {
+      "id": "10m.sg2_geometry_channel_count",
+      "passed": true
+    },
+    {
+      "id": "10m.sg2_acquisition_channel_order",
+      "passed": true
+    },
+    {
+      "id": "10m.sg2_decode_vs_obspy",
+      "passed": true
+    },
+    {
+      "id": "10m.sg2_missing_sidecar_rejected",
+      "passed": true
+    },
+    {
+      "id": "20m.sg2_geometry_channel_count",
+      "passed": true
+    },
+    {
+      "id": "20m.sg2_acquisition_channel_order",
+      "passed": true
+    },
+    {
+      "id": "20m.sg2_decode_vs_obspy",
+      "passed": true
+    },
+    {
+      "id": "20m.sg2_missing_sidecar_rejected",
+      "passed": true
+    },
+    {
+      "id": "30m.sg2_geometry_channel_count",
+      "passed": true
+    },
+    {
+      "id": "30m.sg2_acquisition_channel_order",
+      "passed": true
+    },
+    {
+      "id": "30m.sg2_decode_vs_obspy",
+      "passed": true
+    },
+    {
+      "id": "30m.sg2_missing_sidecar_rejected",
+      "passed": true
+    },
+    {
+      "id": "40m.sg2_geometry_channel_count",
+      "passed": true
+    },
+    {
+      "id": "40m.sg2_acquisition_channel_order",
+      "passed": true
+    },
+    {
+      "id": "40m.sg2_decode_vs_obspy",
+      "passed": true
+    },
+    {
+      "id": "40m.sg2_missing_sidecar_rejected",
+      "passed": true
+    },
+    {
+      "id": "50m.sg2_geometry_channel_count",
+      "passed": true
+    },
+    {
+      "id": "50m.sg2_acquisition_channel_order",
+      "passed": true
+    },
+    {
+      "id": "50m.sg2_decode_vs_obspy",
+      "passed": true
+    },
+    {
+      "id": "50m.sg2_missing_sidecar_rejected",
+      "passed": true
+    },
+    {
+      "id": "60m.sg2_geometry_channel_count",
+      "passed": true
+    },
+    {
+      "id": "60m.sg2_acquisition_channel_order",
+      "passed": true
+    },
+    {
+      "id": "60m.sg2_decode_vs_obspy",
+      "passed": true
+    },
+    {
+      "id": "60m.sg2_missing_sidecar_rejected",
+      "passed": true
+    },
+    {
+      "id": "all_sgt_annotations_mapped_by_coordinates",
+      "passed": true
+    }
+  ],
+  "dependencies": {
+    "numpy": "1.26.4",
+    "scipy": "1.15.2",
+    "pydantic": "2.12.5",
+    "obspy": "1.5.1",
+    "matplotlib": "3.10.0"
+  },
+  "code_sha256": {
+    "tools/probe_field_data.py": "1ce8d4d0b1d0bc5d61d2954e77c3661965ce032338fa6371ce342a224ec7e3bf",
+    "geoqc/io/binary.py": "b2cf8ce499f234d2983edf673195fa331e6e6a9566f4a455ea3e03c333785cf5",
+    "geoqc/trs/picking.py": "d8cc18dabff1b33fb8a3ec2b21e9395479f71447c2725c323f0dc0604aca1fe9",
+    "geoqc/masw/transform.py": "931bf77fe0c4a15505a6fc059992c7a08af5560817957f588137d8029449476c",
+    "geoqc/masw/curves.py": "d124c0ee9634d647cf3d25e6ac36ef7bb8c37cd4d89d005d16ae514c9cd70d6d"
+  },
+  "oysand": [
+    {
+      "file": "examples/field/raw/oysand/examples/Data/Oysand_dx_2m_x1_10m_forward.dat",
+      "offset_m": 10.0,
+      "receiver_spacing_m": 2.0,
+      "fs_hz": 1000.0,
+      "qc": {
+        "channels": 24,
+        "samples_per_channel": 2201,
+        "finite_fraction": 1.0,
+        "constant_channels_1based": [],
+        "zero_channels_1based": [],
+        "rms_ac_native_units": [
+          0.001998478714436387,
+          0.001703081078758955,
+          0.0014865935644288858,
+          0.0012204596690404345,
+          0.0010073214004636768,
+          0.0011074335432424383,
+          0.0009464450057035657,
+          0.0008087199841187564,
+          0.0007445569956310566,
+          0.0007214912489629989,
+          0.0007602244270421419,
+          0.0007305493142372409,
+          0.0006777741659767761,
+          0.0005477852137647288,
+          0.0005457433710380541,
+          0.0005627500297037126,
+          0.0005769658903958135,
+          0.0006037569601229676,
+          0.0006203703533951929,
+          0.0005679300311276629,
+          0.0005471385687937617,
+          0.0005014507304066097,
+          0.000488230487145427,
+          0.0004620406258734049
+        ],
+        "amplitude_unit": "UNKNOWN",
+        "clipping_status": "UNKNOWN_ADC_RAILS"
+      },
+      "duration_s": 2.201,
+      "last_sample_time_s": 2.2,
+      "aperture_m": 46.0,
+      "fft_window": "HANN_FULL_RECORD_DC_REMOVED",
+      "frequency_bounds_hz": [
+        5.452067242162653,
+        69.96819627442072
+      ],
+      "velocity_grid_ms": [
+        60.0,
+        400.0,
+        1
+      ],
+      "ridge_coherence_median": 0.6956285813633345,
+      "forward_max_coherence_median": 0.6956285813633345,
+      "reverse_max_coherence_median": 0.5913980173302006,
+      "spatially_unaliased_ridge_bins": 58,
+      "channel_1_sensitivity": {
+        "scope": "Drop only channel 1; preserve coordinates; trigger role is unresolved",
+        "median_absolute_ridge_shift_ms": 0.0,
+        "max_absolute_ridge_shift_ms": 34.0
+      },
+      "comparison_to_upstream_composite": {
+        "scope": "Same-site composite curve; not independent ground truth or per-shot labels",
+        "bins": 57,
+        "median_absolute_difference_ms": 0.7830009319131648,
+        "rmse_ms": 7.169028457371047
+      },
+      "limitations": [
+        "Amplitude unit, response and geometry uncertainty not documented",
+        "Channel 1 is mentioned as trigger; keep upstream 24-channel convention provisionally",
+        "Spatial aliasing flags are geometric and do not validate modal identity",
+        "No field confidence intervals, significance or Vs30 acceptance"
+      ]
+    },
+    {
+      "file": "examples/field/raw/oysand/examples/Data/Oysand_dx_2m_x1_15m_forward.dat",
+      "offset_m": 15.0,
+      "receiver_spacing_m": 2.0,
+      "fs_hz": 1000.0,
+      "qc": {
+        "channels": 24,
+        "samples_per_channel": 2201,
+        "finite_fraction": 1.0,
+        "constant_channels_1based": [],
+        "zero_channels_1based": [],
+        "rms_ac_native_units": [
+          0.0019411560174303916,
+          0.0015480425583051763,
+          0.001404093900684799,
+          0.0011549943028510193,
+          0.0010032615031937773,
+          0.0009774921228483716,
+          0.0009144278918251725,
+          0.0008616771781155499,
+          0.0008742300042772341,
+          0.0007795524430075858,
+          0.0007898969199885272,
+          0.0006902583021178917,
+          0.0006545174718503389,
+          0.0006313777189126442,
+          0.0006898644753104573,
+          0.0007108798893377581,
+          0.0007459150035101699,
+          0.0007749128491387577,
+          0.0007850132510404178,
+          0.0007130089694865477,
+          0.0006673146624245434,
+          0.0005919744786402027,
+          0.0005763774741477815,
+          0.0005402101646871739
+        ],
+        "amplitude_unit": "UNKNOWN",
+        "clipping_status": "UNKNOWN_ADC_RAILS"
+      },
+      "duration_s": 2.201,
+      "last_sample_time_s": 2.2,
+      "aperture_m": 46.0,
+      "fft_window": "HANN_FULL_RECORD_DC_REMOVED",
+      "frequency_bounds_hz": [
+        5.452067242162653,
+        69.96819627442072
+      ],
+      "velocity_grid_ms": [
+        60.0,
+        400.0,
+        1
+      ],
+      "ridge_coherence_median": 0.6881042449115786,
+      "forward_max_coherence_median": 0.6908624288181505,
+      "reverse_max_coherence_median": 0.5158562755358211,
+      "spatially_unaliased_ridge_bins": 59,
+      "channel_1_sensitivity": {
+        "scope": "Drop only channel 1; preserve coordinates; trigger role is unresolved",
+        "median_absolute_ridge_shift_ms": 0.0,
+        "max_absolute_ridge_shift_ms": 52.0
+      },
+      "comparison_to_upstream_composite": {
+        "scope": "Same-site composite curve; not independent ground truth or per-shot labels",
+        "bins": 58,
+        "median_absolute_difference_ms": 1.1871519809790243,
+        "rmse_ms": 5.757125902012165
+      },
+      "limitations": [
+        "Amplitude unit, response and geometry uncertainty not documented",
+        "Channel 1 is mentioned as trigger; keep upstream 24-channel convention provisionally",
+        "Spatial aliasing flags are geometric and do not validate modal identity",
+        "No field confidence intervals, significance or Vs30 acceptance"
+      ]
+    },
+    {
+      "file": "examples/field/raw/oysand/examples/Data/Oysand_dx_2m_x1_20m_forward.dat",
+      "offset_m": 20.0,
+      "receiver_spacing_m": 2.0,
+      "fs_hz": 1000.0,
+      "qc": {
+        "channels": 24,
+        "samples_per_channel": 2201,
+        "finite_fraction": 1.0,
+        "constant_channels_1based": [],
+        "zero_channels_1based": [],
+        "rms_ac_native_units": [
+          0.0020764059963044035,
+          0.00171632652125719,
+          0.0014768247187692048,
+          0.0012922663946617154,
+          0.00124779815425108,
+          0.0012355197938417983,
+          0.0011428676688844364,
+          0.0009855835670446323,
+          0.000912536809923832,
+          0.0009166121428809235,
+          0.0009660413188770415,
+          0.001008416114803692,
+          0.0008885852771567789,
+          0.0008619252432481762,
+          0.0008778593006710584,
+          0.0009443995956381534,
+          0.0010294540959645722,
+          0.0010136957283043496,
+          0.0009740849025235734,
+          0.0008733147118971565,
+          0.0008066625411010014,
+          0.000752850604882008,
+          0.0006977590036398771,
+          0.0006283133584177968
+        ],
+        "amplitude_unit": "UNKNOWN",
+        "clipping_status": "UNKNOWN_ADC_RAILS"
+      },
+      "duration_s": 2.201,
+      "last_sample_time_s": 2.2,
+      "aperture_m": 46.0,
+      "fft_window": "HANN_FULL_RECORD_DC_REMOVED",
+      "frequency_bounds_hz": [
+        5.452067242162653,
+        69.96819627442072
+      ],
+      "velocity_grid_ms": [
+        60.0,
+        400.0,
+        1
+      ],
+      "ridge_coherence_median": 0.86665381129467,
+      "forward_max_coherence_median": 0.86665381129467,
+      "reverse_max_coherence_median": 0.5777041810227178,
+      "spatially_unaliased_ridge_bins": 59,
+      "channel_1_sensitivity": {
+        "scope": "Drop only channel 1; preserve coordinates; trigger role is unresolved",
+        "median_absolute_ridge_shift_ms": 0.0,
+        "max_absolute_ridge_shift_ms": 37.0
+      },
+      "comparison_to_upstream_composite": {
+        "scope": "Same-site composite curve; not independent ground truth or per-shot labels",
+        "bins": 58,
+        "median_absolute_difference_ms": 1.2014925549251814,
+        "rmse_ms": 4.951035867022211
+      },
+      "limitations": [
+        "Amplitude unit, response and geometry uncertainty not documented",
+        "Channel 1 is mentioned as trigger; keep upstream 24-channel convention provisionally",
+        "Spatial aliasing flags are geometric and do not validate modal identity",
+        "No field confidence intervals, significance or Vs30 acceptance"
+      ]
+    },
+    {
+      "file": "examples/field/raw/oysand/examples/Data/Oysand_dx_2m_x1_30m_forward.dat",
+      "offset_m": 30.0,
+      "receiver_spacing_m": 2.0,
+      "fs_hz": 1000.0,
+      "qc": {
+        "channels": 24,
+        "samples_per_channel": 2201,
+        "finite_fraction": 1.0,
+        "constant_channels_1based": [],
+        "zero_channels_1based": [],
+        "rms_ac_native_units": [
+          0.001392375715641341,
+          0.0011975461410678526,
+          0.0011901652310757505,
+          0.0009916481685171006,
+          0.0009025647610254965,
+          0.0009562085924588826,
+          0.0009337036981587688,
+          0.0008800728412467057,
+          0.0008799661743508247,
+          0.0008644769282885929,
+          0.0009477784528986021,
+          0.000894869726784556,
+          0.0007668596446452902,
+          0.0006868198275872872,
+          0.000720090233615346,
+          0.0007116540380938637,
+          0.0006762299561852923,
+          0.0006805502934999919,
+          0.0006698510882031056,
+          0.0006294290217523629,
+          0.0006003646226520134,
+          0.0005319387914204689,
+          0.0004935622199355855,
+          0.0004465397749154207
+        ],
+        "amplitude_unit": "UNKNOWN",
+        "clipping_status": "UNKNOWN_ADC_RAILS"
+      },
+      "duration_s": 2.201,
+      "last_sample_time_s": 2.2,
+      "aperture_m": 46.0,
+      "fft_window": "HANN_FULL_RECORD_DC_REMOVED",
+      "frequency_bounds_hz": [
+        5.452067242162653,
+        69.96819627442072
+      ],
+      "velocity_grid_ms": [
+        60.0,
+        400.0,
+        1
+      ],
+      "ridge_coherence_median": 0.8303571687175619,
+      "forward_max_coherence_median": 0.8309655514925214,
+      "reverse_max_coherence_median": 0.7000879212542057,
+      "spatially_unaliased_ridge_bins": 59,
+      "channel_1_sensitivity": {
+        "scope": "Drop only channel 1; preserve coordinates; trigger role is unresolved",
+        "median_absolute_ridge_shift_ms": 0.0,
+        "max_absolute_ridge_shift_ms": 43.0
+      },
+      "comparison_to_upstream_composite": {
+        "scope": "Same-site composite curve; not independent ground truth or per-shot labels",
+        "bins": 58,
+        "median_absolute_difference_ms": 2.0865569069907934,
+        "rmse_ms": 6.385029172963589
+      },
+      "limitations": [
+        "Amplitude unit, response and geometry uncertainty not documented",
+        "Channel 1 is mentioned as trigger; keep upstream 24-channel convention provisionally",
+        "Spatial aliasing flags are geometric and do not validate modal identity",
+        "No field confidence intervals, significance or Vs30 acceptance"
+      ]
+    }
+  ],
+  "chevremont": {
+    "shots": [
+      {
+        "file": "examples/field/raw/chevremont/example/Chevremont/0m.sg2",
+        "source_xz_m": [
+          0.0,
+          188.788
+        ],
+        "qc": {
+          "channels": 48,
+          "samples_per_channel": 4000,
+          "finite_fraction": 1.0,
+          "constant_channels_1based": [],
+          "zero_channels_1based": [],
+          "rms_ac_native_units": [
+            1.1029983470990574e-05,
+            1.3308523374725276e-05,
+            1.340725331120155e-05,
+            1.5115417039996233e-05,
+            1.5193673755789006e-05,
+            1.5244308885091887e-05,
+            8.722498264811383e-06,
+            1.5954324183332858e-05,
+            1.5010515450861398e-05,
+            1.3909549399169672e-05,
+            1.696699576465156e-05,
+            1.5320819656883845e-05,
+            1.5096686755603048e-05,
+            1.6450174999325096e-05,
+            1.7142742962114773e-05,
+            1.4122955814021146e-05,
+            1.44701492556917e-05,
+            1.622881201919012e-05,
+            1.60081901402166e-05,
+            1.936150204975095e-05,
+            2.772038778108317e-05,
+            2.6908920865929453e-05,
+            3.3925465190839474e-05,
+            3.1809111476001735e-05,
+            3.860792867368259e-05,
+            4.675714931407059e-05,
+            5.3404667010775855e-05,
+            5.415993432504866e-05,
+            3.113646032660438e-05,
+            6.6220000721654e-05,
+            8.62579942136183e-05,
+            0.00010599792710644253,
+            0.00014435901429507065,
+            0.00017933852862708863,
+            0.00020457394925202813,
+            0.00024862900609477756,
+            0.00024770324147376237,
+            0.0002630798328158092,
+            0.0002774202734654442,
+            0.00027935389242550674,
+            0.0003637640336272166,
+            0.0004813814426983008,
+            0.0006046490619387369,
+            0.0007852173657748284,
+            0.0008415348887579252,
+            0.001554213223296708,
+            0.0020335822942808904,
+            0.0016606396983649392
+          ],
+          "amplitude_unit": "UNKNOWN",
+          "clipping_status": "UNKNOWN_ADC_RAILS"
+        },
+        "dt_s": 0.0005,
+        "header_delay_s": -0.8,
+        "stack_headers": [
+          "3"
+        ],
+        "header_receiver_location_unique_count": 2,
+        "source_clock": "HEADER_DELAY_ASSUMPTION_UNVERIFIED",
+        "wave": "P_ASSUMED_FOR_EXPLORATORY_PICKING_NOT_VERIFIED",
+        "decoder_matches_obspy": true,
+        "obspy_warnings": [
+          "Many companies use custom defined SEG2 header variables. This might cause basic header information reflected in the single traces' stats to be wrong (e.g. recording delays, first sample number, station code names, ..). Please check the complete list of additional unmapped header fields that gets stored in Trace.stats.seg2 and/or the manual of the source of the SEG2 files for fields that might influence e.g. trace start times.",
+          "Non-zero value found in Trace's 'DELAY' field. This is not supported/tested yet and might lead to a wrong starttime of the Trace. Please contact the ObsPy developers with a sample file."
+        ],
+        "native_ingestion_error": "METADATA_MISSING",
+        "pick_states": {
+          "AMBIGUOUS": 41,
+          "UNCALIBRATED": 7
+        },
+        "pick_reasons": {
+          "Múltiples episodios de energía: primera llegada ambigua": 38,
+          "Burst aislado o llegada sin soporte sostenido": 3,
+          "Onset diagnóstico; curvatura AIC no es sigma; polaridad separada": 7
+        },
+        "matched_upstream_annotations": 43
+      },
+      {
+        "file": "examples/field/raw/chevremont/example/Chevremont/10m.sg2",
+        "source_xz_m": [
+          10.0,
+          188.333
+        ],
+        "qc": {
+          "channels": 48,
+          "samples_per_channel": 4000,
+          "finite_fraction": 1.0,
+          "constant_channels_1based": [],
+          "zero_channels_1based": [],
+          "rms_ac_native_units": [
+            4.70325420587521e-05,
+            5.5005015590844194e-05,
+            5.367500628030549e-05,
+            5.8430477808093744e-05,
+            5.9325975367373394e-05,
+            5.6640508031041484e-05,
+            5.228641618923369e-06,
+            5.8669991566044554e-05,
+            5.7645145574011465e-05,
+            5.558038140082396e-05,
+            7.320447437579124e-05,
+            6.4505546230249e-05,
+            6.690185066278727e-05,
+            7.563042819705039e-05,
+            8.23384311823431e-05,
+            7.317264979530868e-05,
+            7.985535803723415e-05,
+            8.747407787137082e-05,
+            8.728973731198791e-05,
+            0.00010403747117371318,
+            0.00014052678216278677,
+            0.00014624456519315984,
+            0.0001717665422789245,
+            0.00021441957005333302,
+            0.00022151379868921292,
+            0.0003045413487531546,
+            0.0003269666070700241,
+            0.0003907494758530518,
+            0.0002584002249240027,
+            0.00048074232643939937,
+            0.0006472025299684049,
+            0.0006759106166717472,
+            0.0007961922861474796,
+            0.0009200166767645354,
+            0.001089115378474424,
+            0.001470413778255116,
+            0.0015403371999152032,
+            0.0018561385874698126,
+            0.0022502752144741628,
+            0.0033424000939510394,
+            0.00595572978602668,
+            0.012389010790190984,
+            0.017563309512140596,
+            0.03557000402347278,
+            0.020355271480369298,
+            0.015619988258433973,
+            0.008004366891378378,
+            0.0025762218358536286
+          ],
+          "amplitude_unit": "UNKNOWN",
+          "clipping_status": "UNKNOWN_ADC_RAILS"
+        },
+        "dt_s": 0.0005,
+        "header_delay_s": -0.8,
+        "stack_headers": [
+          "3"
+        ],
+        "header_receiver_location_unique_count": 2,
+        "source_clock": "HEADER_DELAY_ASSUMPTION_UNVERIFIED",
+        "wave": "P_ASSUMED_FOR_EXPLORATORY_PICKING_NOT_VERIFIED",
+        "decoder_matches_obspy": true,
+        "obspy_warnings": [
+          "Many companies use custom defined SEG2 header variables. This might cause basic header information reflected in the single traces' stats to be wrong (e.g. recording delays, first sample number, station code names, ..). Please check the complete list of additional unmapped header fields that gets stored in Trace.stats.seg2 and/or the manual of the source of the SEG2 files for fields that might influence e.g. trace start times.",
+          "Non-zero value found in Trace's 'DELAY' field. This is not supported/tested yet and might lead to a wrong starttime of the Trace. Please contact the ObsPy developers with a sample file."
+        ],
+        "native_ingestion_error": "METADATA_MISSING",
+        "pick_states": {
+          "AMBIGUOUS": 40,
+          "MISSING": 1,
+          "UNCALIBRATED": 7
+        },
+        "pick_reasons": {
+          "Múltiples episodios de energía: primera llegada ambigua": 36,
+          "No se identifica cambio de energía sobre el ruido": 1,
+          "Burst aislado o llegada sin soporte sostenido": 2,
+          "Onset diagnóstico; curvatura AIC no es sigma; polaridad separada": 7,
+          "Mínimo AIC en límite de segmentos": 2
+        },
+        "matched_upstream_annotations": 0
+      },
+      {
+        "file": "examples/field/raw/chevremont/example/Chevremont/20m.sg2",
+        "source_xz_m": [
+          20.0,
+          187.878
+        ],
+        "qc": {
+          "channels": 48,
+          "samples_per_channel": 4000,
+          "finite_fraction": 1.0,
+          "constant_channels_1based": [],
+          "zero_channels_1based": [],
+          "rms_ac_native_units": [
+            3.250582517926555e-05,
+            4.248659626215893e-05,
+            4.181430523718345e-05,
+            4.444345257650909e-05,
+            4.7699849287481296e-05,
+            4.712994990133232e-05,
+            1.6792871746903472e-05,
+            5.090254440925645e-05,
+            5.156859448538749e-05,
+            5.842635005377935e-05,
+            7.005519662949118e-05,
+            7.164688356662644e-05,
+            8.432951315692202e-05,
+            8.776939092098901e-05,
+            8.968230499627551e-05,
+            8.679325994781872e-05,
+            9.485831371954044e-05,
+            0.00011801961370890066,
+            0.00014891998427441747,
+            0.0002041221242287345,
+            0.00034973129508856864,
+            0.0003075951394589782,
+            0.00045123359954480664,
+            0.0004576431453299351,
+            0.0006947300311048135,
+            0.0009627171522541263,
+            0.0010043230838441201,
+            0.001205439418347656,
+            0.002197648005532769,
+            0.0037988579988243796,
+            0.0034719980507881706,
+            0.006170964239487253,
+            0.014691493317622333,
+            0.03340922245593653,
+            0.011451078912838454,
+            0.006684451858532893,
+            0.003510159537312597,
+            0.001970709593047546,
+            0.0015820853347392103,
+            0.0012114963114428054,
+            0.0013384751523118335,
+            0.0009782961365204623,
+            0.0009399604037692812,
+            0.0011442900924529826,
+            0.0009991402040880819,
+            0.0012803365195681587,
+            0.0012817762203696855,
+            0.0005105354620490675
+          ],
+          "amplitude_unit": "UNKNOWN",
+          "clipping_status": "UNKNOWN_ADC_RAILS"
+        },
+        "dt_s": 0.0005,
+        "header_delay_s": -0.8,
+        "stack_headers": [
+          "3"
+        ],
+        "header_receiver_location_unique_count": 2,
+        "source_clock": "HEADER_DELAY_ASSUMPTION_UNVERIFIED",
+        "wave": "P_ASSUMED_FOR_EXPLORATORY_PICKING_NOT_VERIFIED",
+        "decoder_matches_obspy": true,
+        "obspy_warnings": [
+          "Many companies use custom defined SEG2 header variables. This might cause basic header information reflected in the single traces' stats to be wrong (e.g. recording delays, first sample number, station code names, ..). Please check the complete list of additional unmapped header fields that gets stored in Trace.stats.seg2 and/or the manual of the source of the SEG2 files for fields that might influence e.g. trace start times.",
+          "Non-zero value found in Trace's 'DELAY' field. This is not supported/tested yet and might lead to a wrong starttime of the Trace. Please contact the ObsPy developers with a sample file."
+        ],
+        "native_ingestion_error": "METADATA_MISSING",
+        "pick_states": {
+          "UNCALIBRATED": 15,
+          "AMBIGUOUS": 33
+        },
+        "pick_reasons": {
+          "Onset diagnóstico; curvatura AIC no es sigma; polaridad separada": 15,
+          "Múltiples episodios de energía: primera llegada ambigua": 33
+        },
+        "matched_upstream_annotations": 0
+      },
+      {
+        "file": "examples/field/raw/chevremont/example/Chevremont/30m.sg2",
+        "source_xz_m": [
+          30.0,
+          187.423
+        ],
+        "qc": {
+          "channels": 48,
+          "samples_per_channel": 4000,
+          "finite_fraction": 1.0,
+          "constant_channels_1based": [],
+          "zero_channels_1based": [],
+          "rms_ac_native_units": [
+            4.237120599099231e-05,
+            5.5988337368002485e-05,
+            5.2813141727263596e-05,
+            5.890063944895699e-05,
+            5.751840285028644e-05,
+            5.987139684159007e-05,
+            2.7573444721632582e-05,
+            7.641398842370844e-05,
+            8.00885753224927e-05,
+            9.113389550262486e-05,
+            0.00012493961174743192,
+            0.000136899314685598,
+            0.00015837729973595816,
+            0.00017199391689848704,
+            0.00020064137837515298,
+            0.00021278321409257497,
+            0.0002627132968753822,
+            0.0004441267021606766,
+            0.0006258045578886987,
+            0.0015845279594083799,
+            0.003172802981822574,
+            0.004353953171645461,
+            0.009920177745302843,
+            0.03475239324805409,
+            0.008765780091100801,
+            0.0030942023757495767,
+            0.0014999868664028685,
+            0.0012065073389138008,
+            0.0019059966071337982,
+            0.000804366011763313,
+            0.000599570383036128,
+            0.00036190393048544684,
+            0.0003243636692795939,
+            0.0004085920046190367,
+            0.00028898141441302023,
+            0.00032679480156472273,
+            0.00027705140138961203,
+            0.0002136491174506209,
+            0.00018467238708080337,
+            0.00017400504080953265,
+            0.00015559459388818378,
+            0.00012971322453787773,
+            0.00014127317406057265,
+            0.00017493962462971466,
+            0.00013218242202807707,
+            0.0001423762055302543,
+            0.00015412872999838375,
+            0.00010014423589810499
+          ],
+          "amplitude_unit": "UNKNOWN",
+          "clipping_status": "UNKNOWN_ADC_RAILS"
+        },
+        "dt_s": 0.0005,
+        "header_delay_s": -0.8,
+        "stack_headers": [
+          "3"
+        ],
+        "header_receiver_location_unique_count": 2,
+        "source_clock": "HEADER_DELAY_ASSUMPTION_UNVERIFIED",
+        "wave": "P_ASSUMED_FOR_EXPLORATORY_PICKING_NOT_VERIFIED",
+        "decoder_matches_obspy": true,
+        "obspy_warnings": [
+          "Many companies use custom defined SEG2 header variables. This might cause basic header information reflected in the single traces' stats to be wrong (e.g. recording delays, first sample number, station code names, ..). Please check the complete list of additional unmapped header fields that gets stored in Trace.stats.seg2 and/or the manual of the source of the SEG2 files for fields that might influence e.g. trace start times.",
+          "Non-zero value found in Trace's 'DELAY' field. This is not supported/tested yet and might lead to a wrong starttime of the Trace. Please contact the ObsPy developers with a sample file."
+        ],
+        "native_ingestion_error": "METADATA_MISSING",
+        "pick_states": {
+          "UNCALIBRATED": 20,
+          "AMBIGUOUS": 28
+        },
+        "pick_reasons": {
+          "Onset diagnóstico; curvatura AIC no es sigma; polaridad separada": 20,
+          "Múltiples episodios de energía: primera llegada ambigua": 27,
+          "Burst aislado o llegada sin soporte sostenido": 1
+        },
+        "matched_upstream_annotations": 0
+      },
+      {
+        "file": "examples/field/raw/chevremont/example/Chevremont/40m.sg2",
+        "source_xz_m": [
+          40.0,
+          186.968
+        ],
+        "qc": {
+          "channels": 48,
+          "samples_per_channel": 4000,
+          "finite_fraction": 1.0,
+          "constant_channels_1based": [],
+          "zero_channels_1based": [],
+          "rms_ac_native_units": [
+            0.000683057580817036,
+            0.00042506474644135177,
+            0.0004847384887345187,
+            0.0006593389521898922,
+            0.0009258147793508902,
+            0.0010445866212423366,
+            0.0005735320325845024,
+            0.0013251284511293653,
+            0.0018323883046614648,
+            0.0024223673033355562,
+            0.004092557322758571,
+            0.00632595384281646,
+            0.017096653459852094,
+            0.02334601538613482,
+            0.016008422096808753,
+            0.006525064192295551,
+            0.00322429438550381,
+            0.0025275255766074754,
+            0.0016729166987823829,
+            0.0011227760222154333,
+            0.0011646882628108916,
+            0.0004904092446297943,
+            0.0003816824207779557,
+            0.0002976128054066504,
+            0.00028675877367742873,
+            0.00024338531322984957,
+            0.00015870894712195706,
+            0.00014182361128086204,
+            0.0002106062095388748,
+            0.0003132512415988439,
+            0.00010955570041360882,
+            0.00011080976439837658,
+            9.785795794268454e-05,
+            0.00011601016609615794,
+            0.00010710909217334226,
+            9.183305563267216e-05,
+            8.736950315009655e-05,
+            7.41939415310618e-05,
+            7.339214359911566e-05,
+            6.404418932027305e-05,
+            5.6512143568156736e-05,
+            5.323338731992853e-05,
+            5.400724355221857e-05,
+            6.887425499828996e-05,
+            6.498752633983197e-05,
+            7.569879365105876e-05,
+            7.296412689716746e-05,
+            4.379833692809604e-05
+          ],
+          "amplitude_unit": "UNKNOWN",
+          "clipping_status": "UNKNOWN_ADC_RAILS"
+        },
+        "dt_s": 0.0005,
+        "header_delay_s": -0.8,
+        "stack_headers": [
+          "3"
+        ],
+        "header_receiver_location_unique_count": 2,
+        "source_clock": "HEADER_DELAY_ASSUMPTION_UNVERIFIED",
+        "wave": "P_ASSUMED_FOR_EXPLORATORY_PICKING_NOT_VERIFIED",
+        "decoder_matches_obspy": true,
+        "obspy_warnings": [
+          "Many companies use custom defined SEG2 header variables. This might cause basic header information reflected in the single traces' stats to be wrong (e.g. recording delays, first sample number, station code names, ..). Please check the complete list of additional unmapped header fields that gets stored in Trace.stats.seg2 and/or the manual of the source of the SEG2 files for fields that might influence e.g. trace start times.",
+          "Non-zero value found in Trace's 'DELAY' field. This is not supported/tested yet and might lead to a wrong starttime of the Trace. Please contact the ObsPy developers with a sample file."
+        ],
+        "native_ingestion_error": "METADATA_MISSING",
+        "pick_states": {
+          "AMBIGUOUS": 33,
+          "UNCALIBRATED": 15
+        },
+        "pick_reasons": {
+          "Múltiples episodios de energía: primera llegada ambigua": 32,
+          "Onset diagnóstico; curvatura AIC no es sigma; polaridad separada": 15,
+          "Burst aislado o llegada sin soporte sostenido": 1
+        },
+        "matched_upstream_annotations": 0
+      },
+      {
+        "file": "examples/field/raw/chevremont/example/Chevremont/50m.sg2",
+        "source_xz_m": [
+          50.0,
+          186.513
+        ],
+        "qc": {
+          "channels": 48,
+          "samples_per_channel": 4000,
+          "finite_fraction": 1.0,
+          "constant_channels_1based": [],
+          "zero_channels_1based": [],
+          "rms_ac_native_units": [
+            0.007617676051169977,
+            0.008499345167315327,
+            0.015198548847235012,
+            0.03590410764105421,
+            0.023659479264472587,
+            0.010378892711976452,
+            0.0005044704153571643,
+            0.003293550438887593,
+            0.0023491652693125448,
+            0.0018345764460999598,
+            0.0017044170294231555,
+            0.001243669240934432,
+            0.001135809782155642,
+            0.0011292098213304565,
+            0.0008770740330558335,
+            0.0005133220440610513,
+            0.00045727297716635575,
+            0.0003305150824324537,
+            0.0002227308953518389,
+            0.000169315900452667,
+            0.000180115798928336,
+            0.00013692448094388811,
+            0.00013469785850655006,
+            0.00013239797844492857,
+            0.00013508875678460935,
+            0.0001291433874689713,
+            8.914022229069276e-05,
+            7.527894134821857e-05,
+            0.00010677999564625976,
+            0.00010955694767249837,
+            6.501450312938827e-05,
+            6.981544930899726e-05,
+            6.279013643208777e-05,
+            7.175541816469372e-05,
+            6.608458459679036e-05,
+            5.9643544240970404e-05,
+            6.0595549509563224e-05,
+            5.3109654819463155e-05,
+            5.342048265502175e-05,
+            4.992030284659673e-05,
+            5.197085839511465e-05,
+            5.0352123444516336e-05,
+            5.9931458380388096e-05,
+            7.136951513188233e-05,
+            6.936422916366504e-05,
+            8.060045674654264e-05,
+            6.720461543132919e-05,
+            3.165144947148391e-05
+          ],
+          "amplitude_unit": "UNKNOWN",
+          "clipping_status": "UNKNOWN_ADC_RAILS"
+        },
+        "dt_s": 0.0005,
+        "header_delay_s": -0.8,
+        "stack_headers": [
+          "3"
+        ],
+        "header_receiver_location_unique_count": 2,
+        "source_clock": "HEADER_DELAY_ASSUMPTION_UNVERIFIED",
+        "wave": "P_ASSUMED_FOR_EXPLORATORY_PICKING_NOT_VERIFIED",
+        "decoder_matches_obspy": true,
+        "obspy_warnings": [
+          "Many companies use custom defined SEG2 header variables. This might cause basic header information reflected in the single traces' stats to be wrong (e.g. recording delays, first sample number, station code names, ..). Please check the complete list of additional unmapped header fields that gets stored in Trace.stats.seg2 and/or the manual of the source of the SEG2 files for fields that might influence e.g. trace start times.",
+          "Non-zero value found in Trace's 'DELAY' field. This is not supported/tested yet and might lead to a wrong starttime of the Trace. Please contact the ObsPy developers with a sample file."
+        ],
+        "native_ingestion_error": "METADATA_MISSING",
+        "pick_states": {
+          "UNCALIBRATED": 17,
+          "AMBIGUOUS": 31
+        },
+        "pick_reasons": {
+          "Onset diagnóstico; curvatura AIC no es sigma; polaridad separada": 17,
+          "Mínimo AIC en límite de segmentos": 2,
+          "Múltiples episodios de energía: primera llegada ambigua": 27,
+          "Burst aislado o llegada sin soporte sostenido": 2
+        },
+        "matched_upstream_annotations": 0
+      },
+      {
+        "file": "examples/field/raw/chevremont/example/Chevremont/60m.sg2",
+        "source_xz_m": [
+          60.0,
+          186.058
+        ],
+        "qc": {
+          "channels": 48,
+          "samples_per_channel": 4000,
+          "finite_fraction": 1.0,
+          "constant_channels_1based": [],
+          "zero_channels_1based": [],
+          "rms_ac_native_units": [
+            0.001981084546924924,
+            0.0013561796015586062,
+            0.0009307963782509663,
+            0.0009712931110428778,
+            0.0008469283010110191,
+            0.0006034817501555476,
+            0.00043091643513571586,
+            0.00045094331536966244,
+            0.0003374901221351993,
+            0.0003003429663978008,
+            0.00022525209492752995,
+            0.00018209943577081935,
+            0.00015949362339666458,
+            0.00017223902503002783,
+            0.00015778078097051409,
+            0.00010942956222565884,
+            0.00010777033243359077,
+            9.09725043660001e-05,
+            6.96495851852662e-05,
+            6.038577992794077e-05,
+            6.380266419055477e-05,
+            4.849969261212893e-05,
+            4.7253494467401536e-05,
+            3.9425325772877786e-05,
+            4.561733557295351e-05,
+            4.765065633423894e-05,
+            3.908759959788289e-05,
+            3.5160033999205234e-05,
+            4.001656572344941e-05,
+            7.381927148430855e-05,
+            4.567273045022217e-05,
+            3.746968467793156e-05,
+            3.2175424290189296e-05,
+            3.450406765618319e-05,
+            2.971540868246302e-05,
+            2.830739989176571e-05,
+            2.8860827900199332e-05,
+            2.615068960789655e-05,
+            2.744915929514466e-05,
+            2.764810139274625e-05,
+            3.3353302204793156e-05,
+            2.3468520026594706e-05,
+            3.6788089447622656e-05,
+            3.8232438389834866e-05,
+            4.151597256083463e-05,
+            4.2025720487634504e-05,
+            4.126378197449419e-05,
+            1.9020096053970385e-05
+          ],
+          "amplitude_unit": "UNKNOWN",
+          "clipping_status": "UNKNOWN_ADC_RAILS"
+        },
+        "dt_s": 0.0005,
+        "header_delay_s": -0.8,
+        "stack_headers": [
+          "3"
+        ],
+        "header_receiver_location_unique_count": 2,
+        "source_clock": "HEADER_DELAY_ASSUMPTION_UNVERIFIED",
+        "wave": "P_ASSUMED_FOR_EXPLORATORY_PICKING_NOT_VERIFIED",
+        "decoder_matches_obspy": true,
+        "obspy_warnings": [
+          "Many companies use custom defined SEG2 header variables. This might cause basic header information reflected in the single traces' stats to be wrong (e.g. recording delays, first sample number, station code names, ..). Please check the complete list of additional unmapped header fields that gets stored in Trace.stats.seg2 and/or the manual of the source of the SEG2 files for fields that might influence e.g. trace start times.",
+          "Non-zero value found in Trace's 'DELAY' field. This is not supported/tested yet and might lead to a wrong starttime of the Trace. Please contact the ObsPy developers with a sample file."
+        ],
+        "native_ingestion_error": "METADATA_MISSING",
+        "pick_states": {
+          "UNCALIBRATED": 11,
+          "AMBIGUOUS": 37
+        },
+        "pick_reasons": {
+          "Onset diagnóstico; curvatura AIC no es sigma; polaridad separada": 11,
+          "Múltiples episodios de energía: primera llegada ambigua": 32,
+          "Burst aislado o llegada sin soporte sostenido": 5
+        },
+        "matched_upstream_annotations": 0
+      }
+    ],
+    "annotation_count": 43,
+    "compared_onsets": 6,
+    "conditional_mean_absolute_difference_ms": 26.335166666666726,
+    "conditional_median_absolute_difference_ms": 26.43600000000005,
+    "conditional_median_signed_difference_ms": -26.43600000000005,
+    "annotation_scope": "43 labels from one source only; human/reference annotation, not independent truth",
+    "geometry": {
+      "receivers": [
+        [
+          52.0,
+          186.422
+        ],
+        [
+          51.0,
+          186.467
+        ],
+        [
+          50.0,
+          186.513
+        ],
+        [
+          49.0,
+          186.558
+        ],
+        [
+          48.0,
+          186.604
+        ],
+        [
+          47.0,
+          186.649
+        ],
+        [
+          46.0,
+          186.695
+        ],
+        [
+          45.0,
+          186.74
+        ],
+        [
+          44.0,
+          186.786
+        ],
+        [
+          43.0,
+          186.831
+        ],
+        [
+          42.0,
+          186.877
+        ],
+        [
+          41.0,
+          186.922
+        ],
+        [
+          40.0,
+          186.968
+        ],
+        [
+          39.0,
+          187.013
+        ],
+        [
+          38.0,
+          187.059
+        ],
+        [
+          37.0,
+          187.104
+        ],
+        [
+          36.0,
+          187.15
+        ],
+        [
+          35.0,
+          187.195
+        ],
+        [
+          34.0,
+          187.241
+        ],
+        [
+          33.0,
+          187.286
+        ],
+        [
+          32.0,
+          187.332
+        ],
+        [
+          31.0,
+          187.377
+        ],
+        [
+          30.0,
+          187.423
+        ],
+        [
+          29.0,
+          187.468
+        ],
+        [
+          28.0,
+          187.514
+        ],
+        [
+          27.0,
+          187.559
+        ],
+        [
+          26.0,
+          187.605
+        ],
+        [
+          25.0,
+          187.65
+        ],
+        [
+          24.0,
+          187.696
+        ],
+        [
+          23.0,
+          187.741
+        ],
+        [
+          22.0,
+          187.787
+        ],
+        [
+          21.0,
+          187.832
+        ],
+        [
+          20.0,
+          187.878
+        ],
+        [
+          19.0,
+          187.923
+        ],
+        [
+          18.0,
+          187.969
+        ],
+        [
+          17.0,
+          188.014
+        ],
+        [
+          16.0,
+          188.06
+        ],
+        [
+          15.0,
+          188.105
+        ],
+        [
+          14.0,
+          188.151
+        ],
+        [
+          13.0,
+          188.196
+        ],
+        [
+          12.0,
+          188.242
+        ],
+        [
+          11.0,
+          188.287
+        ],
+        [
+          10.0,
+          188.333
+        ],
+        [
+          9.0,
+          188.378
+        ],
+        [
+          8.0,
+          188.424
+        ],
+        [
+          7.0,
+          188.469
+        ],
+        [
+          6.0,
+          188.515
+        ],
+        [
+          5.0,
+          188.56
+        ]
+      ],
+      "vertical_span_m": 2.1380000000000052
+    },
+    "limitations": [
+      "Source clock and component/wave identity unverified",
+      "UNITS NONE; no response, ADC rails or geometric uncertainty",
+      "STACK 3; raw single-impact acquisitions unavailable",
+      "Current horizontal layered inversion not verified for this site",
+      "Conditional annotation differences require both abstention counts and verified timing"
+    ]
+  }
+}

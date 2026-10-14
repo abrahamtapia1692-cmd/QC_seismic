@@ -1,0 +1,81 @@
+{
+  "id": "MASW-R1-DOCUMENT-REVIEW",
+  "specification_version": "1.4",
+  "document_revision": "MASW-R1",
+  "status": "DOCUMENT_CONSISTENCY_VERIFIED",
+  "scope": "Documentos, aritmética y sondas acotadas; no cierre RM/G5/G9",
+  "timestamp": "2026-10-13T03:56:19.961729+00:00",
+  "review_date_local": "2026-10-12",
+  "versions": {
+    "python": "3.12.3",
+    "numpy": "1.26.4",
+    "platform": "Windows-10-10.0.19045-SP0"
+  },
+  "seed": null,
+  "input_hashes": {
+    "SDD_QC_Geofisico_MASW_TRS_v1_4.md": "329e7018a771f16eb433397ddd8216cd549b3258920315e569c957e5485998ab",
+    "README.md": "17566bd807344821e9c79f71d373137a66732f12f60f87a0ed7f7b28bdabcd99",
+    "docs/masw_review_2026_10_12.md": "72eb57a02d44a86f35f4884a767e2b0f40a8bd6c87474f76a0407c6e4add514a",
+    "docs/adr/0002-masw-r1.md": "28af7f3d4eebd1a3ce6f5bc8eb7a3a87f2f59a6f1d48270628d5527f26a29826",
+    "docs/revision_v1_4.md": "0b308d0f570d130a683b3217436e285a7e2423c5bad1cf89d24737ae29bd6eb6",
+    "docs/requirements_e5.md": "e01dc55680cb2ef96d403705d41baaa735fdbb1af7d1ea39396066016212a4fd",
+    "docs/e5_implementation.md": "16f68681f02136504455545aab52d17a49b2758ff48e4c9d87a863b9895b5348",
+    "docs/open_questions.md": "634f90931ec2ba0dd1ad51a695eb56bee1635d2c60eb9280f99ad71269a2d1f7",
+    "geoqc/core/models.py": "e6524295f09a0651bec562d929d9e61c65ed25b3db2711ee36bda72d2edf50e0",
+    "geoqc/masw/contracts.py": "278ae0f1387e1730d78edc564107528b85487379f67687ebfef2fbd06fbd48a4",
+    "geoqc/masw/curves.py": "54581fd7e43b2341596f8051a4e5ca70ff73e692c2693364532f5f8bdbc1145a",
+    "geoqc/masw/engineering.py": "36c9fa7a5bf92a42737745a1bbc6bb5751d5b81f0af5a6ed2fb32b7a93d384ba",
+    "geoqc/synth/dispersion.py": "504b6f684b67502970c8d989d3c9811af18b0b2caac50bf6987d0da93cc99460",
+    "geoqc/masw/report.py": "05e73607b65d756170a12f495f2eb2525e5167f3e5b4d1ff684ecb45df36f949",
+    "tests/synthetic/test_e5_engineering.py": "2ab4bf8b6a40c6e3aeec22c50a1b210b5a510b2d4ae76649ddbb474f9e642ce1",
+    "tests/unit/test_e5_boundaries.py": "baf49944e8f34d6b1edcf8e2493aea4eae4007110b076705f2e3d82822104d5d",
+    "tests/synthetic/test_e5_curves.py": "541fe0b927c5846c955c9d4e93195c9d9a7f1692b02c0bf04b33026b1816740a"
+  },
+  "supplement_hash": "62140f332d255df578180637ae80b132d30880d6aa0977ba696970e00d106c26",
+  "validator_hash": "867985111bdb95a5ddbbe98c31dc03f8323cdb2ddabdc8b4cdd3e92eff99674b",
+  "checks": {
+    "base_ids": 100,
+    "additional_obligations": 8,
+    "local_links": 78,
+    "preserved_inputs": {
+      "docs/archive/SDD_v1_4_before_masw_r1.md": "1a8e4b04e7c1b8a04a2dd0c5f59a28455f688d0b73aecf3cdd385b16585f5090",
+      "docs/validation_manifest_v1_4.json": "a68278febf213724184ed2efd597e2879fff35ba6a256b5c53a56995b56f7471",
+      "evidence/e5/G5.json": "de993cc9e83f57489c58991c91be0e81e2552ea824d35ee70f5aa0761e66ebcf"
+    },
+    "all_RM_NOT_RUN": true
+  },
+  "counterexamples": {
+    "rayleigh_over_vs_nu025": 0.919401686761966,
+    "scaled_identity_determinants": [
+      1.0,
+      1.000000000000001e-12
+    ],
+    "correlated_difference_z": 7.071067811865473,
+    "independent_difference_z": 0.7071067811865475,
+    "vs30_logvs_gradient": [
+      149.99999999999997,
+      149.99999999999997
+    ],
+    "vs30_gradient_finite_difference": [
+      149.99999999929514,
+      149.99999999929514
+    ],
+    "local_noise_variance_damping10": 9.802960494069208e-05,
+    "local_posterior_variance_damping10": 0.009900990099009901,
+    "local_resolution_damping10": 0.009900990099009901
+  },
+  "observed_gaps": {
+    "protocol_retains_declared_confirmed": true,
+    "merge_reports_compatible_without_cross_covariance": null,
+    "merge_retains_covariance_reference": true,
+    "field_acceptance_enabled": false
+  },
+  "implementation_and_field_validation": "NOT_ESTABLISHED_BY_THIS_REVIEW",
+  "tolerances": {
+    "rayleigh_atol": 1e-14,
+    "vs30_gradient_rtol": 1e-08,
+    "vs30_gradient_atol": 1e-08,
+    "matrix_rtol": 1e-12,
+    "matrix_atol": 1e-14
+  }
+}

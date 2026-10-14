@@ -1,0 +1,319 @@
+{
+  "schema_version": "1.4",
+  "specification_version": "1.4",
+  "id": "V-E0-3",
+  "status": "PASSED",
+  "tests": [
+    {
+      "nodeid": "tests/unit/test_e0.py::test_invalid_threshold_configuration_rejected[bad0]",
+      "id": "V-E0-3",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": []
+    },
+    {
+      "nodeid": "tests/unit/test_e0.py::test_invalid_threshold_configuration_rejected[bad1]",
+      "id": "V-E0-3",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": []
+    },
+    {
+      "nodeid": "tests/unit/test_e0.py::test_invalid_threshold_configuration_rejected[bad2]",
+      "id": "V-E0-3",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": []
+    },
+    {
+      "nodeid": "tests/unit/test_e0.py::test_invalid_threshold_configuration_rejected[bad3]",
+      "id": "V-E0-3",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": []
+    },
+    {
+      "nodeid": "tests/unit/test_e0_boundaries.py::test_complete_threshold_rejects_each_missing_operational_field[boundary]",
+      "id": "V-E0-3",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": []
+    },
+    {
+      "nodeid": "tests/unit/test_e0_boundaries.py::test_complete_threshold_rejects_each_missing_operational_field[calibration_state]",
+      "id": "V-E0-3",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": []
+    },
+    {
+      "nodeid": "tests/unit/test_e0_boundaries.py::test_complete_threshold_rejects_each_missing_operational_field[direction]",
+      "id": "V-E0-3",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": []
+    },
+    {
+      "nodeid": "tests/unit/test_e0_boundaries.py::test_complete_threshold_rejects_each_missing_operational_field[fail]",
+      "id": "V-E0-3",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": []
+    },
+    {
+      "nodeid": "tests/unit/test_e0_boundaries.py::test_complete_threshold_rejects_each_missing_operational_field[mandatory]",
+      "id": "V-E0-3",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": []
+    },
+    {
+      "nodeid": "tests/unit/test_e0_boundaries.py::test_complete_threshold_rejects_each_missing_operational_field[unit]",
+      "id": "V-E0-3",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": []
+    },
+    {
+      "nodeid": "tests/unit/test_e0_boundaries.py::test_complete_threshold_rejects_each_missing_operational_field[warn]",
+      "id": "V-E0-3",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": []
+    },
+    {
+      "nodeid": "tests/unit/test_e0_boundaries.py::test_complete_threshold_rejects_each_single_invalid_field[boundary-undefined]",
+      "id": "V-E0-3",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": []
+    },
+    {
+      "nodeid": "tests/unit/test_e0_boundaries.py::test_complete_threshold_rejects_each_single_invalid_field[calibration_state-CALIBRATED]",
+      "id": "V-E0-3",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": []
+    },
+    {
+      "nodeid": "tests/unit/test_e0_boundaries.py::test_complete_threshold_rejects_each_single_invalid_field[direction-unknown]",
+      "id": "V-E0-3",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": []
+    },
+    {
+      "nodeid": "tests/unit/test_e0_boundaries.py::test_complete_threshold_rejects_each_single_invalid_field[id-unknown_detector]",
+      "id": "V-E0-3",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": []
+    },
+    {
+      "nodeid": "tests/unit/test_e0_boundaries.py::test_complete_threshold_rejects_each_single_invalid_field[surprise-1]",
+      "id": "V-E0-3",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": []
+    },
+    {
+      "nodeid": "tests/unit/test_e0_boundaries.py::test_complete_threshold_rejects_each_single_invalid_field[warn-4.0]",
+      "id": "V-E0-3",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": []
+    },
+    {
+      "nodeid": "tests/unit/test_e0_boundaries.py::test_duplicate_config_keys_rejected[json-{\"profile\":\"vs30_sitio\",\"profile\":\"cimentacion_estandar\"}]",
+      "id": "V-E0-3",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": []
+    },
+    {
+      "nodeid": "tests/unit/test_e0_boundaries.py::test_duplicate_config_keys_rejected[yaml-profile: vs30_sitio\\nprofile: cimentacion_estandar\\n]",
+      "id": "V-E0-3",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": []
+    },
+    {
+      "nodeid": "tests/unit/test_e0_boundaries.py::test_threshold_values_at_inclusive_boundaries[higher_is_better]",
+      "id": "V-E0-3",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": []
+    },
+    {
+      "nodeid": "tests/unit/test_e0_boundaries.py::test_threshold_values_at_inclusive_boundaries[lower_is_better]",
+      "id": "V-E0-3",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      },
+      "scientific_properties": []
+    }
+  ],
+  "execution_artifact": "execution.json",
+  "execution_artifact_sha256": "db4f4401ce24fba1fc71edcc100be6e43e94920ad5de85a40700d2c91da7d663",
+  "input_sha256": {
+    "configs/cimentacion_estandar.yaml": "d59e44a6a7fa95e44d69598b2e250046a5d9f60fff68b2c120c4c62b9fba11d6",
+    "configs/vs30_sitio.yaml": "641e42eb3a97f0284b220bd967a33a2d8bd817a9aa1364e5d567fa3dda5a881a",
+    "docs/e1_e3_implementation.md": "76f1a247f81ea231ad00106a7e11596525c72b538b9f98574101bf7474b1344b",
+    "docs/requirements_e1_e3.md": "9392f95ccdaefd31e2b593ba4b32c1cb6edd6164448c1500038df26e9f185f4a",
+    "docs/requirements_v1_4.md": "298f9b0a7401b442cfb9b7afc54501f374844779ea3e9e129da8773df2f200aa",
+    "docs/validation_manifest_v1_4.json": "a68278febf213724184ed2efd597e2879fff35ba6a256b5c53a56995b56f7471",
+    "geoqc/__init__.py": "fbbc80e4eefb904177f62ab93c5071366b3188f5cfa2801c52320a2ec494ef31",
+    "geoqc/__main__.py": "c3f89ff7ba05d71060fb2235246c3ec0fc2403562ded148cbfb0cd13bbb0dd24",
+    "geoqc/cli.py": "e1f76f1fbe102666cb4e3dad54be60b700f22457e49a56b95537028657e102cb",
+    "geoqc/core/__init__.py": "78ba84be71b71b6d11cd332cf7bc72e204da62c45f06bacf32094c6f402e134f",
+    "geoqc/core/config.py": "c3375a6359aea4aa8fffc928f500afe0be43b21fdf57c611c336018cf178ae9d",
+    "geoqc/core/errors.py": "0a7bf8efae11cc98f384c4e8ab3a59d1678d33bc976755cd6c71617b6e04db09",
+    "geoqc/core/evidence.py": "373fa87122a67688e10322dc37848d715f5638096add5501a45ab65588f94cee",
+    "geoqc/core/models.py": "e6524295f09a0651bec562d929d9e61c65ed25b3db2711ee36bda72d2edf50e0",
+    "geoqc/core/physics.py": "3d4171c39dc25917437df35d901e613b74ee726fdb107dbf4c5a1c0a38391b8f",
+    "geoqc/core/planning.py": "5594f4f9dee5ac61c68adbe56ce5063a1e31eabb8f7a79185bd1529a3529b82c",
+    "geoqc/io/__init__.py": "b64d5e66ea125c9e713908587d403f6870942e3d495b43bb90fb39d69a54886f",
+    "geoqc/io/binary.py": "b2cf8ce499f234d2983edf673195fa331e6e6a9566f4a455ea3e03c333785cf5",
+    "geoqc/io/contracts.py": "9a6e2088bf088eb67206c61eba126de44e372fdf497fff478bb56da38bb6360d",
+    "geoqc/io/errors.py": "4c8ca8e42543a955f1dd8f54bff302277bfb416f53b67b5d48e08c37743824a7",
+    "geoqc/io/geometry.py": "443ff15ee436d054ed158c9cff49d0bf8c00f27b05c0e8017ce265292c5f7f13",
+    "geoqc/io/readers.py": "350efd67e6ef1fadd76f6b359462dacc282fd1b7a9304cd7238ed8e010ab3117",
+    "geoqc/io/writers.py": "ba2d31106f88a26783eeb7500c4286c60d741f6321eb1fb7a079a5caeef0c7b7",
+    "geoqc/py.typed": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "geoqc/synth/__init__.py": "5d7f8308808968637fcef7c358275650a9014baf1a66d97712ee8711c8cf33e4",
+    "geoqc/synth/dispersion.py": "504b6f684b67502970c8d989d3c9811af18b0b2caac50bf6987d0da93cc99460",
+    "geoqc/synth/eikonal.py": "6763d9aa519774b7985bc1cad82a97293951390c4315059daa991b2369b5ab2d",
+    "geoqc/synth/farfield.py": "5fe1117fc0b27f39c5c357cabb30e8094fdbd24c0878e8f4a507faead81e9eb8",
+    "geoqc/synth/faults.py": "19665993a6755926a755a8072b54f3879b94d150e6c78bfa43a8ff42bb8ddf3b",
+    "geoqc/synth/modal.py": "064dc6e7df8275a602a23035d122eced5ad487cb567306cbf038c3de4aeeb88a",
+    "geoqc/synth/trs.py": "7bdabb24c9cc880e9ac0cf605546091e97aeec6bfc4176887960b83b14b0106d",
+    "geoqc/synth/wavelets.py": "44957213bebd361a3b8056af63b862a205ea6c9f0f19931793f299a7062b7f4c",
+    "pyproject.toml": "e656c98ea27a7ce54679dae9a0c409f49bd750a9b4c416f8b127458baf3e1614",
+    "requirements-win-py312.lock": "105cd2655cafa10b6d514c2ec5488e22d30ed25a7e9ccb7aa9566b568dd595c3",
+    "SDD_QC_Geofisico_MASW_TRS_v1_4.md": "1a8e4b04e7c1b8a04a2dd0c5f59a28455f688d0b73aecf3cdd385b16585f5090",
+    "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/conftest.py": "b3db982eba8913b5e55cac9988a7ed960847d9c89e385d6fbd3edc93564783b1",
+    "tests/synthetic/test_e3.py": "7f282dbe1dd418c3fcb920b826cd2af2578ab204b35f8fc5416ad1534b1b6b25",
+    "tests/synthetic/test_e3_domains.py": "41da5e96396a144fc571ff84f9037467930b4efe73d5a9a35a41d786056d1c73",
+    "tests/synthetic/test_e3_reference.py": "fd36ef141ce54902921cee0795f56eb50a2a5977baf380f9c5aab1352623e87b",
+    "tests/unit/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/unit/test_e0.py": "95d8d945d2ff71cba09da6388814cdfd18291a4198cf8484db71dea200a23c61",
+    "tests/unit/test_e0_boundaries.py": "d88538d33d850b29438ecf4157c99340213f2f375b10cef2e9eed3c6313988d7",
+    "tests/unit/test_e1.py": "29ba5d039d6952458f4b9a3febee05ac95a259ac53610a644fc386dd97a4e04c",
+    "tests/unit/test_e1_cli.py": "e1697a7191bc8c0ccb49ba55654673e3addb46bbcde242a2311b17d7f8618ee1",
+    "tests/unit/test_e1_errors.py": "e5f118b26e05c025feb0c0ed4fd7bb6896a6cc2976b88284da1478a424df72dc",
+    "tests/unit/test_e1_formats.py": "7a14d52ca3d22043a9c07b40cea8c65bd065f65aec4d40aae1fe77238eb07ec0",
+    "tests/unit/test_rayleigh_halfspace.py": "c6f8afa29feb00b501809c6609605d82f3516fcb4da12f71b9b8086f5c35a3c5",
+    "tools/check_e0.py": "5e7ef5490cc5b40180324c63aa484b6154537c6a6a3484e2497528c52aefd5f7",
+    "tools/check_foundation.py": "bd13ec0b4e08a3592d118ccf626e0908f6af84ec2f13bc627172ef32ee8b10f0",
+    "tools/create_io_demo.py": "a5dbc6662567dbe53e76a11fbd9dbe4d1db24c4c4b2a6ffec43005bd1e497f7a",
+    "tools/lock_environment.py": "dc240fd9c1ea129ecaa6e4b39a6f1933a06574c9ce505da980d3a6d4b28b2fd7",
+    "tools/plot_foundation.py": "8182862df98fc2dd0fdad21eb9aaa6dfb1625636c94e9788ee896da8dcd0ce54"
+  },
+  "versions": {
+    "python": "3.12.3",
+    "geoqc": "0.0.3",
+    "numpy": "1.26.4",
+    "scipy": "1.15.2",
+    "pydantic": "2.12.5",
+    "pytest": "9.1.1",
+    "hypothesis": "6.168.3",
+    "ruff": "0.16.10",
+    "mypy": "2.4.0",
+    "disba": "0.7.0",
+    "obspy": "1.5.1",
+    "numba": "0.68.0",
+    "llvmlite": "0.50.0",
+    "coverage": "7.15.4",
+    "pytest-cov": "7.1.0"
+  },
+  "rng": {
+    "algorithm": "PCG64",
+    "fixture_seed": 41,
+    "hypothesis_derandomize": true,
+    "pythonhashseed": 0
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.4",
+  "picking": {
+    "schema_version": "1.4",
+    "search": {
+      "schema_version": "1.4",
+      "start_s": 0.0,
+      "end_s": 0.16
+    },
+    "noise": {
+      "schema_version": "1.4",
+      "start_s": -0.025,
+      "end_s": -0.005
+    },
+    "band_hz": [
+      40.0,
+      160.0
+    ],
+    "sta_s": 0.002,
+    "lta_s": 0.02,
+    "trigger_ratio": 8.0,
+    "refine_pre_s": 0.012,
+    "refine_post_s": 0.025,
+    "minimum_segment_samples": 8,
+    "variance_floor_fraction": 1e-8,
+    "min_sustained_s": 0.015,
+    "preprocessing": "RAW_DC_REMOVED",
+    "domain_id": "gated-damped-P-80Hz-iidGaussian-SNR20",
+    "provenance": "docs/requirements_e4.md"
+  },
+  "branch_error_model": "GAUSSIAN_CANDIDATE",
+  "horizontal_two_layers_verified": true,
+  "geological_model_ref": "synthetic 300/1500m/s,h5 known generator",
+  "initial_v1_v2_h": [
+    315.0,
+    1400.0,
+    5.3
+  ],
+  "max_evaluations": 5,
+  "max_segments": 2,
+  "roi_ref": "synthetic horizontal 0..10m",
+  "source_clock_correction_s": 0.03,
+  "time_correction_ref": "known synthetic source latency +30ms",
+  "provenance": "examples/e4, declared synthetic domain only"
+}

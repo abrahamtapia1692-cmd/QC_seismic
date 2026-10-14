@@ -1,0 +1,394 @@
+{
+  "id": "MASW_DOSSIER_EXERCISE",
+  "specification_version": "1.4",
+  "status": "PASSED",
+  "timestamp": "2026-10-14T03:09:17.351515+00:00",
+  "scope": "DIAGNOSTIC_REPORT_IMPLEMENTATION_NOT_G5_G6_G9",
+  "input_hashes": {
+    "tools/report_masw_quality.py": "11b1ebb0bb0979fd1515e5f124f480c35308c92d3e05ca7290266f2b85efd12b",
+    "tools/tests/test_masw_dossier.py": "2b21b0bc6896f25326292c22949ad51d5585e04107ae451302333dcbc65d1c51",
+    "tools/validate_masw_dossier.py": "72c2f5312ad328609653d1b211a9dc2bdbbcf938be8838a8c7568ea38754bdaf",
+    "docs/requirements_masw_dossier.md": "9652b119ed85e54cb19a257b7f265932c3d1247622ef18fa511fd298ed76f48a",
+    "geoqc/__init__.py": "fbbc80e4eefb904177f62ab93c5071366b3188f5cfa2801c52320a2ec494ef31",
+    "geoqc/__main__.py": "c3f89ff7ba05d71060fb2235246c3ec0fc2403562ded148cbfb0cd13bbb0dd24",
+    "geoqc/cli.py": "505e3eef46d39c08a17f8782d9a182c3e48b5deadcf31e4d42786dd5e04b9132",
+    "geoqc/core/__init__.py": "78ba84be71b71b6d11cd332cf7bc72e204da62c45f06bacf32094c6f402e134f",
+    "geoqc/core/config.py": "c3375a6359aea4aa8fffc928f500afe0be43b21fdf57c611c336018cf178ae9d",
+    "geoqc/core/errors.py": "0a7bf8efae11cc98f384c4e8ab3a59d1678d33bc976755cd6c71617b6e04db09",
+    "geoqc/core/evidence.py": "373fa87122a67688e10322dc37848d715f5638096add5501a45ab65588f94cee",
+    "geoqc/core/models.py": "e6524295f09a0651bec562d929d9e61c65ed25b3db2711ee36bda72d2edf50e0",
+    "geoqc/core/physics.py": "3d4171c39dc25917437df35d901e613b74ee726fdb107dbf4c5a1c0a38391b8f",
+    "geoqc/core/planning.py": "5594f4f9dee5ac61c68adbe56ce5063a1e31eabb8f7a79185bd1529a3529b82c",
+    "geoqc/core/revisions.py": "99cae057a714f785f0cf7bea73ea77c4dec122fa3382395d647f56b3fc2eea66",
+    "geoqc/decision/__init__.py": "9658ebfc8bea141c300e6351bc5fc929cd2661cda685c66cd9a76c9caab9bb5c",
+    "geoqc/decision/actions.py": "cc7dca64dc428516c20f0812af08aeeae40114f143957559b53ee7de4bc040c2",
+    "geoqc/decision/adapters.py": "e344314bc6efb58d889f24f788a7bddddd3d0446605a8714bed1a917a5839171",
+    "geoqc/decision/aggregator.py": "a8137884b64893189d6371766665f7785e46bb4f23d289d3fb5190ef6c056a21",
+    "geoqc/decision/contracts.py": "b23940961519eb560e8c98d2dcc36f6801d0700d764ac148c15e7efc08ebc337",
+    "geoqc/io/__init__.py": "b64d5e66ea125c9e713908587d403f6870942e3d495b43bb90fb39d69a54886f",
+    "geoqc/io/binary.py": "b2cf8ce499f234d2983edf673195fa331e6e6a9566f4a455ea3e03c333785cf5",
+    "geoqc/io/contracts.py": "9a6e2088bf088eb67206c61eba126de44e372fdf497fff478bb56da38bb6360d",
+    "geoqc/io/errors.py": "4c8ca8e42543a955f1dd8f54bff302277bfb416f53b67b5d48e08c37743824a7",
+    "geoqc/io/geometry.py": "443ff15ee436d054ed158c9cff49d0bf8c00f27b05c0e8017ce265292c5f7f13",
+    "geoqc/io/readers.py": "350efd67e6ef1fadd76f6b359462dacc282fd1b7a9304cd7238ed8e010ab3117",
+    "geoqc/io/writers.py": "ba2d31106f88a26783eeb7500c4286c60d741f6321eb1fb7a079a5caeef0c7b7",
+    "geoqc/masw/__init__.py": "1568935c9fbf6e12d9ebfdc0dd09e0ead19f0da9556fa041587c1f2ae9e65a10",
+    "geoqc/masw/contracts.py": "278ae0f1387e1730d78edc564107528b85487379f67687ebfef2fbd06fbd48a4",
+    "geoqc/masw/curves.py": "54581fd7e43b2341596f8051a4e5ca70ff73e692c2693364532f5f8bdbc1145a",
+    "geoqc/masw/engineering.py": "36c9fa7a5bf92a42737745a1bbc6bb5751d5b81f0af5a6ed2fb32b7a93d384ba",
+    "geoqc/masw/r1.py": "9a014197b1f7f8e143d3c894f926c3e522cb2899cff04ab2cd3945c595176425",
+    "geoqc/masw/report.py": "05e73607b65d756170a12f495f2eb2525e5167f3e5b4d1ff684ecb45df36f949",
+    "geoqc/masw/statistics.py": "6cee27c4901f5ff6be05fe638ba38389012b68560cd9b1ef60accaf76f3d91c8",
+    "geoqc/masw/transform.py": "931bf77fe0c4a15505a6fc059992c7a08af5560817957f588137d8029449476c",
+    "geoqc/masw/union.py": "4758c94a356b2ca72bf077870fd13a0ef50f06631e4b4e0b865835254a6b714b",
+    "geoqc/qc/__init__.py": "6c2f6f94eb1714d55926e64759191b226e2e0f9fdfd4a9a7be16bc7b8a9a32a1",
+    "geoqc/qc/channels.py": "8aef05a2e0e0fea6ab6d1bf437ea60ca7ab0cd709917b493e4956d0503a24732",
+    "geoqc/qc/contracts.py": "f608a019e414f1ee35748442b70e0c6a56b6bd531a23a2deab0a67800ab68a98",
+    "geoqc/qc/noise.py": "437dc62461b295c7e3fc18ba60bb3aad071f759286355a665216c3f9e5d82a92",
+    "geoqc/qc/quality.py": "8d3747b7b6a8d2cd02f36e22ac514ffae15e20143016556d9ebf602eea446929",
+    "geoqc/qc/report.py": "637b5e5cdbef3ae5d6c8a3c54bc6876a88d666dae4213df6502bd0c1c5914245",
+    "geoqc/qc/similarity.py": "7fdadf78ed97978cc67fea0e2d80db28bb95d4c1ece18d59f01096109288d034",
+    "geoqc/qc/spectral.py": "c415b5f349f90a7b4eb06173fef699751c997801d8ccbd4face10b683897ae58",
+    "geoqc/qc/timing.py": "0604b72758e8d9951e1ed23cd4c5dece69ce820aa6312e5c0302b990f7701734",
+    "geoqc/synth/__init__.py": "5d7f8308808968637fcef7c358275650a9014baf1a66d97712ee8711c8cf33e4",
+    "geoqc/synth/dispersion.py": "504b6f684b67502970c8d989d3c9811af18b0b2caac50bf6987d0da93cc99460",
+    "geoqc/synth/eikonal.py": "6763d9aa519774b7985bc1cad82a97293951390c4315059daa991b2369b5ab2d",
+    "geoqc/synth/farfield.py": "5fe1117fc0b27f39c5c357cabb30e8094fdbd24c0878e8f4a507faead81e9eb8",
+    "geoqc/synth/faults.py": "19665993a6755926a755a8072b54f3879b94d150e6c78bfa43a8ff42bb8ddf3b",
+    "geoqc/synth/modal.py": "064dc6e7df8275a602a23035d122eced5ad487cb567306cbf038c3de4aeeb88a",
+    "geoqc/synth/nearfield.py": "47a7ac2419bca556a7f18f5d9abb8c2735320294ca0237f561504c3f8a4e693f",
+    "geoqc/synth/trs.py": "7bdabb24c9cc880e9ac0cf605546091e97aeec6bfc4176887960b83b14b0106d",
+    "geoqc/synth/wavelets.py": "44957213bebd361a3b8056af63b862a205ea6c9f0f19931793f299a7062b7f4c",
+    "geoqc/trs/__init__.py": "16355f4239fcd3d386dc5ff9d9629ad5b37dc78dee5c7cc43d06e0fecec1a3fa",
+    "geoqc/trs/branches.py": "da118a8e2aa4e62f006e705e43eb09c57ac60eecd485d46bb6a5a158b1d5a445",
+    "geoqc/trs/contracts.py": "70e3d1575e33218fa2f8a9c0f69b32cb943b954152aa5d6d05c1c87e97e8951e",
+    "geoqc/trs/coverage.py": "90829d53110f43629dd9ba848f89d7925a797eb418415d7b314ba68edab2b502",
+    "geoqc/trs/forward.py": "8177286b0fd583aecfd5c3e860790d866faf6388278ca931aea95384db711d8a",
+    "geoqc/trs/inversion.py": "9ca399d1f23b910fb30e3c0380467ca0defa100c15e8bdebbbda063dc3e2d6d8",
+    "geoqc/trs/picking.py": "d8cc18dabff1b33fb8a3ec2b21e9395479f71447c2725c323f0dc0604aca1fe9",
+    "geoqc/trs/reciprocity.py": "c09496a832f4f92c583cc8df06fb171ac72cedc2408062b1b845a3bf85fce086",
+    "geoqc/trs/reference.py": "0ed57b57c697d91bc2544c5b9f91bd8cdb8203b04e12529ad99abce061bc863a",
+    "geoqc/trs/report.py": "de159ae4e48ea0dc1f8fec1ef9ef144199a07262dde6b89f737179ef0baed5b7"
+  },
+  "source_stable": true,
+  "checks": {
+    "pytest": {
+      "exit_code": 0,
+      "artifact_ref": "pytest.txt"
+    },
+    "ruff": {
+      "exit_code": 0,
+      "artifact_ref": "ruff.txt"
+    },
+    "format": {
+      "exit_code": 0,
+      "artifact_ref": "format.txt"
+    }
+  },
+  "tests": [
+    {
+      "id": "tools.tests.test_field_report/test_coverage_includes_abstentions_and_boundaries[0-0-GRAY]",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_field_report/test_coverage_includes_abstentions_and_boundaries[0-10-RED]",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_field_report/test_coverage_includes_abstentions_and_boundaries[4-10-RED]",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_field_report/test_coverage_includes_abstentions_and_boundaries[5-10-AMBER]",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_field_report/test_coverage_includes_abstentions_and_boundaries[7-10-AMBER]",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_field_report/test_coverage_includes_abstentions_and_boundaries[8-10-GREEN]",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_field_report/test_coverage_is_configurable_and_rejects_invalid_counts",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_field_report/test_missing_evidence_cannot_turn_green[colors0-False-GREEN]",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_field_report/test_missing_evidence_cannot_turn_green[colors1-True-AMBER]",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_field_report/test_missing_evidence_cannot_turn_green[colors2-False-AMBER]",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_field_report/test_missing_evidence_cannot_turn_green[colors3-True-RED]",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_field_report/test_missing_evidence_cannot_turn_green[colors4-True-GRAY]",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_field_report/test_missing_evidence_cannot_turn_green[colors5-True-GRAY]",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_field_report/test_nonfinite_sample_fraction_and_failed_checks_prevent_green",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_field_report/test_modified_source_refuses_historical_report",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_masw_dossier/test_planar_signal_and_zero_do_not_share_validity",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_masw_dossier/test_spatial_boundary[40-False-True-REVIEW]",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_masw_dossier/test_spatial_boundary[41-False-True-PENDING]",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_masw_dossier/test_spatial_boundary[41-True-True-REVIEW]",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_masw_dossier/test_spatial_boundary[41-False-False-NO_SUPPORT]",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_masw_dossier/test_incomplete_support_cannot_use_uniform_nyquist",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_masw_dossier/test_bands_preserve_gaps_and_support",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_masw_dossier/test_nonfinite_samples_are_rejected",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_masw_dossier/test_manifest_detects_tampering",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_masw_dossier/test_field_records_keep_all_channels_and_missing_evidence",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_masw_dossier/test_no_common_support_is_not_zero_disagreement",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_masw_dossier/test_end_to_end_artifacts_and_digest",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_noise_review/test_conditional_snr_uses_power_and_is_invariant_to_gain_without_adc",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_noise_review/test_mad_does_not_erase_impulsive_noise_power",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_noise_review/test_nonstationarity_is_disclosed_without_selecting_quietest_quartile",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_noise_review/test_zero_noise_and_gaps_do_not_become_infinite_good_snr",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_noise_review/test_line_frequency_drift_and_harmonics_are_candidates_with_resolution",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_noise_review/test_low_frequency_band_and_coherence_require_duration_not_padding",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_noise_review/test_zero_phase_candidate_attenuates_noise_preserves_raw_and_rejects_unstable_pick",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_noise_review/test_zero_phase_can_create_energy_before_a_causal_onset",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_noise_review/test_incomplete_evidence_is_not_bad_and_all_channels_remain_in_denominator",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_noise_review/test_claimed_truncation_channel22_is_not_supported_by_samples",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_trace_quality/test_percentage_boundaries_without_rounding[90-100-BUENA]",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_trace_quality/test_percentage_boundaries_without_rounding[89-100-REGULAR]",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_trace_quality/test_percentage_boundaries_without_rounding[899-1000-REGULAR]",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_trace_quality/test_percentage_boundaries_without_rounding[75-100-REGULAR]",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_trace_quality/test_percentage_boundaries_without_rounding[74-100-MALA]",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_trace_quality/test_percentage_boundaries_without_rounding[749-1000-MALA]",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_trace_quality/test_percentage_boundaries_without_rounding[0-10-MALA]",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_trace_quality/test_percentage_boundaries_without_rounding[10-10-BUENA]",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_trace_quality/test_percentage_boundaries_without_rounding[0-0-None]",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_trace_quality/test_trace_thresholds[12-0.001-BUENA]",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_trace_quality/test_trace_thresholds[11.999-0-REGULAR]",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_trace_quality/test_trace_thresholds[6-0-REGULAR]",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_trace_quality/test_trace_thresholds[5.999-0-MALA]",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_trace_quality/test_trace_thresholds[20-0.001001-REGULAR]",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_trace_quality/test_trace_thresholds[20-0.01-MALA]",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_trace_quality/test_missing_evidence_cannot_be_good_and_dead_channel_overrides_it",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_trace_quality/test_gaps_and_amplitude_anomalies_are_reported",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_trace_quality/test_zero_noise_is_not_infinite_good_snr_but_unresolved_net_signal_is_bad",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_trace_quality/test_waveforms_classify_known_faults_and_aggregate[18-BUENA]",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_trace_quality/test_waveforms_classify_known_faults_and_aggregate[15-REGULAR]",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_trace_quality/test_waveforms_classify_known_faults_and_aggregate[14-MALA]",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_trace_quality/test_group_aggregation_weights_channels_instead_of_records",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_trace_quality/test_invalid_category_and_policy_fail_explicitly",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_trace_quality/test_actual_field_channels_are_preserved_and_missing_evidence_disclosed",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_trace_quality/test_plots_use_classification_colors_and_html_embeds_them",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_trace_similarity/test_correlation_matches_independent_pearson_and_recovers_delay_with_gain_and_dc",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_trace_similarity/test_delays_amplitude_decay_and_dc_are_not_shape_faults",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_trace_similarity/test_isolated_frequency_fault_is_red_but_neighbors_are_not_contaminated",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_trace_similarity/test_heterogeneous_neighborhood_abstains_instead_of_condemning_every_channel",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_trace_similarity/test_geometry_not_channel_order_defines_neighbors_and_pair_lag_sign_is_consistent",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_trace_similarity/test_gaps_constants_and_short_windows_do_not_create_false_correlations",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_trace_similarity/test_incompatible_clocks_and_undeclared_comparability",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_trace_similarity/test_protocol_rejects_excess_lag_and_overlapping_baseline",
+      "status": "PASSED"
+    },
+    {
+      "id": "tools.tests.test_trace_similarity/test_optional_common_qc_integration_catches_good_snr_but_wrong_waveform",
+      "status": "PASSED"
+    }
+  ],
+  "metrics": {
+    "cases": 71,
+    "skipped": 0
+  },
+  "tolerances": {
+    "plane_velocity_error_ms": 1,
+    "planar_coherence_min": 0.999
+  },
+  "seed": null,
+  "versions": {
+    "python": "3.12.3"
+  },
+  "platform": "Windows-10-10.0.19045-SP0",
+  "artifact_refs": [
+    "pytest.xml",
+    "pytest.txt",
+    "ruff.txt",
+    "format.txt"
+  ],
+  "eligible_for_acceptance": false
+}

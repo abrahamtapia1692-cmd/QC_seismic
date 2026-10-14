@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.4",
+  "id": "G2",
+  "status": "PASSED",
+  "required_test_ids": [
+    "V-E2-1",
+    "V-E2-2",
+    "V-E2-3",
+    "V-E2-4",
+    "V-E2-5",
+    "V-E2-6",
+    "V-E2-7",
+    "V-E2-8",
+    "V-E2-9",
+    "V-E2-10"
+  ],
+  "execution_artifact": "execution.json",
+  "execution_artifact_sha256": "948e5e37063bf75fca709be86a11f7d9f0491839c795e25842348fee0e25a6cd",
+  "scope": "IMPLEMENTATION_AND_DECLARED_SYNTHETIC_DOMAIN_ONLY",
+  "eligible_for_field_acceptance": false,
+  "coverage_io": null,
+  "coverage_common_qc": {
+    "geoqc\\qc\\__init__.py": {
+      "covered_lines": 2,
+      "num_statements": 2,
+      "percent_covered": 100.0,
+      "percent_covered_display": "100",
+      "missing_lines": 0,
+      "excluded_lines": 0,
+      "percent_statements_covered": 100.0,
+      "percent_statements_covered_display": "100"
+    },
+    "geoqc\\qc\\channels.py": {
+      "covered_lines": 76,
+      "num_statements": 76,
+      "percent_covered": 100.0,
+      "percent_covered_display": "100",
+      "missing_lines": 0,
+      "excluded_lines": 0,
+      "percent_statements_covered": 100.0,
+      "percent_statements_covered_display": "100"
+    },
+    "geoqc\\qc\\contracts.py": {
+      "covered_lines": 77,
+      "num_statements": 78,
+      "percent_covered": 98.71794871794872,
+      "percent_covered_display": "99",
+      "missing_lines": 1,
+      "excluded_lines": 0,
+      "percent_statements_covered": 98.71794871794872,
+      "percent_statements_covered_display": "99"
+    },
+    "geoqc\\qc\\report.py": {
+      "covered_lines": 38,
+      "num_statements": 38,
+      "percent_covered": 100.0,
+      "percent_covered_display": "100",
+      "missing_lines": 0,
+      "excluded_lines": 0,
+      "percent_statements_covered": 100.0,
+      "percent_statements_covered_display": "100"
+    },
+    "geoqc\\qc\\spectral.py": {
+      "covered_lines": 66,
+      "num_statements": 67,
+      "percent_covered": 98.50746268656717,
+      "percent_covered_display": "99",
+      "missing_lines": 1,
+      "excluded_lines": 0,
+      "percent_statements_covered": 98.50746268656717,
+      "percent_statements_covered_display": "99"
+    },
+    "geoqc\\qc\\timing.py": {
+      "covered_lines": 88,
+      "num_statements": 96,
+      "percent_covered": 91.66666666666667,
+      "percent_covered_display": "92",
+      "missing_lines": 8,
+      "excluded_lines": 0,
+      "percent_statements_covered": 91.66666666666667,
+      "percent_statements_covered_display": "92"
+    }
+  },
+  "coverage_trs": null
+}

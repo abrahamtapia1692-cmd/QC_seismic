@@ -1,0 +1,803 @@
+{
+  "schema_version": "1.4",
+  "scope": "TRS_DECLARED_DIAGNOSTIC_DOMAIN_ONLY",
+  "shot_id": "synthetic-trs",
+  "picks": [
+    {
+      "receiver_id": "r0",
+      "offset_m": 3.0,
+      "arrival": {
+        "schema_version": "1.4",
+        "onset_s": 0.03988673582847942,
+        "sigma_s": 9.812979117946355e-05,
+        "bias_s": 0.00011326417152058741,
+        "confidence": "CALIBRATED",
+        "reason": "Solo dominio sintético declarado; intervalos por errores train independientes",
+        "window_s": [
+          0.0,
+          0.16
+        ],
+        "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=351520d5ee1c0ebdbf93909e6ebd8332ae7253dcc3db001098f0ea791d683f71",
+        "shared_error_refs": [
+          "train seed4420,n2000,requirements_e4.md"
+        ],
+        "interval_s": [
+          0.039755945644399174,
+          0.04010081112574498
+        ]
+      }
+    },
+    {
+      "receiver_id": "r1",
+      "offset_m": 3.9130000000000003,
+      "arrival": {
+        "schema_version": "1.4",
+        "onset_s": 0.04313673582847942,
+        "sigma_s": 9.812979117946355e-05,
+        "bias_s": 0.00011326417152058741,
+        "confidence": "CALIBRATED",
+        "reason": "Solo dominio sintético declarado; intervalos por errores train independientes",
+        "window_s": [
+          0.0,
+          0.16
+        ],
+        "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=351520d5ee1c0ebdbf93909e6ebd8332ae7253dcc3db001098f0ea791d683f71",
+        "shared_error_refs": [
+          "train seed4420,n2000,requirements_e4.md"
+        ],
+        "interval_s": [
+          0.04300594564439918,
+          0.04335081112574498
+        ]
+      }
+    },
+    {
+      "receiver_id": "r2",
+      "offset_m": 4.8260000000000005,
+      "arrival": {
+        "schema_version": "1.4",
+        "onset_s": 0.04613673582847942,
+        "sigma_s": 9.812979117946355e-05,
+        "bias_s": 0.00011326417152058741,
+        "confidence": "CALIBRATED",
+        "reason": "Solo dominio sintético declarado; intervalos por errores train independientes",
+        "window_s": [
+          0.0,
+          0.16
+        ],
+        "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=351520d5ee1c0ebdbf93909e6ebd8332ae7253dcc3db001098f0ea791d683f71",
+        "shared_error_refs": [
+          "train seed4420,n2000,requirements_e4.md"
+        ],
+        "interval_s": [
+          0.04600594564439918,
+          0.04635081112574498
+        ]
+      }
+    },
+    {
+      "receiver_id": "r3",
+      "offset_m": 5.739,
+      "arrival": {
+        "schema_version": "1.4",
+        "onset_s": 0.04913673582847941,
+        "sigma_s": 9.812979117946355e-05,
+        "bias_s": 0.00011326417152058741,
+        "confidence": "CALIBRATED",
+        "reason": "Solo dominio sintético declarado; intervalos por errores train independientes",
+        "window_s": [
+          0.0,
+          0.16
+        ],
+        "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=351520d5ee1c0ebdbf93909e6ebd8332ae7253dcc3db001098f0ea791d683f71",
+        "shared_error_refs": [
+          "train seed4420,n2000,requirements_e4.md"
+        ],
+        "interval_s": [
+          0.04900594564439917,
+          0.04935081112574497
+        ]
+      }
+    },
+    {
+      "receiver_id": "r4",
+      "offset_m": 6.652,
+      "arrival": {
+        "schema_version": "1.4",
+        "onset_s": 0.05188673582847941,
+        "sigma_s": 9.812979117946355e-05,
+        "bias_s": 0.00011326417152058741,
+        "confidence": "CALIBRATED",
+        "reason": "Solo dominio sintético declarado; intervalos por errores train independientes",
+        "window_s": [
+          0.0,
+          0.16
+        ],
+        "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=351520d5ee1c0ebdbf93909e6ebd8332ae7253dcc3db001098f0ea791d683f71",
+        "shared_error_refs": [
+          "train seed4420,n2000,requirements_e4.md"
+        ],
+        "interval_s": [
+          0.05175594564439917,
+          0.052100811125744974
+        ]
+      }
+    },
+    {
+      "receiver_id": "r5",
+      "offset_m": 7.565,
+      "arrival": {
+        "schema_version": "1.4",
+        "onset_s": 0.055136735828479416,
+        "sigma_s": 9.812979117946355e-05,
+        "bias_s": 0.00011326417152058741,
+        "confidence": "CALIBRATED",
+        "reason": "Solo dominio sintético declarado; intervalos por errores train independientes",
+        "window_s": [
+          0.0,
+          0.16
+        ],
+        "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=351520d5ee1c0ebdbf93909e6ebd8332ae7253dcc3db001098f0ea791d683f71",
+        "shared_error_refs": [
+          "train seed4420,n2000,requirements_e4.md"
+        ],
+        "interval_s": [
+          0.05500594564439917,
+          0.05535081112574498
+        ]
+      }
+    },
+    {
+      "receiver_id": "r6",
+      "offset_m": 8.478,
+      "arrival": {
+        "schema_version": "1.4",
+        "onset_s": 0.05838673582847942,
+        "sigma_s": 9.812979117946355e-05,
+        "bias_s": 0.00011326417152058741,
+        "confidence": "CALIBRATED",
+        "reason": "Solo dominio sintético declarado; intervalos por errores train independientes",
+        "window_s": [
+          0.0,
+          0.16
+        ],
+        "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=351520d5ee1c0ebdbf93909e6ebd8332ae7253dcc3db001098f0ea791d683f71",
+        "shared_error_refs": [
+          "train seed4420,n2000,requirements_e4.md"
+        ],
+        "interval_s": [
+          0.058255945644399176,
+          0.05860081112574498
+        ]
+      }
+    },
+    {
+      "receiver_id": "r7",
+      "offset_m": 9.391,
+      "arrival": {
+        "schema_version": "1.4",
+        "onset_s": 0.06138673582847942,
+        "sigma_s": 9.812979117946355e-05,
+        "bias_s": 0.00011326417152058741,
+        "confidence": "CALIBRATED",
+        "reason": "Solo dominio sintético declarado; intervalos por errores train independientes",
+        "window_s": [
+          0.0,
+          0.16
+        ],
+        "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=351520d5ee1c0ebdbf93909e6ebd8332ae7253dcc3db001098f0ea791d683f71",
+        "shared_error_refs": [
+          "train seed4420,n2000,requirements_e4.md"
+        ],
+        "interval_s": [
+          0.06125594564439918,
+          0.06160081112574498
+        ]
+      }
+    },
+    {
+      "receiver_id": "r8",
+      "offset_m": 10.304,
+      "arrival": {
+        "schema_version": "1.4",
+        "onset_s": 0.06438673582847941,
+        "sigma_s": 9.812979117946355e-05,
+        "bias_s": 0.00011326417152058741,
+        "confidence": "CALIBRATED",
+        "reason": "Solo dominio sintético declarado; intervalos por errores train independientes",
+        "window_s": [
+          0.0,
+          0.16
+        ],
+        "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=351520d5ee1c0ebdbf93909e6ebd8332ae7253dcc3db001098f0ea791d683f71",
+        "shared_error_refs": [
+          "train seed4420,n2000,requirements_e4.md"
+        ],
+        "interval_s": [
+          0.06425594564439917,
+          0.06460081112574498
+        ]
+      }
+    },
+    {
+      "receiver_id": "r9",
+      "offset_m": 11.217,
+      "arrival": {
+        "schema_version": "1.4",
+        "onset_s": 0.06738673582847941,
+        "sigma_s": 9.812979117946355e-05,
+        "bias_s": 0.00011326417152058741,
+        "confidence": "CALIBRATED",
+        "reason": "Solo dominio sintético declarado; intervalos por errores train independientes",
+        "window_s": [
+          0.0,
+          0.16
+        ],
+        "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=351520d5ee1c0ebdbf93909e6ebd8332ae7253dcc3db001098f0ea791d683f71",
+        "shared_error_refs": [
+          "train seed4420,n2000,requirements_e4.md"
+        ],
+        "interval_s": [
+          0.06725594564439917,
+          0.06760081112574498
+        ]
+      }
+    },
+    {
+      "receiver_id": "r10",
+      "offset_m": 12.13,
+      "arrival": {
+        "schema_version": "1.4",
+        "onset_s": 0.07038673582847942,
+        "sigma_s": 9.812979117946355e-05,
+        "bias_s": 0.00011326417152058741,
+        "confidence": "CALIBRATED",
+        "reason": "Solo dominio sintético declarado; intervalos por errores train independientes",
+        "window_s": [
+          0.0,
+          0.16
+        ],
+        "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=351520d5ee1c0ebdbf93909e6ebd8332ae7253dcc3db001098f0ea791d683f71",
+        "shared_error_refs": [
+          "train seed4420,n2000,requirements_e4.md"
+        ],
+        "interval_s": [
+          0.07025594564439917,
+          0.07060081112574498
+        ]
+      }
+    },
+    {
+      "receiver_id": "r11",
+      "offset_m": 13.043000000000001,
+      "arrival": {
+        "schema_version": "1.4",
+        "onset_s": 0.07138673582847942,
+        "sigma_s": 9.812979117946355e-05,
+        "bias_s": 0.00011326417152058741,
+        "confidence": "CALIBRATED",
+        "reason": "Solo dominio sintético declarado; intervalos por errores train independientes",
+        "window_s": [
+          0.0,
+          0.16
+        ],
+        "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=351520d5ee1c0ebdbf93909e6ebd8332ae7253dcc3db001098f0ea791d683f71",
+        "shared_error_refs": [
+          "train seed4420,n2000,requirements_e4.md"
+        ],
+        "interval_s": [
+          0.07125594564439917,
+          0.07160081112574498
+        ]
+      }
+    },
+    {
+      "receiver_id": "r12",
+      "offset_m": 13.957,
+      "arrival": {
+        "schema_version": "1.4",
+        "onset_s": 0.07188673582847942,
+        "sigma_s": 9.812979117946355e-05,
+        "bias_s": 0.00011326417152058741,
+        "confidence": "CALIBRATED",
+        "reason": "Solo dominio sintético declarado; intervalos por errores train independientes",
+        "window_s": [
+          0.0,
+          0.16
+        ],
+        "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=351520d5ee1c0ebdbf93909e6ebd8332ae7253dcc3db001098f0ea791d683f71",
+        "shared_error_refs": [
+          "train seed4420,n2000,requirements_e4.md"
+        ],
+        "interval_s": [
+          0.07175594564439917,
+          0.07210081112574498
+        ]
+      }
+    },
+    {
+      "receiver_id": "r13",
+      "offset_m": 14.870000000000001,
+      "arrival": {
+        "schema_version": "1.4",
+        "onset_s": 0.07263673582847942,
+        "sigma_s": 9.812979117946355e-05,
+        "bias_s": 0.00011326417152058741,
+        "confidence": "CALIBRATED",
+        "reason": "Solo dominio sintético declarado; intervalos por errores train independientes",
+        "window_s": [
+          0.0,
+          0.16
+        ],
+        "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=351520d5ee1c0ebdbf93909e6ebd8332ae7253dcc3db001098f0ea791d683f71",
+        "shared_error_refs": [
+          "train seed4420,n2000,requirements_e4.md"
+        ],
+        "interval_s": [
+          0.07250594564439918,
+          0.07285081112574499
+        ]
+      }
+    },
+    {
+      "receiver_id": "r14",
+      "offset_m": 15.783,
+      "arrival": {
+        "schema_version": "1.4",
+        "onset_s": 0.07313673582847942,
+        "sigma_s": 9.812979117946355e-05,
+        "bias_s": 0.00011326417152058741,
+        "confidence": "CALIBRATED",
+        "reason": "Solo dominio sintético declarado; intervalos por errores train independientes",
+        "window_s": [
+          0.0,
+          0.16
+        ],
+        "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=351520d5ee1c0ebdbf93909e6ebd8332ae7253dcc3db001098f0ea791d683f71",
+        "shared_error_refs": [
+          "train seed4420,n2000,requirements_e4.md"
+        ],
+        "interval_s": [
+          0.07300594564439918,
+          0.07335081112574499
+        ]
+      }
+    },
+    {
+      "receiver_id": "r15",
+      "offset_m": 16.696,
+      "arrival": {
+        "schema_version": "1.4",
+        "onset_s": 0.07388673582847942,
+        "sigma_s": 9.812979117946355e-05,
+        "bias_s": 0.00011326417152058741,
+        "confidence": "CALIBRATED",
+        "reason": "Solo dominio sintético declarado; intervalos por errores train independientes",
+        "window_s": [
+          0.0,
+          0.16
+        ],
+        "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=351520d5ee1c0ebdbf93909e6ebd8332ae7253dcc3db001098f0ea791d683f71",
+        "shared_error_refs": [
+          "train seed4420,n2000,requirements_e4.md"
+        ],
+        "interval_s": [
+          0.07375594564439918,
+          0.07410081112574499
+        ]
+      }
+    },
+    {
+      "receiver_id": "r16",
+      "offset_m": 17.609,
+      "arrival": {
+        "schema_version": "1.4",
+        "onset_s": 0.07438673582847942,
+        "sigma_s": 9.812979117946355e-05,
+        "bias_s": 0.00011326417152058741,
+        "confidence": "CALIBRATED",
+        "reason": "Solo dominio sintético declarado; intervalos por errores train independientes",
+        "window_s": [
+          0.0,
+          0.16
+        ],
+        "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=351520d5ee1c0ebdbf93909e6ebd8332ae7253dcc3db001098f0ea791d683f71",
+        "shared_error_refs": [
+          "train seed4420,n2000,requirements_e4.md"
+        ],
+        "interval_s": [
+          0.07425594564439918,
+          0.07460081112574499
+        ]
+      }
+    },
+    {
+      "receiver_id": "r17",
+      "offset_m": 18.522000000000002,
+      "arrival": {
+        "schema_version": "1.4",
+        "onset_s": 0.07513673582847942,
+        "sigma_s": 9.812979117946355e-05,
+        "bias_s": 0.00011326417152058741,
+        "confidence": "CALIBRATED",
+        "reason": "Solo dominio sintético declarado; intervalos por errores train independientes",
+        "window_s": [
+          0.0,
+          0.16
+        ],
+        "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=351520d5ee1c0ebdbf93909e6ebd8332ae7253dcc3db001098f0ea791d683f71",
+        "shared_error_refs": [
+          "train seed4420,n2000,requirements_e4.md"
+        ],
+        "interval_s": [
+          0.07500594564439918,
+          0.07535081112574499
+        ]
+      }
+    },
+    {
+      "receiver_id": "r18",
+      "offset_m": 19.435,
+      "arrival": {
+        "schema_version": "1.4",
+        "onset_s": 0.07563673582847942,
+        "sigma_s": 9.812979117946355e-05,
+        "bias_s": 0.00011326417152058741,
+        "confidence": "CALIBRATED",
+        "reason": "Solo dominio sintético declarado; intervalos por errores train independientes",
+        "window_s": [
+          0.0,
+          0.16
+        ],
+        "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=351520d5ee1c0ebdbf93909e6ebd8332ae7253dcc3db001098f0ea791d683f71",
+        "shared_error_refs": [
+          "train seed4420,n2000,requirements_e4.md"
+        ],
+        "interval_s": [
+          0.07550594564439918,
+          0.07585081112574499
+        ]
+      }
+    },
+    {
+      "receiver_id": "r19",
+      "offset_m": 20.348,
+      "arrival": {
+        "schema_version": "1.4",
+        "onset_s": 0.07613673582847942,
+        "sigma_s": 9.812979117946355e-05,
+        "bias_s": 0.00011326417152058741,
+        "confidence": "CALIBRATED",
+        "reason": "Solo dominio sintético declarado; intervalos por errores train independientes",
+        "window_s": [
+          0.0,
+          0.16
+        ],
+        "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=351520d5ee1c0ebdbf93909e6ebd8332ae7253dcc3db001098f0ea791d683f71",
+        "shared_error_refs": [
+          "train seed4420,n2000,requirements_e4.md"
+        ],
+        "interval_s": [
+          0.07600594564439918,
+          0.07635081112574499
+        ]
+      }
+    },
+    {
+      "receiver_id": "r20",
+      "offset_m": 21.261,
+      "arrival": {
+        "schema_version": "1.4",
+        "onset_s": 0.07688673582847942,
+        "sigma_s": 9.812979117946355e-05,
+        "bias_s": 0.00011326417152058741,
+        "confidence": "CALIBRATED",
+        "reason": "Solo dominio sintético declarado; intervalos por errores train independientes",
+        "window_s": [
+          0.0,
+          0.16
+        ],
+        "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=351520d5ee1c0ebdbf93909e6ebd8332ae7253dcc3db001098f0ea791d683f71",
+        "shared_error_refs": [
+          "train seed4420,n2000,requirements_e4.md"
+        ],
+        "interval_s": [
+          0.07675594564439918,
+          0.07710081112574499
+        ]
+      }
+    },
+    {
+      "receiver_id": "r21",
+      "offset_m": 22.174,
+      "arrival": {
+        "schema_version": "1.4",
+        "onset_s": 0.07738673582847942,
+        "sigma_s": 9.812979117946355e-05,
+        "bias_s": 0.00011326417152058741,
+        "confidence": "CALIBRATED",
+        "reason": "Solo dominio sintético declarado; intervalos por errores train independientes",
+        "window_s": [
+          0.0,
+          0.16
+        ],
+        "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=351520d5ee1c0ebdbf93909e6ebd8332ae7253dcc3db001098f0ea791d683f71",
+        "shared_error_refs": [
+          "train seed4420,n2000,requirements_e4.md"
+        ],
+        "interval_s": [
+          0.07725594564439918,
+          0.07760081112574499
+        ]
+      }
+    },
+    {
+      "receiver_id": "r22",
+      "offset_m": 23.087,
+      "arrival": {
+        "schema_version": "1.4",
+        "onset_s": 0.07813673582847942,
+        "sigma_s": 9.812979117946355e-05,
+        "bias_s": 0.00011326417152058741,
+        "confidence": "CALIBRATED",
+        "reason": "Solo dominio sintético declarado; intervalos por errores train independientes",
+        "window_s": [
+          0.0,
+          0.16
+        ],
+        "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=351520d5ee1c0ebdbf93909e6ebd8332ae7253dcc3db001098f0ea791d683f71",
+        "shared_error_refs": [
+          "train seed4420,n2000,requirements_e4.md"
+        ],
+        "interval_s": [
+          0.07800594564439918,
+          0.07835081112574499
+        ]
+      }
+    },
+    {
+      "receiver_id": "r23",
+      "offset_m": 24.0,
+      "arrival": {
+        "schema_version": "1.4",
+        "onset_s": 0.07863673582847942,
+        "sigma_s": 9.812979117946355e-05,
+        "bias_s": 0.00011326417152058741,
+        "confidence": "CALIBRATED",
+        "reason": "Solo dominio sintético declarado; intervalos por errores train independientes",
+        "window_s": [
+          0.0,
+          0.16
+        ],
+        "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=351520d5ee1c0ebdbf93909e6ebd8332ae7253dcc3db001098f0ea791d683f71",
+        "shared_error_refs": [
+          "train seed4420,n2000,requirements_e4.md"
+        ],
+        "interval_s": [
+          0.07850594564439918,
+          0.07885081112574499
+        ]
+      }
+    }
+  ],
+  "branches": [
+    {
+      "side": "LEFT",
+      "state": "MISSING",
+      "reason": "Menos de cinco offsets únicos con onset por lado"
+    },
+    {
+      "side": "RIGHT",
+      "receiver_ids": [
+        "r0",
+        "r1",
+        "r2",
+        "r3",
+        "r4",
+        "r5",
+        "r6",
+        "r7",
+        "r8",
+        "r9",
+        "r10",
+        "r11",
+        "r12",
+        "r13",
+        "r14",
+        "r15",
+        "r16",
+        "r17",
+        "r18",
+        "r19",
+        "r20",
+        "r21",
+        "r22",
+        "r23"
+      ],
+      "fit": {
+        "state": "VALID",
+        "selected": {
+          "segments": 2,
+          "parameters": 4,
+          "bic": -365.9786498884183,
+          "rss_s2": 1.945402759838145e-07,
+          "slopes_s_per_m": [
+            0.003338145972316478,
+            0.0006664779951896355
+          ],
+          "velocities_ms": [
+            299.56748695026613,
+            1500.4246309969562
+          ],
+          "breakpoints_m": [
+            12.248922384002555
+          ],
+          "coefficients": [
+            -4.815663391748962e-05,
+            0.003338145972316478,
+            -0.0026716679771268425
+          ],
+          "points_per_branch": [
+            11,
+            13
+          ],
+          "neg2loglik": -378.6908652098101
+        },
+        "candidates": [
+          {
+            "segments": 1,
+            "parameters": 2,
+            "bic": 42339.015571004165,
+            "rss_s2": 0.000411481605417133,
+            "slopes_s_per_m": [
+              0.0017741253120249515
+            ],
+            "velocities_ms": [
+              563.658042203693
+            ],
+            "breakpoints_m": [],
+            "coefficients": [
+              0.011988127449475887,
+              0.0017741253120249515
+            ],
+            "points_per_branch": [
+              24
+            ],
+            "neg2loglik": 42332.65946334347
+          },
+          {
+            "segments": 2,
+            "parameters": 4,
+            "bic": -365.9786498884183,
+            "rss_s2": 1.945402759838145e-07,
+            "slopes_s_per_m": [
+              0.003338145972316478,
+              0.0006664779951896355
+            ],
+            "velocities_ms": [
+              299.56748695026613,
+              1500.4246309969562
+            ],
+            "breakpoints_m": [
+              12.248922384002555
+            ],
+            "coefficients": [
+              -4.815663391748962e-05,
+              0.003338145972316478,
+              -0.0026716679771268425
+            ],
+            "points_per_branch": [
+              11,
+              13
+            ],
+            "neg2loglik": -378.6908652098101
+          }
+        ],
+        "reason": "Ramas visibles, no número de capas; BIC gaussiano y mínimos explícitos",
+        "depth_identifiable": false,
+        "eligible_for_acceptance": false
+      },
+      "parameters": {
+        "state": "VALID",
+        "v1_ms": 299.56748695026613,
+        "v2_ms": 1500.4246309969562,
+        "intercept_s": 0.03267689705373432,
+        "thickness_m": 4.995036897217274,
+        "reason": "Estimación condicional; capas equivalentes/ocultas no excluidas"
+      },
+      "inversion": {
+        "state": "NOT_CONVERGED",
+        "converged": false,
+        "evaluations": 5,
+        "budget": 5,
+        "velocities_ms": [
+          300.06695348847506,
+          1500.4246310221326
+        ],
+        "thickness_m": 5.003711747056189,
+        "misfit": {
+          "Q": 0.8558093652102366,
+          "rms_s": 9.077983562214489e-05,
+          "bias_s": -2.8061289195770718e-06,
+          "residuals_s": [
+            -0.0001110328865457904,
+            9.631283451487505e-05,
+            5.365855557553853e-05,
+            1.1004276636191607e-05,
+            -0.00028165000230314513,
+            -7.430428124248142e-05,
+            0.00013304143981818575,
+            9.038716087884924e-05,
+            4.7732881939495375e-05,
+            5.0786030001623295e-06,
+            -3.7575675939170716e-05,
+            1.6966283398298088e-05,
+            -9.219460419480907e-05,
+            4.9310986207265484e-05,
+            -5.9183423390660184e-05,
+            8.232216701141437e-05,
+            -2.6172242586518235e-05,
+            0.00011533334781555632,
+            6.838938217630652e-06,
+            -0.00010165547138029501,
+            3.985011902177954e-05,
+            -6.864429057614613e-05,
+            7.286129982592843e-05,
+            -3.563310977200418e-05
+          ],
+          "reason": "Misfit normalizado por n, no chi² reducido con DOF garantizados"
+        },
+        "branch_observations": [
+          11,
+          13
+        ],
+        "jacobian_singular_values": [
+          1952.802588542304,
+          580.7225823194781,
+          64.62509060334267
+        ],
+        "log_parameter_covariance": [
+          [
+            1.2021922843983182e-06,
+            -3.005256564294456e-07,
+            1.2522773070362604e-06
+          ],
+          [
+            -3.005256564292663e-07,
+            0.00022332583377402716,
+            5.971758724447301e-05
+          ],
+          [
+            1.2522773070363083e-06,
+            5.971758724447269e-05,
+            1.8139995791907767e-05
+          ]
+        ],
+        "roi_ref": "synthetic horizontal 0..10m",
+        "resolution_state": "LOCAL_PARAMETRIC_ONLY",
+        "eligible_for_acceptance": false,
+        "reason": "Convergencia no acredita unicidad; presupuesto agotado no implica adquisición mala"
+      }
+    }
+  ],
+  "evidence_status": "INCOMPLETE",
+  "missing_requirement_ids": [
+    "RECIPROCITY_PHYSICAL_PAIRS",
+    "ROI_RAY_COVERAGE_AND_RESOLUTION",
+    "FIELD_CALIBRATION_G9",
+    "HIDDEN_LAYERS_NOT_EXCLUDED",
+    "SHARED_CALIBRATION_AND_CLOCK_COVARIANCE",
+    "LEFT/BRANCH_SUPPORT"
+  ],
+  "eligible_for_acceptance": false,
+  "operator_decision": "PENDING",
+  "quality_status": null,
+  "protocol_hash": "da2fd76202c6a17c3b82256a93d66e2c3cc0a50bb76883bbdd2a4ea749410494",
+  "code_hash": "033a0a7a30dac9d0e08ea8e81fb38ebb383ad1b9b1dfb41d0be17261659b0c6c",
+  "data_hashes": [
+    "ec8cf2b1acb1eb50278b41cd3a77d53595eecb364b444f51438d3d1a78e43647",
+    "ead59b81b311e4e3d5f906a19ebb380a6cc93c319535933e3f5e34c33594b5a6"
+  ],
+  "calibration_hash": "3b34b2cf0611b942721a040fa753dbc16be791e5795ec0fb389633bfedda5f70",
+  "reason": "Picking/ajustes condicionados; falta soporte de sitio y causas/estratos pueden no ser identificables"
+}

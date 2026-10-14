@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.4",
+  "shot_id": "e2-common-qc-demo",
+  "acquisition": {
+    "schema_version": "1.4",
+    "technique": "MASW",
+    "wave": "RAYLEIGH",
+    "component": "Z",
+    "receiver_ids": [
+      "r0",
+      "r1",
+      "r2",
+      "r3",
+      "r4",
+      "r5"
+    ],
+    "source_type": "synthetic pulse",
+    "orientation_degrees": null,
+    "trigger_ref": null,
+    "response_ref": null,
+    "calibration_ref": null,
+    "adc_rails": [
+      -1.0,
+      1.0
+    ],
+    "gain": null,
+    "amplitude_unit": "counts",
+    "stack_count": 1,
+    "stack_kind": "RAW",
+    "replica_ids": []
+  },
+  "geometry_policy": "HEADER",
+  "geometry": {
+    "schema_version": "1.4",
+    "xr": [
+      6.0,
+      8.0,
+      10.0,
+      12.0,
+      14.0,
+      16.0
+    ],
+    "yr": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "zr": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "xs": 0.0,
+    "ys": 0.0,
+    "zs": 0.0,
+    "uncertainty_m": [
+      0.01,
+      0.01,
+      0.01,
+      0.01,
+      0.01,
+      0.01
+    ],
+    "crs": "local-SI",
+    "provenance": [
+      "synthetic geometry"
+    ],
+    "permutation": null
+  },
+  "header_coordinate_uncertainty_m": [
+    0.01,
+    0.01,
+    0.01,
+    0.01,
+    0.01,
+    0.01
+  ],
+  "header_crs": "local-SI",
+  "time_reference": "SOURCE_INITIATION_VERIFIED",
+  "t0_s": null,
+  "waveform_sha256": "5dae2e034399bd69107e610416c495427d0bea220e02ba4a4d3cccbd8795e9ef",
+  "valid_mask": null,
+  "mask_reasons": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "provenance": "GeoQC export: source-relative delay; SI coordinates; original geometry retained in sidecar",
+  "original_headers_json": "{\"scope\":\"synthetic illustration only\"}"
+}

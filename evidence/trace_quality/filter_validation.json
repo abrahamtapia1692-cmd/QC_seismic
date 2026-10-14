@@ -1,0 +1,123 @@
+{
+  "status": "CANDIDATE_ONLY",
+  "promoted_to_raw": false,
+  "input_sha256": "3fd000728bebfabd79ece1718d0e843e17b596d4969f24a1769ab3c279882b0b",
+  "output_sha256": "1b1bf44d7123a232b1cb3529b85e49e955d1cde39d8db97e4b05d84d4d42dbc6",
+  "preprocessing_chain": [
+    {
+      "kind": "BUTTERWORTH_HIGHPASS",
+      "hz": 10,
+      "order_one_pass": 4,
+      "sos": [
+        [
+          0.9211709934999417,
+          -1.8423419869998834,
+          0.9211709934999417,
+          1.0,
+          -1.8866095826215064,
+          0.8903397362840242
+        ],
+        [
+          1.0,
+          -2.0,
+          1.0,
+          1.0,
+          -1.9492159580258417,
+          0.9530698953278909
+        ]
+      ]
+    },
+    {
+      "kind": "NOTCH",
+      "hz": 59.95,
+      "Q": 30,
+      "sos": [
+        [
+          0.9937611359890495,
+          -1.8481812388999743,
+          0.9937611359890492,
+          1.0,
+          -1.8481812388999748,
+          0.987522271978099
+        ]
+      ]
+    }
+  ],
+  "implementation": "SOS forward-backward; SciPy default padding",
+  "pick_before_s": 0.20100000000000007,
+  "pick_after_s": null,
+  "pick_delta_s": null,
+  "pick_stability": "UNVERIFIED",
+  "pick_tolerance_s": 0.00025,
+  "limitations": "Fase cero no garantiza onset invariante: revisar pre-ringing, amplitud, bordes y banda útil",
+  "known_onset_s": 0.2,
+  "pick_details": [
+    {
+      "schema_version": "1.4",
+      "onset_s": 0.20100000000000007,
+      "sigma_s": null,
+      "bias_s": null,
+      "confidence": "UNCALIBRATED",
+      "reason": "Onset diagnóstico; curvatura AIC no es sigma; polaridad separada",
+      "window_s": [
+        0.0,
+        0.5
+      ],
+      "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=5071d5a264744b387ec1da53478bde686db2eea2d07210adfb8422399428bb6f",
+      "shared_error_refs": [],
+      "interval_s": null
+    },
+    {
+      "schema_version": "1.4",
+      "onset_s": null,
+      "sigma_s": null,
+      "bias_s": null,
+      "confidence": "AMBIGUOUS",
+      "reason": "Múltiples episodios de energía: primera llegada ambigua",
+      "window_s": [
+        0.0,
+        0.5
+      ],
+      "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=5071d5a264744b387ec1da53478bde686db2eea2d07210adfb8422399428bb6f",
+      "shared_error_refs": [],
+      "interval_s": null
+    }
+  ],
+  "seed": 812,
+  "waveform": "filter_candidate.npz",
+  "scope": "Synthetic demonstration only; frequency known from injection, not fitted to the arrival",
+  "field_filtering": "NOT_APPLIED; evidence, band and pick stability require review",
+  "protocol": {
+    "schema_version": "1.4",
+    "search": {
+      "schema_version": "1.4",
+      "start_s": 0.0,
+      "end_s": 0.5
+    },
+    "noise": {
+      "schema_version": "1.4",
+      "start_s": -2.9,
+      "end_s": -0.1
+    },
+    "band_hz": [
+      40.0,
+      160.0
+    ],
+    "sta_s": 0.002,
+    "lta_s": 0.02,
+    "trigger_ratio": 8.0,
+    "refine_pre_s": 0.012,
+    "refine_post_s": 0.025,
+    "minimum_segment_samples": 8,
+    "variance_floor_fraction": 1e-08,
+    "min_sustained_s": 0.015,
+    "preprocessing": "RAW_DC_REMOVED",
+    "domain_id": null,
+    "provenance": "Fixed synthetic filter test; no field validation"
+  },
+  "code_sha256": {
+    "tools\\validate_noise_review.py": "4d8c44a7c9183da3cb99a71317b8b8c4e25bd7f9f6442da69eec856612b0caa0",
+    "geoqc\\qc\\noise.py": "437dc62461b295c7e3fc18ba60bb3aad071f759286355a665216c3f9e5d82a92",
+    "geoqc\\trs\\picking.py": "d8cc18dabff1b33fb8a3ec2b21e9395479f71447c2725c323f0dc0604aca1fe9"
+  }
+}

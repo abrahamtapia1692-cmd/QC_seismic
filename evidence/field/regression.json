@@ -1,0 +1,9 @@
+{
+  "date_local": "2026-10-07",
+  "scope": "Selected existing regression tests; separate from exploratory field checks and G9",
+  "command": ".venv/Scripts/python.exe -m pytest tests/unit/test_e1_formats.py tests/unit/test_e1_errors.py tests/synthetic/test_e4_picking.py tests/synthetic/test_e5_transform.py tests/synthetic/test_e5_curves.py -q",
+  "exit_code": 0,
+  "passed": 77,
+  "duration_s": 88.90,
+  "reported_output": "77 passed in 88.90s (0:01:28)"
+}

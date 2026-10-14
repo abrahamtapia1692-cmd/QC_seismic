@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.4",
+  "id": "G3",
+  "status": "PASSED",
+  "required_test_ids": [
+    "V-E3-1",
+    "V-E3-2",
+    "V-E3-3",
+    "V-E3-4",
+    "V-E3-5",
+    "V-E3-6",
+    "V-E3-7"
+  ],
+  "execution_artifact": "execution.json",
+  "execution_artifact_sha256": "db4f4401ce24fba1fc71edcc100be6e43e94920ad5de85a40700d2c91da7d663",
+  "scope": "IMPLEMENTATION_AND_DECLARED_SYNTHETIC_DOMAIN_ONLY",
+  "eligible_for_field_acceptance": false,
+  "coverage_io": null
+}

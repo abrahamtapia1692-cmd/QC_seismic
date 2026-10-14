@@ -1,0 +1,209 @@
+{
+  "pytest_exit_code": 1,
+  "tests": [
+    {
+      "nodeid": "tests/unit/test_masw_r1.py::test_correlated_difference_and_explicit_independence",
+      "id": "V-E5-22",
+      "status": "FAILED",
+      "phases": {
+        "setup": "passed",
+        "call": "failed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": [
+        [
+          "RM-03",
+          "covariance"
+        ]
+      ]
+    },
+    {
+      "nodeid": "tests/unit/test_masw_r1.py::test_covariance_invalid_inputs[matrix0]",
+      "id": "V-E0-9",
+      "status": "FAILED",
+      "phases": {
+        "setup": "passed",
+        "call": "failed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": [
+        [
+          "RM-03",
+          "validation"
+        ]
+      ]
+    },
+    {
+      "nodeid": "tests/unit/test_masw_r1.py::test_covariance_invalid_inputs[matrix1]",
+      "id": "V-E0-9",
+      "status": "FAILED",
+      "phases": {
+        "setup": "passed",
+        "call": "failed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": [
+        [
+          "RM-03",
+          "validation"
+        ]
+      ]
+    },
+    {
+      "nodeid": "tests/unit/test_masw_r1.py::test_covariance_invalid_inputs[matrix2]",
+      "id": "V-E0-9",
+      "status": "FAILED",
+      "phases": {
+        "setup": "passed",
+        "call": "failed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": [
+        [
+          "RM-03",
+          "validation"
+        ]
+      ]
+    },
+    {
+      "nodeid": "tests/unit/test_masw_r1.py::test_covariance_invalid_inputs[matrix3]",
+      "id": "V-E0-9",
+      "status": "FAILED",
+      "phases": {
+        "setup": "passed",
+        "call": "failed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": [
+        [
+          "RM-03",
+          "validation"
+        ]
+      ]
+    },
+    {
+      "nodeid": "tests/unit/test_masw_r1.py::test_duplicates_modes_support_and_unknown_covariance",
+      "id": "V-E5-22",
+      "status": "FAILED",
+      "phases": {
+        "setup": "passed",
+        "call": "failed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": [
+        [
+          "RM-03",
+          "duplicates_modes"
+        ]
+      ]
+    },
+    {
+      "nodeid": "tests/unit/test_masw_r1.py::test_explicit_migration_and_unknown_schema",
+      "id": "V-E0-9",
+      "status": "FAILED",
+      "phases": {
+        "setup": "passed",
+        "call": "failed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": [
+        [
+          "RM-08",
+          "migration"
+        ]
+      ]
+    },
+    {
+      "nodeid": "tests/unit/test_masw_r1.py::test_joint_covariance_order_and_singular_nullspace",
+      "id": "V-E5-22",
+      "status": "FAILED",
+      "phases": {
+        "setup": "passed",
+        "call": "failed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": [
+        [
+          "RM-03",
+          "joint"
+        ]
+      ]
+    },
+    {
+      "nodeid": "tests/unit/test_masw_r1.py::test_legacy_union_preserves_covariance_and_abstains",
+      "id": "V-E5-22",
+      "status": "FAILED",
+      "phases": {
+        "setup": "passed",
+        "call": "failed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": [
+        [
+          "RM-03",
+          "unknowns"
+        ]
+      ]
+    },
+    {
+      "nodeid": "tests/unit/test_masw_r1.py::test_modal_evidence_authority_scope_tampering_and_partial_support",
+      "id": "V-E5-7",
+      "status": "FAILED",
+      "phases": {
+        "setup": "passed",
+        "call": "failed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": [
+        [
+          "RM-02",
+          "reference"
+        ]
+      ]
+    },
+    {
+      "nodeid": "tests/unit/test_masw_r1.py::test_supplement_requires_real_phases_revision_and_all_criteria",
+      "id": "V-E0-10",
+      "status": "FAILED",
+      "phases": {
+        "setup": "passed",
+        "call": "failed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": [
+        [
+          "RM-08",
+          "runner"
+        ]
+      ]
+    },
+    {
+      "nodeid": "tests/unit/test_masw_r1.py::test_unresolved_reference_cannot_confirm_observed_mode",
+      "id": "V-E5-7",
+      "status": "FAILED",
+      "phases": {
+        "setup": "passed",
+        "call": "failed",
+        "teardown": "passed"
+      },
+      "scientific_properties": [],
+      "supplement_criteria": [
+        [
+          "RM-02",
+          "reference"
+        ]
+      ]
+    }
+  ]
+}

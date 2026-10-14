@@ -1,0 +1,162 @@
+{
+  "retrieved_at_utc": "2026-10-08T04:13:24.527530+00:00",
+  "repositories": [
+    {
+      "label": "oysand",
+      "repository": "Mazvel/maswavespy",
+      "commit": "8ae34e9a112aad4e68df34f58efde7d500621a89"
+    },
+    {
+      "label": "chevremont",
+      "repository": "hadrienmichel/SardineReborn",
+      "commit": "2d1fdac70d94aa0baa62e82ae5319feacfc4a19b"
+    }
+  ],
+  "files": [
+    {
+      "path": "examples/field/raw/oysand/examples/Data/Oysand_c_list.txt",
+      "url": "https://raw.githubusercontent.com/Mazvel/maswavespy/8ae34e9a112aad4e68df34f58efde7d500621a89/examples/Data/Oysand_c_list.txt",
+      "bytes": 12344,
+      "sha256": "ca21dc55d7a0d1e08d42a40657e96d308b205663921bd7414ae1944125ffab4c"
+    },
+    {
+      "path": "examples/field/raw/oysand/examples/Data/Oysand_dc.txt",
+      "url": "https://raw.githubusercontent.com/Mazvel/maswavespy/8ae34e9a112aad4e68df34f58efde7d500621a89/examples/Data/Oysand_dc.txt",
+      "bytes": 1015,
+      "sha256": "53f2b0d5ba101829e8750cd5004b953187615810c948c8fb15f6d83b361c5b32"
+    },
+    {
+      "path": "examples/field/raw/oysand/examples/Data/Oysand_dx_2m_x1_10m_forward.dat",
+      "url": "https://raw.githubusercontent.com/Mazvel/maswavespy/8ae34e9a112aad4e68df34f58efde7d500621a89/examples/Data/Oysand_dx_2m_x1_10m_forward.dat",
+      "bytes": 964517,
+      "sha256": "aabaf9379cf7f67b0285206eca7c11125c768862e3899b14f9b81647c67982ce"
+    },
+    {
+      "path": "examples/field/raw/oysand/examples/Data/Oysand_dx_2m_x1_15m_forward.dat",
+      "url": "https://raw.githubusercontent.com/Mazvel/maswavespy/8ae34e9a112aad4e68df34f58efde7d500621a89/examples/Data/Oysand_dx_2m_x1_15m_forward.dat",
+      "bytes": 964326,
+      "sha256": "52229da4e751574efbf4acdf02f684e3f02002ba70e87092641a0e9beaaad1c2"
+    },
+    {
+      "path": "examples/field/raw/oysand/examples/Data/Oysand_dx_2m_x1_20m_forward.dat",
+      "url": "https://raw.githubusercontent.com/Mazvel/maswavespy/8ae34e9a112aad4e68df34f58efde7d500621a89/examples/Data/Oysand_dx_2m_x1_20m_forward.dat",
+      "bytes": 966105,
+      "sha256": "f131c4ec3aa712c63c0469cd3a57cf3d4a1e9cbb7cd4ba63f94cae46a1e65aab"
+    },
+    {
+      "path": "examples/field/raw/oysand/examples/Data/Oysand_dx_2m_x1_30m_forward.dat",
+      "url": "https://raw.githubusercontent.com/Mazvel/maswavespy/8ae34e9a112aad4e68df34f58efde7d500621a89/examples/Data/Oysand_dx_2m_x1_30m_forward.dat",
+      "bytes": 965401,
+      "sha256": "4bdefabe1a2752abcf42cf80123179143d2a44222f0d9a8a3918c22c1614f40d"
+    },
+    {
+      "path": "examples/field/raw/oysand/examples/Data/Oysand_example_dataset.csv",
+      "url": "https://raw.githubusercontent.com/Mazvel/maswavespy/8ae34e9a112aad4e68df34f58efde7d500621a89/examples/Data/Oysand_example_dataset.csv",
+      "bytes": 344,
+      "sha256": "0635de06c54b201540ae6e506240752fb372f61c12777ee43052511c7482af02"
+    },
+    {
+      "path": "examples/field/raw/oysand/examples/Data/Oysand_f_list.txt",
+      "url": "https://raw.githubusercontent.com/Mazvel/maswavespy/8ae34e9a112aad4e68df34f58efde7d500621a89/examples/Data/Oysand_f_list.txt",
+      "bytes": 15186,
+      "sha256": "301d8e9c7c9aa5b500acd1e1720594a60cc3add62b31d1a76ce4660588179bb5"
+    },
+    {
+      "path": "examples/field/raw/oysand/examples/Data/Oysand_initial.csv",
+      "url": "https://raw.githubusercontent.com/Mazvel/maswavespy/8ae34e9a112aad4e68df34f58efde7d500621a89/examples/Data/Oysand_initial.csv",
+      "bytes": 187,
+      "sha256": "f38c9f8ee9951644cc6a1f92042c8106df34cf4c482594f525a3c468b01de3b0"
+    },
+    {
+      "path": "examples/field/raw/oysand/LICENSE",
+      "url": "https://raw.githubusercontent.com/Mazvel/maswavespy/8ae34e9a112aad4e68df34f58efde7d500621a89/LICENSE",
+      "bytes": 31900,
+      "sha256": "1aad3340a45175f856beeef192d536a1bca306b7444647f94077ac7522890906"
+    },
+    {
+      "path": "examples/field/raw/oysand/README.md",
+      "url": "https://raw.githubusercontent.com/Mazvel/maswavespy/8ae34e9a112aad4e68df34f58efde7d500621a89/README.md",
+      "bytes": 12745,
+      "sha256": "37923ea541ebb182fa390e5e8b7e14471e70a7f04b07b86f531c6336da911a71"
+    },
+    {
+      "path": "examples/field/raw/oysand/examples/MASWavesPy_Dispersion_test1.py",
+      "url": "https://raw.githubusercontent.com/Mazvel/maswavespy/8ae34e9a112aad4e68df34f58efde7d500621a89/examples/MASWavesPy_Dispersion_test1.py",
+      "bytes": 4643,
+      "sha256": "0b4650ea06fb05c45b373334640cc7b2a0405abe6ecec9986b665072c646b4f3"
+    },
+    {
+      "path": "examples/field/raw/oysand/examples/MASWavesPy_Dispersion_test2.py",
+      "url": "https://raw.githubusercontent.com/Mazvel/maswavespy/8ae34e9a112aad4e68df34f58efde7d500621a89/examples/MASWavesPy_Dispersion_test2.py",
+      "bytes": 6731,
+      "sha256": "036452bb7589b85e3460a117b235b1b6f900fafc5b31f07798f13a8c96ee2857"
+    },
+    {
+      "path": "examples/field/raw/chevremont/example/Chevremont/0m.sg2",
+      "url": "https://raw.githubusercontent.com/hadrienmichel/SardineReborn/2d1fdac70d94aa0baa62e82ae5319feacfc4a19b/example/Chevremont/0m.sg2",
+      "bytes": 787780,
+      "sha256": "3e2a95f34f1ccd83b9ee987c83e51e1fc101fc44b6a7f866143bc0536ecd38d4"
+    },
+    {
+      "path": "examples/field/raw/chevremont/example/Chevremont/10m.sg2",
+      "url": "https://raw.githubusercontent.com/hadrienmichel/SardineReborn/2d1fdac70d94aa0baa62e82ae5319feacfc4a19b/example/Chevremont/10m.sg2",
+      "bytes": 787780,
+      "sha256": "986fcf821ecb3cc6dcb2448cec51cca7442634993193eeaa9c35c5a3f90a7fd1"
+    },
+    {
+      "path": "examples/field/raw/chevremont/example/Chevremont/20m.sg2",
+      "url": "https://raw.githubusercontent.com/hadrienmichel/SardineReborn/2d1fdac70d94aa0baa62e82ae5319feacfc4a19b/example/Chevremont/20m.sg2",
+      "bytes": 787780,
+      "sha256": "43cb279f017d3e28af526fe346bf6560261349042325de6a375d0fff768b29d7"
+    },
+    {
+      "path": "examples/field/raw/chevremont/example/Chevremont/30m.sg2",
+      "url": "https://raw.githubusercontent.com/hadrienmichel/SardineReborn/2d1fdac70d94aa0baa62e82ae5319feacfc4a19b/example/Chevremont/30m.sg2",
+      "bytes": 787840,
+      "sha256": "c7f420e37c002d6c0a13e5230b0668d6de740b59888e610ce36116f67e230018"
+    },
+    {
+      "path": "examples/field/raw/chevremont/example/Chevremont/40m.sg2",
+      "url": "https://raw.githubusercontent.com/hadrienmichel/SardineReborn/2d1fdac70d94aa0baa62e82ae5319feacfc4a19b/example/Chevremont/40m.sg2",
+      "bytes": 787972,
+      "sha256": "0bb69e8a7185a91b8d0da0111784550c999bdfa52e1c34046b08034315ca68d4"
+    },
+    {
+      "path": "examples/field/raw/chevremont/example/Chevremont/50m.sg2",
+      "url": "https://raw.githubusercontent.com/hadrienmichel/SardineReborn/2d1fdac70d94aa0baa62e82ae5319feacfc4a19b/example/Chevremont/50m.sg2",
+      "bytes": 787780,
+      "sha256": "37a1f75446ec51837f8ddffe8c683fabb9d3c1a052a12e3d2c6e475d8ff77186"
+    },
+    {
+      "path": "examples/field/raw/chevremont/example/Chevremont/60m.sg2",
+      "url": "https://raw.githubusercontent.com/hadrienmichel/SardineReborn/2d1fdac70d94aa0baa62e82ae5319feacfc4a19b/example/Chevremont/60m.sg2",
+      "bytes": 787876,
+      "sha256": "7f1030fa2bbc2de96d453259bdf08bccf9a519ab22c9aa74700084dcb9adf1f7"
+    },
+    {
+      "path": "examples/field/raw/chevremont/example/Chevremont/chevremont.geometry",
+      "url": "https://raw.githubusercontent.com/hadrienmichel/SardineReborn/2d1fdac70d94aa0baa62e82ae5319feacfc4a19b/example/Chevremont/chevremont.geometry",
+      "bytes": 672,
+      "sha256": "3386636b894cac85ea4c3b3d9b4f23a028f12667ed8c3f85d47bad0f9e02b996"
+    },
+    {
+      "path": "examples/field/raw/chevremont/example/Chevremont/test.sgt",
+      "url": "https://raw.githubusercontent.com/hadrienmichel/SardineReborn/2d1fdac70d94aa0baa62e82ae5319feacfc4a19b/example/Chevremont/test.sgt",
+      "bytes": 1650,
+      "sha256": "650c636c301bf55ef1e6d9c2e3e48f14fed6db21ee91b2cb109842920b478c5f"
+    },
+    {
+      "path": "examples/field/raw/chevremont/LICENSE",
+      "url": "https://raw.githubusercontent.com/hadrienmichel/SardineReborn/2d1fdac70d94aa0baa62e82ae5319feacfc4a19b/LICENSE",
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "examples/field/raw/chevremont/README.md",
+      "url": "https://raw.githubusercontent.com/hadrienmichel/SardineReborn/2d1fdac70d94aa0baa62e82ae5319feacfc4a19b/README.md",
+      "bytes": 13721,
+      "sha256": "b50f432d63e495f1b77a7b687894337e344702eb6cbf6ea806fce4accd52fad2"
+    }
+  ],
+  "scope": "Exploratory field diagnostics; no field acceptance or calibration."
+}

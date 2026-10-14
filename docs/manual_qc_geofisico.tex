@@ -1,0 +1,499 @@
+\documentclass[11pt,a4paper]{article}
+
+% --- Paquetes Fundamentales de Tipografía y Lenguaje ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+
+% --- Geometría y Márgenes ---
+\usepackage[top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textsc{GeoQC-Field} $\cdot$ Manual Técnico de Control de Calidad}
+\fancyhead[R]{\small MASW y TRS $\cdot$ Dosier 2.0}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% --- Paquetes Matemáticos y Símbolos ---
+\usepackage{amsmath,amssymb,amsfonts,mathtools}
+
+% --- Tablas Profesionales ---
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+
+% --- Gráficos, Colores y Enlaces ---
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+
+\definecolor{brandblue}{RGB}{3, 105, 161}
+\definecolor{branddark}{RGB}{15, 23, 42}
+\definecolor{usablegreen}{RGB}{22, 128, 60}
+\definecolor{reviewamber}{RGB}{183, 121, 0}
+\definecolor{unusablegrey}{RGB}{100, 116, 139}
+\definecolor{badred}{RGB}{185, 28, 28}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=brandblue,
+    citecolor=brandblue,
+    urlcolor=brandblue,
+    pdftitle={Manual Técnico de Control de Calidad Geofísico de Campo: MASW y TRS},
+    pdfauthor={GeoQC Development Team},
+    pdfsubject={Control de Calidad Geofísico MASW y TRS}
+}
+
+% --- Cajas de Información Estilizadas ---
+\newtcolorbox{principiobox}[1]{
+    colback=brandblue!5!white,
+    colframe=brandblue,
+    fonttitle=\bfseries,
+    title={#1},
+    arc=3mm,
+    boxrule=0.8pt,
+    left=3mm, right=3mm, top=2mm, bottom=2mm
+}
+
+\newtcolorbox{warningbox}[1]{
+    colback=reviewamber!8!white,
+    colframe=reviewamber!90!black,
+    fonttitle=\bfseries,
+    title={#1},
+    arc=2mm,
+    boxrule=0.8pt,
+    left=3mm, right=3mm, top=2mm, bottom=2mm
+}
+
+\newtcolorbox{limitbox}[1]{
+    colback=unusablegrey!8!white,
+    colframe=unusablegrey!90!black,
+    fonttitle=\bfseries,
+    title={#1},
+    arc=2mm,
+    boxrule=0.8pt,
+    left=3mm, right=3mm, top=2mm, bottom=2mm
+}
+
+% --- Título del Documento ---
+\title{
+    \vspace{-1.5cm}
+    \textbf{\Large SISTEMA DE CONTROL DE CALIDAD GEOFÍSICO EN CAMPO} \\[0.3cm]
+    \textbf{\LARGE Manual Técnico de Procedimiento y Dosieres 2.0} \\[0.3cm]
+    \large Análisis Multicanal de Ondas Superficiales (MASW) y Tomografía de Refracción Sísmica (TRS)
+}
+\author{\textbf{GeoQC Core Architecture} $\cdot$ Especificación Técnica de Procedimiento}
+\date{Octubre 2026 $\cdot$ Revisión 2.0 (Desacoplamiento Diagnóstico)}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\begin{abstract}
+\noindent Este manual establece las directrices teóricas, matemáticas y operativas del sistema de control de calidad geofísico en campo (\textsc{GeoQC-Field}) para exploraciones sísmicas superficiales basadas en \textbf{MASW} y \textbf{TRS}. El protocolo responde al cambio metodológico formal del sistema: gran parte del control de calidad puede y debe estimarse de los propios registros de ondas, pero reconociendo de manera estricta los límites infranqueables de la interpretación física cuando faltan metadatos instrumentales. Se describe exhaustivamente: (1)~los insumos mínimos requeridos para cada técnica y la gestión de información faltante; (2)~el procedimiento algorítmico paso a paso, desde la integridad de trazas y análisis de ruido, hasta la extracción de crestas de dispersión, ambigüedad direccional en número de onda firmado $q \in [-q_N, q_N]$ y consistencia multidispáro; y (3)~la arquitectura de salida del \textbf{Dosier 2.0}, fundamentada en el desacoplamiento riguroso entre la \emph{Calidad diagnóstica por bandas} y la \emph{Suficiencia del objetivo ingenieril} ($V_{s30}$, profundidad o modelos de velocidad).
+\end{abstract}
+
+\vspace{0.3cm}
+\tableofcontents
+\newpage
+
+% =========================================================================
+\section{Introducción y Filosofía del Control de Calidad Diagnóstico}
+% =========================================================================
+
+\subsection{El Cambio de Paradigma: Del Bloqueo Normativo a la Calificación Interna}
+Los sistemas tradicionales de control de calidad sísmico tienden a cometer uno de dos errores extremos:
+\begin{enumerate}
+    \item \textbf{Permisividad no calificada:} Declarar ``verde'' o ``aprobado'' cualquier registro del cual el software logre trazar una curva suave, sin verificar si el lóbulo principal del arreglo invade el límite espacial de Nyquist, si existen ondas en sentido inverso o si la curva cambia drásticamente al modificar la ventana de tiempo.
+    \item \textbf{Bloqueo normativo excesivo:} Trasladar los requisitos finales de aceptación operativa (tales como verificación de cotas topográficas oficiales, conocimiento de los rails de saturación del convertidor ADC o modelos de inversión de $V_{s30}$) a la calificación diagnóstica primaria del sismograma en campo.
+\end{enumerate}
+
+El sistema \textsc{GeoQC-Field} adopta un enfoque equilibrado y teóricamente sólido: \textbf{no necesitamos conocer perfectamente el instrumento y el subsuelo para decidir si un registro aporta dispersión o primeros arribos interpretables, pero tampoco podemos recuperar información física faltante a partir de una simple matriz de amplitudes numéricas.}
+
+\begin{principiobox}{Pregunta Central del Dosier Diagnóstico 2.0}
+\centering
+\emph{«¿Qué bandas o componentes de este registro son utilizables para extraer y comparar dispersión o tiempos de viaje, y qué tan estable es esa interpretación ante cambios de procesamiento y geometría?»}
+\end{principiobox}
+
+\subsection{Principio de las Dos Evaluaciones Desacopladas}
+Todo informe o dosier emitido por el sistema genera dos conclusiones totalmente separadas:
+\begin{itemize}
+    \item \textbf{Dimensión 1: Calidad Diagnóstica por Banda / Traza.} Clasifica cada bin de frecuencia o canal en:
+    \begin{itemize}
+        \item \textcolor{usablegreen}{\textbf{UTILIZABLE*}}: Pasa los controles internos objetivos de coherencia, contraste cresta--fondo, ausencia de competidores espaciales y estabilidad frente a variantes de procesamiento.
+        \item \textcolor{reviewamber}{\textbf{REVISAR}}: Presenta advertencias objetivas (lóbulo en Nyquist, picos competidores espaciales, sensibilidad al retirar canales o dirección no resuelta).
+        \item \textcolor{badred}{\textbf{NO\_UTILIZABLE / SIN\_SOPORTE}}: Amplitud espectral nula o menos de dos canales activos.
+        \item \textcolor{unusablegrey}{\textbf{NO\_EVALUABLE}}: Arreglos irregulares o geometrías incompletas que impiden aplicar el kernel analítico uniforme.
+    \end{itemize}
+    \item \textbf{Dimensión 2: Suficiencia del Objetivo.} Informa si el conjunto de datos demuestra la cobertura, profundidad o precisión requerida para un fin específico (e.g., $V_{s30}$ según NEHRP/Eurocódigo o profundidad de roca basal). Permanece como \textbf{PENDIENTE} (\texttt{NOT\_DEMONSTRATED}) mientras no se aporten las evidencias externas requeridas (plan de posiciones, identificación modal verificada, etc.).
+\end{itemize}
+
+Bajo esta separación, la ausencia de los voltajes de saturación ADC en la cabecera dejará abierta la sospecha de clipping sin confirmación instrumental, pero \textbf{no bloqueará} la extracción ni la calificación de estabilidad de una cresta de dispersión aparente.
+
+\newpage
+% =========================================================================
+\section{Qué se Recibe para Cada Técnica: Insumos y Metadatos}
+% =========================================================================
+
+\subsection{Tabla Comparativa de Insumos}
+
+\begin{table}[h!]
+\centering
+\small
+\renewcommand{\arraystretch}{1.25}
+\begin{tabularx}{\textwidth}{L{3.2cm} X X}
+\toprule
+\textbf{Elemento} & \textbf{MASW (Ondas Superficiales)} & \textbf{TRS (Refracción Sísmica)} \\
+\midrule
+\textbf{Formato nativo} & SEG-2, Seismic Unix (SU), texto tabular o binario con cabecera documentada. & SEG-2, SU, o texto ASCII multicanal con marcas temporales. \\
+\addlinespace
+\textbf{Datos de entrada obligatorios} & Matriz $N_{\text{canales}} \times N_{\text{muestras}}$ de amplitudes finitas y escalares de muestreo. & Matriz $N_{\text{canales}} \times N_{\text{muestras}}$ de amplitudes finitas y marcas temporales. \\
+\addlinespace
+\textbf{Tiempo obligatorio} & Intervalo de muestreo $dt$ (o tasa $f_s = 1/dt$). & $dt$, tiempo de pre-disparo ($T_{\text{pre}}$) y sincronización (time-break / canal trigger). \\
+\addlinespace
+\textbf{Geometría obligatoria} & Coordenadas relativas de receptores $x_r$ y posición de la fuente $x_s$ (para offset $x_1$). & Coordenadas $x_r, y_r, z_r$ de receptores y posiciones $x_s, y_s, z_s$ de fuentes directas e inversas. \\
+\addlinespace
+\textbf{Metadatos instrumentales deseables} & Frecuencia propia de geófonos (e.g. 4.5\,Hz), rango dinámico ADC, unidades físicas. & Frecuencia propia (e.g. 10--14\,Hz), impedancia de amortiguamiento, escala ADC. \\
+\addlinespace
+\textbf{Insumos de ruido} & Ventana pre-evento en el registro o archivo de ruido ambiente no excitado. & Ventana previa al time-break ($T_{\text{pre}} \ge 100$\,ms) o registros pasivos. \\
+\addlinespace
+\textbf{Objetivo ingenieril} & Profundidad requerida, $V_{s30}$ normativo o perfil de rigidez esperado. & Profundidad de basamento, modelo de 2 o más capas, objetivos de ripabilidad. \\
+\bottomrule
+\end{tabularx}
+\caption{Comparativa de insumos mínimos y metadatos requeridos para MASW y TRS.}
+\label{tab:insumos}
+\end{table}
+
+\subsection{Lo que NO se Puede Estimar de los Datos Numéricos}
+\begin{limitbox}{Fronteras Infranqueables de la Ingesta Numérica}
+Es un error común asumir que un algoritmo avanzado puede deducir cualquier parámetro faltante. Se establecen los siguientes límites:
+\begin{enumerate}
+    \item \textbf{Escala temporal y espacial:} Una matriz pura de números flotantes no contiene información intrínseca sobre si $dt = 1$\,ms o $dt = 0.5$\,ms, ni si la distancia entre geófonos es de 1\,m o 5\,m. Sin $dt$ y coordenadas explícitas, el registro es \textbf{inútil}.
+    \item \textbf{Canales auxiliares y de disparo:} Si el canal 1 se utilizó como sensor de impacto (trigger mecánico) pero se mapea en las cabeceras como el primer geófono del arreglo, todo el análisis espacial se corromperá. La correspondencia física debe estar verificada en la libreta de campo.
+    \item \textbf{Voltajes de saturación instrumental:} Sin los niveles máximos del conversor análogo-digital (ADC rails o escala completa en milivoltios), no se puede confirmar físicamente un clipping instrumental; sólo es posible levantar una \emph{sospecha de clipping} por deformación morfológica de la señal.
+\end{enumerate}
+\end{limitbox}
+
+\newpage
+% =========================================================================
+\section{Procedimiento Metodológico Paso a Paso}
+% =========================================================================
+
+\subsection{Paso 1: Ingesta, Integridad Digital y Geometría}
+El flujo inicia con la verificación estricta de la estructura digital del sismograma:
+\begin{enumerate}
+    \item \textbf{Finitud y dimensión:} Se comprueba que no existan valores \texttt{NaN}, \texttt{Inf} o muestras corruptas. El número de canales $N \ge 3$ y el número de muestras $M \ge 32$.
+    \item \textbf{Mapeo geométrico:} Se calculan las posiciones ordenadas $x_1 < x_2 < \dots < x_N$, el espaciamiento inter-canal $dx_k = x_{k+1} - x_k$ y la apertura total del arreglo:
+    \begin{equation}
+        L = x_N - x_1
+    \end{equation}
+    \item \textbf{Evaluación de regularidad:} Se verifica si el arreglo es uniforme:
+    \begin{equation}
+        \max_k |dx_k - dx| \le \epsilon \quad (\text{con } \epsilon = 10^{-9}\,\text{m})
+    \end{equation}
+    Si el arreglo presenta huecos o espaciamientos irregulares, se conserva la coordenada real pero se inhabilita el uso directo de fórmulas de kernel uniforme, asignando la etiqueta \texttt{KERNEL\_UNSUPPORTED}.
+\end{enumerate}
+
+\subsection{Paso 2: Diagnóstico de Canal y Trazas Problemáticas}
+Antes de cualquier transformada espectral, cada traza $u_i(t)$ ($i=1,\dots,N$) es sometida a controles individuales:
+\begin{itemize}
+    \item \textbf{Canales nulos o constantes:} Se verifica si $\max(u_i) - \min(u_i) = 0$ o si la traza está idénticamente en cero. Estos canales son marcados de inmediato como \texttt{MALA} e inhabilitados para el análisis espacial.
+    \item \textbf{Potencia RMS nativa:} Se calcula la amplitud RMS centrada:
+    \begin{equation}
+        \text{RMS}_i = \sqrt{\frac{1}{M} \sum_{m=1}^{M} \left( u_i(t_m) - \bar{u}_i \right)^2 }
+    \end{equation}
+    Permite detectar anomalías de acoplamiento o canales hiperamplificados.
+    \item \textbf{Detección morfológica de mesetas (Sospecha de Clipping):} Se detectan secuencias donde la primera derivada numérica se anula en amplitudes extremas:
+    \begin{equation}
+        u_i(t_m) = u_i(t_{m+1}) = \dots = u_i(t_{m+K}) = \pm \max_t |u_i(t)| \quad (K \ge 3)
+    \end{equation}
+    Al no disponer de los límites ADC del fabricante, el sistema reporta \textbf{sospecha de deformación por saturación}, sin pretender validar la calibración de fábrica.
+\end{itemize}
+
+\subsection{Paso 3: Análisis de Ruido y Coherencia de Fondo}
+\begin{warningbox}{Distinción Fundamental: Contraste de Imagen Espectral vs. SNR Física}
+No todo contraste de amplitud en el plano de dispersión equivale a una Relación Señal/Ruido (SNR) física. Usar la coda tardía del sismograma asumiéndola como ``ruido puro'' conduce a valores de SNR artificialmente optimistas y engañosos, pues la coda contiene reflexiones, retrodispersión y energía guiada tardía.
+\end{warningbox}
+
+El sistema adopta dos protocolos según la disponibilidad de datos:
+\begin{enumerate}
+    \item \textbf{Caso A: Existe ventana previa al evento ($T_{\text{pre}}$ representativo):}
+    Se calcula la potencia cuadrática en la ventana de ruido $P_{\text{ruido}}$ y en la ventana de señal $P_{\text{señal}}$. La SNR condicional de la traza se define por:
+    \begin{equation}
+        \text{SNR}_i = 10 \log_{10} \left( \frac{P_{\text{señal}, i}}{P_{\text{ruido}, i}} \right)
+    \end{equation}
+    Se evalúa la estabilidad mediante la Desviación Absoluta Mediana (MAD) para evitar que picos transitorios contaminen la varianza.
+    \item \textbf{Caso B: No existe ventana previa (MASW con registro disparado al inicio):}
+    No se inventa un valor de SNR. En su lugar, el sistema estima el \textbf{contraste cresta--fondo} de la función de coherencia espacial $I(q)$ generada por el propio campo de ondas multicanal (descrito en el Paso 4A).
+\end{enumerate}
+
+\newpage
+\subsection{Paso 4A: Extracción y Calidad Diagnóstica de Dispersión (MASW)}
+Para cada frecuencia seleccionada $f$, se aplica la transformada de desfase (\emph{phase-shift}) en el dominio de número de onda firmado $q \in [-q_N, +q_N]$, donde $q_N = \frac{1}{2 dx}$ es el límite de Nyquist espacial:
+
+\begin{enumerate}
+    \item \textbf{Normalización espectral con piso relativo:}
+    Sea $U(f, x_k)$ la transformada de Fourier de la señal centrada con ventana de Hann. Para evitar amplificar ceros numéricos o ruido asintótico, se define un piso relativo:
+    \begin{equation}
+        |U(f, x_k)| > \text{piso\_rel} \times \max_f |U(f, x_k)| \quad (\text{con piso\_rel} = 10^{-6})
+    \end{equation}
+    La fase normalizada se expresa como $\hat{U}(f, x_k) = \frac{U(f, x_k)}{|U(f, x_k)|}$.
+
+    \item \textbf{Escaneo direccional de coherencia multicanal:}
+    Para un número de onda firmado $q$, la coherencia espectral normalizada $I(f, q)$ se calcula como:
+    \begin{equation}
+        I(f, q) = \frac{1}{N} \left| \sum_{k=1}^{N} \hat{U}(f, x_k) \, e^{2\pi i \, q \, (x_k - x_1)} \right|, \quad q \in \left[ -\frac{1}{2dx}, +\frac{1}{2dx} \right]
+    \end{equation}
+    Nótese que la velocidad aparente en la dirección positiva de avance es $c = f / q$ (para $q > 0$). El escaneo en $q < 0$ evalúa la energía que viaja en sentido contrario hacia la fuente.
+
+    \item \textbf{Resolución del arreglo y exclusión del lóbulo principal:}
+    La función de respuesta de un arreglo lineal uniforme de $N$ receptores con espaciamiento $dx$ posee su primer cero analítico a una distancia de:
+    \begin{equation}
+        \Delta q_{\text{nulo}} = \frac{1}{N \cdot dx} = \frac{1}{L}
+    \end{equation}
+    Sea $q_0 = f / c_0$ la ubicación de la cresta seleccionada. Para no clasificar el hombro natural del lóbulo de difracción como un modo superior o un pico competidor, se define una \textbf{zona de exclusión estricta}:
+    \begin{equation}
+        \Omega_{\text{exclusión}} = \left\{ q \;\Big|\; |q - q_0| < \frac{1}{N \cdot dx} \right\}
+    \end{equation}
+
+    \item \textbf{Cálculo de atributos diagnósticos intrínsecos:}
+    \begin{itemize}
+        \item \textbf{Coherencia en cresta:} $I_{\text{cresta}} = I(f, q_0) \in [0, 1]$.
+        \item \textbf{Fondo espectral:} Mediana de la coherencia fuera del lóbulo:
+        \begin{equation}
+            I_{\text{fondo}}(f) = \text{mediana}_{q \notin \Omega_{\text{exclusión}}} I(f, q)
+        \end{equation}
+        \item \textbf{Contraste cresta--fondo:}
+        \begin{equation}
+            C(f) = I_{\text{cresta}}(f) - I_{\text{fondo}}(f)
+        \end{equation}
+        \item \textbf{Pico competidor máximo (Rival Ratio):}
+        Se buscan todos los máximos locales de $I(f, q)$ fuera de $\Omega_{\text{exclusión}}$ en todo el dominio firmado $[-q_N, q_N]$. Si existe un máximo rival en $q_{\text{rival}}$:
+        \begin{equation}
+            R(f) = \frac{I(f, q_{\text{rival}})}{I_{\text{cresta}}(f)}
+        \end{equation}
+    \end{itemize}
+
+    \item \textbf{Controles de ambigüedad espacial y límites físicos:}
+    \begin{itemize}
+        \item Si $q_0 \le \frac{1}{N \cdot dx}$: La longitud de onda es comparable a la longitud total del tendido $L$. El lóbulo principal abarca $q=0$, por lo que la dirección de propagación no puede resolverse. Motivo: \texttt{DIRECTION\_UNRESOLVED}.
+        \item Si $q_0 \ge q_N$: La cresta se encuentra en o fuera del límite de muestreo espacial. Motivo: \texttt{NYQUIST\_LIMIT}.
+        \item Si $q_0 + \frac{1}{N \cdot dx} \ge q_N$: El lóbulo principal toca el límite de Nyquist, produciendo fuga de energía y distorsión. Motivo: \texttt{LOBE\_AT\_NYQUIST}.
+    \end{itemize}
+\end{enumerate}
+
+\newpage
+\subsection{Paso 4B: Primeros Arribos y Reciprocidad (TRS)}
+Para la tomografía de refracción sísmica, la extracción de primeros arribos se fundamenta en:
+\begin{enumerate}
+    \item \textbf{Algoritmo STA/LTA con refinamiento AIC:}
+    Se evalúa la razón entre el promedio de energía de ventana corta (STA) y ventana larga (LTA). En la vecindad del disparo, se aplica el Criterio de Información de Akaike (AIC) sobre la señal $u_i(t)$:
+    \begin{equation}
+        \text{AIC}(k) = k \log_{10}(\text{var}(u_i[1..k])) + (M - k - 1) \log_{10}(\text{var}(u_i[k+1..M]))
+    \end{equation}
+    El tiempo de llegada preliminar corresponde al mínimo global de $\text{AIC}(k)$.
+    \item \textbf{Control estricto de reciprocidad de pares de disparos:}
+    Si se dispone de un disparo directo en $A$ con receptor en $B$ ($t_{AB}$) y su disparo inverso en $B$ con receptor en $A$ ($t_{BA}$), la física del principio de Fermat exige reciprocidad cinemática:
+    \begin{equation}
+        |t_{AB} - t_{BA}| \le \tau_{\text{tol}} \quad (\text{típicamente } \tau_{\text{tol}} = 2\,dt \text{ a } 3\,dt)
+    \end{equation}
+    Las discrepancias mayores se reportan como error geométrico o deriva de reloj de disparo.
+    \item \textbf{Monotonicidad aparente y filtros de velocidad física:}
+    La curva dromocrónica o hodógrafa debe cumplir pendientes físicamente viables para ondas refractadas en el subsuelo ($V_P \in [300, 6500]$\,m/s). Pendientes negativas no justificadas por topografía son marcadas para revisión.
+\end{enumerate}
+
+\subsection{Paso 5: Estabilidad de la Curva ante Variantes de Procesamiento}
+\begin{limitbox}{La Sensibilidad de Procesamiento NO es Desviación Estándar ($\sigma$)}
+Modificar las opciones del software y comparar los resultados mide la \emph{sensibilidad del algoritmo frente a decisiones del operador}. No representa la dispersión estocástica debida al ruido del terreno ni la incertidumbre gaussiana del subsuelo.
+\end{limitbox}
+
+En MASW, el sistema evalúa la cresta base $c_0(f)$ (calculada con ventana de Hann y 24 canales) frente a tres variantes obligatorias:
+\begin{enumerate}
+    \item \textbf{Variante 1 ($c_{\text{rect}}$):} Transformada directa sobre ventana rectangular (sin atenuar los extremos del registro).
+    \item \textbf{Variante 2 ($c_{\text{drop1}}$):} Exclusión del canal 1 (más cercano a la fuente), \textbf{conservando estrictamente las posiciones espaciales reales} de los canales 2 a $N$ (sin reindexar $x_2$ como si fuera el origen 0\,m).
+    \item \textbf{Variante 3 ($c_{\text{unpen}}$):} Selección de la cresta por máximo absoluto puro por frecuencia, eliminando la penalización de curvatura de la programación dinámica.
+\end{enumerate}
+Se calcula la sensibilidad relativa máxima:
+\begin{equation}
+    S(f) = \max \left( \frac{|c_{\text{rect}}(f) - c_0(f)|}{c_0(f)}, \; \frac{|c_{\text{drop1}}(f) - c_0(f)|}{c_0(f)}, \; \frac{|c_{\text{unpen}}(f) - c_0(f)|}{c_0(f)} \right)
+\end{equation}
+Si $S(f) > 0.05$ (5\,\%), el punto se declara sensible al procesamiento (\texttt{PROCESSING\_SENSITIVE}).
+
+\subsection{Paso 6: Consistencia Multidispáro entre Registros}
+De acuerdo con \emph{Ólafsdóttir et al. (2018)}, evaluar la concordancia de curvas obtenidas con distintos offsets de fuente aporta respaldo metodológico sustancial, siempre que se reconozca que \textbf{distintos offsets no son réplicas idénticas del mismo experimento}:
+\begin{itemize}
+    \item Los offsets cortos ($x_1 = 5$--10\,m) iluminan mejor las altas frecuencias pero sufren sesgo de campo cercano en ondas largas.
+    \item Los offsets largos ($x_1 = 20$--30\,m) atenúan los modos superiores y el campo cercano en bajas frecuencias, pero atenúan drásticamente las frecuencias altas por disipación intrínseca.
+\end{itemize}
+El sistema realiza la intersección de frecuencias comunes y computa la mediana y el valor máximo de discrepancia:
+\begin{equation}
+    \Delta c_{AB}(f) = |c_A(f) - c_B(f)|
+\end{equation}
+Estas diferencias se presentan como estadísticos observados, asignando el estado \texttt{uncertainty\_status: NOT\_CALIBRATED} para no generar una falsa ilusión de exactitud formal.
+
+\newpage
+% =========================================================================
+\section{Cuál es la Salida de los Dosieres: Estructura del Dosier 2.0}
+% =========================================================================
+
+\subsection{Ecosistema de Entregables Generados}
+La ejecución del módulo de reporte produce un conjunto coordinado y reproducible de artefactos en la carpeta de evidencia:
+
+\begin{figure}[h!]
+\centering
+\small
+\begin{tcolorbox}[colback=white,colframe=branddark,arc=1mm,title=\textbf{Arquitectura de Entregables del Dosier 2.0}]
+\begin{itemize}
+    \item \textbf{\texttt{dossier.json}:} Archivo maestro de trazabilidad digital. Contiene:
+    \begin{itemize}
+        \item \emph{Digest científico canónico}: Hash SHA-256 de todas las decisiones numéricas.
+        \item \emph{Auditoría de código e insumos}: Hashes SHA-256 de cada script, archivo de datos y configuración.
+        \item \emph{Tablas completas}: Puntos, frecuencias, clasificaciones y motivos.
+    \end{itemize}
+    \item \textbf{\texttt{dossier.pdf}:} Documento técnico de alta calidad visual para archivo formal y revisión de ingeniería.
+    \item \textbf{\texttt{dossier.html}:} Aplicación autónoma interactiva en HTML5 (imágenes incrustadas en Base64, sin dependencias externas de internet) que permite explorar traza por traza, registro por registro y filtrar motivos.
+    \item \textbf{Tablas Tabulares (\texttt{.csv}):}
+    \begin{itemize}
+        \item \texttt{usability\_bands.csv}: Intervalos continuos de frecuencia clasificados con sus motivos.
+        \item \texttt{usability.csv}: Métricas detalladas por cada bin de frecuencia (coherencia, contraste, razón de rival, sensibilidad).
+        \item \texttt{traces.csv}: Control de integridad traza por traza (RMS, ceros, canales muertos, sospecha de clipping).
+        \item \texttt{comparisons.csv}: Matriz de diferencias entre pares de disparos ($\Delta c$).
+    \end{itemize}
+    \item \textbf{Matrices Binarias (\texttt{.npz}):} Espectros de coherencia normalizada $I(f, q)$ e $I(f, c)$ para auditoría independiente.
+\end{itemize}
+\end{tcolorbox}
+\end{figure}
+
+\subsection{Contenido Visual del Dosier Técnico (\texttt{dossier.pdf})}
+El reporte PDF consta de secciones gráficas diseñadas bajo principios de máxima claridad diagnóstica:
+\begin{enumerate}
+    \item \textbf{Página de Síntesis del Estudio:}
+    Presenta la ficha general (sitio, perfil, operadora, fecha, trazabilidad), la confirmación de integridad de muestras (\texttt{PASS}), el estado desacoplado de las dos dimensiones (\texttt{Dispersión: EVALUACIÓN POR BANDAS} vs. \texttt{Objetivo Vs30: PENDIENTE}) y la tabla resumen de conteo de bins utilizables por registro.
+    
+    \item \textbf{Página de Comparación entre Offsets y Matriz de Soporte:}
+    \begin{itemize}
+        \item \emph{Panel de curvas combinadas:} Muestra las curvas de dispersión de todos los disparos. La línea fuerte destaca los tramos que pasan los controles internos (\texttt{UTILIZABLE*}), mientras que las zonas tenues señalan los tramos en revisión o sin soporte.
+        \item \emph{Panel de sensibilidad al canal 1:} Gráfico de $|c_{\text{base}} - c_{\text{drop1}}|$ por frecuencia.
+        \item \emph{Mapa de calor de usabilidad:} Matriz registro vs. frecuencia con código de colores normalizado:
+        \begin{center}
+        \fcolorbox{usablegreen}{usablegreen}{\textcolor{white}{\textbf{ Verde: Utilizable* }}} \quad
+        \fcolorbox{reviewamber}{reviewamber}{\textcolor{white}{\textbf{ Ámbar: Revisar }}} \quad
+        \fcolorbox{badred}{badred}{\textcolor{white}{\textbf{ Rojo: Sin soporte útil }}} \quad
+        \fcolorbox{unusablegrey}{unusablegrey}{\textcolor{white}{\textbf{ Gris: No evaluable }}}
+        \end{center}
+        \item \emph{Tabla de diferencias observadas:} Bins comunes, mediana y máximo de $|\Delta c|$ entre cada par de disparos.
+    \end{itemize}
+
+    \item \textbf{Página de Geometría Declarada y Bandas:}
+    Esquema relativo de posiciones fuente--receptores y tabla desglosada de los intervalos de frecuencia delimitados por sus frecuencias límite exactas.
+
+    \item \textbf{Páginas de Detalle por Registro (2 páginas por disparo):}
+    \begin{itemize}
+        \item \emph{Diagnóstico de registro:} Trazas temporales normalizadas, barras de amplitud RMS AC nativa por canal, espectro de coherencia $+1$ con la curva de cresta aparente superpuesta, espectro inverso $-1$ para detectar retrodispersión, y comparación de las curvas de las variantes de procesamiento.
+        \item \emph{Controles internos de usabilidad:} 4 paneles con las curvas de Coherencia, Contraste, Razón de Rival y Sensibilidad Relativa frente a sus respectivos umbrales diagnósticos DRAFT.
+    \end{itemize}
+\end{enumerate}
+
+\newpage
+% =========================================================================
+\section{Ejemplo Práctico de Diagnóstico: Caso Oysand P1}
+% =========================================================================
+
+\subsection{Descripción del Conjunto Experimental}
+El conjunto de validación de Oysand corresponde a un perfil lineal MASW de 24 geófonos espaciados a $dx = 2.0$\,m ($L = 46.0$\,m), con 4 disparos de impacto vertical a distancias de fuente de 10, 15, 20 y 30\,m (registros \texttt{r1}, \texttt{r2}, \texttt{r3} y \texttt{r4}), muestreados a $dt = 1$\,ms ($f_s = 1000$\,Hz, 2201 muestras por traza).
+
+\subsection{Resultados Numéricos Obtenidos}
+
+\begin{table}[h!]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{c c C{2.2cm} C{2.2cm} X}
+\toprule
+\textbf{Registro} & \textbf{Offset (m)} & \textbf{Bins Utilizables} & \textbf{Bins a Revisar} & \textbf{Bandas Declaradas Utilizables* (Hz)} \\
+\midrule
+\texttt{r1} & 10 & 42 & 99 & 10.45--21.35; 23.17--27.71; 29.08--29.53 \\
+\texttt{r2} & 15 & 47 & 94 & 8.63--22.26; 23.17--29.99 \\
+\texttt{r3} & 20 & 48 & 93 & 7.72--21.81; 23.17--29.99 \\
+\texttt{r4} & 30 & 45 & 96 & 9.09--21.81; 23.17--29.99 \\
+\bottomrule
+\end{tabularx}
+\caption{Resultados diagnósticos del Dosier 2.0 sobre los registros de Oysand P1.}
+\label{tab:oysand}
+\end{table}
+
+\subsection{Interpretación de los Motivos Diagnósticos Observados}
+El análisis demuestra empíricamente por qué la antigua pretensión de declarar ``buena'' toda la banda continua hasta 31--32\,Hz era metodológicamente insostenible:
+\begin{enumerate}
+    \item \textbf{Corte en bajas frecuencias (< 8--10\,Hz):}
+    En las frecuencias más bajas, la longitud de onda calculada $\lambda = c / f \approx 200 / 6 \approx 33$\,m es del orden de la longitud total del arreglo ($L = 46$\,m). El lóbulo principal del kernel abarca $q=0$, activando de inmediato la condición \texttt{DIRECTION\_UNRESOLVED}. Asimismo, la energía decae y la coherencia desciende por debajo de 0.60 (\texttt{LOW\_COHERENCE}).
+    
+    \item \textbf{Muesca intermedia en $\sim$22--23\,Hz:}
+    En el registro más cercano a la fuente (\texttt{r1}, 10\,m), al retirar el canal 1 la velocidad de fase estimada varía más de un 5\,\% (\texttt{PROCESSING\_SENSITIVE}) debido a la fuerte influencia de campo cercano en el primer sensor. En \texttt{r2}, \texttt{r3} y \texttt{r4}, un modo superior incipiente compite con la cresta principal (\texttt{COMPETING\_PEAK}). El sistema coloca correctamente este bin en \texttt{REVISAR}.
+    
+    \item \textbf{Corte en altas frecuencias (> 30\,Hz):}
+    Para $f > 30$\,Hz, la relación $q_0 + \frac{1}{L}$ alcanza la frecuencia espacial de Nyquist $q_N = \frac{1}{2 \times 2} = 0.25\,\text{m}^{-1}$, activando la advertencia \texttt{LOBE\_AT\_NYQUIST}. Inmediatamente después de 31.8\,Hz, la cresta excede $q_N$ (\texttt{NYQUIST\_LIMIT}), entrando en la zona de solapamiento espacial (aliasing). Por tanto, la dispersión por encima de 30\,Hz no es interpretable como modo aparente no sesgado.
+\end{enumerate}
+
+\subsection{Comparaciones entre Disparos}
+La comparación de los 59 bins geométricamente candidatos comunes entre los cuatro registros muestra una mediana de discrepancia $|\Delta c|$ de apenas \textbf{1.0 a 2.0\,m/s}, demostrando una consistencia mutua extraordinaria en el rango utilizable. Sin embargo, en las frecuencias donde los efectos de campo cercano divergen, las diferencias puntuales alcanzan entre 24 y 53\,m/s, lo que justifica plenamente conservar estas discrepancias en el informe sin forzar una desviación estándar artificial.
+
+\newpage
+% =========================================================================
+\section{Guía Rápida para el Operador de Campo}
+% =========================================================================
+
+\begin{figure}[h!]
+\centering
+\small
+\begin{tcolorbox}[colback=white,colframe=brandblue,arc=2mm,title=\textbf{Protocolo de Operación en Terreno $\cdot$ Paso a Paso}]
+\begin{enumerate}
+    \item \textbf{Antes de disparar:}
+    \begin{itemize}
+        \item Anotar en libreta de campo: $dt$, modelo de sismógrafo, frecuencia de geófonos y coordenadas relativas de estacas.
+        \item Comprobar que el canal trigger o impacto esté físicamente conectado a la entrada auxiliar o identificado en su canal numérico.
+    \end{itemize}
+    \item \textbf{Ejecución de registros:}
+    \begin{itemize}
+        \item Registrar si es posible una ventana previa al impacto ($T_{\text{pre}} \ge 0.2$\,s) o un disparo en silencio para análisis de ruido.
+        \item Adquirir al menos dos offsets de fuente distintos (e.g. 10\,m y 20\,m) para permitir la evaluación de consistencia multidispáro.
+    \end{itemize}
+    \item \textbf{Ingesta y generación de dosier en el software:}
+    \begin{itemize}
+        \item Ejecutar \texttt{report\_masw\_quality.py --output <directorio>}.
+        \item Abrir de inmediato \texttt{dossier.html} en el navegador local.
+    \end{itemize}
+    \item \textbf{Toma de decisiones con el dosier en pantalla:}
+    \begin{itemize}
+        \item \emph{¿Hay canales en rojo en la tabla de trazas?} Revisar de inmediato conexiones físicas o geófonos mal plantados antes de mover el tendido.
+        \item \emph{¿Qué tramos aparecen en verde (\texttt{UTILIZABLE*})?} Son los intervalos fiables para el picado de dispersión aparente.
+        \item \emph{¿Aparece \texttt{DIRECTION\_UNRESOLVED} en frecuencias deseadas?} El tendido es demasiado corto; se requiere aumentar la longitud $L$ (mayor espaciamiento o más canales) para resolver longitudes de onda mayores.
+        \item \emph{¿Aparece \texttt{LOBE\_AT\_NYQUIST} muy temprano?} El espaciamiento $dx$ es demasiado grande para las velocidades superficiales; se requiere reducir $dx$ para muestrear adecuadamente las ondas lentas.
+    \end{itemize}
+\end{enumerate}
+\end{tcolorbox}
+\end{figure}
+
+% =========================================================================
+\section{Referencias Normativas y Bibliográficas}
+% =========================================================================
+\begin{enumerate}
+    \item \textbf{Ólafsdóttir, E. A., Bessason, B., \& Erlingsson, S. (2018).} \emph{Combination of dispersion curves from multichannel analysis of surface waves (MASW).} Soil Dynamics and Earthquake Engineering, 113, 473--487. \href{https://doi.org/10.1016/j.soildyn.2018.05.025}{doi:10.1016/j.soildyn.2018.05.025}.
+    \item \textbf{Park, C. B., Miller, R. D., \& Xia, J. (1999).} \emph{Multichannel analysis of surface waves.} Geophysics, 64(3), 800--808.
+    \item \textbf{Foti, S., Lai, C. G., Rix, G. J., \& Strobbia, C. (2014).} \emph{Surface Wave Methods for Near-Surface Site Characterization.} CRC Press.
+    \item \textbf{Aki, K., \& Richards, P. G. (2002).} \emph{Quantitative Seismology.} University Science Books.
+    \item \textbf{Eurocódigo 8 / NEHRP (2020).} \emph{Provisions for Seismic Regulations for New Buildings and Other Structures ($V_{s30}$ Site Classification).}
+\end{enumerate}
+
+\end{document}

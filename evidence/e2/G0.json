@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.4",
+  "id": "G0",
+  "status": "PASSED",
+  "required_test_ids": [
+    "V-E0-1",
+    "V-E0-2",
+    "V-E0-3",
+    "V-E0-4",
+    "V-E0-5",
+    "V-E0-6",
+    "V-E0-7",
+    "V-E0-8",
+    "V-E0-9",
+    "V-E0-10",
+    "V-E3-4"
+  ],
+  "execution_artifact": "execution.json",
+  "execution_artifact_sha256": "838d558135168a0c39edb4684a3d9f351ae92a749bc0c7c6ba5eb75e339993cc",
+  "scope": "IMPLEMENTATION_AND_DECLARED_SYNTHETIC_DOMAIN_ONLY",
+  "eligible_for_field_acceptance": false,
+  "coverage_io": null,
+  "coverage_common_qc": null
+}

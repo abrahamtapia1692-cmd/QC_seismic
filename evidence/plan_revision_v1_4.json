@@ -1,0 +1,32 @@
+{
+  "id": "PLAN-REVISION-1.4",
+  "status": "DOCUMENT_CONSISTENCY_VERIFIED",
+  "scope": "Documento, manifiesto, integridad histórica y contrapruebas; no cierre de gates",
+  "specification_version": "1.4",
+  "audit_date_local": "2026-10-03",
+  "input_hashes": {
+    "plan": "329e7018a771f16eb433397ddd8216cd549b3258920315e569c957e5485998ab",
+    "manifest": "a68278febf213724184ed2efd597e2879fff35ba6a256b5c53a56995b56f7471",
+    "previous_audit": "c1ee4fb43e5f716ef5897642e672071fa307e0008798f3287f2f9fff538f102c",
+    "validator": "0f50c0a12415770fc796f251cec3449678a8d4f9b5b1a2900aacefb33bbd0d3c"
+  },
+  "checks": {
+    "test_ids_complete": 100,
+    "gate_dependencies_acyclic": true,
+    "specification_manifest_retains_initial_states": true,
+    "audit_findings_mapped": 30,
+    "historical_plan_and_source_hashes_preserved": true,
+    "historical_pyproject_archive": "docs/archive/pyproject_v0_0_1.toml",
+    "local_links_checked": 60,
+    "fwhm_amplitude_N24_times_Ndx": 1.2074756732023462,
+    "fwhm_power_N24_times_Ndx": 0.8865573941823447,
+    "counterexamples_preserved": [
+      "NACD",
+      "hidden_layer",
+      "rayleigh_tail",
+      "binomial_size"
+    ]
+  },
+  "implementation_and_field_validation": "NOT_ASSESSED_BY_DOCUMENT_CHECK",
+  "execution_state_source": "evidence/e1_e3/execution.json"
+}

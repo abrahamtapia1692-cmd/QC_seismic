@@ -1,0 +1,219 @@
+{
+  "id": "AUDIT-SDD-1.3",
+  "status": "FINDINGS_CONFIRMED",
+  "audit_date_local": "2026-10-03",
+  "timezone": "America/Mexico_City",
+  "seed": 20261003,
+  "versions": {
+    "python": "3.12.3",
+    "numpy": "1.26.4",
+    "scipy": "1.15.2"
+  },
+  "sdd_sha256": "144d000a250e48dc70786a8d991c702c518b675d16ce11b2522e36791f309bf8",
+  "scope": "Experimentos analíticos/numéricos; no cierre de gates ni validación con datos reales",
+  "rayleigh": {
+    "0.0": {
+      "ratio_polynomial_roots": 0.8740320488976424,
+      "ratio_existing_solver": 0.8740320488976422,
+      "absolute_difference": 2.220446049250313e-16
+    },
+    "0.25": {
+      "ratio_polynomial_roots": 0.919401686761966,
+      "ratio_existing_solver": 0.9194016867619661,
+      "absolute_difference": 1.1102230246251565e-16
+    },
+    "0.3": {
+      "ratio_polynomial_roots": 0.9274127097029364,
+      "ratio_existing_solver": 0.9274127097029365,
+      "absolute_difference": 1.1102230246251565e-16
+    },
+    "0.4": {
+      "ratio_polynomial_roots": 0.9421954331163838,
+      "ratio_existing_solver": 0.9421954331163832,
+      "absolute_difference": 5.551115123125783e-16
+    },
+    "0.45": {
+      "ratio_polynomial_roots": 0.9489596978722713,
+      "ratio_existing_solver": 0.9489596978722714,
+      "absolute_difference": 1.1102230246251565e-16
+    },
+    "0.5": {
+      "ratio_polynomial_roots": 0.9553125010256316,
+      "ratio_existing_solver": 0.9553125010256315,
+      "absolute_difference": 1.1102230246251565e-16
+    }
+  },
+  "nominal_geophone_depth_m": {
+    "fn_4_5": 15.07512692986214,
+    "fn_2": 33.919035592189815
+  },
+  "geophone_response": {
+    "4.5": 0.7142857142857143,
+    "3.0": 0.4091870878141461,
+    "2.0": 0.19452747359242148,
+    "1.5": 0.11067473785474295
+  },
+  "nacd_definition_counterexample": {
+    "N": 24,
+    "dx_m": 2,
+    "x1_m": 6,
+    "wavelength_m": 48,
+    "x1_over_lambda": 0.125,
+    "mean_offset_over_lambda": 0.6041666666666666,
+    "warning": "Corregir la definición no valida automáticamente un umbral de aceptación"
+  },
+  "dirichlet_width": {
+    "amplitude_fwhm_times_Ndx": 1.2074756732023462,
+    "power_fwhm_times_Ndx": 0.8865573941823446,
+    "widths_in_velocity": [
+      {
+        "lambda_over_Ndx": 0.25,
+        "exact_amplitude_fwhm_over_c": 0.30890617504072443,
+        "exact_power_fwhm_over_c": 0.22439514537211025,
+        "sdd_approximation": 0.2215
+      },
+      {
+        "lambda_over_Ndx": 0.5,
+        "exact_amplitude_fwhm_over_c": 0.6642692701044746,
+        "exact_power_fwhm_over_c": 0.4661792888611866,
+        "sdd_approximation": 0.443
+      },
+      {
+        "lambda_over_Ndx": 1.0,
+        "exact_amplitude_fwhm_over_c": 1.900038530812936,
+        "exact_power_fwhm_over_c": 1.1033640128957174,
+        "sdd_approximation": 0.886
+      }
+    ],
+    "sdd_sigma_floor_over_c_for_lambda75_L96": 0.2939449668184316
+  },
+  "clean_wave_raw_neighbor_correlation": -0.49999999999999833,
+  "clean_sine_false_clipping_fraction_with_estimated_FS": 0.13,
+  "reflection_invariance": {
+    "original_I": 1.0,
+    "permutation_I": 1.0,
+    "reverse_channels_and_negate_x_I": 0.041666666666666616
+  },
+  "reciprocity_geometry_counterexample": {
+    "position_error_m": 0.5,
+    "velocity_ms": 1500,
+    "travel_time_difference_ms": 0.3333333333333333,
+    "absolute_tolerance_ms": 1.0,
+    "sdd_criterion_result": "PASS"
+  },
+  "hidden_layer_nonidentifiability": {
+    "three_layer_velocities_ms": [
+      300.0,
+      600.0,
+      1500.0
+    ],
+    "thicknesses_m": [
+      5.0,
+      0.5
+    ],
+    "equivalent_two_layer_thickness_m": 5.233853586673372,
+    "intermediate_branch_ever_first": false,
+    "max_time_difference_between_models_s": 0.0,
+    "domain_m": [
+      0,
+      200
+    ]
+  },
+  "vs30_acquisition_record_duration": {
+    "max_offset_m": 134.0,
+    "c_min_ms": 80.0,
+    "wavelet_duration_s": 0.3,
+    "required_post_trigger_s_with_zero_margin": 1.975,
+    "available_post_trigger_s_if_total_2s_includes_0_1s_pretrigger": 1.9
+  },
+  "false_pass_binomial_bound": {
+    "bad_independent_sites": 10,
+    "false_pass_observed": 0,
+    "one_sided_95_percent_upper_bound": 0.2588655508930523,
+    "bad_independent_cases_needed_for_zero_errors_upper_bound_le_0_05": 59
+  },
+  "kluyver_quantiles": [
+    {
+      "N": 12,
+      "quantile_tail_0_0005": 0.7444828557389348,
+      "tail_t20": 0.0005000000103648761,
+      "tail_t40": 0.0004999999999714122,
+      "absolute_truncation_comparison": 1.0393463867330865e-11,
+      "sum_quad_error_estimates": 1.63625365716527e-14
+    },
+    {
+      "N": 24,
+      "quantile_tail_0_0005": 0.5455726445847684,
+      "tail_t20": 0.0004999999996436744,
+      "tail_t40": 0.0004999999996436744,
+      "absolute_truncation_comparison": 0.0,
+      "sum_quad_error_estimates": 1.6874765851253428e-14
+    },
+    {
+      "N": 48,
+      "quantile_tail_0_0005": 0.3920002353997056,
+      "tail_t20": 0.0004999999997942206,
+      "tail_t40": 0.0004999999997942206,
+      "absolute_truncation_comparison": 0.0,
+      "sum_quad_error_estimates": 1.7119767147247345e-14
+    }
+  ],
+  "rayleigh_tail_not_always_conservative": {
+    "N": 12,
+    "threshold_a": 0.3167507964112503,
+    "rayleigh_tail": 0.3,
+    "kluyver_tail": 0.30636168074147063,
+    "quad_error_estimate": 7.755468541460914e-15,
+    "monte_carlo_tail": 0.306121,
+    "monte_carlo_samples": 2000000,
+    "monte_carlo_standard_error": 0.000325891802105392
+  },
+  "stack_recommendation_example": {
+    "current_stacks": 4,
+    "current_snr_db": 6,
+    "target_snr_db": 12,
+    "required_stacks_independent_noise": 16
+  },
+  "gate_omissions": {
+    "G4": [
+      "V-E4-18",
+      "V-E4-19",
+      "V-E4-20",
+      "V-E4-21"
+    ],
+    "G5": [
+      "V-E5-17",
+      "V-E5-17b",
+      "V-E5-18",
+      "V-E5-19",
+      "V-E5-20"
+    ],
+    "G6": [
+      "V-E6-4",
+      "V-E6-5"
+    ],
+    "G8": [
+      "V-E8-3"
+    ]
+  },
+  "original_pytest_collection": {
+    "command": "python -m pytest -q -p no:cacheprovider test_rayleigh_halfspace.py",
+    "exit_code": 1,
+    "error": "ModuleNotFoundError: No module named 'geoqc'",
+    "note": "Observado durante la auditoría; el script no vuelve a ejecutar pytest"
+  },
+  "supplied_tests_in_temporary_package": {
+    "exit_code": 0,
+    "stdout": "................................s.                                       [100%]\n33 passed, 1 skipped in 0.63s\n",
+    "stderr": "",
+    "note": "Copias sin cambios; se añadieron solamente directorios y __init__.py temporales. No cierra G0 ni G3."
+  },
+  "input_sha256": {
+    "physics.py": "f449087c3b0daea6a43a7ac8c8f7d64f2b4d65a7de563b4a5edc4b7aec3ef6e7",
+    "modal.py": "29eafe8b346eb9c427f213d4b6d6ca91fd40eb4adffe5744f0560da3532cf32d",
+    "evidence.py": "a7884bf444310e8b7fe2043a5bfd20693522bcfc3197375c79e587be7b0c7ce3",
+    "test_rayleigh_halfspace.py": "43830a0920fe47ea49cef329af3930b5192bcc82813d2a3a56e33e60d1a28bcd",
+    "pyproject.toml": "c3c65cd2b914f882fb81d06e0d8320819090c293ffee09293d491a2c64c4d7af"
+  },
+  "audit_script_sha256": "3e7c6bb678bbd6d7ef64aef5435211db897858e3a99d55476fa5ef64effa9c3c"
+}

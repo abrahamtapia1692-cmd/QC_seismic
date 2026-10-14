@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.4",
+  "id": "MASW_APPARENT_USABILITY_V1_DRAFT",
+  "calibration_state": "DRAFT_NOT_FIELD_CALIBRATED",
+  "coherence_min": 0.6,
+  "contrast_min": 0.25,
+  "competitor_ratio_max": 0.8,
+  "sensitivity_max_rel": 0.05,
+  "amplitude_floor_rel": 0.000001,
+  "q_samples_per_null": 24
+}

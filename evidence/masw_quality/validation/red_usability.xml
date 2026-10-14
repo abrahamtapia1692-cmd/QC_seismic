@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="0.402" timestamp="2026-10-13T21:18:38.868539-06:00" hostname="DESKTOP-S3O7HF2"><testcase classname="" name="tools.tests.test_masw_usability" time="0.000"><error message="collection failure">ImportError while importing test module 'D:\Proyectos_personales\QC_sismica\tools\tests\test_masw_usability.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tools\tests\test_masw_usability.py:5: in &lt;module&gt;
+    from geoqc.masw.diagnostic_quality import UsabilityPolicy, assess_ridges, classify_metrics
+E   ModuleNotFoundError: No module named 'geoqc.masw.diagnostic_quality'</error></testcase></testsuite></testsuites>

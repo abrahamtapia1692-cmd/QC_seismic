@@ -1,0 +1,10 @@
+[project]
+name = "geoqc"
+version = "0.0.1"
+requires-python = ">=3.11"
+dependencies = ["numpy", "scipy"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+markers = ["req(id): requisito del SDD que cubre el test (trazabilidad)"]

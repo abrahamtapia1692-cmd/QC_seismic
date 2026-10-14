@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.4",
+  "specification_version": "1.4",
+  "id": "V-E0-9",
+  "status": "PASSED",
+  "tests": [
+    {
+      "nodeid": "tests/unit/test_e0.py::test_missing_metric_cannot_claim_valid_pass",
+      "id": "V-E0-9",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      }
+    },
+    {
+      "nodeid": "tests/unit/test_e0.py::test_nan_must_be_masked_and_reason_preserved",
+      "id": "V-E0-9",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      }
+    },
+    {
+      "nodeid": "tests/unit/test_e0.py::test_shot_owns_immutable_data_and_roundtrips",
+      "id": "V-E0-9",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      }
+    },
+    {
+      "nodeid": "tests/unit/test_e0_boundaries.py::test_pick_curve_coverage_and_failure_contracts_roundtrip",
+      "id": "V-E0-9",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      }
+    },
+    {
+      "nodeid": "tests/unit/test_e0_boundaries.py::test_report_preserves_incomplete_evidence_and_blocks_acceptance",
+      "id": "V-E0-9",
+      "status": "PASSED",
+      "phases": {
+        "setup": "passed",
+        "call": "passed",
+        "teardown": "passed"
+      }
+    }
+  ],
+  "scope": "E0_IMPLEMENTATION_ONLY",
+  "gate_artifact": "G0.json",
+  "gate_artifact_sha256": "1b4b327c000ea51e8cafd91efc19041636321442ec510b9ac1a36a24961f224b",
+  "input_sha256": {
+    "configs/cimentacion_estandar.yaml": "d59e44a6a7fa95e44d69598b2e250046a5d9f60fff68b2c120c4c62b9fba11d6",
+    "configs/vs30_sitio.yaml": "641e42eb3a97f0284b220bd967a33a2d8bd817a9aa1364e5d567fa3dda5a881a",
+    "docs/requirements_v1_4.md": "d6c1785cf87daad9b047d3d09e0b6cd668dd9cc43416b640bdec92fc6833f261",
+    "docs/validation_manifest_v1_4.json": "a68278febf213724184ed2efd597e2879fff35ba6a256b5c53a56995b56f7471",
+    "geoqc/__init__.py": "488c9c42983febfc61aaec4cc68a6765c133b2afd18fbf28735a11457f8d8e1b",
+    "geoqc/__main__.py": "c3f89ff7ba05d71060fb2235246c3ec0fc2403562ded148cbfb0cd13bbb0dd24",
+    "geoqc/cli.py": "5080dcd40eb63501135c6e04d6f9c6a082a4a5f9a3ffcc2cab43773bd42fc164",
+    "geoqc/core/__init__.py": "78ba84be71b71b6d11cd332cf7bc72e204da62c45f06bacf32094c6f402e134f",
+    "geoqc/core/config.py": "c3375a6359aea4aa8fffc928f500afe0be43b21fdf57c611c336018cf178ae9d",
+    "geoqc/core/errors.py": "0a7bf8efae11cc98f384c4e8ab3a59d1678d33bc976755cd6c71617b6e04db09",
+    "geoqc/core/evidence.py": "373fa87122a67688e10322dc37848d715f5638096add5501a45ab65588f94cee",
+    "geoqc/core/models.py": "e6524295f09a0651bec562d929d9e61c65ed25b3db2711ee36bda72d2edf50e0",
+    "geoqc/core/physics.py": "3d4171c39dc25917437df35d901e613b74ee726fdb107dbf4c5a1c0a38391b8f",
+    "geoqc/core/planning.py": "5594f4f9dee5ac61c68adbe56ce5063a1e31eabb8f7a79185bd1529a3529b82c",
+    "geoqc/py.typed": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "geoqc/synth/__init__.py": "5d7f8308808968637fcef7c358275650a9014baf1a66d97712ee8711c8cf33e4",
+    "geoqc/synth/modal.py": "064dc6e7df8275a602a23035d122eced5ad487cb567306cbf038c3de4aeeb88a",
+    "pyproject.toml": "d53b5103f738504d57bca8329ad55ebde9314f61ce73a9ba5f8713f99ef35173",
+    "requirements-win-py312.lock": "270501c4984d41d06313c157bdc2691cfb50daf9286b926709f00e4dc1ac4681",
+    "SDD_QC_Geofisico_MASW_TRS_v1_4.md": "1a8e4b04e7c1b8a04a2dd0c5f59a28455f688d0b73aecf3cdd385b16585f5090",
+    "tests/conftest.py": "c634a5eeb5a6eccb9847e26b6918fb2b1cf4e838ed231a4d686b9f37978dccdb",
+    "tests/unit/test_e0.py": "95d8d945d2ff71cba09da6388814cdfd18291a4198cf8484db71dea200a23c61",
+    "tests/unit/test_e0_boundaries.py": "dbefa5be84674a3e067e9f39727aad7426fa72c144aad4067c32f780c1bdc2cf",
+    "tests/unit/test_rayleigh_halfspace.py": "c6f8afa29feb00b501809c6609605d82f3516fcb4da12f71b9b8086f5c35a3c5",
+    "tools/check_e0.py": "bd7f9582440b49c3a4ceaa7128d721a4888f9a43ff09417a38597083ea89a1ab",
+    "tools/lock_environment.py": "5d934beb4cc71d8c48459aa7a8dbf72f4a57f9ee0fb6d4d6a58d85deb4954fc3"
+  },
+  "versions": {
+    "python": "3.12.3",
+    "geoqc": "0.0.2",
+    "numpy": "1.26.4",
+    "scipy": "1.15.2",
+    "pydantic": "2.12.5",
+    "PyYAML": "6.0.3",
+    "pytest": "9.1.1",
+    "hypothesis": "6.168.3",
+    "ruff": "0.16.10",
+    "mypy": "2.4.0",
+    "types-PyYAML": "6.0.12.20260906"
+  },
+  "rng": {
+    "algorithm": "PCG64",
+    "fixture_seed": 41,
+    "hypothesis_derandomize": true,
+    "pythonhashseed": 0
+  },
+  "timestamp_utc": "2026-10-04T02:57:04.006825+00:00"
+}
