@@ -10,5 +10,5 @@ __pycache__/
 build/
 dist/
 .coverage
-KM*
+/KM*
 *.zip
