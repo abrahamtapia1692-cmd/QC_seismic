@@ -407,13 +407,15 @@ El reporte PDF consta de secciones gráficas diseñadas bajo principios de máxi
 
 \newpage
 % =========================================================================
-\section{Ejemplo Práctico de Diagnóstico: Caso Oysand P1}
+\section{Ejemplos Prácticos de Diagnóstico: Casos MASW y TRS}
 % =========================================================================
 
-\subsection{Descripción del Conjunto Experimental}
+\subsection{Caso MASW: Análisis Multicanal de Ondas Superficiales (Oysand P1)}
+
+\subsubsection{Descripción del Conjunto Experimental}
 El conjunto de validación de Oysand corresponde a un perfil lineal MASW de 24 geófonos espaciados a $dx = 2.0$\,m ($L = 46.0$\,m), con 4 disparos de impacto vertical a distancias de fuente de 10, 15, 20 y 30\,m (registros \texttt{r1}, \texttt{r2}, \texttt{r3} y \texttt{r4}), muestreados a $dt = 1$\,ms ($f_s = 1000$\,Hz, 2201 muestras por traza).
 
-\subsection{Resultados Numéricos Obtenidos}
+\subsubsection{Resultados Numéricos Obtenidos}
 
 \begin{table}[h!]
 \centering
@@ -429,11 +431,11 @@ El conjunto de validación de Oysand corresponde a un perfil lineal MASW de 24 g
 \texttt{r4} & 30 & 45 & 96 & 9.09--21.81; 23.17--29.99 \\
 \bottomrule
 \end{tabularx}
-\caption{Resultados diagnósticos del Dosier 2.0 sobre los registros de Oysand P1.}
+\caption{Resultados diagnósticos del Dosier 2.0 sobre los registros de dispersión MASW de Oysand P1.}
 \label{tab:oysand}
 \end{table}
 
-\subsection{Interpretación de los Motivos Diagnósticos Observados}
+\subsubsection{Interpretación de los Motivos Diagnósticos Observados}
 El análisis demuestra empíricamente por qué la antigua pretensión de declarar ``buena'' toda la banda continua hasta 31--32\,Hz era metodológicamente insostenible:
 \begin{enumerate}
     \item \textbf{Corte en bajas frecuencias (< 8--10\,Hz):}
@@ -446,8 +448,78 @@ El análisis demuestra empíricamente por qué la antigua pretensión de declara
     Para $f > 30$\,Hz, la relación $q_0 + \frac{1}{L}$ alcanza la frecuencia espacial de Nyquist $q_N = \frac{1}{2 \times 2} = 0.25\,\text{m}^{-1}$, activando la advertencia \texttt{LOBE\_AT\_NYQUIST}. Inmediatamente después de 31.8\,Hz, la cresta excede $q_N$ (\texttt{NYQUIST\_LIMIT}), entrando en la zona de solapamiento espacial (aliasing). Por tanto, la dispersión por encima de 30\,Hz no es interpretable como modo aparente no sesgado.
 \end{enumerate}
 
-\subsection{Comparaciones entre Disparos}
+\subsubsection{Comparaciones entre Disparos MASW}
 La comparación de los 59 bins geométricamente candidatos comunes entre los cuatro registros muestra una mediana de discrepancia $|\Delta c|$ de apenas \textbf{1.0 a 2.0\,m/s}, demostrando una consistencia mutua extraordinaria en el rango utilizable. Sin embargo, en las frecuencias donde los efectos de campo cercano divergen, las diferencias puntuales alcanzan entre 24 y 53\,m/s, lo que justifica plenamente conservar estas discrepancias en el informe sin forzar una desviación estándar artificial.
+
+\vspace{0.4cm}
+\subsection{Caso TRS: Tomografía de Refracción Sísmica (Levantamientos Reales KM* y Chèvremont)}
+
+\subsubsection{Descripción de los Levantamientos de Refracción Reales}
+A diferencia de los experimentos MASW con un solo disparo lateral, la tomografía de refracción sísmica (TRS) exige una cobertura multicanal densa con múltiples posiciones de disparo distribuidas a lo largo y fuera del tendido para lograr intersección de rayos y resolución bidimensional del subsuelo.
+
+El sistema fue evaluado sobre tres levantamientos de campo reales de ingeniería geotécnica:
+\begin{itemize}
+    \item \textbf{KM 40+672:} Tendido lineal de 24 geófonos espaciados a $dx = 5.0$\,m ($L = 115.0$\,m). Se ejecutaron 29 registros SEG-2 repartidos en 9 posiciones de fuente ($F_1$ a $F_9$, espaciadas cada 15\,m) con 3 a 4 golpes apilados por posición.
+    \item \textbf{KM 44+552:} Tendido lineal de 24 geófonos a $dx = 5.0$\,m ($L = 115.0$\,m). Se ejecutaron 32 registros SEG-2 en 9 posiciones de fuente ($F_1$ a $F_9$) con 3 a 5 golpes por posición.
+    \item \textbf{KM 52+500:} Tendido lineal de 24 geófonos a $dx = 2.5$\,m ($L = 57.5$\,m). Se ejecutaron 38 registros TRS en 11 posiciones de fuente ($F_1$ a $F_{11}$, espaciadas cada 5--7.5\,m) con 3 a 5 golpes por posición, complementados con 14 registros pasivos MAM.
+\end{itemize}
+
+\subsubsection{Resultados Numéricos de los Levantamientos TRS}
+
+\begin{table}[h!]
+\centering
+\small
+\renewcommand{\arraystretch}{1.25}
+\begin{tabularx}{\textwidth}{L{3.5cm} C{2.2cm} C{2.2cm} C{2.2cm} X}
+\toprule
+\textbf{Parámetro de Diagnóstico} & \textbf{KM 40+672} & \textbf{KM 44+552} & \textbf{KM 52+500} & \textbf{Chèvremont} \\
+\midrule
+\textbf{Espaciamiento $dx$} & 5.0 m & 5.0 m & 2.5 m & 2.5 m \\
+\textbf{Apertura del Arreglo ($L$)} & 115.0 m & 115.0 m & 57.5 m & 57.5 m \\
+\textbf{Tasa de Muestreo ($f_s$)} & 8000 Hz ($dt=0.125$ ms) & 8000 Hz ($dt=0.125$ ms) & 8000 Hz ($dt=0.125$ ms) & 4000 Hz ($dt=0.25$ ms) \\
+\textbf{Disparos TRS Evaluados} & 29 registros & 32 registros & 38 registros & 7 registros \\
+\textbf{Fuentes Distribuidas} & 9 ($F_1$ a $F_9$) & 9 ($F_1$ a $F_9$) & 11 ($F_1$ a $F_{11}$) & 7 (0 a 60 m) \\
+\textbf{Total Trazas Procesadas} & 696 trazas & 768 trazas & 912 trazas & 168 trazas \\
+\textbf{Finitud e Integridad} & 100\% PASS & 100\% PASS & 100\% PASS & 100\% PASS \\
+\textbf{Canales Muertos / Ceros} & 0 canales & 0 canales & 0 canales & 0 canales \\
+\textbf{Repetibilidad Media ($r$)} & 0.600 (picos $\ge$0.89) & 0.618 (picos $\ge$0.88) & \textbf{0.781 (Excelente)} & N/A (1 golpe/fuente) \\
+\textbf{$V_P$ Aparente Directa} & $\approx$811 m/s & $\approx$850 m/s & $\approx$980 m/s & $\approx$450--1800 m/s \\
+\textbf{Estado de Integridad} & \textbf{PASS} & \textbf{PASS} & \textbf{PASS} & \textbf{PASS} \\
+\bottomrule
+\end{tabularx}
+\caption{Resultados comparativos del control de calidad diagnóstico sobre levantamientos reales TRS.}
+\label{tab:trs_surveys}
+\end{table}
+
+\subsubsection{Diagnóstico de Repetibilidad Intra-Fuente (Múltiples Golpes)}
+Un control fundamental en refracción sísmica es la \textbf{repetibilidad mecánica del impacto y la estabilidad del acoplamiento sensor-terreno}. Al analizar los 3 a 5 golpes sucesivos ejecutados en cada posición de fuente, el sistema revela:
+\begin{itemize}
+    \item \textbf{Efecto de compactación inicial:} La correlación cruzada entre el Golpe 1 y el Golpe 2 suele ser moderada ($r \approx 0.50$--$0.70$), debido a que el primer impacto compacta el terreno suelto bajo la placa metálica.
+    \item \textbf{Estabilización en golpes tardíos:} La correlación entre los Golpes 3 y 4 o 4 y 5 asciende consistentemente a **$r \ge 0.85$ a $0.97$**, confirmando excelente repetibilidad de la fuente y ausencia de desprendimiento de geófonos.
+    \item En \texttt{KM 52+500}, la repetibilidad media global alcanzó un factor sobresaliente de **$0.781$**, calificando como \texttt{EXCELENTE}.
+\end{itemize}
+
+\subsubsection{Cinemática de Primeros Arribos y Reciprocidad de Fermat}
+El análisis de tiempos de viaje en refracción exige verificar:
+\begin{enumerate}
+    \item \textbf{Abanico de Hodógrafas:} La detección automática mediante STA/LTA causal refinada por AIC traza hodógrafas coherentes en todas las fuentes intermedias, mostrando el punto de impacto (mínimo de tiempo de viaje) alineado exactamente con la posición física de la fuente correspondiente ($F_1$ en canal 1, $F_4$ en canal 10, $F_9$ en canal 24).
+    \item \textbf{Velocidad de Onda P:} La pendiente aparente inicial $V_1 = dx / dt$ varía entre 810 y 980\,m/s en los sitios KM, compatible con depósitos aluviales y suelo no saturado. En geófonos lejanos, la curva se quiebra hacia velocidades mayores ($V_2 \approx 1800$--2400\,m/s), reflejando la refracción en el estrato subyacente más rígido.
+    \item \textbf{Control de Reciprocidad Conjugada:} Para pares conjugados de fuentes en extremos opuestos ($F_1$ en $x=0$\,m y $F_9$ en $x=115$\,m), la diferencia de tiempos directos e inversos:
+    \begin{equation}
+        \Delta t_{\text{rec}} = |t(F_1 \rightarrow \text{ch24}) - t(F_9 \rightarrow \text{ch1})| \le 2\,dt \quad (\le 0.25\,\text{ms})
+    \end{equation}
+    satisface el principio de reciprocidad de Fermat, descartando desfasajes de reloj instrumental o corrimientos de estacas.
+\end{enumerate}
+
+\subsubsection{Por qué $dx = 5.0$\,m es Óptimo para TRS pero Inadecuado para MASW}
+El diagnóstico simultáneo de ambas técnicas en estos datos ilustra un principio geofísico clave:
+\begin{principiobox}{Contraste de Criterio de Muestreo: Ondas P vs. Ondas de Rayleigh}
+\begin{itemize}
+    \item \textbf{En TRS (Ondas P):} Las velocidades de propagación son altas ($V_P \ge 800$\,m/s). Para frecuencias dominantes del golpe de martillo ($f \approx 50$--100\,Hz), la longitud de onda de compresión es $\lambda_P = V_P / f \ge 800 / 100 = 8.0$\,m. El espaciamiento $dx = 5.0$\,m permite muestrear adecuadamente los frentes de onda refractados sin ambigüedad espacial, alcanzando además una penetración profunda ($L = 115$\,m $\implies$ profundidad de investigación $\approx L / 4 \approx 28$\,m).
+    \item \textbf{En MASW (Ondas Rayleigh):} La velocidad de corte superficial es muy baja ($V_S \approx 100$--150\,m/s). Con $dx = 5.0$\,m, el límite espacial de Nyquist es $q_N = 0.10$\,m$^{-1}$. Por tanto, cualquier frecuencia por encima de $f = q_N \times V_S \approx 0.10 \times 120 \approx 12$\,Hz entra inmediatamente en \textbf{aliasing espacial}.
+\end{itemize}
+\textbf{Conclusión Diagnóstica:} Los levantamientos KM 40 y KM 44 son **técnicamente excelentes para TRS**, pero están físicamente restringidos para análisis MASW de alta frecuencia debido a la separación de 5 metros entre sensores.
+\end{principiobox}
 
 \newpage
 % =========================================================================
