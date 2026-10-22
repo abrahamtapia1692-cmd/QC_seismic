@@ -1,5 +1,8 @@
 # Preparación de registros KM para la aplicación local
 
+Para entender cómo se conecta este ejemplo con el código y cómo modificar o ampliar
+el sistema, consultar el [manual de arquitectura y mantenimiento](../../docs/manual_mantenimiento.md).
+
 Fecha: 2026-10-19. **Usar la copia TRS para refracción y primeros arribos.**
 La aplicación actual admite SEG-Y rev0/1 con sidecar de adquisición validado y
 protocolo de la técnica seleccionada. Los originales KM son SEG-2; cambiarles la

@@ -2,6 +2,10 @@
 
 Proyecto de control de calidad y suficiencia de adquisición sísmica MASW/TRS.
 
+**Para entender, modificar y ampliar el sistema:**
+[Manual de arquitectura y mantenimiento](docs/manual_mantenimiento.md): mapa del código,
+recorrido de datos, operación local, criterios, pruebas, recuperación y evolución.
+
 **Aplicación local — plan inicial:** [APP-LOCAL-0.1](app.md) ·
 [decisiones de alcance](docs/adr/0004-local-masw-scope.md) ·
 [auditoría de arquitectura](docs/auditoria_arquitectura_app_2026_10_14.md).
