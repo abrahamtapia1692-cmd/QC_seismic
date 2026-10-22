@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.4",
+  "picking": {
+    "schema_version": "1.4",
+    "search": {
+      "schema_version": "1.4",
+      "start_s": 0.0,
+      "end_s": 0.5
+    },
+    "noise": {
+      "schema_version": "1.4",
+      "start_s": 1.5,
+      "end_s": 2.0
+    },
+    "band_hz": [
+      40.0,
+      160.0
+    ],
+    "sta_s": 0.002,
+    "lta_s": 0.02,
+    "trigger_ratio": 8.0,
+    "refine_pre_s": 0.012,
+    "refine_post_s": 0.025,
+    "minimum_segment_samples": 8,
+    "variance_floor_fraction": 1e-08,
+    "min_sustained_s": 0.015,
+    "preprocessing": "RAW_DC_REMOVED",
+    "noise_position": "DECLARED_POST_SIGNAL",
+    "domain_id": "KM40-F1-EXPLORATORY-TRS",
+    "provenance": "EXPLORATORY DEMO ONLY; NOT VERIFIED FIELD METADATA. All source/receiver elevations are assumed 0 m, not measured. Coordinate uncertainties are set to 0 m only to omit geometric uncertainty from this model, not to claim perfect positioning. One unstacked hit per file and stored samples in V are hypotheses; original STACK=0 is retained. Channel-to-receiver correspondence follows SEG-2 CHANNEL_NUMBER and trace order, not an independent survey. TRS first-arrival exploration; no verified geological model or temporal calibration. The post-signal noise reference window is assumed signal-free, not validated in the field. User confirms vertical geophones, DAQLink 4, hammer switch, no pretrigger, and F1 at x=-15 m before receiver 1; receiver spacing 5 m comes from field notes."
+  },
+  "branch_error_model": "UNKNOWN",
+  "horizontal_two_layers_verified": false,
+  "geological_model_ref": null,
+  "initial_v1_v2_h": [
+    300.0,
+    1500.0,
+    5.0
+  ],
+  "max_evaluations": 5,
+  "max_segments": 2,
+  "roi_ref": null,
+  "source_clock_correction_s": 0.0,
+  "time_correction_ref": null,
+  "provenance": "EXPLORATORY DEMO ONLY; NOT VERIFIED FIELD METADATA. All source/receiver elevations are assumed 0 m, not measured. Coordinate uncertainties are set to 0 m only to omit geometric uncertainty from this model, not to claim perfect positioning. One unstacked hit per file and stored samples in V are hypotheses; original STACK=0 is retained. Channel-to-receiver correspondence follows SEG-2 CHANNEL_NUMBER and trace order, not an independent survey. TRS first-arrival exploration; no verified geological model or temporal calibration. The post-signal noise reference window is assumed signal-free, not validated in the field. User confirms vertical geophones, DAQLink 4, hammer switch, no pretrigger, and F1 at x=-15 m before receiver 1; receiver spacing 5 m comes from field notes."
+}

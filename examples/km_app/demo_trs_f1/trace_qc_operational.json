@@ -1,0 +1,122 @@
+{
+  "schema_version": "1.4",
+  "protocol": {
+    "schema_version": "1.4",
+    "analysis": {
+      "schema_version": "1.4",
+      "start_s": 0.0,
+      "end_s": 2.0
+    },
+    "noise": {
+      "schema_version": "1.4",
+      "start_s": 1.5,
+      "end_s": 2.0
+    },
+    "signal": {
+      "schema_version": "1.4",
+      "start_s": 0.0,
+      "end_s": 0.5
+    },
+    "noise_independent": false,
+    "noise_stationarity": "UNKNOWN",
+    "stationarity_ref": null,
+    "expected_relative_amplitude": null,
+    "amplitude_model_ref": null,
+    "log_mad_limit": 3.5,
+    "amplitude_ratio_bounds": [
+      0.4,
+      2.5
+    ],
+    "rail_tolerance": 0.0,
+    "rail_scale_to_data": null,
+    "frequency_band_hz": [
+      40.0,
+      160.0
+    ],
+    "antialias_verified": null,
+    "nyquist_margin": 0.8,
+    "min_group_velocity_ms": null,
+    "group_velocity_verified": false,
+    "group_velocity_ref": null,
+    "wavelet_duration_s": 0.0,
+    "post_margin_s": 0.0,
+    "guard_s": 0.0,
+    "mains_hz": null,
+    "mains_search_hz": 1.0,
+    "line_power_ratio": 20.0,
+    "welch_segment_samples": 256,
+    "provenance": "KM40 F1 EXPLORATORY: analysis [0,2) s; signal [0,0.5) s and posterior reference [1.5,2) s reuse the declared picking windows. Reference assumed signal-free; independence and transfer to signal NOT verified. No ADC rails/scale verified. No instrumental comparability verified. No filtering or calibration of first-arrival accuracy.",
+    "quality_policy": {
+      "schema_version": "1.4",
+      "id": "TRACE_QUALITY_V1_DRAFT",
+      "snr_good_min_db": 12.0,
+      "snr_bad_below_db": 6.0,
+      "clip_good_max_fraction": 0.001,
+      "clip_bad_min_fraction": 0.01
+    },
+    "similarity": {
+      "schema_version": "1.4",
+      "arrival": {
+        "schema_version": "1.4",
+        "start_s": 0.0,
+        "end_s": 0.5
+      },
+      "baseline": null,
+      "neighbor_radius_m": 10.1,
+      "min_apparent_velocity_ms": 100.0,
+      "max_lag_s": 0.02,
+      "max_neighbors": 4,
+      "min_neighbors": 3,
+      "bad_below_rho": 0.5,
+      "warn_below_rho": 0.8,
+      "neighbor_consensus_min": 0.8,
+      "bad_neighbor_fraction_min": 0.75,
+      "baseline_ratio_warn": 5.0,
+      "comparable_channels": false,
+      "reference": "KM40 F1 EXPLORATORY: analysis [0,2) s; signal [0,0.5) s and posterior reference [1.5,2) s reuse the declared picking windows. Reference assumed signal-free; independence and transfer to signal NOT verified. No ADC rails/scale verified. No instrumental comparability verified. No filtering or calibration of first-arrival accuracy. Neighborhood/lag are draft scenarios; do not assert comparability."
+    }
+  },
+  "noise": {
+    "schema_version": "1.4",
+    "noise": {
+      "schema_version": "1.4",
+      "start_s": 1.5,
+      "end_s": 2.0
+    },
+    "signal": {
+      "schema_version": "1.4",
+      "start_s": 0.0,
+      "end_s": 0.5
+    },
+    "low_band_hz": [
+      1.0,
+      15.0
+    ],
+    "minimum_cycles": 3.0,
+    "noise_blocks": 4,
+    "block_power_ratio_warn": 4.0,
+    "low_ratio_warn": 0.5,
+    "mains_candidates_hz": [
+      50.0,
+      60.0
+    ],
+    "harmonics": 5,
+    "line_prominence_db": 10.0,
+    "reference": "KM40 F1 EXPLORATORY: analysis [0,2) s; signal [0,0.5) s and posterior reference [1.5,2) s reuse the declared picking windows. Reference assumed signal-free; independence and transfer to signal NOT verified. No ADC rails/scale verified. No instrumental comparability verified. No filtering or calibration of first-arrival accuracy.",
+    "reference_kind": "POST_SIGNAL"
+  },
+  "config": null,
+  "operational_policy": {
+    "schema_version": "1.4",
+    "id": "TRS_SAMPLE_SCREENING_V1_DRAFT",
+    "minimum_coverage": 0.75,
+    "contrast_good_db": 12.0,
+    "contrast_review_db": 6.0,
+    "max_reference_power_ratio": 4.0,
+    "reference_blocks": 4,
+    "plateau_min_run": 3,
+    "line_persistence_min_fraction": 0.75,
+    "line_prominence_db": 10.0,
+    "reference": "docs/trs_operational_quality.md; fixed declared windows; local screening thresholds, not field-calibrated acceptance. Metadata and strict QC preserved."
+  }
+}

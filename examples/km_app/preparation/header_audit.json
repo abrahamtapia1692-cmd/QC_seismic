@@ -1,0 +1,28 @@
+{
+    "scope":  "Existing inventory plus direct pilot header inspection; no new full binary audit",
+    "records":  152,
+    "instruments":  [
+                        "SEISMIC_SOURCE_CO"
+                    ],
+    "units":  [
+                  "NONE"
+              ],
+    "delay_values":  [
+                         0.0
+                     ],
+    "descaling_values":  [
+                             "1000"
+                         ],
+    "stack_values":  [
+                         "0"
+                     ],
+    "pilot":  "KM 40+672/Datos/Sismica/F1/250122_205932.sg2",
+    "pilot_absent":  [
+                         "SOURCE",
+                         "RECEIVER",
+                         "RECEIVER_SPECS",
+                         "FIXED_GAIN"
+                     ],
+    "source_inventory":  "inventory.json",
+    "model_identified":  false
+}

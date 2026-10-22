@@ -1,0 +1,1398 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="11" failures="0" skipped="0" tests="40" time="13.961" timestamp="2026-10-14T22:29:01.310275-06:00" hostname="DESKTOP-S3O7HF2"><testcase classname="tests.unit.test_e1_cli" name="test_inspect_cli_valid_and_missing_metadata_are_structured" time="3.022" /><testcase classname="tests.unit.test_e5_boundaries" name="test_calibration_identity_geometry_clock_support_and_direction" time="3.020" /><testcase classname="tests.unit.test_e5_boundaries" name="test_cli_json_diagnostic_and_invalid_protocol" time="2.575" /><testcase classname="tests.unit.test_e5_boundaries" name="test_invalid_transform_inputs_masked_windows_and_non_aligned_clocks" time="0.022" /><testcase classname="tests.unit.test_e5_boundaries" name="test_null_domain_rejects_unvalidated_low_n" time="0.001" /><testcase classname="tests.unit.test_e5_boundaries" name="test_all_masked_channels_yield_missing_band_not_estimated_confidence" time="0.370" /><testcase classname="tests.unit.test_e5_boundaries" name="test_nonphysical_calibration_abstains_without_negative_velocity" time="0.352" /><testcase classname="tests.unit.test_e5_boundaries" name="test_green_domain_and_numerical_budget_errors" time="0.001" /><testcase classname="tests.unit.test_masw_r1" name="test_unresolved_reference_cannot_confirm_observed_mode" time="0.116" /><testcase classname="tests.unit.test_masw_r1" name="test_legacy_union_preserves_covariance_and_abstains" time="0.002" /><testcase classname="tests.unit.test_masw_r1" name="test_correlated_difference_and_explicit_independence" time="0.007" /><testcase classname="tests.unit.test_masw_r1" name="test_joint_covariance_order_and_singular_nullspace" time="0.008" /><testcase classname="tests.unit.test_masw_r1" name="test_duplicates_modes_support_and_unknown_covariance" time="0.002" /><testcase classname="tests.unit.test_masw_r1" name="test_covariance_invalid_inputs[matrix0]" time="0.001" /><testcase classname="tests.unit.test_masw_r1" name="test_covariance_invalid_inputs[matrix1]" time="0.001" /><testcase classname="tests.unit.test_masw_r1" name="test_covariance_invalid_inputs[matrix2]" time="0.001" /><testcase classname="tests.unit.test_masw_r1" name="test_covariance_invalid_inputs[matrix3]" time="0.001" /><testcase classname="tests.unit.test_masw_r1" name="test_explicit_migration_and_unknown_schema" time="0.001" /><testcase classname="tests.unit.test_masw_r1" name="test_modal_evidence_authority_scope_tampering_and_partial_support" time="0.002" /><testcase classname="tests.unit.test_masw_r1" name="test_supplement_requires_real_phases_revision_and_all_criteria" time="0.002" /><testcase classname="tests.unit.test_masw_r1" name="test_base_passed_never_closes_expanded_g5_or_descendants" time="0.002" /><testcase classname="tests.unit.test_masw_r1" name="test_covariance_binding_sigmas_and_missing_criterion" time="0.002" /><testcase classname="tests.unit.test_masw_r1" name="test_report_uses_external_approval_but_never_enables_acceptance" time="0.238" /><testcase classname="tests.unit.test_masw_r1" name="test_r1_contract_arrays_are_immutable_and_validate_shape" time="0.001" /><testcase classname="tests.synthetic.test_e5_pipeline" name="test_waveform_to_calibrated_curve_independent_holdout[10]" time="0.001"><error message="failed on setup with &quot;pytest.PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')&quot;">cls = &lt;class '_pytest.runner.CallInfo'&gt;
+func = &lt;function call_and_report.&lt;locals&gt;.&lt;lambda&gt; at 0x000001D0349B1800&gt;
+when = 'setup'
+reraise = (&lt;class '_pytest.outcomes.Exit'&gt;, &lt;class 'KeyboardInterrupt'&gt;)
+
+    @classmethod
+    def from_call(
+        cls,
+        func: Callable[[], TResult],
+        when: Literal["collect", "setup", "call", "teardown"],
+        reraise: type[BaseException] | tuple[type[BaseException], ...] | None = None,
+    ) -&gt; CallInfo[TResult]:
+        """Call func, wrapping the result in a CallInfo.
+    
+        :param func:
+            The function to call. Called without arguments.
+        :type func: Callable[[], _pytest.runner.TResult]
+        :param when:
+            The phase in which the function is called.
+        :param reraise:
+            Exception or exceptions that shall propagate if raised by the
+            function, instead of being wrapped in the CallInfo.
+        """
+        excinfo = None
+        instant = timing.Instant()
+        try:
+&gt;           result: TResult | None = func()
+                                     ^^^^^^
+
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:361: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:250: in &lt;lambda&gt;
+    lambda: runtest_hook(item=item, **kwds),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_hooks.py:512: in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_manager.py:120: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\logging.py:858: in pytest_runtest_setup
+    yield
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\capture.py:895: in pytest_runtest_setup
+    return (yield)
+            ^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:170: in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:536: in setup
+    col.setup()
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\python.py:1710: in setup
+    self._request._fillfixtures()
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:806: in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:630: in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:726: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:1232: in execute
+    result: FixtureValue = ihook.pytest_fixture_setup(
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_hooks.py:512: in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_manager.py:120: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py:53: in run_old_style_hookwrapper
+    return result.get_result()
+           ^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py:38: in run_old_style_hookwrapper
+    res = yield
+          ^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\setuponly.py:36: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:1328: in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:1005: in call_fixture_func
+    fixture_result = fixturefunc(**kwargs)
+                     ^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\junitxml.py:289: in record_property
+    _warn_incompatibility_with_xunit2(request, "record_property")
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\junitxml.py:267: in _warn_incompatibility_with_xunit2
+    request.node.warn(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;Function test_waveform_to_calibrated_curve_independent_holdout[10]&gt;
+warning = PytestWarning("record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')")
+
+    def warn(self, warning: Warning) -&gt; None:
+        """Issue a warning for this Node.
+    
+        Warnings will be displayed after the test session, unless explicitly suppressed.
+    
+        :param Warning warning:
+            The warning instance to issue.
+    
+        :raises ValueError: If ``warning`` instance is not a subclass of Warning.
+    
+        Example usage:
+    
+        .. code-block:: python
+    
+            node.warn(PytestWarning("some message"))
+            node.warn(UserWarning("some message"))
+    
+        .. versionchanged:: 6.2
+            Any subclass of :class:`Warning` is now accepted, rather than only
+            :class:`PytestWarning &lt;pytest.PytestWarning&gt;` subclasses.
+        """
+        # enforce type checks here to avoid getting a generic type error later otherwise.
+        if not isinstance(warning, Warning):
+            raise ValueError(
+                f"warning must be an instance of Warning or subclass, got {warning!r}"
+            )
+        path, lineno = get_fslocation_from_item(self)
+        assert lineno is not None
+&gt;       warnings.warn_explicit(
+            warning,
+            category=None,
+            filename=str(path),
+            lineno=lineno + 1,
+        )
+E       pytest.PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\nodes.py:263: PytestWarning</error></testcase><testcase classname="tests.synthetic.test_e5_pipeline" name="test_waveform_to_calibrated_curve_independent_holdout[20]" time="0.001"><error message="failed on setup with &quot;pytest.PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')&quot;">cls = &lt;class '_pytest.runner.CallInfo'&gt;
+func = &lt;function call_and_report.&lt;locals&gt;.&lt;lambda&gt; at 0x000001D0349B1E40&gt;
+when = 'setup'
+reraise = (&lt;class '_pytest.outcomes.Exit'&gt;, &lt;class 'KeyboardInterrupt'&gt;)
+
+    @classmethod
+    def from_call(
+        cls,
+        func: Callable[[], TResult],
+        when: Literal["collect", "setup", "call", "teardown"],
+        reraise: type[BaseException] | tuple[type[BaseException], ...] | None = None,
+    ) -&gt; CallInfo[TResult]:
+        """Call func, wrapping the result in a CallInfo.
+    
+        :param func:
+            The function to call. Called without arguments.
+        :type func: Callable[[], _pytest.runner.TResult]
+        :param when:
+            The phase in which the function is called.
+        :param reraise:
+            Exception or exceptions that shall propagate if raised by the
+            function, instead of being wrapped in the CallInfo.
+        """
+        excinfo = None
+        instant = timing.Instant()
+        try:
+&gt;           result: TResult | None = func()
+                                     ^^^^^^
+
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:361: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:250: in &lt;lambda&gt;
+    lambda: runtest_hook(item=item, **kwds),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_hooks.py:512: in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_manager.py:120: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\logging.py:858: in pytest_runtest_setup
+    yield
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\capture.py:895: in pytest_runtest_setup
+    return (yield)
+            ^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:170: in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:536: in setup
+    col.setup()
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\python.py:1710: in setup
+    self._request._fillfixtures()
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:806: in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:630: in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:726: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:1232: in execute
+    result: FixtureValue = ihook.pytest_fixture_setup(
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_hooks.py:512: in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_manager.py:120: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py:53: in run_old_style_hookwrapper
+    return result.get_result()
+           ^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py:38: in run_old_style_hookwrapper
+    res = yield
+          ^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\setuponly.py:36: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:1328: in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:1005: in call_fixture_func
+    fixture_result = fixturefunc(**kwargs)
+                     ^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\junitxml.py:289: in record_property
+    _warn_incompatibility_with_xunit2(request, "record_property")
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\junitxml.py:267: in _warn_incompatibility_with_xunit2
+    request.node.warn(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;Function test_waveform_to_calibrated_curve_independent_holdout[20]&gt;
+warning = PytestWarning("record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')")
+
+    def warn(self, warning: Warning) -&gt; None:
+        """Issue a warning for this Node.
+    
+        Warnings will be displayed after the test session, unless explicitly suppressed.
+    
+        :param Warning warning:
+            The warning instance to issue.
+    
+        :raises ValueError: If ``warning`` instance is not a subclass of Warning.
+    
+        Example usage:
+    
+        .. code-block:: python
+    
+            node.warn(PytestWarning("some message"))
+            node.warn(UserWarning("some message"))
+    
+        .. versionchanged:: 6.2
+            Any subclass of :class:`Warning` is now accepted, rather than only
+            :class:`PytestWarning &lt;pytest.PytestWarning&gt;` subclasses.
+        """
+        # enforce type checks here to avoid getting a generic type error later otherwise.
+        if not isinstance(warning, Warning):
+            raise ValueError(
+                f"warning must be an instance of Warning or subclass, got {warning!r}"
+            )
+        path, lineno = get_fslocation_from_item(self)
+        assert lineno is not None
+&gt;       warnings.warn_explicit(
+            warning,
+            category=None,
+            filename=str(path),
+            lineno=lineno + 1,
+        )
+E       pytest.PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\nodes.py:263: PytestWarning</error></testcase><testcase classname="tests.synthetic.test_e5_transform" name="test_common_window_phase_and_channel_muting" time="0.001"><error message="failed on setup with &quot;pytest.PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')&quot;">cls = &lt;class '_pytest.runner.CallInfo'&gt;
+func = &lt;function call_and_report.&lt;locals&gt;.&lt;lambda&gt; at 0x000001D036AE6200&gt;
+when = 'setup'
+reraise = (&lt;class '_pytest.outcomes.Exit'&gt;, &lt;class 'KeyboardInterrupt'&gt;)
+
+    @classmethod
+    def from_call(
+        cls,
+        func: Callable[[], TResult],
+        when: Literal["collect", "setup", "call", "teardown"],
+        reraise: type[BaseException] | tuple[type[BaseException], ...] | None = None,
+    ) -&gt; CallInfo[TResult]:
+        """Call func, wrapping the result in a CallInfo.
+    
+        :param func:
+            The function to call. Called without arguments.
+        :type func: Callable[[], _pytest.runner.TResult]
+        :param when:
+            The phase in which the function is called.
+        :param reraise:
+            Exception or exceptions that shall propagate if raised by the
+            function, instead of being wrapped in the CallInfo.
+        """
+        excinfo = None
+        instant = timing.Instant()
+        try:
+&gt;           result: TResult | None = func()
+                                     ^^^^^^
+
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:361: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:250: in &lt;lambda&gt;
+    lambda: runtest_hook(item=item, **kwds),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_hooks.py:512: in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_manager.py:120: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\logging.py:858: in pytest_runtest_setup
+    yield
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\capture.py:895: in pytest_runtest_setup
+    return (yield)
+            ^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:170: in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:536: in setup
+    col.setup()
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\python.py:1710: in setup
+    self._request._fillfixtures()
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:806: in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:630: in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:726: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:1232: in execute
+    result: FixtureValue = ihook.pytest_fixture_setup(
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_hooks.py:512: in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_manager.py:120: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py:53: in run_old_style_hookwrapper
+    return result.get_result()
+           ^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py:38: in run_old_style_hookwrapper
+    res = yield
+          ^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\setuponly.py:36: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:1328: in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:1005: in call_fixture_func
+    fixture_result = fixturefunc(**kwargs)
+                     ^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\junitxml.py:289: in record_property
+    _warn_incompatibility_with_xunit2(request, "record_property")
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\junitxml.py:267: in _warn_incompatibility_with_xunit2
+    request.node.warn(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;Function test_common_window_phase_and_channel_muting&gt;
+warning = PytestWarning("record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')")
+
+    def warn(self, warning: Warning) -&gt; None:
+        """Issue a warning for this Node.
+    
+        Warnings will be displayed after the test session, unless explicitly suppressed.
+    
+        :param Warning warning:
+            The warning instance to issue.
+    
+        :raises ValueError: If ``warning`` instance is not a subclass of Warning.
+    
+        Example usage:
+    
+        .. code-block:: python
+    
+            node.warn(PytestWarning("some message"))
+            node.warn(UserWarning("some message"))
+    
+        .. versionchanged:: 6.2
+            Any subclass of :class:`Warning` is now accepted, rather than only
+            :class:`PytestWarning &lt;pytest.PytestWarning&gt;` subclasses.
+        """
+        # enforce type checks here to avoid getting a generic type error later otherwise.
+        if not isinstance(warning, Warning):
+            raise ValueError(
+                f"warning must be an instance of Warning or subclass, got {warning!r}"
+            )
+        path, lineno = get_fslocation_from_item(self)
+        assert lineno is not None
+&gt;       warnings.warn_explicit(
+            warning,
+            category=None,
+            filename=str(path),
+            lineno=lineno + 1,
+        )
+E       pytest.PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\nodes.py:263: PytestWarning</error></testcase><testcase classname="tests.synthetic.test_e5_transform" name="test_plane_wave_sign_and_exact_alignment" time="0.001" /><testcase classname="tests.synthetic.test_e5_transform" name="test_finite_kernel_exact_velocity_boundaries" time="0.001"><error message="failed on setup with &quot;pytest.PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')&quot;">cls = &lt;class '_pytest.runner.CallInfo'&gt;
+func = &lt;function call_and_report.&lt;locals&gt;.&lt;lambda&gt; at 0x000001D036AE67A0&gt;
+when = 'setup'
+reraise = (&lt;class '_pytest.outcomes.Exit'&gt;, &lt;class 'KeyboardInterrupt'&gt;)
+
+    @classmethod
+    def from_call(
+        cls,
+        func: Callable[[], TResult],
+        when: Literal["collect", "setup", "call", "teardown"],
+        reraise: type[BaseException] | tuple[type[BaseException], ...] | None = None,
+    ) -&gt; CallInfo[TResult]:
+        """Call func, wrapping the result in a CallInfo.
+    
+        :param func:
+            The function to call. Called without arguments.
+        :type func: Callable[[], _pytest.runner.TResult]
+        :param when:
+            The phase in which the function is called.
+        :param reraise:
+            Exception or exceptions that shall propagate if raised by the
+            function, instead of being wrapped in the CallInfo.
+        """
+        excinfo = None
+        instant = timing.Instant()
+        try:
+&gt;           result: TResult | None = func()
+                                     ^^^^^^
+
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:361: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:250: in &lt;lambda&gt;
+    lambda: runtest_hook(item=item, **kwds),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_hooks.py:512: in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_manager.py:120: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\logging.py:858: in pytest_runtest_setup
+    yield
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\capture.py:895: in pytest_runtest_setup
+    return (yield)
+            ^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:170: in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:536: in setup
+    col.setup()
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\python.py:1710: in setup
+    self._request._fillfixtures()
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:806: in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:630: in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:726: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:1232: in execute
+    result: FixtureValue = ihook.pytest_fixture_setup(
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_hooks.py:512: in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_manager.py:120: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py:53: in run_old_style_hookwrapper
+    return result.get_result()
+           ^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py:38: in run_old_style_hookwrapper
+    res = yield
+          ^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\setuponly.py:36: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:1328: in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:1005: in call_fixture_func
+    fixture_result = fixturefunc(**kwargs)
+                     ^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\junitxml.py:289: in record_property
+    _warn_incompatibility_with_xunit2(request, "record_property")
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\junitxml.py:267: in _warn_incompatibility_with_xunit2
+    request.node.warn(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;Function test_finite_kernel_exact_velocity_boundaries&gt;
+warning = PytestWarning("record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')")
+
+    def warn(self, warning: Warning) -&gt; None:
+        """Issue a warning for this Node.
+    
+        Warnings will be displayed after the test session, unless explicitly suppressed.
+    
+        :param Warning warning:
+            The warning instance to issue.
+    
+        :raises ValueError: If ``warning`` instance is not a subclass of Warning.
+    
+        Example usage:
+    
+        .. code-block:: python
+    
+            node.warn(PytestWarning("some message"))
+            node.warn(UserWarning("some message"))
+    
+        .. versionchanged:: 6.2
+            Any subclass of :class:`Warning` is now accepted, rather than only
+            :class:`PytestWarning &lt;pytest.PytestWarning&gt;` subclasses.
+        """
+        # enforce type checks here to avoid getting a generic type error later otherwise.
+        if not isinstance(warning, Warning):
+            raise ValueError(
+                f"warning must be an instance of Warning or subclass, got {warning!r}"
+            )
+        path, lineno = get_fslocation_from_item(self)
+        assert lineno is not None
+&gt;       warnings.warn_explicit(
+            warning,
+            category=None,
+            filename=str(path),
+            lineno=lineno + 1,
+        )
+E       pytest.PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\nodes.py:263: PytestWarning</error></testcase><testcase classname="tests.synthetic.test_e5_transform" name="test_signed_aliases_real_masked_irregular_kernel" time="0.001"><error message="failed on setup with &quot;pytest.PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')&quot;">cls = &lt;class '_pytest.runner.CallInfo'&gt;
+func = &lt;function call_and_report.&lt;locals&gt;.&lt;lambda&gt; at 0x000001D036AE5760&gt;
+when = 'setup'
+reraise = (&lt;class '_pytest.outcomes.Exit'&gt;, &lt;class 'KeyboardInterrupt'&gt;)
+
+    @classmethod
+    def from_call(
+        cls,
+        func: Callable[[], TResult],
+        when: Literal["collect", "setup", "call", "teardown"],
+        reraise: type[BaseException] | tuple[type[BaseException], ...] | None = None,
+    ) -&gt; CallInfo[TResult]:
+        """Call func, wrapping the result in a CallInfo.
+    
+        :param func:
+            The function to call. Called without arguments.
+        :type func: Callable[[], _pytest.runner.TResult]
+        :param when:
+            The phase in which the function is called.
+        :param reraise:
+            Exception or exceptions that shall propagate if raised by the
+            function, instead of being wrapped in the CallInfo.
+        """
+        excinfo = None
+        instant = timing.Instant()
+        try:
+&gt;           result: TResult | None = func()
+                                     ^^^^^^
+
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:361: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:250: in &lt;lambda&gt;
+    lambda: runtest_hook(item=item, **kwds),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_hooks.py:512: in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_manager.py:120: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\logging.py:858: in pytest_runtest_setup
+    yield
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\capture.py:895: in pytest_runtest_setup
+    return (yield)
+            ^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:170: in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:536: in setup
+    col.setup()
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\python.py:1710: in setup
+    self._request._fillfixtures()
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:806: in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:630: in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:726: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:1232: in execute
+    result: FixtureValue = ihook.pytest_fixture_setup(
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_hooks.py:512: in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_manager.py:120: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py:53: in run_old_style_hookwrapper
+    return result.get_result()
+           ^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py:38: in run_old_style_hookwrapper
+    res = yield
+          ^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\setuponly.py:36: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:1328: in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:1005: in call_fixture_func
+    fixture_result = fixturefunc(**kwargs)
+                     ^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\junitxml.py:289: in record_property
+    _warn_incompatibility_with_xunit2(request, "record_property")
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\junitxml.py:267: in _warn_incompatibility_with_xunit2
+    request.node.warn(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;Function test_signed_aliases_real_masked_irregular_kernel&gt;
+warning = PytestWarning("record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')")
+
+    def warn(self, warning: Warning) -&gt; None:
+        """Issue a warning for this Node.
+    
+        Warnings will be displayed after the test session, unless explicitly suppressed.
+    
+        :param Warning warning:
+            The warning instance to issue.
+    
+        :raises ValueError: If ``warning`` instance is not a subclass of Warning.
+    
+        Example usage:
+    
+        .. code-block:: python
+    
+            node.warn(PytestWarning("some message"))
+            node.warn(UserWarning("some message"))
+    
+        .. versionchanged:: 6.2
+            Any subclass of :class:`Warning` is now accepted, rather than only
+            :class:`PytestWarning &lt;pytest.PytestWarning&gt;` subclasses.
+        """
+        # enforce type checks here to avoid getting a generic type error later otherwise.
+        if not isinstance(warning, Warning):
+            raise ValueError(
+                f"warning must be an instance of Warning or subclass, got {warning!r}"
+            )
+        path, lineno = get_fslocation_from_item(self)
+        assert lineno is not None
+&gt;       warnings.warn_explicit(
+            warning,
+            category=None,
+            filename=str(path),
+            lineno=lineno + 1,
+        )
+E       pytest.PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\nodes.py:263: PytestWarning</error></testcase><testcase classname="tests.synthetic.test_e5_transform" name="test_phase_fk_time_domain_tau_p_independent_references" time="0.001"><error message="failed on setup with &quot;pytest.PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')&quot;">cls = &lt;class '_pytest.runner.CallInfo'&gt;
+func = &lt;function call_and_report.&lt;locals&gt;.&lt;lambda&gt; at 0x000001D036AE7060&gt;
+when = 'setup'
+reraise = (&lt;class '_pytest.outcomes.Exit'&gt;, &lt;class 'KeyboardInterrupt'&gt;)
+
+    @classmethod
+    def from_call(
+        cls,
+        func: Callable[[], TResult],
+        when: Literal["collect", "setup", "call", "teardown"],
+        reraise: type[BaseException] | tuple[type[BaseException], ...] | None = None,
+    ) -&gt; CallInfo[TResult]:
+        """Call func, wrapping the result in a CallInfo.
+    
+        :param func:
+            The function to call. Called without arguments.
+        :type func: Callable[[], _pytest.runner.TResult]
+        :param when:
+            The phase in which the function is called.
+        :param reraise:
+            Exception or exceptions that shall propagate if raised by the
+            function, instead of being wrapped in the CallInfo.
+        """
+        excinfo = None
+        instant = timing.Instant()
+        try:
+&gt;           result: TResult | None = func()
+                                     ^^^^^^
+
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:361: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:250: in &lt;lambda&gt;
+    lambda: runtest_hook(item=item, **kwds),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_hooks.py:512: in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_manager.py:120: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\logging.py:858: in pytest_runtest_setup
+    yield
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\capture.py:895: in pytest_runtest_setup
+    return (yield)
+            ^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:170: in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:536: in setup
+    col.setup()
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\python.py:1710: in setup
+    self._request._fillfixtures()
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:806: in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:630: in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:726: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:1232: in execute
+    result: FixtureValue = ihook.pytest_fixture_setup(
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_hooks.py:512: in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_manager.py:120: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py:53: in run_old_style_hookwrapper
+    return result.get_result()
+           ^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py:38: in run_old_style_hookwrapper
+    res = yield
+          ^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\setuponly.py:36: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:1328: in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:1005: in call_fixture_func
+    fixture_result = fixturefunc(**kwargs)
+                     ^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\junitxml.py:289: in record_property
+    _warn_incompatibility_with_xunit2(request, "record_property")
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\junitxml.py:267: in _warn_incompatibility_with_xunit2
+    request.node.warn(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;Function test_phase_fk_time_domain_tau_p_independent_references&gt;
+warning = PytestWarning("record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')")
+
+    def warn(self, warning: Warning) -&gt; None:
+        """Issue a warning for this Node.
+    
+        Warnings will be displayed after the test session, unless explicitly suppressed.
+    
+        :param Warning warning:
+            The warning instance to issue.
+    
+        :raises ValueError: If ``warning`` instance is not a subclass of Warning.
+    
+        Example usage:
+    
+        .. code-block:: python
+    
+            node.warn(PytestWarning("some message"))
+            node.warn(UserWarning("some message"))
+    
+        .. versionchanged:: 6.2
+            Any subclass of :class:`Warning` is now accepted, rather than only
+            :class:`PytestWarning &lt;pytest.PytestWarning&gt;` subclasses.
+        """
+        # enforce type checks here to avoid getting a generic type error later otherwise.
+        if not isinstance(warning, Warning):
+            raise ValueError(
+                f"warning must be an instance of Warning or subclass, got {warning!r}"
+            )
+        path, lineno = get_fslocation_from_item(self)
+        assert lineno is not None
+&gt;       warnings.warn_explicit(
+            warning,
+            category=None,
+            filename=str(path),
+            lineno=lineno + 1,
+        )
+E       pytest.PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\nodes.py:263: PytestWarning</error></testcase><testcase classname="tests.synthetic.test_e5_transform" name="test_metamorphic_support_preserving_properties" time="0.006" /><testcase classname="tests.synthetic.test_e5_curves" name="test_ridge_grid_prior_sensitivity_does_not_create_observations" time="0.001"><error message="failed on setup with &quot;pytest.PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')&quot;">cls = &lt;class '_pytest.runner.CallInfo'&gt;
+func = &lt;function call_and_report.&lt;locals&gt;.&lt;lambda&gt; at 0x000001D01A3EF6A0&gt;
+when = 'setup'
+reraise = (&lt;class '_pytest.outcomes.Exit'&gt;, &lt;class 'KeyboardInterrupt'&gt;)
+
+    @classmethod
+    def from_call(
+        cls,
+        func: Callable[[], TResult],
+        when: Literal["collect", "setup", "call", "teardown"],
+        reraise: type[BaseException] | tuple[type[BaseException], ...] | None = None,
+    ) -&gt; CallInfo[TResult]:
+        """Call func, wrapping the result in a CallInfo.
+    
+        :param func:
+            The function to call. Called without arguments.
+        :type func: Callable[[], _pytest.runner.TResult]
+        :param when:
+            The phase in which the function is called.
+        :param reraise:
+            Exception or exceptions that shall propagate if raised by the
+            function, instead of being wrapped in the CallInfo.
+        """
+        excinfo = None
+        instant = timing.Instant()
+        try:
+&gt;           result: TResult | None = func()
+                                     ^^^^^^
+
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:361: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:250: in &lt;lambda&gt;
+    lambda: runtest_hook(item=item, **kwds),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_hooks.py:512: in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_manager.py:120: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\logging.py:858: in pytest_runtest_setup
+    yield
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\capture.py:895: in pytest_runtest_setup
+    return (yield)
+            ^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:170: in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:536: in setup
+    col.setup()
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\python.py:1710: in setup
+    self._request._fillfixtures()
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:806: in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:630: in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:726: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:1232: in execute
+    result: FixtureValue = ihook.pytest_fixture_setup(
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_hooks.py:512: in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_manager.py:120: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py:53: in run_old_style_hookwrapper
+    return result.get_result()
+           ^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py:38: in run_old_style_hookwrapper
+    res = yield
+          ^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\setuponly.py:36: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:1328: in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:1005: in call_fixture_func
+    fixture_result = fixturefunc(**kwargs)
+                     ^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\junitxml.py:289: in record_property
+    _warn_incompatibility_with_xunit2(request, "record_property")
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\junitxml.py:267: in _warn_incompatibility_with_xunit2
+    request.node.warn(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;Function test_ridge_grid_prior_sensitivity_does_not_create_observations&gt;
+warning = PytestWarning("record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')")
+
+    def warn(self, warning: Warning) -&gt; None:
+        """Issue a warning for this Node.
+    
+        Warnings will be displayed after the test session, unless explicitly suppressed.
+    
+        :param Warning warning:
+            The warning instance to issue.
+    
+        :raises ValueError: If ``warning`` instance is not a subclass of Warning.
+    
+        Example usage:
+    
+        .. code-block:: python
+    
+            node.warn(PytestWarning("some message"))
+            node.warn(UserWarning("some message"))
+    
+        .. versionchanged:: 6.2
+            Any subclass of :class:`Warning` is now accepted, rather than only
+            :class:`PytestWarning &lt;pytest.PytestWarning&gt;` subclasses.
+        """
+        # enforce type checks here to avoid getting a generic type error later otherwise.
+        if not isinstance(warning, Warning):
+            raise ValueError(
+                f"warning must be an instance of Warning or subclass, got {warning!r}"
+            )
+        path, lineno = get_fslocation_from_item(self)
+        assert lineno is not None
+&gt;       warnings.warn_explicit(
+            warning,
+            category=None,
+            filename=str(path),
+            lineno=lineno + 1,
+        )
+E       pytest.PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\nodes.py:263: PytestWarning</error></testcase><testcase classname="tests.synthetic.test_e5_curves" name="test_three_families_observable_fundamental_and_missing_identity[10]" time="0.001"><error message="failed on setup with &quot;pytest.PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')&quot;">cls = &lt;class '_pytest.runner.CallInfo'&gt;
+func = &lt;function call_and_report.&lt;locals&gt;.&lt;lambda&gt; at 0x000001D036AE7D80&gt;
+when = 'setup'
+reraise = (&lt;class '_pytest.outcomes.Exit'&gt;, &lt;class 'KeyboardInterrupt'&gt;)
+
+    @classmethod
+    def from_call(
+        cls,
+        func: Callable[[], TResult],
+        when: Literal["collect", "setup", "call", "teardown"],
+        reraise: type[BaseException] | tuple[type[BaseException], ...] | None = None,
+    ) -&gt; CallInfo[TResult]:
+        """Call func, wrapping the result in a CallInfo.
+    
+        :param func:
+            The function to call. Called without arguments.
+        :type func: Callable[[], _pytest.runner.TResult]
+        :param when:
+            The phase in which the function is called.
+        :param reraise:
+            Exception or exceptions that shall propagate if raised by the
+            function, instead of being wrapped in the CallInfo.
+        """
+        excinfo = None
+        instant = timing.Instant()
+        try:
+&gt;           result: TResult | None = func()
+                                     ^^^^^^
+
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:361: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:250: in &lt;lambda&gt;
+    lambda: runtest_hook(item=item, **kwds),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_hooks.py:512: in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_manager.py:120: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\logging.py:858: in pytest_runtest_setup
+    yield
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\capture.py:895: in pytest_runtest_setup
+    return (yield)
+            ^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:170: in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:536: in setup
+    col.setup()
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\python.py:1710: in setup
+    self._request._fillfixtures()
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:806: in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:630: in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:726: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:1232: in execute
+    result: FixtureValue = ihook.pytest_fixture_setup(
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_hooks.py:512: in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_manager.py:120: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py:53: in run_old_style_hookwrapper
+    return result.get_result()
+           ^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py:38: in run_old_style_hookwrapper
+    res = yield
+          ^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\setuponly.py:36: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:1328: in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:1005: in call_fixture_func
+    fixture_result = fixturefunc(**kwargs)
+                     ^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\junitxml.py:289: in record_property
+    _warn_incompatibility_with_xunit2(request, "record_property")
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\junitxml.py:267: in _warn_incompatibility_with_xunit2
+    request.node.warn(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;Function test_three_families_observable_fundamental_and_missing_identity[10]&gt;
+warning = PytestWarning("record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')")
+
+    def warn(self, warning: Warning) -&gt; None:
+        """Issue a warning for this Node.
+    
+        Warnings will be displayed after the test session, unless explicitly suppressed.
+    
+        :param Warning warning:
+            The warning instance to issue.
+    
+        :raises ValueError: If ``warning`` instance is not a subclass of Warning.
+    
+        Example usage:
+    
+        .. code-block:: python
+    
+            node.warn(PytestWarning("some message"))
+            node.warn(UserWarning("some message"))
+    
+        .. versionchanged:: 6.2
+            Any subclass of :class:`Warning` is now accepted, rather than only
+            :class:`PytestWarning &lt;pytest.PytestWarning&gt;` subclasses.
+        """
+        # enforce type checks here to avoid getting a generic type error later otherwise.
+        if not isinstance(warning, Warning):
+            raise ValueError(
+                f"warning must be an instance of Warning or subclass, got {warning!r}"
+            )
+        path, lineno = get_fslocation_from_item(self)
+        assert lineno is not None
+&gt;       warnings.warn_explicit(
+            warning,
+            category=None,
+            filename=str(path),
+            lineno=lineno + 1,
+        )
+E       pytest.PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\nodes.py:263: PytestWarning</error></testcase><testcase classname="tests.synthetic.test_e5_curves" name="test_three_families_observable_fundamental_and_missing_identity[20]" time="0.001"><error message="failed on setup with &quot;pytest.PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')&quot;">cls = &lt;class '_pytest.runner.CallInfo'&gt;
+func = &lt;function call_and_report.&lt;locals&gt;.&lt;lambda&gt; at 0x000001D036AE7CE0&gt;
+when = 'setup'
+reraise = (&lt;class '_pytest.outcomes.Exit'&gt;, &lt;class 'KeyboardInterrupt'&gt;)
+
+    @classmethod
+    def from_call(
+        cls,
+        func: Callable[[], TResult],
+        when: Literal["collect", "setup", "call", "teardown"],
+        reraise: type[BaseException] | tuple[type[BaseException], ...] | None = None,
+    ) -&gt; CallInfo[TResult]:
+        """Call func, wrapping the result in a CallInfo.
+    
+        :param func:
+            The function to call. Called without arguments.
+        :type func: Callable[[], _pytest.runner.TResult]
+        :param when:
+            The phase in which the function is called.
+        :param reraise:
+            Exception or exceptions that shall propagate if raised by the
+            function, instead of being wrapped in the CallInfo.
+        """
+        excinfo = None
+        instant = timing.Instant()
+        try:
+&gt;           result: TResult | None = func()
+                                     ^^^^^^
+
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:361: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:250: in &lt;lambda&gt;
+    lambda: runtest_hook(item=item, **kwds),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_hooks.py:512: in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_manager.py:120: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\logging.py:858: in pytest_runtest_setup
+    yield
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\capture.py:895: in pytest_runtest_setup
+    return (yield)
+            ^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:170: in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:536: in setup
+    col.setup()
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\python.py:1710: in setup
+    self._request._fillfixtures()
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:806: in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:630: in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:726: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:1232: in execute
+    result: FixtureValue = ihook.pytest_fixture_setup(
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_hooks.py:512: in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_manager.py:120: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py:53: in run_old_style_hookwrapper
+    return result.get_result()
+           ^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py:38: in run_old_style_hookwrapper
+    res = yield
+          ^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\setuponly.py:36: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:1328: in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:1005: in call_fixture_func
+    fixture_result = fixturefunc(**kwargs)
+                     ^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\junitxml.py:289: in record_property
+    _warn_incompatibility_with_xunit2(request, "record_property")
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\junitxml.py:267: in _warn_incompatibility_with_xunit2
+    request.node.warn(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;Function test_three_families_observable_fundamental_and_missing_identity[20]&gt;
+warning = PytestWarning("record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')")
+
+    def warn(self, warning: Warning) -&gt; None:
+        """Issue a warning for this Node.
+    
+        Warnings will be displayed after the test session, unless explicitly suppressed.
+    
+        :param Warning warning:
+            The warning instance to issue.
+    
+        :raises ValueError: If ``warning`` instance is not a subclass of Warning.
+    
+        Example usage:
+    
+        .. code-block:: python
+    
+            node.warn(PytestWarning("some message"))
+            node.warn(UserWarning("some message"))
+    
+        .. versionchanged:: 6.2
+            Any subclass of :class:`Warning` is now accepted, rather than only
+            :class:`PytestWarning &lt;pytest.PytestWarning&gt;` subclasses.
+        """
+        # enforce type checks here to avoid getting a generic type error later otherwise.
+        if not isinstance(warning, Warning):
+            raise ValueError(
+                f"warning must be an instance of Warning or subclass, got {warning!r}"
+            )
+        path, lineno = get_fslocation_from_item(self)
+        assert lineno is not None
+&gt;       warnings.warn_explicit(
+            warning,
+            category=None,
+            filename=str(path),
+            lineno=lineno + 1,
+        )
+E       pytest.PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\nodes.py:263: PytestWarning</error></testcase><testcase classname="tests.synthetic.test_e5_curves" name="test_modal_amplitudes_separability_and_apparent_mode" time="0.001"><error message="failed on setup with &quot;pytest.PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')&quot;">cls = &lt;class '_pytest.runner.CallInfo'&gt;
+func = &lt;function call_and_report.&lt;locals&gt;.&lt;lambda&gt; at 0x000001D036AE7EC0&gt;
+when = 'setup'
+reraise = (&lt;class '_pytest.outcomes.Exit'&gt;, &lt;class 'KeyboardInterrupt'&gt;)
+
+    @classmethod
+    def from_call(
+        cls,
+        func: Callable[[], TResult],
+        when: Literal["collect", "setup", "call", "teardown"],
+        reraise: type[BaseException] | tuple[type[BaseException], ...] | None = None,
+    ) -&gt; CallInfo[TResult]:
+        """Call func, wrapping the result in a CallInfo.
+    
+        :param func:
+            The function to call. Called without arguments.
+        :type func: Callable[[], _pytest.runner.TResult]
+        :param when:
+            The phase in which the function is called.
+        :param reraise:
+            Exception or exceptions that shall propagate if raised by the
+            function, instead of being wrapped in the CallInfo.
+        """
+        excinfo = None
+        instant = timing.Instant()
+        try:
+&gt;           result: TResult | None = func()
+                                     ^^^^^^
+
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:361: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:250: in &lt;lambda&gt;
+    lambda: runtest_hook(item=item, **kwds),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_hooks.py:512: in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_manager.py:120: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\logging.py:858: in pytest_runtest_setup
+    yield
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\capture.py:895: in pytest_runtest_setup
+    return (yield)
+            ^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:170: in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:536: in setup
+    col.setup()
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\python.py:1710: in setup
+    self._request._fillfixtures()
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:806: in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:630: in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:726: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:1232: in execute
+    result: FixtureValue = ihook.pytest_fixture_setup(
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_hooks.py:512: in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_manager.py:120: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py:53: in run_old_style_hookwrapper
+    return result.get_result()
+           ^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py:38: in run_old_style_hookwrapper
+    res = yield
+          ^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\setuponly.py:36: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:1328: in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:1005: in call_fixture_func
+    fixture_result = fixturefunc(**kwargs)
+                     ^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\junitxml.py:289: in record_property
+    _warn_incompatibility_with_xunit2(request, "record_property")
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\junitxml.py:267: in _warn_incompatibility_with_xunit2
+    request.node.warn(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;Function test_modal_amplitudes_separability_and_apparent_mode&gt;
+warning = PytestWarning("record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')")
+
+    def warn(self, warning: Warning) -&gt; None:
+        """Issue a warning for this Node.
+    
+        Warnings will be displayed after the test session, unless explicitly suppressed.
+    
+        :param Warning warning:
+            The warning instance to issue.
+    
+        :raises ValueError: If ``warning`` instance is not a subclass of Warning.
+    
+        Example usage:
+    
+        .. code-block:: python
+    
+            node.warn(PytestWarning("some message"))
+            node.warn(UserWarning("some message"))
+    
+        .. versionchanged:: 6.2
+            Any subclass of :class:`Warning` is now accepted, rather than only
+            :class:`PytestWarning &lt;pytest.PytestWarning&gt;` subclasses.
+        """
+        # enforce type checks here to avoid getting a generic type error later otherwise.
+        if not isinstance(warning, Warning):
+            raise ValueError(
+                f"warning must be an instance of Warning or subclass, got {warning!r}"
+            )
+        path, lineno = get_fslocation_from_item(self)
+        assert lineno is not None
+&gt;       warnings.warn_explicit(
+            warning,
+            category=None,
+            filename=str(path),
+            lineno=lineno + 1,
+        )
+E       pytest.PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\nodes.py:263: PytestWarning</error></testcase><testcase classname="tests.synthetic.test_e5_curves" name="test_near_ratios_do_not_create_observed_support" time="0.001" /><testcase classname="tests.synthetic.test_e5_curves" name="test_repeatability_on_common_support_and_confounded_causes" time="0.001"><error message="failed on setup with &quot;pytest.PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')&quot;">cls = &lt;class '_pytest.runner.CallInfo'&gt;
+func = &lt;function call_and_report.&lt;locals&gt;.&lt;lambda&gt; at 0x000001D036DB85E0&gt;
+when = 'setup'
+reraise = (&lt;class '_pytest.outcomes.Exit'&gt;, &lt;class 'KeyboardInterrupt'&gt;)
+
+    @classmethod
+    def from_call(
+        cls,
+        func: Callable[[], TResult],
+        when: Literal["collect", "setup", "call", "teardown"],
+        reraise: type[BaseException] | tuple[type[BaseException], ...] | None = None,
+    ) -&gt; CallInfo[TResult]:
+        """Call func, wrapping the result in a CallInfo.
+    
+        :param func:
+            The function to call. Called without arguments.
+        :type func: Callable[[], _pytest.runner.TResult]
+        :param when:
+            The phase in which the function is called.
+        :param reraise:
+            Exception or exceptions that shall propagate if raised by the
+            function, instead of being wrapped in the CallInfo.
+        """
+        excinfo = None
+        instant = timing.Instant()
+        try:
+&gt;           result: TResult | None = func()
+                                     ^^^^^^
+
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:361: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:250: in &lt;lambda&gt;
+    lambda: runtest_hook(item=item, **kwds),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_hooks.py:512: in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_manager.py:120: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\logging.py:858: in pytest_runtest_setup
+    yield
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\capture.py:895: in pytest_runtest_setup
+    return (yield)
+            ^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:170: in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\runner.py:536: in setup
+    col.setup()
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\python.py:1710: in setup
+    self._request._fillfixtures()
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:806: in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:630: in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:726: in _get_active_fixturedef
+    fixturedef.execute(request=subrequest)
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:1232: in execute
+    result: FixtureValue = ihook.pytest_fixture_setup(
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_hooks.py:512: in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_manager.py:120: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py:53: in run_old_style_hookwrapper
+    return result.get_result()
+           ^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\pluggy\_callers.py:38: in run_old_style_hookwrapper
+    res = yield
+          ^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\setuponly.py:36: in pytest_fixture_setup
+    return (yield)
+            ^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:1328: in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\fixtures.py:1005: in call_fixture_func
+    fixture_result = fixturefunc(**kwargs)
+                     ^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\junitxml.py:289: in record_property
+    _warn_incompatibility_with_xunit2(request, "record_property")
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\junitxml.py:267: in _warn_incompatibility_with_xunit2
+    request.node.warn(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;Function test_repeatability_on_common_support_and_confounded_causes&gt;
+warning = PytestWarning("record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')")
+
+    def warn(self, warning: Warning) -&gt; None:
+        """Issue a warning for this Node.
+    
+        Warnings will be displayed after the test session, unless explicitly suppressed.
+    
+        :param Warning warning:
+            The warning instance to issue.
+    
+        :raises ValueError: If ``warning`` instance is not a subclass of Warning.
+    
+        Example usage:
+    
+        .. code-block:: python
+    
+            node.warn(PytestWarning("some message"))
+            node.warn(UserWarning("some message"))
+    
+        .. versionchanged:: 6.2
+            Any subclass of :class:`Warning` is now accepted, rather than only
+            :class:`PytestWarning &lt;pytest.PytestWarning&gt;` subclasses.
+        """
+        # enforce type checks here to avoid getting a generic type error later otherwise.
+        if not isinstance(warning, Warning):
+            raise ValueError(
+                f"warning must be an instance of Warning or subclass, got {warning!r}"
+            )
+        path, lineno = get_fslocation_from_item(self)
+        assert lineno is not None
+&gt;       warnings.warn_explicit(
+            warning,
+            category=None,
+            filename=str(path),
+            lineno=lineno + 1,
+        )
+E       pytest.PytestWarning: record_property is incompatible with junit_family 'xunit2' (use 'legacy' or 'xunit1')
+
+C:\Users\ray03\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pytest\nodes.py:263: PytestWarning</error></testcase><testcase classname="tests.synthetic.test_e5_curves" name="test_octaves_and_disjoint_segments" time="0.001" /><testcase classname="tests.synthetic.test_e5_curves" name="test_union_preserves_holes_modes_support_and_conflicts" time="0.003" /></testsuite></testsuites>

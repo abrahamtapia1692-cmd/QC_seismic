@@ -1,0 +1,354 @@
+[
+  {
+    "variant": "base",
+    "policy": {
+      "schema_version": "1.4",
+      "id": "TRS_SAMPLE_SCREENING_V1_DRAFT",
+      "minimum_coverage": 0.75,
+      "contrast_good_db": 12.0,
+      "contrast_review_db": 6.0,
+      "max_reference_power_ratio": 4.0,
+      "reference_blocks": 4,
+      "plateau_min_run": 3,
+      "line_persistence_min_fraction": 0.75,
+      "line_prominence_db": 10.0,
+      "reference": "docs/trs_operational_quality.md; fixed declared windows; local screening thresholds, not field-calibrated acceptance. Metadata and strict QC preserved."
+    },
+    "policy_hash": "42de3c40a67350a0ae777bb28e85bd98f51d9f29566b04f4acdf31c0ee635156",
+    "assessment": {
+      "grade": "MALA",
+      "color": "#dc2626",
+      "policy_id": "TRS_SAMPLE_SCREENING_V1_DRAFT",
+      "scope": "CONDITIONAL_SAMPLE_SCREENING_NOT_FIELD_ACCEPTANCE",
+      "total_traces": 24,
+      "counts": {
+        "BUENA": 2,
+        "REGULAR": 22,
+        "MALA": 0,
+        "NO_EVALUABLE": 0
+      },
+      "good_percent_bounds": [
+        8.333333333333334,
+        8.333333333333334
+      ],
+      "mean_coverage_fraction": 0.75,
+      "domain_support_counts": {
+        "integrity": 24,
+        "morphology": 24,
+        "contrast": 24
+      },
+      "pending_traces": 0,
+      "reason": "Calificaci\u00f3n por proporci\u00f3n de buenas diagn\u00f3sticas; no identifica aver\u00edas ni certifica aceptaci\u00f3n",
+      "acceptance_status": "NOT_CERTIFIED",
+      "eligible_for_acceptance": false
+    }
+  },
+  {
+    "variant": "contrast_10",
+    "policy": {
+      "schema_version": "1.4",
+      "id": "TRS_SAMPLE_SCREENING_V1_DRAFT",
+      "minimum_coverage": 0.75,
+      "contrast_good_db": 10.0,
+      "contrast_review_db": 6.0,
+      "max_reference_power_ratio": 4.0,
+      "reference_blocks": 4,
+      "plateau_min_run": 3,
+      "line_persistence_min_fraction": 0.75,
+      "line_prominence_db": 10.0,
+      "reference": "docs/trs_operational_quality.md; fixed declared windows; local screening thresholds, not field-calibrated acceptance. Metadata and strict QC preserved."
+    },
+    "policy_hash": "c3048fce6efd1e41997a009b35cd20a5bad1127a0085b23f125cd441ad7ab56e",
+    "assessment": {
+      "grade": "MALA",
+      "color": "#dc2626",
+      "policy_id": "TRS_SAMPLE_SCREENING_V1_DRAFT",
+      "scope": "CONDITIONAL_SAMPLE_SCREENING_NOT_FIELD_ACCEPTANCE",
+      "total_traces": 24,
+      "counts": {
+        "BUENA": 3,
+        "REGULAR": 21,
+        "MALA": 0,
+        "NO_EVALUABLE": 0
+      },
+      "good_percent_bounds": [
+        12.5,
+        12.5
+      ],
+      "mean_coverage_fraction": 0.75,
+      "domain_support_counts": {
+        "integrity": 24,
+        "morphology": 24,
+        "contrast": 24
+      },
+      "pending_traces": 0,
+      "reason": "Calificaci\u00f3n por proporci\u00f3n de buenas diagn\u00f3sticas; no identifica aver\u00edas ni certifica aceptaci\u00f3n",
+      "acceptance_status": "NOT_CERTIFIED",
+      "eligible_for_acceptance": false
+    }
+  },
+  {
+    "variant": "contrast_15",
+    "policy": {
+      "schema_version": "1.4",
+      "id": "TRS_SAMPLE_SCREENING_V1_DRAFT",
+      "minimum_coverage": 0.75,
+      "contrast_good_db": 15.0,
+      "contrast_review_db": 6.0,
+      "max_reference_power_ratio": 4.0,
+      "reference_blocks": 4,
+      "plateau_min_run": 3,
+      "line_persistence_min_fraction": 0.75,
+      "line_prominence_db": 10.0,
+      "reference": "docs/trs_operational_quality.md; fixed declared windows; local screening thresholds, not field-calibrated acceptance. Metadata and strict QC preserved."
+    },
+    "policy_hash": "ac8b3e46446a44f771969fac988d4295a2609758ccb94776e75935d5be87b1c4",
+    "assessment": {
+      "grade": "MALA",
+      "color": "#dc2626",
+      "policy_id": "TRS_SAMPLE_SCREENING_V1_DRAFT",
+      "scope": "CONDITIONAL_SAMPLE_SCREENING_NOT_FIELD_ACCEPTANCE",
+      "total_traces": 24,
+      "counts": {
+        "BUENA": 1,
+        "REGULAR": 23,
+        "MALA": 0,
+        "NO_EVALUABLE": 0
+      },
+      "good_percent_bounds": [
+        4.166666666666667,
+        4.166666666666667
+      ],
+      "mean_coverage_fraction": 0.75,
+      "domain_support_counts": {
+        "integrity": 24,
+        "morphology": 24,
+        "contrast": 24
+      },
+      "pending_traces": 0,
+      "reason": "Calificaci\u00f3n por proporci\u00f3n de buenas diagn\u00f3sticas; no identifica aver\u00edas ni certifica aceptaci\u00f3n",
+      "acceptance_status": "NOT_CERTIFIED",
+      "eligible_for_acceptance": false
+    }
+  },
+  {
+    "variant": "coverage_100",
+    "policy": {
+      "schema_version": "1.4",
+      "id": "TRS_SAMPLE_SCREENING_V1_DRAFT",
+      "minimum_coverage": 1.0,
+      "contrast_good_db": 12.0,
+      "contrast_review_db": 6.0,
+      "max_reference_power_ratio": 4.0,
+      "reference_blocks": 4,
+      "plateau_min_run": 3,
+      "line_persistence_min_fraction": 0.75,
+      "line_prominence_db": 10.0,
+      "reference": "docs/trs_operational_quality.md; fixed declared windows; local screening thresholds, not field-calibrated acceptance. Metadata and strict QC preserved."
+    },
+    "policy_hash": "cd917669a196dd1d76b259df98643c30dad87841eca0b116fc9962740494ba27",
+    "assessment": {
+      "grade": "MALA",
+      "color": "#dc2626",
+      "policy_id": "TRS_SAMPLE_SCREENING_V1_DRAFT",
+      "scope": "CONDITIONAL_SAMPLE_SCREENING_NOT_FIELD_ACCEPTANCE",
+      "total_traces": 24,
+      "counts": {
+        "BUENA": 0,
+        "REGULAR": 22,
+        "MALA": 0,
+        "NO_EVALUABLE": 2
+      },
+      "good_percent_bounds": [
+        0.0,
+        8.333333333333334
+      ],
+      "mean_coverage_fraction": 0.75,
+      "domain_support_counts": {
+        "integrity": 24,
+        "morphology": 24,
+        "contrast": 24
+      },
+      "pending_traces": 2,
+      "reason": "Calificaci\u00f3n por proporci\u00f3n de buenas diagn\u00f3sticas; no identifica aver\u00edas ni certifica aceptaci\u00f3n",
+      "acceptance_status": "NOT_CERTIFIED",
+      "eligible_for_acceptance": false
+    }
+  },
+  {
+    "variant": "blocks_3",
+    "policy": {
+      "schema_version": "1.4",
+      "id": "TRS_SAMPLE_SCREENING_V1_DRAFT",
+      "minimum_coverage": 0.75,
+      "contrast_good_db": 12.0,
+      "contrast_review_db": 6.0,
+      "max_reference_power_ratio": 4.0,
+      "reference_blocks": 3,
+      "plateau_min_run": 3,
+      "line_persistence_min_fraction": 0.75,
+      "line_prominence_db": 10.0,
+      "reference": "docs/trs_operational_quality.md; fixed declared windows; local screening thresholds, not field-calibrated acceptance. Metadata and strict QC preserved."
+    },
+    "policy_hash": "f80821c90fd6fb8d3c171b42b5495005c4567b9ae2b9b68bd286004f5f2d49b6",
+    "assessment": {
+      "grade": "MALA",
+      "color": "#dc2626",
+      "policy_id": "TRS_SAMPLE_SCREENING_V1_DRAFT",
+      "scope": "CONDITIONAL_SAMPLE_SCREENING_NOT_FIELD_ACCEPTANCE",
+      "total_traces": 24,
+      "counts": {
+        "BUENA": 3,
+        "REGULAR": 21,
+        "MALA": 0,
+        "NO_EVALUABLE": 0
+      },
+      "good_percent_bounds": [
+        12.5,
+        12.5
+      ],
+      "mean_coverage_fraction": 0.75,
+      "domain_support_counts": {
+        "integrity": 24,
+        "morphology": 24,
+        "contrast": 24
+      },
+      "pending_traces": 0,
+      "reason": "Calificaci\u00f3n por proporci\u00f3n de buenas diagn\u00f3sticas; no identifica aver\u00edas ni certifica aceptaci\u00f3n",
+      "acceptance_status": "NOT_CERTIFIED",
+      "eligible_for_acceptance": false
+    }
+  },
+  {
+    "variant": "blocks_8",
+    "policy": {
+      "schema_version": "1.4",
+      "id": "TRS_SAMPLE_SCREENING_V1_DRAFT",
+      "minimum_coverage": 0.75,
+      "contrast_good_db": 12.0,
+      "contrast_review_db": 6.0,
+      "max_reference_power_ratio": 4.0,
+      "reference_blocks": 8,
+      "plateau_min_run": 3,
+      "line_persistence_min_fraction": 0.75,
+      "line_prominence_db": 10.0,
+      "reference": "docs/trs_operational_quality.md; fixed declared windows; local screening thresholds, not field-calibrated acceptance. Metadata and strict QC preserved."
+    },
+    "policy_hash": "02471c1e92c5dccda661a9f7615209f27d07d52b59104e34006de88ed8d81e68",
+    "assessment": {
+      "grade": "MALA",
+      "color": "#dc2626",
+      "policy_id": "TRS_SAMPLE_SCREENING_V1_DRAFT",
+      "scope": "CONDITIONAL_SAMPLE_SCREENING_NOT_FIELD_ACCEPTANCE",
+      "total_traces": 24,
+      "counts": {
+        "BUENA": 6,
+        "REGULAR": 18,
+        "MALA": 0,
+        "NO_EVALUABLE": 0
+      },
+      "good_percent_bounds": [
+        25.0,
+        25.0
+      ],
+      "mean_coverage_fraction": 0.75,
+      "domain_support_counts": {
+        "integrity": 24,
+        "morphology": 24,
+        "contrast": 24
+      },
+      "pending_traces": 0,
+      "reason": "Calificaci\u00f3n por proporci\u00f3n de buenas diagn\u00f3sticas; no identifica aver\u00edas ni certifica aceptaci\u00f3n",
+      "acceptance_status": "NOT_CERTIFIED",
+      "eligible_for_acceptance": false
+    }
+  },
+  {
+    "variant": "power_ratio_2",
+    "policy": {
+      "schema_version": "1.4",
+      "id": "TRS_SAMPLE_SCREENING_V1_DRAFT",
+      "minimum_coverage": 0.75,
+      "contrast_good_db": 12.0,
+      "contrast_review_db": 6.0,
+      "max_reference_power_ratio": 2.0,
+      "reference_blocks": 4,
+      "plateau_min_run": 3,
+      "line_persistence_min_fraction": 0.75,
+      "line_prominence_db": 10.0,
+      "reference": "docs/trs_operational_quality.md; fixed declared windows; local screening thresholds, not field-calibrated acceptance. Metadata and strict QC preserved."
+    },
+    "policy_hash": "3e373c825b8e6dddf92c539ae5754f9e81c0b0e3507083bee0d4a0c591eda493",
+    "assessment": {
+      "grade": "MALA",
+      "color": "#dc2626",
+      "policy_id": "TRS_SAMPLE_SCREENING_V1_DRAFT",
+      "scope": "CONDITIONAL_SAMPLE_SCREENING_NOT_FIELD_ACCEPTANCE",
+      "total_traces": 24,
+      "counts": {
+        "BUENA": 2,
+        "REGULAR": 22,
+        "MALA": 0,
+        "NO_EVALUABLE": 0
+      },
+      "good_percent_bounds": [
+        8.333333333333334,
+        8.333333333333334
+      ],
+      "mean_coverage_fraction": 0.75,
+      "domain_support_counts": {
+        "integrity": 24,
+        "morphology": 24,
+        "contrast": 24
+      },
+      "pending_traces": 0,
+      "reason": "Calificaci\u00f3n por proporci\u00f3n de buenas diagn\u00f3sticas; no identifica aver\u00edas ni certifica aceptaci\u00f3n",
+      "acceptance_status": "NOT_CERTIFIED",
+      "eligible_for_acceptance": false
+    }
+  },
+  {
+    "variant": "power_ratio_8",
+    "policy": {
+      "schema_version": "1.4",
+      "id": "TRS_SAMPLE_SCREENING_V1_DRAFT",
+      "minimum_coverage": 0.75,
+      "contrast_good_db": 12.0,
+      "contrast_review_db": 6.0,
+      "max_reference_power_ratio": 8.0,
+      "reference_blocks": 4,
+      "plateau_min_run": 3,
+      "line_persistence_min_fraction": 0.75,
+      "line_prominence_db": 10.0,
+      "reference": "docs/trs_operational_quality.md; fixed declared windows; local screening thresholds, not field-calibrated acceptance. Metadata and strict QC preserved."
+    },
+    "policy_hash": "20cb23a6c85097a15e63f6a81c93319486e1108c2e81c3b6569f6ded33913144",
+    "assessment": {
+      "grade": "MALA",
+      "color": "#dc2626",
+      "policy_id": "TRS_SAMPLE_SCREENING_V1_DRAFT",
+      "scope": "CONDITIONAL_SAMPLE_SCREENING_NOT_FIELD_ACCEPTANCE",
+      "total_traces": 24,
+      "counts": {
+        "BUENA": 2,
+        "REGULAR": 22,
+        "MALA": 0,
+        "NO_EVALUABLE": 0
+      },
+      "good_percent_bounds": [
+        8.333333333333334,
+        8.333333333333334
+      ],
+      "mean_coverage_fraction": 0.75,
+      "domain_support_counts": {
+        "integrity": 24,
+        "morphology": 24,
+        "contrast": 24
+      },
+      "pending_traces": 0,
+      "reason": "Calificaci\u00f3n por proporci\u00f3n de buenas diagn\u00f3sticas; no identifica aver\u00edas ni certifica aceptaci\u00f3n",
+      "acceptance_status": "NOT_CERTIFIED",
+      "eligible_for_acceptance": false
+    }
+  }
+]

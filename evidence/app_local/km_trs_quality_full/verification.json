@@ -1,0 +1,156 @@
+{
+  "dossier_id": "6518ff41-fef1-4e6b-8721-342841e4e905",
+  "scientific_digest": "5ad277deb11ebf1149edaf09c1940010c663d9ca51091bea73824ce1bcc8cecb",
+  "tests": {
+    "tools.tests.test_app_trace_qc::test_export_presents_published_trace_and_spread_assessments[HTML]": {
+      "status": "PASSED",
+      "report": "trs_full_quality_tests.xml"
+    },
+    "tools.tests.test_app_trace_qc::test_export_presents_published_trace_and_spread_assessments[PDF]": {
+      "status": "PASSED",
+      "report": "trs_full_quality_tests.xml"
+    },
+    "tools.tests.test_app_trace_qc::test_qc_summary_escapes_identifiers_and_reads_historical_dossiers": {
+      "status": "PASSED",
+      "report": "trs_full_quality_tests.xml"
+    },
+    "tools.tests.test_app_trace_qc::test_portable_qc_report_renders_same_criteria_charts_and_filters_offline": {
+      "status": "PASSED",
+      "report": "trs_full_quality_tests.xml"
+    },
+    "tools.tests.test_app_trace_qc::test_explicit_qc_reuses_native_quality_and_preserves_samples": {
+      "status": "PASSED",
+      "report": "trs_full_quality_tests.xml"
+    },
+    "tools.tests.test_app_trace_qc::test_missing_metadata_is_not_bad_acquisition_or_picker_confidence": {
+      "status": "PASSED",
+      "report": "trs_full_quality_tests.xml"
+    },
+    "tools.tests.test_app_trace_qc::test_posterior_noise_stays_conditional_and_masked_preview_breaks": {
+      "status": "PASSED",
+      "report": "trs_full_quality_tests.xml"
+    },
+    "tools.tests.test_app_trace_qc::test_invalid_cross_method_or_mismatched_windows_fail_validation": {
+      "status": "PASSED",
+      "report": "trs_full_quality_tests.xml"
+    },
+    "tools.tests.test_app_trace_qc::test_worker_qc_snapshot_projection_pagination_and_immutable_digest": {
+      "status": "PASSED",
+      "report": "trs_full_quality_tests.xml"
+    },
+    "tools.tests.test_app_trs::test_trs_worker_preserves_native_arrivals_and_scientific_abstentions": {
+      "status": "PASSED",
+      "report": "trs_full_quality_tests.xml"
+    },
+    "tools.tests.test_app_trs::test_trs_http_detail_cursor_exports_and_method_isolation": {
+      "status": "PASSED",
+      "report": "trs_full_quality_tests.xml"
+    },
+    "tools.tests.test_app_trs::test_method_mismatch_is_rejected_before_publishing": {
+      "status": "PASSED",
+      "report": "trs_full_quality_tests.xml"
+    },
+    "tools.tests.test_app_trs::test_protocols_do_not_silently_change_technique_or_noise_reference": {
+      "status": "PASSED",
+      "report": "trs_full_quality_tests.xml"
+    },
+    "tools.tests.test_app_trs::test_browser_trs_upload_arrivals_and_wrong_sidecar_before_writes": {
+      "status": "PASSED",
+      "report": "trs_full_quality_tests.xml"
+    },
+    "tools.tests.test_app_trs::test_browser_project_validation_preserves_files_and_allows_correction[False]": {
+      "status": "PASSED",
+      "report": "trs_full_quality_tests.xml"
+    },
+    "tools.tests.test_app_trs::test_browser_project_validation_preserves_files_and_allows_correction[True]": {
+      "status": "PASSED",
+      "report": "trs_full_quality_tests.xml"
+    },
+    "tools.tests.test_app_exports::test_csv_preserves_nulls_types_units_and_provenance": {
+      "status": "PASSED",
+      "report": "trs_full_quality_tests.xml"
+    },
+    "tools.tests.test_app_exports::test_html_escapes_provenance_and_csv_does_not_emit_formula": {
+      "status": "PASSED",
+      "report": "trs_full_quality_tests.xml"
+    },
+    "tools.tests.test_app_exports::test_pdf_is_readable_and_keeps_diagnostic_status": {
+      "status": "PASSED",
+      "report": "trs_full_quality_tests.xml"
+    },
+    "tools.tests.test_app_exports::test_renderer_rejects_modified_science": {
+      "status": "PASSED",
+      "report": "trs_full_quality_tests.xml"
+    },
+    "tools.tests.test_app_exports::test_http_export_formats_idempotency_and_authorized_download[CSV]": {
+      "status": "PASSED",
+      "report": "trs_full_quality_tests.xml"
+    },
+    "tools.tests.test_app_exports::test_http_export_formats_idempotency_and_authorized_download[HTML]": {
+      "status": "PASSED",
+      "report": "trs_full_quality_tests.xml"
+    },
+    "tools.tests.test_app_exports::test_http_export_formats_idempotency_and_authorized_download[PDF]": {
+      "status": "PASSED",
+      "report": "trs_full_quality_tests.xml"
+    },
+    "tools.tests.test_app_exports::test_export_disk_failure_retry_preserves_science_and_review": {
+      "status": "PASSED",
+      "report": "trs_full_quality_tests.xml"
+    },
+    "tools.tests.test_app_exports::test_export_claims_are_exclusive_and_expired_token_cannot_publish": {
+      "status": "PASSED",
+      "report": "trs_full_quality_tests.xml"
+    },
+    "tools.tests.test_app_exports::test_export_retry_budget_and_renderer_mismatch": {
+      "status": "PASSED",
+      "report": "trs_full_quality_tests.xml"
+    },
+    "tools.tests.test_app_exports::test_export_timeout_does_not_fail_scientific_run": {
+      "status": "PASSED",
+      "report": "trs_full_quality_tests.xml"
+    },
+    "tools.tests.test_app_exports::test_expiring_publication_rolls_back_artifact_and_manifest": {
+      "status": "PASSED",
+      "report": "trs_full_quality_tests.xml"
+    },
+    "tools.tests.test_app_exports::test_export_rejects_corrupt_source_and_can_retry_after_repair": {
+      "status": "PASSED",
+      "report": "trs_export_recovery_tests.xml"
+    },
+    "tools.tests.test_app_exports::test_export_authorization_applies_to_create_read_retry_and_download": {
+      "status": "PASSED",
+      "report": "trs_full_quality_tests.xml"
+    },
+    "tools.tests.test_app_exports::test_real_export_worker_death_recovers_without_recomputing_science": {
+      "status": "PASSED",
+      "report": "trs_export_recovery_tests.xml"
+    }
+  },
+  "exports": [
+    {
+      "id": "8a37a4b7-b865-4bd6-8f28-c11b37d200ab",
+      "format": "HTML",
+      "state": "READY",
+      "local_copy_matches_published": true
+    },
+    {
+      "id": "d16f48ec-dc97-4019-af11-476fdaa9b3c2",
+      "format": "PDF",
+      "state": "READY",
+      "local_copy_matches_published": true
+    }
+  ],
+  "checks": [
+    "Ruff passed",
+    "mypy passed for three changed Python modules",
+    "Live Chromium: criteria, 7 charts, 24 traces, zero page errors",
+    "Offline Chromium: same renderer, filters, PSD, no network"
+  ],
+  "artifacts": {
+    "dossier.html": "5987dfb2731d25e09f539721c550b2c016dffe4e206ad1f4e85186f1f09ad67d",
+    "dossier.json": "3b64edaf26ddbda0dbd8408541976fc2b384e32bdc97b8cb616b9ce74387ffbd",
+    "dossier.pdf": "cb45d8ec4980625ca4d6d897f11e6cb9fc3cd350c565b2cfc8cb4f392900e64c",
+    "published_exports.json": "a8597b0c639cbf5bf57e1f579b3ff2e26c93d10c334efb73abd00f25f38bfc18"
+  }
+}

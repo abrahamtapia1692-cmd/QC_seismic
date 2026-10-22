@@ -14,7 +14,14 @@ from geoqc.core.models import Geometry, IngestFailure
 from geoqc.core.planning import planning
 from geoqc.decision import DecisionInput, aggregate
 from geoqc.io.readers import try_read_shot
+from geoqc.masw.adapter import (
+    MASWAdapterInput,
+    ReceiverExclusion,
+    build_masw_dossier,
+    capture_engine_reference,
+)
 from geoqc.masw.contracts import CurveCalibration, MASWProtocol, PeakCalibration
+from geoqc.masw.diagnostic_quality import UsabilityPolicy
 from geoqc.masw.report import masw_diagnostics
 from geoqc.qc import common_qc
 from geoqc.qc.contracts import QCProtocol
@@ -49,6 +56,13 @@ def main() -> int:
     masw.add_argument("--protocol", type=Path, required=True)
     masw.add_argument("--peak-calibration", type=Path)
     masw.add_argument("--curve-calibration", type=Path)
+    dossier = sub.add_parser("masw-dossier", help="Dosier MASW local sin renderizado ni aceptación científica")
+    dossier.add_argument("path", type=Path)
+    dossier.add_argument("--sidecar", type=Path)
+    dossier.add_argument("--protocol", type=Path, required=True)
+    dossier.add_argument("--policy", type=Path, required=True)
+    dossier.add_argument("--revision-id", required=True)
+    dossier.add_argument("--sensitivity-receiver", required=True)
     decision = sub.add_parser("decision", help="Agregar requisitos y registros; diagnóstico sin aceptación operativa")
     decision.add_argument("--input", type=Path, required=True)
     args = parser.parse_args()
@@ -59,11 +73,28 @@ def main() -> int:
             )
             print(aggregate(decision_input).model_dump_json(indent=2))
             return 0
-        if args.command in ("inspect", "qc", "trs", "masw"):
+        if args.command in ("inspect", "qc", "trs", "masw", "masw-dossier"):
             shot = try_read_shot(args.path, sidecar=args.sidecar)
             if isinstance(shot, IngestFailure):
                 print(shot.model_dump_json(indent=2))
                 return 2
+            if args.command == "masw-dossier":
+                request = MASWAdapterInput(
+                    acquisition_revision_id=args.revision_id,
+                    shots=(shot,),
+                    protocol=MASWProtocol.model_validate(
+                        json.loads(args.protocol.read_text(encoding="utf-8"), object_pairs_hook=unique_json_pairs)
+                    ),
+                    usability_policy=UsabilityPolicy.model_validate(
+                        json.loads(args.policy.read_text(encoding="utf-8"), object_pairs_hook=unique_json_pairs)
+                    ),
+                    sensitivity_exclusions=(
+                        ReceiverExclusion(shot_id=shot.id, receiver_id=args.sensitivity_receiver),
+                    ),
+                    engine_reference=capture_engine_reference(),
+                )
+                print(build_masw_dossier(request).to_json())
+                return 0
             if args.command == "masw":
                 protocol_masw = MASWProtocol.model_validate(
                     json.loads(args.protocol.read_text(encoding="utf-8"), object_pairs_hook=unique_json_pairs)

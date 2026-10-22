@@ -1,0 +1,103 @@
+{
+  "run_id": "7853fea4-d7a2-46b9-b096-2b2132fc77f4",
+  "dossier_id": "6f2fd889-6ce5-4394-8e78-7eab9fcf7f1a",
+  "previous_dossier_id": "1fc393d8-5c94-4786-b0cc-00c5851f73d5",
+  "scientific_digest": "96ce4c9eea26f54078c5ad51b5f4441fa5ee1a5b66f470ba99539095c0654525",
+  "assessment": {
+    "grade": "MALA",
+    "color": "#dc2626",
+    "policy_id": "TRS_SAMPLE_SCREENING_V1_DRAFT",
+    "scope": "CONDITIONAL_SAMPLE_SCREENING_NOT_FIELD_ACCEPTANCE",
+    "total_traces": 24,
+    "counts": {
+      "BUENA": 2,
+      "REGULAR": 22,
+      "MALA": 0,
+      "NO_EVALUABLE": 0
+    },
+    "good_percent_bounds": [
+      8.333333333333334,
+      8.333333333333334
+    ],
+    "mean_coverage_fraction": 0.75,
+    "domain_support_counts": {
+      "integrity": 24,
+      "morphology": 24,
+      "contrast": 24
+    },
+    "pending_traces": 0,
+    "reason": "Calificaci\u00f3n por proporci\u00f3n de buenas diagn\u00f3sticas; no identifica aver\u00edas ni certifica aceptaci\u00f3n",
+    "acceptance_status": "NOT_CERTIFIED",
+    "eligible_for_acceptance": false
+  },
+  "strict_assessment": {
+    "grade": "NO_EVALUABLE",
+    "color": "#64748b",
+    "total_traces": 24,
+    "demonstrated_bad_traces": 0,
+    "pending_traces": 24,
+    "complete_traces": 0,
+    "good_percent_bounds": [
+      0.0,
+      100.0
+    ],
+    "reason": "Los extremos posibles con la evidencia faltante caen en categor\u00edas distintas",
+    "acceptance_status": "NOT_CERTIFIED"
+  },
+  "renderer_reference": {
+    "version": "geoqc-export-1",
+    "code_sha256": "25862ad03d4b9d6d98782dca6281d275eead65861bba19f8a809381d627ae873",
+    "quality_code_sha256": "5a20d29ddc12a9e49ef3e2785eabfb25f7782247cd48e678a1b6299eeca73630",
+    "projection_code_sha256": "3abb15ff080af440645e19223190d7e4478f10c7903c1d02a09d925d9f304cf7",
+    "resources": {
+      "trace-quality.js": "d70e00568e34da5f10b98af3b20ca43cd885e97c1081be63502054fd2d67ccf6",
+      "trs-visuals.js": "36420bb3bf920e7e155b325ea0bcaebecbee720b200dc0f1739cb1311923dec0",
+      "style.css": "f95c6a6c2b2d30bd7bb2efa9e49f5b49b90351d79980499dc4eb1463d93f502d",
+      "trs-visuals.css": "f22096abde94bc7d9662dc8484c449a5a9c01da10874c9bc212fef100bacbef7"
+    },
+    "dependencies": {}
+  },
+  "files": {
+    "dossier.csv": "c20b41dc1b436cbaefb2edcfdb8fd0a75def67a9145254957ba1bb3d1e4dbb2a",
+    "dossier.html": "ab5f4ff214598bb358cc843089ca881662880000b1bd89d8d6ad0aed512f2441",
+    "dossier.json": "d8fd802a068558b9fd5e59ec71a66022aaf7af9a58729108afb6701848909e54",
+    "dossier.pdf": "13601215110354d55c55327b0091d33a3d9e7c6943126a31b4d8db2a482561f9",
+    "historical_bridge.json": "eff2a03412ce79f4caf946641b2d9814b4d113aaa6d74b89f1c77340d1e7aed8",
+    "operational-preview.png": "a72ba824c68ee360579917c6c190f4a5d2f4337af2007ae5392f962387660e09",
+    "overview.png": "fbac6c0061dd81d55803106e8dc6f45e8e995b6547d63276bb40cd90666f901e",
+    "pdf-operational-preview.png": "1fde6b5b70679c12738591eb4a111805686b71d071fe180f0446edb173b70c9c"
+  },
+  "exports": [
+    {
+      "format": "HTML",
+      "id": "e5f67495-e6c3-48de-a61c-0d7850ad5560",
+      "state": "READY"
+    },
+    {
+      "format": "PDF",
+      "id": "3434994d-a734-4c35-a249-0b344cca8154",
+      "state": "READY"
+    }
+  ],
+  "validation": {
+    "suites": [
+      {
+        "report": "trs_operational_regression_tests.xml",
+        "tests": 91,
+        "failed": 0,
+        "skipped": 0
+      },
+      {
+        "report": "trs_operational_display_tests.xml",
+        "tests": 1,
+        "failed": 0,
+        "skipped": 0
+      }
+    ],
+    "ruff": "PASSED",
+    "mypy_files": 87,
+    "live_chromium": "24 traces / 10 charts / authenticated standalone report",
+    "sensitivity_variants": 8,
+    "field_acceptance": "NOT_CERTIFIED"
+  }
+}

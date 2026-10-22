@@ -11,15 +11,21 @@ dependencies = ["numpy>=1.26,<2", "scipy>=1.15,<1.16", "pydantic>=2.12,<3", "PyY
 [project.optional-dependencies]
 dev = ["pytest>=9,<10", "hypothesis>=6,<7", "ruff>=0.16,<0.17", "mypy>=2.4,<2.5", "types-PyYAML>=6,<7"]
 reference = ["disba>=0.7,<0.8", "obspy>=1.5,<1.6", "pytest-cov>=7.1,<8", "coverage>=7.15,<8"]
+app = ["fastapi>=0.141,<0.142", "uvicorn>=0.52,<0.53", "psycopg[binary]>=3.3,<3.4", "psutil>=7,<8"]
+app-export = ["reportlab>=5,<6"]
+app-test = ["httpx2>=2.13,<3", "pypdf>=6,<7"]
+app-web-test = ["playwright>=1.55,<2"]
 
 [project.scripts]
 geoqc = "geoqc.cli:main"
+geoqc-app = "geoqc_app.cli:main"
 
 [tool.setuptools.packages.find]
 include = ["geoqc*"]
 
 [tool.setuptools.package-data]
 geoqc = ["py.typed"]
+geoqc_app = ["sql/*.sql", "web/*.html", "web/*.css", "web/*.js", "py.typed"]
 
 [tool.pytest.ini_options]
 pythonpath = ["."]
@@ -38,8 +44,16 @@ select = ["E4", "E7", "E9", "F", "I", "UP", "B"]
 [tool.mypy]
 python_version = "3.11"
 strict = true
-files = ["geoqc"]
+files = ["geoqc", "geoqc_app"]
 
 [[tool.mypy.overrides]]
 module = ["scipy.*", "disba.*"]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["psutil"]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["reportlab.*"]
 ignore_missing_imports = true

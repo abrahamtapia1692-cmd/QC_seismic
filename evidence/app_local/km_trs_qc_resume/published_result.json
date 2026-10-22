@@ -1,0 +1,19 @@
+{
+  "run_id": "fd9c78ef-6965-4d7c-b512-8f0db952d8a5",
+  "dossier_id": "6518ff41-fef1-4e6b-8721-342841e4e905",
+  "scientific_digest": "5ad277deb11ebf1149edaf09c1940010c663d9ca51091bea73824ce1bcc8cecb",
+  "assessment": {
+    "grade": "NO_EVALUABLE",
+    "color": "#64748b",
+    "total_traces": 24,
+    "demonstrated_bad_traces": 0,
+    "pending_traces": 24,
+    "complete_traces": 0,
+    "good_percent_bounds": [
+      0.0,
+      100.0
+    ],
+    "reason": "Los extremos posibles con la evidencia faltante caen en categor\u00edas distintas",
+    "acceptance_status": "NOT_CERTIFIED"
+  }
+}

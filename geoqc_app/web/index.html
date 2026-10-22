@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GeoQC · TRS y MASW local</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/trs-visuals.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <header class="masthead"><a href="/" class="brand">GeoQC<span> / TRS · MASW</span></a><span class="environment">Laboratorio local · Diagnóstico</span></header>
+  <main>
+    <div class="intro"><p class="eyebrow">CONTROL DE ADQUISICIÓN SÍSMICA</p><h1>De la adquisición<br>al criterio técnico.</h1><p>Carga registros, examina la evidencia y documenta tu revisión.</p></div>
+    <aside class="notice"><strong>Política DRAFT.</strong> La revisión humana es una anotación diagnóstica. La suficiencia permanece <strong>NOT_DEMONSTRATED</strong> y la elegibilidad es <strong>false</strong>, incluso con ACCEPTED.</aside>
+    <section aria-labelledby="session-title">
+      <div class="section-heading"><h2 id="session-title"><span>01</span> Sesión local</h2><span id="connection">Sin conexión</span></div>
+      <form id="session-form" class="row">
+        <label class="grow">Token personal<input id="token" type="password" required autocomplete="off" spellcheck="false" placeholder="Token de operador o revisor"></label>
+        <button type="submit">Conectar</button><button id="disconnect" type="button" class="secondary">Desconectar</button>
+      </form>
+      <p class="hint">Copia operator.token de .local/credentials.json aquí y pulsa Conectar. Los tokens locales vencen a las 8 horas. Se conservan únicamente en memoria hasta desconectar o recargar esta pestaña.</p>
+    </section>
+    <div id="message" role="status" aria-live="polite"></div>
+    <div class="workspace">
+      <section aria-labelledby="upload-title">
+        <h2 id="upload-title"><span>02</span> Nueva adquisición</h2>
+        <form id="upload-form">
+          <fieldset id="upload-fields">
+            <label>Técnica<select id="technique"><option value="MASW">MASW · dispersión superficial</option><option value="TRS">TRS · refracción y primeros arribos</option></select></label>
+            <p id="technique-help" class="hint">MASW calcula dispersión aparente. Para refracción y primeros arribos, selecciona TRS.</p>
+            <label>Proyecto (UUID)<input id="project" required placeholder="project_id de .local/credentials.json"></label>
+            <small>Copia project_id; el token personal se usa en Sesión local.</small>
+            <label>Nombre de adquisición<input id="name" required maxlength="4000" placeholder="Línea / estación / tiro"></label>
+            <div id="file-pairs"></div>
+            <button type="button" id="add-record" class="secondary">+ Añadir registro</button>
+            <label><span id="protocol-label">Protocolo MASW JSON</span><input id="protocol" type="file" accept=".json" required></label>
+            <label id="trace-qc-label" hidden>QC por traza JSON · requerido para el dosier TRS completo<input id="trace-qc" type="file" accept=".json" disabled></label>
+            <p id="trace-qc-help" class="hint" hidden>Para calificación con parámetros estimados usa examples/km_app/demo_trs_f1/trace_qc_operational.json. Incluye la política diagnóstica y conserva la evaluación estricta por separado. trace_qc.json mantiene únicamente el recorrido anterior.</p>
+            <label id="exclusions-label">Receptor excluido por registro<input id="exclusions" required placeholder="r0, r0 (uno por registro)"></label>
+            <p class="hint">El sidecar es el archivo de adquisición terminado en .sgy.json. assumptions.json documenta la preparación y no se carga aquí.</p>
+            <p class="hint">Hasta 4 registros; 32 MiB por SEG-Y y 1 MiB por sidecar. Declara el protocolo y cada exclusión; no se completan metadatos.</p>
+          </fieldset>
+          <div class="row"><button id="upload-submit" type="submit">Cargar y procesar</button><button type="button" id="new-upload" class="secondary">Nueva carga</button></div>
+        </form>
+        <p id="upload-progress" role="status">Requiere rol FIELD_OPERATOR.</p>
+      </section>
+      <section aria-labelledby="run-title">
+        <h2 id="run-title"><span>03</span> Seguimiento</h2>
+        <form id="run-form" class="row"><label class="grow">Run (UUID)<input id="run-id" required pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" title="Identificador UUID de la ejecución. El token personal va en Sesión local." placeholder="UUID de ejecución; el token va en Sesión local"></label><button type="submit">Consultar</button></form>
+        <div id="run-status" class="empty">El estado confirmado aparecerá aquí.</div>
+        <form id="dossier-form" class="row"><label class="grow">Dosier (UUID)<input id="dossier-id" required placeholder="O abre un dosier existente"></label><button type="submit">Abrir</button></form>
+        <p class="hint">Actualización por HTTP cada 3 segundos. Puedes copiar el ID para abrirlo en otra sesión.</p>
+      </section>
+    </div>
+    <section id="dossier-section" hidden aria-labelledby="dossier-title">
+      <div class="section-heading"><h2 id="dossier-title"><span>04</span> Evidencia científica</h2><div class="row"><button id="open-quality-report" type="button" hidden>Ver informe completo de calidad</button><button id="download-science" class="secondary">Descargar JSON</button></div></div>
+      <div id="science-summary" class="metrics"></div>
+      <div id="historical-result" class="notice" hidden><p>Estás viendo un dosier anterior. El resultado vigente de esta adquisición está disponible.</p><button id="open-current-dossier" type="button">Abrir dosier vigente</button></div>
+      <p id="qc-global" hidden></p>
+      <p id="digest" class="digest"></p>
+      <p id="unsupported" role="alert" hidden>Versión o estado científico no soportado por este cliente. La revisión está bloqueada.</p>
+      <details><summary>Faltantes, procedencia y manifiesto</summary><pre id="science-provenance"></pre></details>
+      <div id="trs-visuals" hidden></div>
+      <details id="technical-details"><summary>Detalle técnico por colección · JSON</summary>
+      <form id="detail-form" class="filters">
+        <label>Registro (índice base 0)<input id="record-index" type="number" min="0" value="0" required></label>
+        <label>Colección<select id="collection"><option value="records">Resumen de registros</option><option value="points" data-method="MASW">Puntos de rejilla</option><option value="native-points" data-method="MASW">Curva nativa refinada</option><option value="bands" data-method="MASW">Bandas aparentes</option><option value="traces" data-method="MASW">Observaciones por traza</option><option value="arrivals" data-method="TRS">Primeros arribos TRS</option><option value="branches" data-method="TRS">Ramas tiempo-distancia TRS</option><option value="qc-traces" data-method="TRS">QC por traza TRS</option></select></label>
+        <label>Dirección<select id="direction"><option value="">Todas</option><option value="1">+1</option><option value="-1">−1</option></select></label>
+        <label>Desde (Hz)<input id="frequency-min" type="number" min="0" step="any"></label>
+        <label>Hasta (Hz)<input id="frequency-max" type="number" min="0" step="any"></label>
+        <button type="submit">Ver detalle</button>
+      </form>
+      <p class="hint">Los valores null, motivos y soporte se muestran tal como los devuelve el servidor. Los conteos de bins no son porcentajes de calidad.</p>
+      <div id="detail-context"></div><div id="detail-results"></div><button id="next-page" class="secondary" hidden>Página siguiente</button>
+      </details>
+      <details><summary>Exportación derivada</summary>
+        <form id="export-form" class="row"><label>Formato<select id="export-format"><option>CSV</option><option>HTML</option><option>PDF</option></select></label><button id="export-submit" type="submit">Solicitar exportación</button><button id="export-download" type="button" class="secondary" disabled>Descargar exportación</button></form>
+        <p id="export-status" role="status">La exportación tiene estado propio y requiere el worker de exportaciones.</p>
+      </details>
+    </section>
+    <section id="review-section" hidden aria-labelledby="review-title">
+      <div class="section-heading"><h2 id="review-title"><span>05</span> Revisión humana</h2><span id="review-state"></span></div>
+      <div id="conflict" role="alert" hidden>La revisión cambió en el servidor. Tu borrador se conserva. Consulta el historial antes de actualizar la versión del borrador.</div>
+      <form id="review-form">
+        <fieldset id="review-fields">
+          <label>Dictamen<select id="verdict"><option value="ACCEPTED">ACCEPTED · anotación diagnóstica</option><option value="REPEAT">REPEAT · repetir</option><option value="EXTEND">EXTEND · ampliar</option></select></label>
+          <label>Alcance<input id="scope" required maxlength="4000"></label>
+          <label>Justificación<textarea id="justification" required maxlength="4000" rows="3"></textarea></label>
+          <label>Salvedades (una por línea; obligatorias para ACCEPTED)<textarea id="caveats" rows="3"></textarea></label>
+        </fieldset>
+        <div class="row"><button id="review-submit" type="submit">Confirmar revisión</button><button id="rebase" type="button" class="secondary" hidden>Actualizar versión del borrador</button></div>
+      </form>
+      <details open><summary>Historial confirmado</summary><pre id="review-history"></pre></details>
+    </section>
+    <footer>GeoQC / APP-LOCAL-0.1 + TRS <span>Diagnóstico · Desarrollo local</span></footer>
+  </main>
+</body>
+</html>

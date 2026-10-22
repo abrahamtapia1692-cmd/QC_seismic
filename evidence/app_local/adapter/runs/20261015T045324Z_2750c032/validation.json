@@ -1,0 +1,85 @@
+{
+  "scope": "APP_LOCAL_ADAPTER_AND_SELECTED_REGRESSIONS_ONLY",
+  "status": "PASSED",
+  "counts": {
+    "application": {
+      "tests": 43,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 43
+    },
+    "core_regression": {
+      "tests": 40,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": 40
+    }
+  },
+  "scientific_gates_evaluated": false,
+  "backend_or_worker_service_tested": false,
+  "source_binding": "Hashes captured when archiving reports; this collector does not attest test execution code",
+  "engine_reference": {
+    "package_version": "0.0.3",
+    "code_hash": "868491a77090d96f3648c3dfa7c2d61cb121bc04cabe0c39efea7da8db1232f4",
+    "masw_estimator_hash": "046537818baeba8a24697d7a3634baf6c2b32f980c73c7169bd59fe63bf85292",
+    "runtime": [
+      {
+        "name": "machine",
+        "version": "AMD64"
+      },
+      {
+        "name": "numpy",
+        "version": "1.26.4"
+      },
+      {
+        "name": "platform",
+        "version": "win32"
+      },
+      {
+        "name": "pydantic",
+        "version": "2.12.5"
+      },
+      {
+        "name": "python",
+        "version": "3.12.3"
+      },
+      {
+        "name": "scipy",
+        "version": "1.15.2"
+      }
+    ]
+  },
+  "input_and_test_hashes": {
+    "tools/report_masw_quality.py": "2694fa2d1ba59b7d548de7dce3c3a53b37156dcf0b148be2cc61cd2b72a125a5",
+    "tools/tests/test_masw_adapter.py": "0fa7421795424a3956f0b375aca7dcbd38c187dcac7096e03527988fcace704b",
+    "tools/tests/test_masw_extraction_regression.py": "577fa89e8f6e1862c77611518a4833a54eb1d9890d175f5b850c494a9ee09348",
+    "tools/tests/test_masw_dossier.py": "4550cc54d0da1ef5b61afd94670701ad8980c986513a3636140a960985e9d94e",
+    "tools/tests/test_masw_usability.py": "edda2d383b45911eb476d52b11cfe381d2f26a00495cbc717302c41e6e3e7dd9",
+    "tools/summarize_app_adapter.py": "c26c5e45fab4e13a2aea2738ea26cdfcf6ef2b1be7eb7830297b2821a1d7ca7d",
+    "tests/fixtures/app_adapter/oysand_before_extraction.json": "4bb198a18de33c75b7e9788036b4c687b17f4307a3a60531afab0289c5936234",
+    "examples/e5/masw_plane.sgy": "5367b35a7875fac1c62a77b4a36c11cd07cbd9ccb88294bef9b98eb8a7b35914",
+    "examples/e5/masw_plane.sgy.json": "c0f3ea05b60133e24804a95a8174ab079d172efc7cf9fcfc59b2ca8de4d199db",
+    "examples/e5/protocol.json": "ce160696c48798a4a78b2523b727acfff0a5fb8fda15aec9cef7dd6ad92525c9",
+    "configs/masw_usability_v1.json": "57bcf92b4cb51280faa93791dc983e1b09a6aafe2c98750d9f01c49603da668d",
+    "tests/unit/test_e1_cli.py": "e1697a7191bc8c0ccb49ba55654673e3addb46bbcde242a2311b17d7f8618ee1",
+    "tests/unit/test_e5_boundaries.py": "baf49944e8f34d6b1edcf8e2493aea4eae4007110b076705f2e3d82822104d5d",
+    "tests/unit/test_masw_r1.py": "ca3516260bd408cb84590f29c3c7ba1d5f093d61462b3afbc37bce02823d24c0",
+    "tests/synthetic/test_e5_pipeline.py": "4acd4f70a0d149b833a352046f7a3b4ebb412c39ab0fd15a7ff3cb02936b9c03",
+    "tests/synthetic/test_e5_transform.py": "32b88f7858d5bf0dab7df366ffb1fe3753c9a2565e4b0aac832205aa93aee1f3",
+    "tests/synthetic/test_e5_curves.py": "541fe0b927c5846c955c9d4e93195c9d9a7f1692b02c0bf04b33026b1816740a",
+    "tests/synthetic/e5_support.py": "4e8013e59f7b396ec959e5e54d919fd0b3752cafef7b2bbb7e1973bff20b2882",
+    "tests/conftest.py": "a6997b5f027da4783573f9233957c677765ac20f3ea7420f8b8fd29e50f8549b"
+  },
+  "artifact_hashes": {
+    "application_tests.xml": "02b95d08ffd56ee9a7e8d4d488f85047390a39f7d9025941f86bc7d0bd2b5e77",
+    "core_regression_tests.xml": "65a98fb45375cf60df40592c688a26a796277adefe6bc8efbca421986acf5ee7",
+    "e5_dossier.json": "f962d75011609bbed4e93174e35660d39bbed80373553f7826adc97981baf34c"
+  },
+  "e5_scientific_digest": "2f6070502e20d39cf40851c4e66f5ea18c889c885b6941ef60c3118393485add",
+  "documented_core_regression_thread_limits": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1"
+  }
+}

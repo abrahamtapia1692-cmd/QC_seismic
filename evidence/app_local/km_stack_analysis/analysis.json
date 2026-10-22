@@ -1,0 +1,823 @@
+{
+  "scope": "EXPLORATORY_STACK_HYPOTHESES_NOT_ACQUISITION_CERTIFICATION",
+  "site": "KM 40+672",
+  "inventory_sha256": "86afb2df97af2b422c158b279770c23a88d024654c6c16f0c36ba51f1b3b0938",
+  "notes": [
+    {
+      "path": "KM 40+672/Datos/Readme.txt",
+      "sha256": "c8cb9740a50596a37f829b93cca5545b5a1d2b9cb21af9dc8658e8dcac2ed271",
+      "text": "TRE\r\n\r\n\r\n- Se realizó TRE en arreglo Dipolo-Dipolo y Wenner-Schul\r\n- A una separación de 5m.\r\n\r\n\r\n\r\nTRS\r\n\r\n-Se realizó TRS con una separación de 5m.\r\n- 9 Fuentes separadas cada 15m.\r\n- Se realizaron de 3 a 4 golpes por fuente.\r\n\r\n\r\nTopografía\r\n\r\n- La topografía de los tendidos quedará pendiente.\r\n"
+    }
+  ],
+  "record_count": 29,
+  "source_count": 9,
+  "records_per_source_distribution": {
+    "4": 2,
+    "3": 7
+  },
+  "stack_kind": "UNKNOWN",
+  "stack_count": null,
+  "limitations": [
+    "One record can equal one hit or a hidden sum/mean of hits.",
+    "High correlation also occurs between independent hits with the same wavefield.",
+    "Hammer strength, gain and coupling confound amplitude trends.",
+    "The late window is not certified noise; residual signal can dominate.",
+    "Cumulative mean calculations assume count starts at one and uninterrupted export.",
+    "No automatic classification or confidence probability is calibrated."
+  ],
+  "groups": [
+    {
+      "source_folder": "F1",
+      "record_count": 4,
+      "records": [
+        {
+          "path": "KM 40+672/Datos/Sismica/F1/250122_205932.sg2",
+          "sha256": "1f438c4c93494f95d14f73caba4b6540fae35aa5756a75bc4b89d74e5b2260ef",
+          "acquisition_time": "20:59:32.966072",
+          "median_channel_rms_stored_units": 3.051231648751783e-05,
+          "stack_header_values": [
+            "0"
+          ]
+        },
+        {
+          "path": "KM 40+672/Datos/Sismica/F1/250122_210052.sg2",
+          "sha256": "9c5b7cca605bf84d287f86f32a55684554094f584647a7ee31d4ceee36f3d74b",
+          "acquisition_time": "21:00:52.441053",
+          "median_channel_rms_stored_units": 2.4725246567701618e-05,
+          "stack_header_values": [
+            "0"
+          ]
+        },
+        {
+          "path": "KM 40+672/Datos/Sismica/F1/250122_210108.sg2",
+          "sha256": "c46a07102f1de88a9a982dc18823cb77b21ccceedbc3fbdf14346829a6123414",
+          "acquisition_time": "21:01:08.135843",
+          "median_channel_rms_stored_units": 2.9667563403380345e-05,
+          "stack_header_values": [
+            "0"
+          ]
+        },
+        {
+          "path": "KM 40+672/Datos/Sismica/F1/250122_210118.sg2",
+          "sha256": "62507393ab60916e03c9386e229d2500474cac8e5fede1a2dcdd9275f1debfe6",
+          "acquisition_time": "21:01:18.993730",
+          "median_channel_rms_stored_units": 2.8833037764606902e-05,
+          "stack_header_values": [
+            "0"
+          ]
+        }
+      ],
+      "pairs": [
+        {
+          "previous": 0,
+          "current": 1,
+          "elapsed_seconds": 79.474981,
+          "full_record": {
+            "valid_channel_count": 24,
+            "median_correlation": 0.7042056014423348,
+            "median_rms_ratio_current_over_previous": 0.829564980750939,
+            "median_relative_residual_after_per_channel_gain_fit": 0.7061230945061792,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 2.1388238398380883e-05,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 3.876251965662914e-05,
+            "stack_count_inferred": null
+          },
+          "last_half_record_not_verified_noise": {
+            "valid_channel_count": 24,
+            "median_correlation": 0.03329444556524713,
+            "median_rms_ratio_current_over_previous": 0.5464330730758378,
+            "median_relative_residual_after_per_channel_gain_fit": 0.9985538979311135,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 1.3741499752824472e-05,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 1.6697442346847763e-05,
+            "stack_count_inferred": null
+          }
+        },
+        {
+          "previous": 1,
+          "current": 2,
+          "elapsed_seconds": 15.69479,
+          "full_record": {
+            "valid_channel_count": 24,
+            "median_correlation": 0.37753440765166546,
+            "median_rms_ratio_current_over_previous": 1.0463421663185686,
+            "median_relative_residual_after_per_channel_gain_fit": 0.925987858192111,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 3.120106011241434e-05,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 8.232001360209386e-05,
+            "stack_count_inferred": null
+          },
+          "last_half_record_not_verified_noise": {
+            "valid_channel_count": 24,
+            "median_correlation": 0.016770067054466795,
+            "median_rms_ratio_current_over_previous": 1.1136099588783095,
+            "median_relative_residual_after_per_channel_gain_fit": 0.9992880894275975,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 9.647206944853743e-06,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 2.5604551669325284e-05,
+            "stack_count_inferred": null
+          }
+        },
+        {
+          "previous": 2,
+          "current": 3,
+          "elapsed_seconds": 10.857887,
+          "full_record": {
+            "valid_channel_count": 24,
+            "median_correlation": 0.8919680540427462,
+            "median_rms_ratio_current_over_previous": 1.0798524228536195,
+            "median_relative_residual_after_per_channel_gain_fit": 0.4498440364120971,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 1.4244882142920846e-05,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 7.464064532545695e-05,
+            "stack_count_inferred": null
+          },
+          "last_half_record_not_verified_noise": {
+            "valid_channel_count": 24,
+            "median_correlation": 0.04467836279547084,
+            "median_rms_ratio_current_over_previous": 1.135996150617816,
+            "median_relative_residual_after_per_channel_gain_fit": 0.996172479723205,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 1.0615188561019703e-05,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 3.8390083907433075e-05,
+            "stack_count_inferred": null
+          }
+        }
+      ]
+    },
+    {
+      "source_folder": "F2",
+      "record_count": 4,
+      "records": [
+        {
+          "path": "KM 40+672/Datos/Sismica/F2/250122_210254.sg2",
+          "sha256": "2da893e3d48255669c9000d245662cbe99eb003adb15fd3a0b64c4f2bc86c002",
+          "acquisition_time": "21:02:54.284393",
+          "median_channel_rms_stored_units": 6.532673173865127e-05,
+          "stack_header_values": [
+            "0"
+          ]
+        },
+        {
+          "path": "KM 40+672/Datos/Sismica/F2/250122_210314.sg2",
+          "sha256": "26ca02415df607fd681d3734c791f4462d994dbd3164439ecd616328ff81997f",
+          "acquisition_time": "21:03:14.618004",
+          "median_channel_rms_stored_units": 6.293644948903971e-05,
+          "stack_header_values": [
+            "0"
+          ]
+        },
+        {
+          "path": "KM 40+672/Datos/Sismica/F2/250122_210323.sg2",
+          "sha256": "70d09b4140f866d8b8b19dfd9d13047adb03b11ce622160f312fd287a179af72",
+          "acquisition_time": "21:03:23.235818",
+          "median_channel_rms_stored_units": 5.511980753769587e-06,
+          "stack_header_values": [
+            "0"
+          ]
+        },
+        {
+          "path": "KM 40+672/Datos/Sismica/F2/250122_210338.sg2",
+          "sha256": "c1817b28abd3a800f44a2502b8b9a77cebe3e001e0fb025bc119307059e1c14b",
+          "acquisition_time": "21:03:38.757098",
+          "median_channel_rms_stored_units": 6.942800946407036e-05,
+          "stack_header_values": [
+            "0"
+          ]
+        }
+      ],
+      "pairs": [
+        {
+          "previous": 0,
+          "current": 1,
+          "elapsed_seconds": 20.333611,
+          "full_record": {
+            "valid_channel_count": 24,
+            "median_correlation": 0.8969796874674079,
+            "median_rms_ratio_current_over_previous": 1.0603656510126216,
+            "median_relative_residual_after_per_channel_gain_fit": 0.4420453090061399,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 2.4095804647164412e-05,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 8.454627470255195e-05,
+            "stack_count_inferred": null
+          },
+          "last_half_record_not_verified_noise": {
+            "valid_channel_count": 24,
+            "median_correlation": 0.02835822188018601,
+            "median_rms_ratio_current_over_previous": 1.468049299941263,
+            "median_relative_residual_after_per_channel_gain_fit": 0.9982039531183771,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 1.5131900936400032e-05,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 2.4032419860451056e-05,
+            "stack_count_inferred": null
+          }
+        },
+        {
+          "previous": 1,
+          "current": 2,
+          "elapsed_seconds": 8.617814,
+          "full_record": {
+            "valid_channel_count": 24,
+            "median_correlation": -0.02005635382720193,
+            "median_rms_ratio_current_over_previous": 0.08355870823931778,
+            "median_relative_residual_after_per_channel_gain_fit": 0.9985915283035571,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 6.320314917301098e-05,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 0.0001270109239066217,
+            "stack_count_inferred": null
+          },
+          "last_half_record_not_verified_noise": {
+            "valid_channel_count": 24,
+            "median_correlation": -0.009632277058815851,
+            "median_rms_ratio_current_over_previous": 0.5353325949043707,
+            "median_relative_residual_after_per_channel_gain_fit": 0.9993195413706388,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 1.1488365290932666e-05,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 2.54395385498927e-05,
+            "stack_count_inferred": null
+          }
+        },
+        {
+          "previous": 2,
+          "current": 3,
+          "elapsed_seconds": 15.52128,
+          "full_record": {
+            "valid_channel_count": 24,
+            "median_correlation": 0.0032051369235583326,
+            "median_rms_ratio_current_over_previous": 13.04492510958865,
+            "median_relative_residual_after_per_channel_gain_fit": 0.9996940620215518,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 6.946467224020675e-05,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 0.0002776677536617959,
+            "stack_count_inferred": null
+          },
+          "last_half_record_not_verified_noise": {
+            "valid_channel_count": 24,
+            "median_correlation": -0.0010062139129308088,
+            "median_rms_ratio_current_over_previous": 1.1282096230867653,
+            "median_relative_residual_after_per_channel_gain_fit": 0.9992572972044358,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 7.993022170666115e-06,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 2.8741970579952913e-05,
+            "stack_count_inferred": null
+          }
+        }
+      ]
+    },
+    {
+      "source_folder": "F3",
+      "record_count": 3,
+      "records": [
+        {
+          "path": "KM 40+672/Datos/Sismica/F3/250122_210548.sg2",
+          "sha256": "72cb20b1b43b31866680741169327b9d38368e51871bfe7cb698b289cebccbe2",
+          "acquisition_time": "21:05:48.122720",
+          "median_channel_rms_stored_units": 0.00011394547226133535,
+          "stack_header_values": [
+            "0"
+          ]
+        },
+        {
+          "path": "KM 40+672/Datos/Sismica/F3/250122_210557.sg2",
+          "sha256": "6de8091a4892fa81dd31fcbf77446d6dcd5693c9bc8f1c26ee451af25d8b08a1",
+          "acquisition_time": "21:05:57.916798",
+          "median_channel_rms_stored_units": 0.00013168912130604897,
+          "stack_header_values": [
+            "0"
+          ]
+        },
+        {
+          "path": "KM 40+672/Datos/Sismica/F3/250122_210707.sg2",
+          "sha256": "18f75a25d929db28d0f6805d2c9ad8a8e85109138e3fbd40f85945e5d21fb9a5",
+          "acquisition_time": "21:07:07.052851",
+          "median_channel_rms_stored_units": 9.705951943587561e-05,
+          "stack_header_values": [
+            "0"
+          ]
+        }
+      ],
+      "pairs": [
+        {
+          "previous": 0,
+          "current": 1,
+          "elapsed_seconds": 9.794078,
+          "full_record": {
+            "valid_channel_count": 24,
+            "median_correlation": 0.5391162046487341,
+            "median_rms_ratio_current_over_previous": 1.1532924009446233,
+            "median_relative_residual_after_per_channel_gain_fit": 0.841761124416908,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 0.00010772072493365383,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 0.00021193117816393657,
+            "stack_count_inferred": null
+          },
+          "last_half_record_not_verified_noise": {
+            "valid_channel_count": 24,
+            "median_correlation": 0.03925519105001851,
+            "median_rms_ratio_current_over_previous": 1.1409251755274838,
+            "median_relative_residual_after_per_channel_gain_fit": 0.998316509454096,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 1.1645296201858567e-05,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 1.9908723760560835e-05,
+            "stack_count_inferred": null
+          }
+        },
+        {
+          "previous": 1,
+          "current": 2,
+          "elapsed_seconds": 69.136053,
+          "full_record": {
+            "valid_channel_count": 24,
+            "median_correlation": 0.09888088693609287,
+            "median_rms_ratio_current_over_previous": 0.8956185400039994,
+            "median_relative_residual_after_per_channel_gain_fit": 0.9817266878631502,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 0.00016487851630638027,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 0.00044414008340358025,
+            "stack_count_inferred": null
+          },
+          "last_half_record_not_verified_noise": {
+            "valid_channel_count": 24,
+            "median_correlation": 0.03336058477873341,
+            "median_rms_ratio_current_over_previous": 0.6342654656211058,
+            "median_relative_residual_after_per_channel_gain_fit": 0.9975135386546784,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 1.1282084607254858e-05,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 2.5894255522533674e-05,
+            "stack_count_inferred": null
+          }
+        }
+      ]
+    },
+    {
+      "source_folder": "F4",
+      "record_count": 3,
+      "records": [
+        {
+          "path": "KM 40+672/Datos/Sismica/F4/250122_211117.sg2",
+          "sha256": "ab61b3d253fbf2781dbef656346f50157c646d2028918e306126295fc936976f",
+          "acquisition_time": "21:11:17.974449",
+          "median_channel_rms_stored_units": 0.00010429387439686236,
+          "stack_header_values": [
+            "0"
+          ]
+        },
+        {
+          "path": "KM 40+672/Datos/Sismica/F4/250122_211149.sg2",
+          "sha256": "f32865a04d9bdf48c757d8c3686ed13df824d6232f176db44869eadc7f2cdebf",
+          "acquisition_time": "21:11:49.304601",
+          "median_channel_rms_stored_units": 0.00010799865691181836,
+          "stack_header_values": [
+            "0"
+          ]
+        },
+        {
+          "path": "KM 40+672/Datos/Sismica/F4/250122_211158.sg2",
+          "sha256": "bbd6fac4f4bc77ae6ef7926c13ce14f4cf8d0f1318489185459e4515eb7b2052",
+          "acquisition_time": "21:11:58.090991",
+          "median_channel_rms_stored_units": 0.00011197721194713432,
+          "stack_header_values": [
+            "0"
+          ]
+        }
+      ],
+      "pairs": [
+        {
+          "previous": 0,
+          "current": 1,
+          "elapsed_seconds": 31.330152,
+          "full_record": {
+            "valid_channel_count": 24,
+            "median_correlation": 0.8842632691566064,
+            "median_rms_ratio_current_over_previous": 1.0975514572069534,
+            "median_relative_residual_after_per_channel_gain_fit": 0.4668949954589815,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 4.399990664746846e-05,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 0.00013431392765499953,
+            "stack_count_inferred": null
+          },
+          "last_half_record_not_verified_noise": {
+            "valid_channel_count": 24,
+            "median_correlation": 0.03144798563676902,
+            "median_rms_ratio_current_over_previous": 0.6701168603589592,
+            "median_relative_residual_after_per_channel_gain_fit": 0.9992605565998498,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 1.2307601134011009e-05,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 1.6979795383343323e-05,
+            "stack_count_inferred": null
+          }
+        },
+        {
+          "previous": 1,
+          "current": 2,
+          "elapsed_seconds": 8.78639,
+          "full_record": {
+            "valid_channel_count": 24,
+            "median_correlation": 0.9568392078287207,
+            "median_rms_ratio_current_over_previous": 1.025446472454286,
+            "median_relative_residual_after_per_channel_gain_fit": 0.29059260713282997,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 2.6787738349975896e-05,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 0.00013640877511497576,
+            "stack_count_inferred": null
+          },
+          "last_half_record_not_verified_noise": {
+            "valid_channel_count": 24,
+            "median_correlation": 0.04510641041650437,
+            "median_rms_ratio_current_over_previous": 0.9080102003372339,
+            "median_relative_residual_after_per_channel_gain_fit": 0.9984832376501523,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 8.582598823589002e-06,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 2.0913866475681313e-05,
+            "stack_count_inferred": null
+          }
+        }
+      ]
+    },
+    {
+      "source_folder": "F5",
+      "record_count": 3,
+      "records": [
+        {
+          "path": "KM 40+672/Datos/Sismica/F5/250122_211338.sg2",
+          "sha256": "dc4420f41d887b44327ac16a5056ccdd91fd51fa03a071d8881450775109056d",
+          "acquisition_time": "21:13:38.204743",
+          "median_channel_rms_stored_units": 8.718189030183154e-05,
+          "stack_header_values": [
+            "0"
+          ]
+        },
+        {
+          "path": "KM 40+672/Datos/Sismica/F5/250122_211358.sg2",
+          "sha256": "33c176c9ef5ddc6da74f9edb88d9ad5f078a145ddffe426a77d0265b43b3379a",
+          "acquisition_time": "21:13:58.180877",
+          "median_channel_rms_stored_units": 0.00010655517972459622,
+          "stack_header_values": [
+            "0"
+          ]
+        },
+        {
+          "path": "KM 40+672/Datos/Sismica/F5/250122_211416.sg2",
+          "sha256": "8a85c1dbc55f9f9f141908de48c6af3194b90dee845a3d500f2f4ddd0fe3859c",
+          "acquisition_time": "21:14:16.449597",
+          "median_channel_rms_stored_units": 0.00010583897672178005,
+          "stack_header_values": [
+            "0"
+          ]
+        }
+      ],
+      "pairs": [
+        {
+          "previous": 0,
+          "current": 1,
+          "elapsed_seconds": 19.976134,
+          "full_record": {
+            "valid_channel_count": 24,
+            "median_correlation": 0.7539871865729896,
+            "median_rms_ratio_current_over_previous": 1.1901273902988343,
+            "median_relative_residual_after_per_channel_gain_fit": 0.6568586704515923,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 6.720715828733464e-05,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 0.00015533613342304128,
+            "stack_count_inferred": null
+          },
+          "last_half_record_not_verified_noise": {
+            "valid_channel_count": 24,
+            "median_correlation": -0.008765101733836952,
+            "median_rms_ratio_current_over_previous": 1.5829891690564981,
+            "median_relative_residual_after_per_channel_gain_fit": 0.99951528057265,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 3.80393657950045e-05,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 6.401754035205044e-05,
+            "stack_count_inferred": null
+          }
+        },
+        {
+          "previous": 1,
+          "current": 2,
+          "elapsed_seconds": 18.26872,
+          "full_record": {
+            "valid_channel_count": 24,
+            "median_correlation": 0.5417871567064534,
+            "median_rms_ratio_current_over_previous": 0.9528938487539054,
+            "median_relative_residual_after_per_channel_gain_fit": 0.8405151958404617,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 9.35245542032787e-05,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 0.00025189242394455126,
+            "stack_count_inferred": null
+          },
+          "last_half_record_not_verified_noise": {
+            "valid_channel_count": 24,
+            "median_correlation": -0.009295274446493843,
+            "median_rms_ratio_current_over_previous": 0.6561580847702478,
+            "median_relative_residual_after_per_channel_gain_fit": 0.9969436761912521,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 3.4191949981458385e-05,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 7.98043660709781e-05,
+            "stack_count_inferred": null
+          }
+        }
+      ]
+    },
+    {
+      "source_folder": "F6",
+      "record_count": 3,
+      "records": [
+        {
+          "path": "KM 40+672/Datos/Sismica/F6/250122_211547.sg2",
+          "sha256": "b96acecd2eee979204a89e065f807fd14dc49dedd96a213d3ce9d700144af5b6",
+          "acquisition_time": "21:15:47.537559",
+          "median_channel_rms_stored_units": 9.007821426599926e-05,
+          "stack_header_values": [
+            "0"
+          ]
+        },
+        {
+          "path": "KM 40+672/Datos/Sismica/F6/250122_211649.sg2",
+          "sha256": "5e485cce1bb9bbaab148c90e072e8dcf6f733cb0830653b535c0dc805f50ff80",
+          "acquisition_time": "21:16:49.830177",
+          "median_channel_rms_stored_units": 0.0001120355729804397,
+          "stack_header_values": [
+            "0"
+          ]
+        },
+        {
+          "path": "KM 40+672/Datos/Sismica/F6/250122_211659.sg2",
+          "sha256": "131855a6ec5d49d7237e027ee4d75b8d6683d16ca016bbc08c5bf84bd493aaf9",
+          "acquisition_time": "21:16:59.373730",
+          "median_channel_rms_stored_units": 0.00011524688892798699,
+          "stack_header_values": [
+            "0"
+          ]
+        }
+      ],
+      "pairs": [
+        {
+          "previous": 0,
+          "current": 1,
+          "elapsed_seconds": 62.292618,
+          "full_record": {
+            "valid_channel_count": 24,
+            "median_correlation": 0.4318149227200534,
+            "median_rms_ratio_current_over_previous": 1.0554431482223856,
+            "median_relative_residual_after_per_channel_gain_fit": 0.9018615235735666,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 0.00011188125967573755,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 0.0002051267222340318,
+            "stack_count_inferred": null
+          },
+          "last_half_record_not_verified_noise": {
+            "valid_channel_count": 24,
+            "median_correlation": -0.012231942052083417,
+            "median_rms_ratio_current_over_previous": 0.46507990118924103,
+            "median_relative_residual_after_per_channel_gain_fit": 0.9959853479332523,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 1.691185785914963e-05,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 2.0462817770085838e-05,
+            "stack_count_inferred": null
+          }
+        },
+        {
+          "previous": 1,
+          "current": 2,
+          "elapsed_seconds": 9.543553,
+          "full_record": {
+            "valid_channel_count": 24,
+            "median_correlation": 0.9207456476935719,
+            "median_rms_ratio_current_over_previous": 1.0512129201677909,
+            "median_relative_residual_after_per_channel_gain_fit": 0.3900036681669954,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 4.049716229772921e-05,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 0.00015859508015820932,
+            "stack_count_inferred": null
+          },
+          "last_half_record_not_verified_noise": {
+            "valid_channel_count": 24,
+            "median_correlation": 0.06415267170445832,
+            "median_rms_ratio_current_over_previous": 1.3760477148611585,
+            "median_relative_residual_after_per_channel_gain_fit": 0.9966039773755739,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 1.0022660513329534e-05,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 2.578314514518298e-05,
+            "stack_count_inferred": null
+          }
+        }
+      ]
+    },
+    {
+      "source_folder": "F7",
+      "record_count": 3,
+      "records": [
+        {
+          "path": "KM 40+672/Datos/Sismica/F7/250122_211829.sg2",
+          "sha256": "a3017027bfa77fe857896b4638cc12c0c257f14fc4be84e6c29aa3dd84e93820",
+          "acquisition_time": "21:18:29.679818",
+          "median_channel_rms_stored_units": 0.00011627117732380382,
+          "stack_header_values": [
+            "0"
+          ]
+        },
+        {
+          "path": "KM 40+672/Datos/Sismica/F7/250122_211840.sg2",
+          "sha256": "1d1db04338f22b6ef36d504405852ab8db84af36964d0f3fd3633f9a307f6e85",
+          "acquisition_time": "21:18:40.856225",
+          "median_channel_rms_stored_units": 0.00010792191193967869,
+          "stack_header_values": [
+            "0"
+          ]
+        },
+        {
+          "path": "KM 40+672/Datos/Sismica/F7/250122_211850.sg2",
+          "sha256": "1d739a20533e97472bf31571d4c219d38a629292374208f13b7fd8effcbdda08",
+          "acquisition_time": "21:18:50.227268",
+          "median_channel_rms_stored_units": 0.00011001617792016836,
+          "stack_header_values": [
+            "0"
+          ]
+        }
+      ],
+      "pairs": [
+        {
+          "previous": 0,
+          "current": 1,
+          "elapsed_seconds": 11.176407,
+          "full_record": {
+            "valid_channel_count": 24,
+            "median_correlation": 0.6583232350758608,
+            "median_rms_ratio_current_over_previous": 1.0182438131071772,
+            "median_relative_residual_after_per_channel_gain_fit": 0.7525619481766246,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 0.00010001733996396872,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 0.0002049729557359736,
+            "stack_count_inferred": null
+          },
+          "last_half_record_not_verified_noise": {
+            "valid_channel_count": 24,
+            "median_correlation": 0.07409069061358704,
+            "median_rms_ratio_current_over_previous": 1.0481678918052233,
+            "median_relative_residual_after_per_channel_gain_fit": 0.9959060568228052,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 1.2031992646909849e-05,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 2.3932006285380975e-05,
+            "stack_count_inferred": null
+          }
+        },
+        {
+          "previous": 1,
+          "current": 2,
+          "elapsed_seconds": 9.371043,
+          "full_record": {
+            "valid_channel_count": 24,
+            "median_correlation": 0.8224786675426958,
+            "median_rms_ratio_current_over_previous": 1.0289049061770112,
+            "median_relative_residual_after_per_channel_gain_fit": 0.568795759781066,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 6.231727530420945e-05,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 0.0001882632290815513,
+            "stack_count_inferred": null
+          },
+          "last_half_record_not_verified_noise": {
+            "valid_channel_count": 24,
+            "median_correlation": 0.03766048218179741,
+            "median_rms_ratio_current_over_previous": 0.9958351285626137,
+            "median_relative_residual_after_per_channel_gain_fit": 0.996048760770609,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 1.2891977969312773e-05,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 3.4025302901390724e-05,
+            "stack_count_inferred": null
+          }
+        }
+      ]
+    },
+    {
+      "source_folder": "F8",
+      "record_count": 3,
+      "records": [
+        {
+          "path": "KM 40+672/Datos/Sismica/F8/250122_212017.sg2",
+          "sha256": "08a20bcecc507a300680ce2fd983779720bebe3211c9783baf6ec852f9c8cf08",
+          "acquisition_time": "21:20:17.520293",
+          "median_channel_rms_stored_units": 2.5531857318629713e-05,
+          "stack_header_values": [
+            "0"
+          ]
+        },
+        {
+          "path": "KM 40+672/Datos/Sismica/F8/250122_212032.sg2",
+          "sha256": "6ff4e6d9f0de17b4cd3ecab0954b8537563251c26afe465298d41a5486bd79dc",
+          "acquisition_time": "21:20:32.433421",
+          "median_channel_rms_stored_units": 2.7221770353676356e-05,
+          "stack_header_values": [
+            "0"
+          ]
+        },
+        {
+          "path": "KM 40+672/Datos/Sismica/F8/250122_212041.sg2",
+          "sha256": "a9daf5fe7454ca35595ebddb4e7463e1f3f2467a09bd0221c9564f606b477942",
+          "acquisition_time": "21:20:41.771873",
+          "median_channel_rms_stored_units": 3.5211233367021087e-05,
+          "stack_header_values": [
+            "0"
+          ]
+        }
+      ],
+      "pairs": [
+        {
+          "previous": 0,
+          "current": 1,
+          "elapsed_seconds": 14.913128,
+          "full_record": {
+            "valid_channel_count": 24,
+            "median_correlation": 0.7188088833815673,
+            "median_rms_ratio_current_over_previous": 1.0167515324388139,
+            "median_relative_residual_after_per_channel_gain_fit": 0.6952076953689864,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 1.7349500293101352e-05,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 3.783899767884459e-05,
+            "stack_count_inferred": null
+          },
+          "last_half_record_not_verified_noise": {
+            "valid_channel_count": 24,
+            "median_correlation": -0.004773569443207285,
+            "median_rms_ratio_current_over_previous": 1.1565616425172325,
+            "median_relative_residual_after_per_channel_gain_fit": 0.9996609908867748,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 1.6584852216656977e-05,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 2.816915438785258e-05,
+            "stack_count_inferred": null
+          }
+        },
+        {
+          "previous": 1,
+          "current": 2,
+          "elapsed_seconds": 9.338452,
+          "full_record": {
+            "valid_channel_count": 24,
+            "median_correlation": 0.6301440668035139,
+            "median_rms_ratio_current_over_previous": 1.1217261080137366,
+            "median_relative_residual_after_per_channel_gain_fit": 0.7764155552120116,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 2.6591565324905103e-05,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 7.86006164028471e-05,
+            "stack_count_inferred": null
+          },
+          "last_half_record_not_verified_noise": {
+            "valid_channel_count": 24,
+            "median_correlation": -0.1238969636988598,
+            "median_rms_ratio_current_over_previous": 0.8300913112741282,
+            "median_relative_residual_after_per_channel_gain_fit": 0.9905928295235619,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 2.7560631163112077e-05,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 7.055781454905526e-05,
+            "stack_count_inferred": null
+          }
+        }
+      ]
+    },
+    {
+      "source_folder": "F9",
+      "record_count": 3,
+      "records": [
+        {
+          "path": "KM 40+672/Datos/Sismica/F9/250122_212141.sg2",
+          "sha256": "b5da59c9c01fdfcd301500dc10287550c404175c3f0682082401377753e054a4",
+          "acquisition_time": "21:21:41.927552",
+          "median_channel_rms_stored_units": 1.9545274649924748e-05,
+          "stack_header_values": [
+            "0"
+          ]
+        },
+        {
+          "path": "KM 40+672/Datos/Sismica/F9/250122_212229.sg2",
+          "sha256": "3ecef53c512311676ca889d580960e1c7f29295ecc7324c6f8c30b434bbce72a",
+          "acquisition_time": "21:22:29.724076",
+          "median_channel_rms_stored_units": 2.311546523915788e-05,
+          "stack_header_values": [
+            "0"
+          ]
+        },
+        {
+          "path": "KM 40+672/Datos/Sismica/F9/250122_212239.sg2",
+          "sha256": "97df36ae0a9eaf55f159765d949455593b51e9204403b4c2d45199636b9fd344",
+          "acquisition_time": "21:22:39.400532",
+          "median_channel_rms_stored_units": 2.6702344118572724e-05,
+          "stack_header_values": [
+            "0"
+          ]
+        }
+      ],
+      "pairs": [
+        {
+          "previous": 0,
+          "current": 1,
+          "elapsed_seconds": 47.796524,
+          "full_record": {
+            "valid_channel_count": 24,
+            "median_correlation": 0.4075573113921219,
+            "median_rms_ratio_current_over_previous": 1.134164575740289,
+            "median_relative_residual_after_per_channel_gain_fit": 0.9127566396074187,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 2.0410320397171236e-05,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 3.8485279043097814e-05,
+            "stack_count_inferred": null
+          },
+          "last_half_record_not_verified_noise": {
+            "valid_channel_count": 24,
+            "median_correlation": 0.01398822525508804,
+            "median_rms_ratio_current_over_previous": 1.1689042918092833,
+            "median_relative_residual_after_per_channel_gain_fit": 0.9996925914924972,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 1.1634275891466447e-05,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 1.7462229853771118e-05,
+            "stack_count_inferred": null
+          }
+        },
+        {
+          "previous": 1,
+          "current": 2,
+          "elapsed_seconds": 9.676456,
+          "full_record": {
+            "valid_channel_count": 24,
+            "median_correlation": 0.7869780489405247,
+            "median_rms_ratio_current_over_previous": 1.0930222768514795,
+            "median_relative_residual_after_per_channel_gain_fit": 0.6166257943901818,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 1.7689160820734584e-05,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 5.528497075588809e-05,
+            "stack_count_inferred": null
+          },
+          "last_half_record_not_verified_noise": {
+            "valid_channel_count": 24,
+            "median_correlation": 0.04990799395368734,
+            "median_rms_ratio_current_over_previous": 1.427769778633423,
+            "median_relative_residual_after_per_channel_gain_fit": 0.9986261223056279,
+            "hypothetical_new_hit_rms_if_cumulative_sum": 1.1030837595150581e-05,
+            "hypothetical_new_hit_rms_if_cumulative_mean_starting_at_one": 3.150446115794846e-05,
+            "stack_count_inferred": null
+          }
+        }
+      ]
+    }
+  ]
+}

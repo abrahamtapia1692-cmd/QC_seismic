@@ -1,0 +1,51 @@
+{
+  "captured_at_utc": "2026-10-16T04:13:15.874217+00:00",
+  "scope": "LOCAL_BACKEND_RECOVERY",
+  "note": "Archives an existing test report; source hashes are captured now, not proof of test execution provenance.",
+  "test_totals": {
+    "tests": 25,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "report_sha256": "b4f93f3fbed260d8c3916497de630e30a93d937c8ff523b09c79a353fce27580",
+  "environment": {
+    "python": "3.12.3",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "postgresql": "18.1",
+    "packages": {
+      "fastapi": "0.141.1",
+      "starlette": "1.6.0",
+      "psycopg": "3.3.6",
+      "psutil": "7.2.2",
+      "httpx2": "2.13.1"
+    }
+  },
+  "sources_sha256": {
+    "geoqc_app/__init__.py": "318d2dcffaf1af229244e93d591608302b3e856a43b4520f9585fd3283633ba5",
+    "geoqc_app/__main__.py": "ca4deaea3b2577315c3fce947d86f7498846d79a5f66bedbdaa24096a79a52e9",
+    "geoqc_app/api.py": "ff9dbad8eb2900fae30beec2fce6cf1bc25f9b6f319acfdfa8f8fa00a784ccce",
+    "geoqc_app/calculate.py": "60f497509c154d10121d47e2e6d8807ec0eb72beefd878223df18435dd3417de",
+    "geoqc_app/cli.py": "dbcda58bd89964f1776d0b37969e1eea246a466f7cff0b19caba2fd269f39274",
+    "geoqc_app/config.py": "7f7b9ac80ef3251e513c8a439ea9aa2ca636f9b645793c32e2578f2821ec1437",
+    "geoqc_app/db.py": "d055ff5ef24f25e897845a78b2068f45ec3bc475b82eaa596ffdb9dd08047fb2",
+    "geoqc_app/errors.py": "cd51fef3d2bf49c331c6022ed295ccb2f5b2bb355a4e6eaaad3fe3743ecff3e3",
+    "geoqc_app/log_context.py": "1a583ff20765b94cff659d9c7b2657112e9e1e483b5d1e404e6e7f570850a9d6",
+    "geoqc_app/maintenance.py": "b4e588edb60285acf2cdd32f0290989040bff601ce66416dbe9cf722f2dbfb9f",
+    "geoqc_app/models.py": "6ed56314ee49e22e7dbf5411d40d61902f409fff5770e2ee461cb7e2d675eedb",
+    "geoqc_app/service.py": "601ebeb8a3688aa6bcfd90ebf1e80c9e5bd016a37553203a42042cfaef1f4308",
+    "geoqc_app/storage.py": "9e00cfbfaef08580d338680e77bdce86d4c64a7219265292754f999f0e935192",
+    "geoqc_app/worker.py": "51d43869b7221bba7fdada71f6bf835e3fe5e88d6d01178361cfb54b5d18ac09",
+    "geoqc_app/sql/001_initial.sql": "7ab77e0d0d63469167a7b415c36b33f5b6639387151a2fede58ae35a16e05025",
+    "tools/tests/test_app_backend.py": "8b8913cce83f5f6266cd4bf4c693650c41a26dc1d1438be06ca4fdc8b67aeee5",
+    "pyproject.toml": "a641a30a9b6baaf7ce2719d32fb9f28efc468d9f9c9b7dffe9bd8a126bd19a48",
+    "tools/summarize_app_backend.py": "d8303da6852b1726966162a33185afa9e4224b30ef28681d53da0c2a9d5121cb"
+  },
+  "remaining": [
+    "PostgreSQL restart and storage power loss",
+    "Temporary/attempt cleanup and upload expiry",
+    "Export recovery",
+    "Measured resource limits",
+    "Web and integrated acceptance"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "unique_latest_results": {
+    "passed": 149,
+    "failed": 0,
+    "skipped": 0
+  },
+  "reports_in_execution_order": [
+    "trace_qc_regression.xml",
+    "trace_qc_scientific_regression.xml",
+    "trace_qc_http_browser_regression.xml",
+    "trace_qc_backend_export_regression.xml",
+    "trace_qc_browser_final.xml"
+  ],
+  "resolved_failure": "Earlier browser selector matched both QC and picker counters; scoped to picker counters and rerun successfully."
+}

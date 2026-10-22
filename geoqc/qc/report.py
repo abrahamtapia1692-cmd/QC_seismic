@@ -17,7 +17,7 @@ from geoqc.qc.spectral import mains_line, noise_psd, snr
 from geoqc.qc.timing import time_budget
 
 
-def common_qc(shot: Shot, protocol: QCProtocol, config: ProjectConfig) -> dict[str, Any]:
+def common_qc(shot: Shot, protocol: QCProtocol, config: ProjectConfig | None = None) -> dict[str, Any]:
     statistics = channel_statistics(shot, protocol)
     similarities = (
         None
@@ -31,7 +31,7 @@ def common_qc(shot: Shot, protocol: QCProtocol, config: ProjectConfig) -> dict[s
             protocol.similarity,
         )
     )
-    thresholds: dict[str, Threshold] = {threshold.id: threshold for threshold in config.metrics}
+    thresholds: dict[str, Threshold] = {threshold.id: threshold for threshold in config.metrics} if config else {}
     metrics = []
     traces: list[dict[str, Any]] = []
     missing = ["FIELD_CALIBRATION_G9", "TECHNIQUE_SPECIFIC_QC", "REPEATED_SOURCE_EVIDENCE"]
@@ -66,7 +66,7 @@ def common_qc(shot: Shot, protocol: QCProtocol, config: ProjectConfig) -> dict[s
                     mandatory=True,
                     critical=threshold.critical if threshold else False,
                     direction=threshold.direction if threshold else None,
-                    threshold_ref=f"{config.profile}/{item.id}" if threshold else None,
+                    threshold_ref=f"{config.profile}/{item.id}" if threshold and config else None,
                     calibration_ref=threshold.calibration_ref if threshold else None,
                     quality_status=classification,
                 )

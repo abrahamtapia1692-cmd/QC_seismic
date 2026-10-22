@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="5" time="35.187" timestamp="2026-10-19T22:07:23.849587-06:00" hostname="DESKTOP-S3O7HF2"><testcase classname="tools.tests.test_app_trs" name="test_trs_worker_preserves_native_arrivals_and_scientific_abstentions" time="6.031"><failure message="AssertionError: assert {'schema_vers...}}, ...], ...} == {'schema_vers...}}, ...], ...}&#10;  &#10;  Omitting 14 identical items, use -vv to show&#10;  Differing items:&#10;  {'data_hashes': ['99110dd27715ccb975a23c8ea6c86ca5c2386ba6b587e88c64ef8e82dc8d0130', 'cdfd4ea6c885094e06726099086048d301cd34693e11f9ff625a19ef7a0059f5']} != {'data_hashes': ('99110dd27715ccb975a23c8ea6c86ca5c2386ba6b587e88c64ef8e82dc8d0130', 'cdfd4ea6c885094e06726099086048d301cd34693e11f9ff625a19ef7a0059f5')}&#10;  Use -v to get more diff">backend = (&lt;geoqc_app.service.Service object at 0x0000027DB2666F30&gt;, {'project_id': '867eadd1-deda-42cd-986f-2bd2acb9f0e8', 'ope...Xu4'}}, Actor(id=UUID('35078f78-5cb2-4a13-bf55-80e254466360')), Actor(id=UUID('8d3bf9f9-5e75-42ca-bf9d-eed22a774311')))
+
+    def test_trs_worker_preserves_native_arrivals_and_scientific_abstentions(backend):
+        service, _, operator, reviewer = backend
+        run = enqueue(backend)
+        assert run["state"] == "SUCCEEDED", run["error_code"]
+        _, document, review_id = Dossiers(service).load(operator, UUID(run["dossier_id"]))
+        protocol = TRSProtocol.model_validate(json.loads((DEMO / "protocol.json").read_bytes()))
+        shot = read_shot(DEMO / "km40_f1_trs_exploratory.sgy")
+&gt;       assert document["diagnostic_quality"][0]["diagnostics"] == trs_diagnostics(shot, protocol)
+E       AssertionError: assert {'schema_vers...}}, ...], ...} == {'schema_vers...}}, ...], ...}
+E         
+E         Omitting 14 identical items, use -vv to show
+E         Differing items:
+E         {'data_hashes': ['99110dd27715ccb975a23c8ea6c86ca5c2386ba6b587e88c64ef8e82dc8d0130', 'cdfd4ea6c885094e06726099086048d301cd34693e11f9ff625a19ef7a0059f5']} != {'data_hashes': ('99110dd27715ccb975a23c8ea6c86ca5c2386ba6b587e88c64ef8e82dc8d0130', 'cdfd4ea6c885094e06726099086048d301cd34693e11f9ff625a19ef7a0059f5')}
+E         Use -v to get more diff
+
+tools\tests\test_app_trs.py:58: AssertionError</failure></testcase><testcase classname="tools.tests.test_app_trs" name="test_trs_http_detail_cursor_exports_and_method_isolation" time="6.856" /><testcase classname="tools.tests.test_app_trs" name="test_method_mismatch_is_rejected_before_publishing" time="4.416" /><testcase classname="tools.tests.test_app_trs" name="test_protocols_do_not_silently_change_technique_or_noise_reference" time="0.016" /><testcase classname="tools.tests.test_app_trs" name="test_browser_trs_upload_arrivals_and_wrong_sidecar_before_writes" time="14.736" /></testsuite></testsuites>

@@ -1,0 +1,30 @@
+{
+  "scope": "LOADABLE_EXPLORATORY_EXAMPLE_NOT_FIELD_VALIDATION",
+  "technique": "TRS",
+  "assumptions": "EXPLORATORY DEMO ONLY; NOT VERIFIED FIELD METADATA. All source/receiver elevations are assumed 0 m, not measured. Coordinate uncertainties are set to 0 m only to omit geometric uncertainty from this model, not to claim perfect positioning. One unstacked hit per file and stored samples in V are hypotheses; original STACK=0 is retained. Channel-to-receiver correspondence follows SEG-2 CHANNEL_NUMBER and trace order, not an independent survey. TRS first-arrival exploration; no verified geological model or temporal calibration. The post-signal noise reference window is assumed signal-free, not validated in the field. User confirms vertical geophones, DAQLink 4, hammer switch, no pretrigger, and F1 at x=-15 m before receiver 1; receiver spacing 5 m comes from field notes.",
+  "original": {
+    "path": "KM 40+672/Datos/Sismica/F1/250122_205932.sg2",
+    "sha256": "1f438c4c93494f95d14f73caba4b6540fae35aa5756a75bc4b89d74e5b2260ef"
+  },
+  "waveform": "km40_f1_trs_exploratory.sgy",
+  "sidecar": "km40_f1_trs_exploratory.sgy.json",
+  "protocol": "protocol.json",
+  "sensitivity_receiver": null,
+  "sensitivity_note": "Not applicable to TRS; no receiver exclusion requested.",
+  "samples_unchanged": true,
+  "channels": 24,
+  "samples_per_channel": 16000,
+  "window_samples": null,
+  "field_metadata_verified": false,
+  "sufficiency": "NOT_DEMONSTRATED",
+  "eligible_for_acceptance": false,
+  "sha256": {
+    "assumptions.json": "a8e1a2844fcf08b1fb09c0f66531133259c061fcb69d9c4e3f064151a94346e2",
+    "assumptions.reviewed-sidecar.json": "eb26e6c3e97911b5ab9022a0578278631f469f9b52ad8e3f65faa40030032608",
+    "km40_f1_trs_exploratory.sgy": "99110dd27715ccb975a23c8ea6c86ca5c2386ba6b587e88c64ef8e82dc8d0130",
+    "km40_f1_trs_exploratory.sgy.json": "cdfd4ea6c885094e06726099086048d301cd34693e11f9ff625a19ef7a0059f5",
+    "protocol.json": "38f68d16898ba1b75b1137ecdc8e4f2b2d7cc27c68847d8cbb5fe644ea52da7f",
+    "trace_qc.json": "50ee3f8666dc87f5e6e3c8fa1b089e91450819d91eac9726de8e3f5cb8285227"
+  },
+  "trace_qc": "trace_qc.json"
+}

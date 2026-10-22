@@ -2,6 +2,15 @@
 
 Proyecto de control de calidad y suficiencia de adquisición sísmica MASW/TRS.
 
+**Aplicación local — plan inicial:** [APP-LOCAL-0.1](app.md) ·
+[decisiones de alcance](docs/adr/0004-local-masw-scope.md) ·
+[auditoría de arquitectura](docs/auditoria_arquitectura_app_2026_10_14.md).
+Primer hito previsto: MASW, SEG-Y con sidecar, dosier y revisión humana diagnóstica.
+La especificación está definida y el [adaptador científico MASW](docs/app_local_adapter.md) está implementado;
+el backend y los workers locales tienen pruebas PostgreSQL. El [cliente Web local](docs/app_local_web.md)
+permite cargar registros, consultar dosieres y registrar revisiones con control de conflictos;
+el cierre del hito integrado sigue pendiente.
+
 **Dosier MASW Oysand:** [HTML](evidence/masw_quality/dossier.html) · [PDF](evidence/masw_quality/dossier.pdf) ·
 [método y resultados](docs/masw_quality_dossier.md). Cuatro registros, 96 trazas,
 bandas diagnósticas y comparación entre offsets; evidencia pendiente explícita.
@@ -14,6 +23,11 @@ SNR condicional de campo, estado no evaluable y pruebas de filtrado que conserva
 
 **Plan vigente de trabajo:** [SDD v1.4 + MASW-R1](SDD_QC_Geofisico_MASW_TRS_v1_4.md). La ejecución histórica registra **G0–G5 PASSED** para sus protocolos sintéticos: contratos, ingesta SEG-Y/SEG-2 con sidecars, referencias, QC común, TRS y MASW; incluye cobertura de ingesta ≥90 %, cero skips obligatorios y controles de tipos/estilo. La [revisión del 12 de octubre de 2026](docs/masw_review_2026_10_12.md) incorpora ocho obligaciones adicionales, inicialmente NOT_RUN. La [primera implementación MASW-R1](docs/masw_r1_implementation.md) agrega evidencia modal verificable, unión con covarianza y evaluación del suplemento. El runner distingue gates base/ampliados y conserva cada ejecución en `evidence/masw_r1/runs`. El cierre ampliado de G5, la calibración de campo y los gates posteriores siguen pendientes.
 
+- [Backend MASW local: ejecución, pruebas PostgreSQL y pendientes](docs/app_local_backend.md).
+- [Exportaciones CSV/HTML/PDF: formatos, worker y recuperación](docs/app_local_exports.md).
+- [Detalle MASW: cursores, frecuencias, unidades y lectura condicional](docs/app_local_detail.md).
+- [Cliente Web local: ejecución, revisión concurrente y pruebas en Chromium](docs/app_local_web.md).
+- [TRS local: selección de técnica, ejemplo KM y primeros arribos](docs/app_local_trs.md).
 - [Auditoría histórica v1.3, H01–H30](docs/findings.md).
 - [Registro de cambios y pendientes v1.4](docs/revision_v1_4.md).
 - [Manifiesto de 100 pruebas y dependencias](docs/validation_manifest_v1_4.json).

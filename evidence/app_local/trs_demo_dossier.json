@@ -1,0 +1,839 @@
+{
+  "schema_version": "app-trs-dossier-0.1",
+  "method": "TRS",
+  "scope": "LOCAL_TRS_DIAGNOSTIC_ONLY",
+  "acquisition_revision_id": "KM40-F1-OFFLINE-EXPLORATORY",
+  "input_manifest": {
+    "shots": [
+      {
+        "shot_id": "KM40_F1_TRS_EXPLORATORY_ASSUMPTIONS",
+        "input_hashes": [
+          "99110dd27715ccb975a23c8ea6c86ca5c2386ba6b587e88c64ef8e82dc8d0130",
+          "cdfd4ea6c885094e06726099086048d301cd34693e11f9ff625a19ef7a0059f5"
+        ],
+        "scientific_shot_hash": "47ad7edbddaa4bb8ce67661287c89f6e324db7ebcc9b38efbf3f486960d7cf1d",
+        "headers_hash": "bc1dd69333c9afa94dfe0834e9ba1fcd1ff6b8bc34657efd63157cf1331dea8f"
+      }
+    ],
+    "protocol_hash": "445403521e56a183e5613175a387e6abd51619c827d56233a4670ad322a79f4a"
+  },
+  "protocol": {
+    "schema_version": "1.4",
+    "picking": {
+      "schema_version": "1.4",
+      "search": {
+        "schema_version": "1.4",
+        "start_s": 0.0,
+        "end_s": 0.5
+      },
+      "noise": {
+        "schema_version": "1.4",
+        "start_s": 1.5,
+        "end_s": 2.0
+      },
+      "band_hz": [
+        40.0,
+        160.0
+      ],
+      "sta_s": 0.002,
+      "lta_s": 0.02,
+      "trigger_ratio": 8.0,
+      "refine_pre_s": 0.012,
+      "refine_post_s": 0.025,
+      "minimum_segment_samples": 8,
+      "variance_floor_fraction": 1e-08,
+      "min_sustained_s": 0.015,
+      "preprocessing": "RAW_DC_REMOVED",
+      "noise_position": "DECLARED_POST_SIGNAL",
+      "domain_id": "KM40-F1-EXPLORATORY-TRS",
+      "provenance": "EXPLORATORY DEMO ONLY; NOT VERIFIED FIELD METADATA. All source/receiver elevations are assumed 0 m, not measured. Coordinate uncertainties are set to 0 m only to omit geometric uncertainty from this model, not to claim perfect positioning. One unstacked hit per file and stored samples in V are hypotheses; original STACK=0 is retained. Channel-to-receiver correspondence follows SEG-2 CHANNEL_NUMBER and trace order, not an independent survey. TRS first-arrival exploration; no verified geological model or temporal calibration. The post-signal noise reference window is assumed signal-free, not validated in the field. User confirms vertical geophones, DAQLink 4, hammer switch, no pretrigger, and F1 at x=-15 m before receiver 1; receiver spacing 5 m comes from field notes."
+    },
+    "branch_error_model": "UNKNOWN",
+    "horizontal_two_layers_verified": false,
+    "geological_model_ref": null,
+    "initial_v1_v2_h": [
+      300.0,
+      1500.0,
+      5.0
+    ],
+    "max_evaluations": 5,
+    "max_segments": 2,
+    "roi_ref": null,
+    "source_clock_correction_s": 0.0,
+    "time_correction_ref": null,
+    "provenance": "EXPLORATORY DEMO ONLY; NOT VERIFIED FIELD METADATA. All source/receiver elevations are assumed 0 m, not measured. Coordinate uncertainties are set to 0 m only to omit geometric uncertainty from this model, not to claim perfect positioning. One unstacked hit per file and stored samples in V are hypotheses; original STACK=0 is retained. Channel-to-receiver correspondence follows SEG-2 CHANNEL_NUMBER and trace order, not an independent survey. TRS first-arrival exploration; no verified geological model or temporal calibration. The post-signal noise reference window is assumed signal-free, not validated in the field. User confirms vertical geophones, DAQLink 4, hammer switch, no pretrigger, and F1 at x=-15 m before receiver 1; receiver spacing 5 m comes from field notes."
+  },
+  "engine_reference": {
+    "package_version": "0.0.3",
+    "code_hash": "2409c143c0ad0d9316c776bdb8c4e76bb671346af43907d74e8d2589fb0b484e",
+    "masw_estimator_hash": "046537818baeba8a24697d7a3634baf6c2b32f980c73c7169bd59fe63bf85292",
+    "runtime": [
+      {
+        "name": "machine",
+        "version": "AMD64"
+      },
+      {
+        "name": "numpy",
+        "version": "1.26.4"
+      },
+      {
+        "name": "platform",
+        "version": "win32"
+      },
+      {
+        "name": "pydantic",
+        "version": "2.12.5"
+      },
+      {
+        "name": "python",
+        "version": "3.12.3"
+      },
+      {
+        "name": "scipy",
+        "version": "1.15.2"
+      }
+    ],
+    "trs_estimator_hash": "efdd70d2523497f7e1b71bf71a186a5c9a1829f237671dbc922842607aebe70f"
+  },
+  "diagnostic_quality": [
+    {
+      "shot_id": "KM40_F1_TRS_EXPLORATORY_ASSUMPTIONS",
+      "amplitude_unit": "V",
+      "geometry": {
+        "schema_version": "1.4",
+        "xr": [
+          0.0,
+          5.0,
+          10.0,
+          15.0,
+          20.0,
+          25.0,
+          30.0,
+          35.0,
+          40.0,
+          45.0,
+          50.0,
+          55.0,
+          60.0,
+          65.0,
+          70.0,
+          75.0,
+          80.0,
+          85.0,
+          90.0,
+          95.0,
+          100.0,
+          105.0,
+          110.0,
+          115.0
+        ],
+        "yr": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "zr": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "xs": -15.0,
+        "ys": 0.0,
+        "zs": 0.0,
+        "uncertainty_m": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "crs": "LOCAL_ALONG_LINE_METRES",
+        "provenance": [
+          "KM 40+672/Datos/Readme.txt: receptor spacing 5 m",
+          "Usuario 2026-10-19: F1 offset 15 m before receiver 1 along the line; x=0 at receiver 1; positive toward receiver n; y=0 defines the line axis; elevations remain unknown",
+          "EXPLORATORY DEMO ONLY; NOT VERIFIED FIELD METADATA. All source/receiver elevations are assumed 0 m, not measured. Coordinate uncertainties are set to 0 m only to omit geometric uncertainty from this model, not to claim perfect positioning. One unstacked hit per file and stored samples in V are hypotheses; original STACK=0 is retained. Channel-to-receiver correspondence follows SEG-2 CHANNEL_NUMBER and trace order, not an independent survey. TRS first-arrival exploration; no verified geological model or temporal calibration. The post-signal noise reference window is assumed signal-free, not validated in the field. User confirms vertical geophones, DAQLink 4, hammer switch, no pretrigger, and F1 at x=-15 m before receiver 1; receiver spacing 5 m comes from field notes."
+        ],
+        "permutation": null
+      },
+      "acquisition": {
+        "schema_version": "1.4",
+        "technique": "TRS",
+        "wave": "P",
+        "component": "Z",
+        "receiver_ids": [
+          "ch01",
+          "ch02",
+          "ch03",
+          "ch04",
+          "ch05",
+          "ch06",
+          "ch07",
+          "ch08",
+          "ch09",
+          "ch10",
+          "ch11",
+          "ch12",
+          "ch13",
+          "ch14",
+          "ch15",
+          "ch16",
+          "ch17",
+          "ch18",
+          "ch19",
+          "ch20",
+          "ch21",
+          "ch22",
+          "ch23",
+          "ch24"
+        ],
+        "source_type": "HAMMER",
+        "orientation_degrees": null,
+        "trigger_ref": "USER_CONFIRMED_HAMMER_SWITCH_KM40_F1_20261019",
+        "response_ref": null,
+        "calibration_ref": null,
+        "adc_rails": null,
+        "gain": null,
+        "amplitude_unit": "V",
+        "stack_count": 1,
+        "stack_kind": "RAW",
+        "replica_ids": []
+      },
+      "diagnostics": {
+        "schema_version": "1.4",
+        "scope": "TRS_DECLARED_DIAGNOSTIC_DOMAIN_ONLY",
+        "shot_id": "KM40_F1_TRS_EXPLORATORY_ASSUMPTIONS",
+        "picks": [
+          {
+            "receiver_id": "ch01",
+            "offset_m": 15.0,
+            "arrival": {
+              "schema_version": "1.4",
+              "onset_s": 0.010375,
+              "sigma_s": null,
+              "bias_s": null,
+              "confidence": "UNCALIBRATED",
+              "reason": "Onset diagnóstico; curvatura AIC no es sigma; polaridad separada",
+              "window_s": [
+                0.0,
+                0.5
+              ],
+              "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=e70540c86d88477426ec92bfd0461296c8b90e12ed97d07cd40ce4fe63356131",
+              "shared_error_refs": [],
+              "interval_s": null
+            }
+          },
+          {
+            "receiver_id": "ch02",
+            "offset_m": 20.0,
+            "arrival": {
+              "schema_version": "1.4",
+              "onset_s": 0.0032500000000000003,
+              "sigma_s": null,
+              "bias_s": null,
+              "confidence": "UNCALIBRATED",
+              "reason": "Onset diagnóstico; curvatura AIC no es sigma; polaridad separada",
+              "window_s": [
+                0.0,
+                0.5
+              ],
+              "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=e70540c86d88477426ec92bfd0461296c8b90e12ed97d07cd40ce4fe63356131",
+              "shared_error_refs": [],
+              "interval_s": null
+            }
+          },
+          {
+            "receiver_id": "ch03",
+            "offset_m": 25.0,
+            "arrival": {
+              "schema_version": "1.4",
+              "onset_s": 0.003125,
+              "sigma_s": null,
+              "bias_s": null,
+              "confidence": "UNCALIBRATED",
+              "reason": "Onset diagnóstico; curvatura AIC no es sigma; polaridad separada",
+              "window_s": [
+                0.0,
+                0.5
+              ],
+              "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=e70540c86d88477426ec92bfd0461296c8b90e12ed97d07cd40ce4fe63356131",
+              "shared_error_refs": [],
+              "interval_s": null
+            }
+          },
+          {
+            "receiver_id": "ch04",
+            "offset_m": 30.0,
+            "arrival": {
+              "schema_version": "1.4",
+              "onset_s": 0.016875,
+              "sigma_s": null,
+              "bias_s": null,
+              "confidence": "UNCALIBRATED",
+              "reason": "Onset diagnóstico; curvatura AIC no es sigma; polaridad separada",
+              "window_s": [
+                0.0,
+                0.5
+              ],
+              "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=e70540c86d88477426ec92bfd0461296c8b90e12ed97d07cd40ce4fe63356131",
+              "shared_error_refs": [],
+              "interval_s": null
+            }
+          },
+          {
+            "receiver_id": "ch05",
+            "offset_m": 35.0,
+            "arrival": {
+              "schema_version": "1.4",
+              "onset_s": 0.02425,
+              "sigma_s": null,
+              "bias_s": null,
+              "confidence": "UNCALIBRATED",
+              "reason": "Onset diagnóstico; curvatura AIC no es sigma; polaridad separada",
+              "window_s": [
+                0.0,
+                0.5
+              ],
+              "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=e70540c86d88477426ec92bfd0461296c8b90e12ed97d07cd40ce4fe63356131",
+              "shared_error_refs": [],
+              "interval_s": null
+            }
+          },
+          {
+            "receiver_id": "ch06",
+            "offset_m": 40.0,
+            "arrival": {
+              "schema_version": "1.4",
+              "onset_s": null,
+              "sigma_s": null,
+              "bias_s": null,
+              "confidence": "AMBIGUOUS",
+              "reason": "Múltiples episodios de energía: primera llegada ambigua",
+              "window_s": [
+                0.0,
+                0.5
+              ],
+              "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=e70540c86d88477426ec92bfd0461296c8b90e12ed97d07cd40ce4fe63356131",
+              "shared_error_refs": [],
+              "interval_s": null
+            }
+          },
+          {
+            "receiver_id": "ch07",
+            "offset_m": 45.0,
+            "arrival": {
+              "schema_version": "1.4",
+              "onset_s": null,
+              "sigma_s": null,
+              "bias_s": null,
+              "confidence": "AMBIGUOUS",
+              "reason": "Múltiples episodios de energía: primera llegada ambigua",
+              "window_s": [
+                0.0,
+                0.5
+              ],
+              "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=e70540c86d88477426ec92bfd0461296c8b90e12ed97d07cd40ce4fe63356131",
+              "shared_error_refs": [],
+              "interval_s": null
+            }
+          },
+          {
+            "receiver_id": "ch08",
+            "offset_m": 50.0,
+            "arrival": {
+              "schema_version": "1.4",
+              "onset_s": null,
+              "sigma_s": null,
+              "bias_s": null,
+              "confidence": "AMBIGUOUS",
+              "reason": "Múltiples episodios de energía: primera llegada ambigua",
+              "window_s": [
+                0.0,
+                0.5
+              ],
+              "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=e70540c86d88477426ec92bfd0461296c8b90e12ed97d07cd40ce4fe63356131",
+              "shared_error_refs": [],
+              "interval_s": null
+            }
+          },
+          {
+            "receiver_id": "ch09",
+            "offset_m": 55.0,
+            "arrival": {
+              "schema_version": "1.4",
+              "onset_s": null,
+              "sigma_s": null,
+              "bias_s": null,
+              "confidence": "AMBIGUOUS",
+              "reason": "Múltiples episodios de energía: primera llegada ambigua",
+              "window_s": [
+                0.0,
+                0.5
+              ],
+              "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=e70540c86d88477426ec92bfd0461296c8b90e12ed97d07cd40ce4fe63356131",
+              "shared_error_refs": [],
+              "interval_s": null
+            }
+          },
+          {
+            "receiver_id": "ch10",
+            "offset_m": 60.0,
+            "arrival": {
+              "schema_version": "1.4",
+              "onset_s": null,
+              "sigma_s": null,
+              "bias_s": null,
+              "confidence": "AMBIGUOUS",
+              "reason": "Múltiples episodios de energía: primera llegada ambigua",
+              "window_s": [
+                0.0,
+                0.5
+              ],
+              "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=e70540c86d88477426ec92bfd0461296c8b90e12ed97d07cd40ce4fe63356131",
+              "shared_error_refs": [],
+              "interval_s": null
+            }
+          },
+          {
+            "receiver_id": "ch11",
+            "offset_m": 65.0,
+            "arrival": {
+              "schema_version": "1.4",
+              "onset_s": null,
+              "sigma_s": null,
+              "bias_s": null,
+              "confidence": "AMBIGUOUS",
+              "reason": "Burst aislado o llegada sin soporte sostenido",
+              "window_s": [
+                0.0,
+                0.5
+              ],
+              "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=e70540c86d88477426ec92bfd0461296c8b90e12ed97d07cd40ce4fe63356131",
+              "shared_error_refs": [],
+              "interval_s": null
+            }
+          },
+          {
+            "receiver_id": "ch12",
+            "offset_m": 70.0,
+            "arrival": {
+              "schema_version": "1.4",
+              "onset_s": null,
+              "sigma_s": null,
+              "bias_s": null,
+              "confidence": "AMBIGUOUS",
+              "reason": "Múltiples episodios de energía: primera llegada ambigua",
+              "window_s": [
+                0.0,
+                0.5
+              ],
+              "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=e70540c86d88477426ec92bfd0461296c8b90e12ed97d07cd40ce4fe63356131",
+              "shared_error_refs": [],
+              "interval_s": null
+            }
+          },
+          {
+            "receiver_id": "ch13",
+            "offset_m": 75.0,
+            "arrival": {
+              "schema_version": "1.4",
+              "onset_s": null,
+              "sigma_s": null,
+              "bias_s": null,
+              "confidence": "AMBIGUOUS",
+              "reason": "Múltiples episodios de energía: primera llegada ambigua",
+              "window_s": [
+                0.0,
+                0.5
+              ],
+              "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=e70540c86d88477426ec92bfd0461296c8b90e12ed97d07cd40ce4fe63356131",
+              "shared_error_refs": [],
+              "interval_s": null
+            }
+          },
+          {
+            "receiver_id": "ch14",
+            "offset_m": 80.0,
+            "arrival": {
+              "schema_version": "1.4",
+              "onset_s": null,
+              "sigma_s": null,
+              "bias_s": null,
+              "confidence": "AMBIGUOUS",
+              "reason": "Múltiples episodios de energía: primera llegada ambigua",
+              "window_s": [
+                0.0,
+                0.5
+              ],
+              "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=e70540c86d88477426ec92bfd0461296c8b90e12ed97d07cd40ce4fe63356131",
+              "shared_error_refs": [],
+              "interval_s": null
+            }
+          },
+          {
+            "receiver_id": "ch15",
+            "offset_m": 85.0,
+            "arrival": {
+              "schema_version": "1.4",
+              "onset_s": null,
+              "sigma_s": null,
+              "bias_s": null,
+              "confidence": "AMBIGUOUS",
+              "reason": "Múltiples episodios de energía: primera llegada ambigua",
+              "window_s": [
+                0.0,
+                0.5
+              ],
+              "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=e70540c86d88477426ec92bfd0461296c8b90e12ed97d07cd40ce4fe63356131",
+              "shared_error_refs": [],
+              "interval_s": null
+            }
+          },
+          {
+            "receiver_id": "ch16",
+            "offset_m": 90.0,
+            "arrival": {
+              "schema_version": "1.4",
+              "onset_s": null,
+              "sigma_s": null,
+              "bias_s": null,
+              "confidence": "AMBIGUOUS",
+              "reason": "Múltiples episodios de energía: primera llegada ambigua",
+              "window_s": [
+                0.0,
+                0.5
+              ],
+              "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=e70540c86d88477426ec92bfd0461296c8b90e12ed97d07cd40ce4fe63356131",
+              "shared_error_refs": [],
+              "interval_s": null
+            }
+          },
+          {
+            "receiver_id": "ch17",
+            "offset_m": 95.0,
+            "arrival": {
+              "schema_version": "1.4",
+              "onset_s": null,
+              "sigma_s": null,
+              "bias_s": null,
+              "confidence": "AMBIGUOUS",
+              "reason": "Múltiples episodios de energía: primera llegada ambigua",
+              "window_s": [
+                0.0,
+                0.5
+              ],
+              "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=e70540c86d88477426ec92bfd0461296c8b90e12ed97d07cd40ce4fe63356131",
+              "shared_error_refs": [],
+              "interval_s": null
+            }
+          },
+          {
+            "receiver_id": "ch18",
+            "offset_m": 100.0,
+            "arrival": {
+              "schema_version": "1.4",
+              "onset_s": null,
+              "sigma_s": null,
+              "bias_s": null,
+              "confidence": "AMBIGUOUS",
+              "reason": "Burst aislado o llegada sin soporte sostenido",
+              "window_s": [
+                0.0,
+                0.5
+              ],
+              "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=e70540c86d88477426ec92bfd0461296c8b90e12ed97d07cd40ce4fe63356131",
+              "shared_error_refs": [],
+              "interval_s": null
+            }
+          },
+          {
+            "receiver_id": "ch19",
+            "offset_m": 105.0,
+            "arrival": {
+              "schema_version": "1.4",
+              "onset_s": null,
+              "sigma_s": null,
+              "bias_s": null,
+              "confidence": "AMBIGUOUS",
+              "reason": "Múltiples episodios de energía: primera llegada ambigua",
+              "window_s": [
+                0.0,
+                0.5
+              ],
+              "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=e70540c86d88477426ec92bfd0461296c8b90e12ed97d07cd40ce4fe63356131",
+              "shared_error_refs": [],
+              "interval_s": null
+            }
+          },
+          {
+            "receiver_id": "ch20",
+            "offset_m": 110.0,
+            "arrival": {
+              "schema_version": "1.4",
+              "onset_s": null,
+              "sigma_s": null,
+              "bias_s": null,
+              "confidence": "AMBIGUOUS",
+              "reason": "Burst aislado o llegada sin soporte sostenido",
+              "window_s": [
+                0.0,
+                0.5
+              ],
+              "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=e70540c86d88477426ec92bfd0461296c8b90e12ed97d07cd40ce4fe63356131",
+              "shared_error_refs": [],
+              "interval_s": null
+            }
+          },
+          {
+            "receiver_id": "ch21",
+            "offset_m": 115.0,
+            "arrival": {
+              "schema_version": "1.4",
+              "onset_s": null,
+              "sigma_s": null,
+              "bias_s": null,
+              "confidence": "MISSING",
+              "reason": "No se identifica cambio de energía sobre el ruido",
+              "window_s": [
+                0.0,
+                0.5
+              ],
+              "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=e70540c86d88477426ec92bfd0461296c8b90e12ed97d07cd40ce4fe63356131",
+              "shared_error_refs": [],
+              "interval_s": null
+            }
+          },
+          {
+            "receiver_id": "ch22",
+            "offset_m": 120.0,
+            "arrival": {
+              "schema_version": "1.4",
+              "onset_s": null,
+              "sigma_s": null,
+              "bias_s": null,
+              "confidence": "MISSING",
+              "reason": "No se identifica cambio de energía sobre el ruido",
+              "window_s": [
+                0.0,
+                0.5
+              ],
+              "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=e70540c86d88477426ec92bfd0461296c8b90e12ed97d07cd40ce4fe63356131",
+              "shared_error_refs": [],
+              "interval_s": null
+            }
+          },
+          {
+            "receiver_id": "ch23",
+            "offset_m": 125.0,
+            "arrival": {
+              "schema_version": "1.4",
+              "onset_s": null,
+              "sigma_s": null,
+              "bias_s": null,
+              "confidence": "AMBIGUOUS",
+              "reason": "Múltiples episodios de energía: primera llegada ambigua",
+              "window_s": [
+                0.0,
+                0.5
+              ],
+              "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=e70540c86d88477426ec92bfd0461296c8b90e12ed97d07cd40ce4fe63356131",
+              "shared_error_refs": [],
+              "interval_s": null
+            }
+          },
+          {
+            "receiver_id": "ch24",
+            "offset_m": 130.0,
+            "arrival": {
+              "schema_version": "1.4",
+              "onset_s": null,
+              "sigma_s": null,
+              "bias_s": null,
+              "confidence": "AMBIGUOUS",
+              "reason": "Burst aislado o llegada sin soporte sostenido",
+              "window_s": [
+                0.0,
+                0.5
+              ],
+              "preprocessing_ref": "RAW_DC_REMOVED;STA/LTA+AIC;protocol_sha256=e70540c86d88477426ec92bfd0461296c8b90e12ed97d07cd40ce4fe63356131",
+              "shared_error_refs": [],
+              "interval_s": null
+            }
+          }
+        ],
+        "branches": [
+          {
+            "side": "LEFT",
+            "state": "MISSING",
+            "reason": "Menos de cinco offsets únicos con onset por lado"
+          },
+          {
+            "side": "RIGHT",
+            "receiver_ids": [
+              "ch01",
+              "ch02",
+              "ch03",
+              "ch04",
+              "ch05"
+            ],
+            "fit": {
+              "state": "MODEL_INAPPLICABLE",
+              "reason": "BIC gaussiano no válido para pérdidas robustas"
+            },
+            "parameters": {
+              "state": "MODEL_INAPPLICABLE",
+              "reason": "Modelo horizontal dos capas no verificado"
+            },
+            "inversion": {
+              "state": "MODEL_INAPPLICABLE",
+              "reason": "Inversión requiere modelo/ROI y sigmas temporales calibradas"
+            }
+          }
+        ],
+        "evidence_status": "INCOMPLETE",
+        "missing_requirement_ids": [
+          "RECIPROCITY_PHYSICAL_PAIRS",
+          "ROI_RAY_COVERAGE_AND_RESOLUTION",
+          "FIELD_CALIBRATION_G9",
+          "HIDDEN_LAYERS_NOT_EXCLUDED",
+          "SHARED_CALIBRATION_AND_CLOCK_COVARIANCE",
+          "ch01/TEMPORAL_CONFIDENCE",
+          "ch02/TEMPORAL_CONFIDENCE",
+          "ch03/TEMPORAL_CONFIDENCE",
+          "ch04/TEMPORAL_CONFIDENCE",
+          "ch05/TEMPORAL_CONFIDENCE",
+          "ch06/TEMPORAL_CONFIDENCE",
+          "ch07/TEMPORAL_CONFIDENCE",
+          "ch08/TEMPORAL_CONFIDENCE",
+          "ch09/TEMPORAL_CONFIDENCE",
+          "ch10/TEMPORAL_CONFIDENCE",
+          "ch11/TEMPORAL_CONFIDENCE",
+          "ch12/TEMPORAL_CONFIDENCE",
+          "ch13/TEMPORAL_CONFIDENCE",
+          "ch14/TEMPORAL_CONFIDENCE",
+          "ch15/TEMPORAL_CONFIDENCE",
+          "ch16/TEMPORAL_CONFIDENCE",
+          "ch17/TEMPORAL_CONFIDENCE",
+          "ch18/TEMPORAL_CONFIDENCE",
+          "ch19/TEMPORAL_CONFIDENCE",
+          "ch20/TEMPORAL_CONFIDENCE",
+          "ch21/TEMPORAL_CONFIDENCE",
+          "ch22/TEMPORAL_CONFIDENCE",
+          "ch23/TEMPORAL_CONFIDENCE",
+          "ch24/TEMPORAL_CONFIDENCE",
+          "LEFT/BRANCH_SUPPORT"
+        ],
+        "eligible_for_acceptance": false,
+        "operator_decision": "PENDING",
+        "quality_status": null,
+        "protocol_hash": "445403521e56a183e5613175a387e6abd51619c827d56233a4670ad322a79f4a",
+        "code_hash": "2409c143c0ad0d9316c776bdb8c4e76bb671346af43907d74e8d2589fb0b484e",
+        "data_hashes": [
+          "99110dd27715ccb975a23c8ea6c86ca5c2386ba6b587e88c64ef8e82dc8d0130",
+          "cdfd4ea6c885094e06726099086048d301cd34693e11f9ff625a19ef7a0059f5"
+        ],
+        "calibration_hash": null,
+        "reason": "Picking/ajustes condicionados; falta soporte de sitio y causas/estratos pueden no ser identificables"
+      }
+    }
+  ],
+  "scientific_status": "DIAGNOSTIC_ONLY_INCOMPLETE_EVIDENCE",
+  "missing_evidence": [
+    "FIELD_CALIBRATION_G9",
+    "HIDDEN_LAYERS_NOT_EXCLUDED",
+    "LEFT/BRANCH_SUPPORT",
+    "RECIPROCITY_PHYSICAL_PAIRS",
+    "ROI_RAY_COVERAGE_AND_RESOLUTION",
+    "SHARED_CALIBRATION_AND_CLOCK_COVARIANCE",
+    "ch01/TEMPORAL_CONFIDENCE",
+    "ch02/TEMPORAL_CONFIDENCE",
+    "ch03/TEMPORAL_CONFIDENCE",
+    "ch04/TEMPORAL_CONFIDENCE",
+    "ch05/TEMPORAL_CONFIDENCE",
+    "ch06/TEMPORAL_CONFIDENCE",
+    "ch07/TEMPORAL_CONFIDENCE",
+    "ch08/TEMPORAL_CONFIDENCE",
+    "ch09/TEMPORAL_CONFIDENCE",
+    "ch10/TEMPORAL_CONFIDENCE",
+    "ch11/TEMPORAL_CONFIDENCE",
+    "ch12/TEMPORAL_CONFIDENCE",
+    "ch13/TEMPORAL_CONFIDENCE",
+    "ch14/TEMPORAL_CONFIDENCE",
+    "ch15/TEMPORAL_CONFIDENCE",
+    "ch16/TEMPORAL_CONFIDENCE",
+    "ch17/TEMPORAL_CONFIDENCE",
+    "ch18/TEMPORAL_CONFIDENCE",
+    "ch19/TEMPORAL_CONFIDENCE",
+    "ch20/TEMPORAL_CONFIDENCE",
+    "ch21/TEMPORAL_CONFIDENCE",
+    "ch22/TEMPORAL_CONFIDENCE",
+    "ch23/TEMPORAL_CONFIDENCE",
+    "ch24/TEMPORAL_CONFIDENCE",
+    "POST_SIGNAL_NOISE_WINDOW_NOT_FIELD_VALIDATED"
+  ],
+  "sufficiency": {
+    "status": "NOT_DEMONSTRATED"
+  },
+  "eligible_for_acceptance": false,
+  "scientific_digest": "f662552c7ed588831452bca41306231f6472488d72cd3b9abeda52e6baddc4e4"
+}

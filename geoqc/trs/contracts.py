@@ -21,6 +21,9 @@ class PickProtocol(FrozenModel):
     variance_floor_fraction: float = Field(default=1e-8, gt=0, lt=1)
     min_sustained_s: Positive = 0.015
     preprocessing: Literal["RAW_DC_REMOVED"] = "RAW_DC_REMOVED"
+    noise_position: Literal["PRE_SEARCH", "DECLARED_POST_SIGNAL"] = Field(
+        default="PRE_SEARCH", exclude_if=lambda value: value == "PRE_SEARCH"
+    )
     domain_id: str | None = None
     provenance: str = Field(min_length=1)
 
@@ -28,8 +31,10 @@ class PickProtocol(FrozenModel):
     def coherent(self) -> Self:
         if self.sta_s >= self.lta_s or self.band_hz[0] >= self.band_hz[1]:
             raise ValueError("STA<LTA y banda ordenada requeridos")
-        if self.noise.end_s > self.search.start_s:
+        if self.noise_position == "PRE_SEARCH" and self.noise.end_s > self.search.start_s:
             raise ValueError("Ruido debe preceder la ventana de búsqueda")
+        if self.noise_position == "DECLARED_POST_SIGNAL" and self.noise.start_s < self.search.end_s:
+            raise ValueError("Referencia posterior de ruido no debe solaparse con búsqueda")
         return self
 
 

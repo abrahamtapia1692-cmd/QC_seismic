@@ -4,9 +4,10 @@ from collections.abc import Mapping
 from typing import Any
 
 import numpy as np
+from pydantic import TypeAdapter
 
 from geoqc.core.evidence import canonical_hash
-from geoqc.core.models import Shot
+from geoqc.core.models import Digest, Shot
 from geoqc.masw.contracts import CurveCalibration, MASWProtocol, PeakCalibration
 from geoqc.masw.curves import contiguous_bands, near_ratios, refine_peak_velocities, ridge_path
 from geoqc.masw.r1 import SUPPLEMENT_HASH, ModalApproval, ModalEvidence, resolve_modes
@@ -23,9 +24,39 @@ def masw_diagnostics(
     modal_evidence: Mapping[str, ModalEvidence] | None = None,
     modal_approvals: Mapping[str, ModalApproval] | None = None,
 ) -> dict[str, Any]:
+    return _masw_diagnostics(
+        shot, protocol, estimator_reference=estimator_hash(),
+        peak_calibration=peak_calibration, curve_calibration=curve_calibration,
+        modal_evidence=modal_evidence, modal_approvals=modal_approvals,
+    )
+
+
+def uncalibrated_masw_diagnostics(
+    shot: Shot, protocol: MASWProtocol, *, estimator_reference: Digest
+) -> dict[str, Any]:
+    """Pure local-run entry; supplied provenance cannot authorize calibrations.
+
+    The regular entry above computes its own estimator reference and remains
+    the only entry here accepting calibrated or externally approved evidence.
+    """
+    return _masw_diagnostics(
+        shot, protocol, estimator_reference=TypeAdapter(Digest).validate_python(estimator_reference)
+    )
+
+
+def _masw_diagnostics(
+    shot: Shot,
+    protocol: MASWProtocol,
+    *,
+    estimator_reference: Digest,
+    peak_calibration: PeakCalibration | None = None,
+    curve_calibration: CurveCalibration | None = None,
+    modal_evidence: Mapping[str, ModalEvidence] | None = None,
+    modal_approvals: Mapping[str, ModalApproval] | None = None,
+) -> dict[str, Any]:
     observed = shot_spectrum(shot, protocol)
     f, c = observed["frequencies_hz"], np.array(protocol.velocities_ms)
-    protocol_hash, code_hash = canonical_hash(protocol.model_dump(mode="json")), estimator_hash()
+    protocol_hash, code_hash = canonical_hash(protocol.model_dump(mode="json")), estimator_reference
     geometry_hash = canonical_hash(
         {
             "x_m": observed["x_m"].tolist(),

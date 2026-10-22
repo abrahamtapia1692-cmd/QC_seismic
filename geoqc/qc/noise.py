@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import hashlib
 from collections.abc import Callable
-from typing import Any, Self
+from typing import Any, Literal, Self
 
 import numpy as np
 from pydantic import Field, model_validator
@@ -26,6 +26,8 @@ class NoiseProtocol(FrozenModel):
     harmonics: int = Field(default=5, ge=1, le=10)
     line_prominence_db: Positive = 10.0
     reference: str = Field(min_length=1)
+    reference_kind: Literal["PRETRIGGER", "POST_SIGNAL"] = Field(
+        default="PRETRIGGER", exclude_if=lambda value: value == "PRETRIGGER")
 
     @model_validator(mode="after")
     def coherent(self) -> Self:
@@ -33,6 +35,8 @@ class NoiseProtocol(FrozenModel):
             raise ValueError("Banda creciente requerida")
         if max(self.noise.start_s, self.signal.start_s) < min(self.noise.end_s, self.signal.end_s):
             raise ValueError("Ventanas de ruido/señal deben ser disjuntas")
+        if self.reference_kind == "POST_SIGNAL" and self.noise.start_s < self.signal.end_s:
+            raise ValueError("Referencia posterior debe seguir a la ventana de señal")
         return self
 
 
@@ -105,7 +109,8 @@ def noise_diagnostics(
         noise_samples=int(noise.size),
         signal_samples=int(signal.size),
         stationarity={
-            "state": "COMPATIBLE_WITHIN_PRETRIGGER" if compatible else "VARIABLE_OR_UNRESOLVED",
+            "state": ("COMPATIBLE_WITHIN_PRETRIGGER" if protocol.reference_kind == "PRETRIGGER"
+                      else "COMPATIBLE_WITHIN_POST_SIGNAL_REFERENCE") if compatible else "VARIABLE_OR_UNRESOLVED",
             "block_powers": powers,
             "max_min_power_ratio": ratio,
             "transfer_to_signal_verified": False,
@@ -122,7 +127,8 @@ def noise_diagnostics(
         },
     )
     if not compatible:
-        out["alerts"].append("Ruido pretrigger variable o no resuelto: SNR solo condicional")
+        out["alerts"].append("Ruido " + ("pretrigger" if protocol.reference_kind == "PRETRIGGER" else "de referencia posterior")
+                             + " variable o no resuelto: SNR solo condicional")
         out["actions"].append("Revisar subventanas de ruido y repetir una toma de ruido antes del disparo")
     if sigma_mad > 0 and np.sqrt(pn) / sigma_mad > 2:
         out["alerts"].append("Transitorios/colas en ruido: RMS supera 2× escala MAD; se conserva toda su potencia")
